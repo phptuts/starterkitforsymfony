@@ -1,0 +1,7 @@
+CoreBundle\Entity\User:
+    example_user:
+        displayName: <username()>
+        email: 'example@gmail.com'
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true

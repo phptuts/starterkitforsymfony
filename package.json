@@ -1,0 +1,16 @@
+{
+  "name": "symfonystart",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Noah Glaser",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
