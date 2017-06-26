@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Color
  * @ORM\Cache(usage="NONSTRICT_READ_WRITE", region="region_colors")
- * @ORM\Table(name="color")
+ * @ORM\Table(name="Color")
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\ColorRepository")
  */
 class Color

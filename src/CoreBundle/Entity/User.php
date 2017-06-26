@@ -3,18 +3,42 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Constraints;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * User
  * @link http://symfony.com/doc/current/security/entity_provider.html
- * @ORM\Table(name="user")
+ * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\UserRepository")
+ * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUPS_DEFAULT})
+ * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUPS_DEFAULT})
  */
 class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 {
+
+    /**
+     * This is the default validation group used across all the user forms
+     * @var string
+     */
+    const VALIDATION_GROUPS_DEFAULT = "user_default_validation_group";
+
+    /**
+     * This is the min password length
+     * @var string
+     */
+    const MIN_PASSWORD_LENGTH = 3;
+
+    /**
+     * This is max password length
+     * @var string
+     */
+    const MAX_PASSWORD_LENGTH = 128;
+
     /**
      * @var int
      *
@@ -26,14 +50,15 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
-     *
+     * @Constraints\Length(min="5", max="100")
      * @ORM\Column(name="display_name", type="string", length=255, nullable=true, unique=true)
      */
     protected $displayName;
 
     /**
      * @var string
-     *
+     * @Constraints\NotBlank(groups={User::VALIDATION_GROUPS_DEFAULT})
+     * @Constraints\Email(groups={User::VALIDATION_GROUPS_DEFAULT})
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     protected $email;
@@ -41,7 +66,21 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="imageUrl", type="string", length=255, nullable=true)
+     * @ORM\Column(name="forget_password_token", type="string", nullable=true)
+     */
+    protected $forgetPasswordToken;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="forget_password_expired", type="datetime", nullable=true)
+     */
+    protected $forgetPasswordExpired;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image_url", type="string", length=255, nullable=true)
      */
     protected $imageUrl;
 
@@ -61,7 +100,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
-     *
+     * @Constraints\Length(max="3000")
      * @ORM\Column(name="bio", type="text", nullable=true)
      */
     protected $bio;
@@ -74,10 +113,18 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     protected $enabled;
 
     /**
+     * @Constraints\NotBlank(groups={User::VALIDATION_GROUPS_DEFAULT})
+     * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUPS_DEFAULT})
      * @var string
      */
     protected $plainPassword;
 
+    /**
+     * @var UploadedFile
+     * // This is better to test end to end
+     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"})
+     */
+    protected $image;
 
     /**
      * Get id
@@ -183,6 +230,10 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
      */
     public function getRoles()
     {
+        if (empty($this->roles)) {
+            return ['ROLE_USER'];
+        }
+
         return $this->roles;
     }
 
@@ -249,6 +300,65 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     }
 
     /**
+     * @return string
+     */
+    public function getForgetPasswordToken()
+    {
+        return $this->forgetPasswordToken;
+    }
+
+    /**
+     * @param string $forgetPasswordToken
+     * @return User
+     */
+    public function setForgetPasswordToken($forgetPasswordToken)
+    {
+        $this->forgetPasswordToken = $forgetPasswordToken;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getForgetPasswordExpired()
+    {
+        return $this->forgetPasswordExpired;
+    }
+
+    /**
+     * @param \DateTime $forgetPasswordExpired
+     * @return User
+     */
+    public function setForgetPasswordExpired($forgetPasswordExpired)
+    {
+        $this->forgetPasswordExpired = $forgetPasswordExpired;
+
+        return $this;
+    }
+
+    /**
+     * @return UploadedFile
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param UploadedFile $image
+     * @return User
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+
+
+    /**
      * Returns the username used to authenticate the user.
      *
      * @return string The username
@@ -297,12 +407,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     }
 
     /**
-     * Checks whether the user's account has expired.
+     * Checks whether the user"s account has expired.
      *
      * Internally, if this method returns false, the authentication system
      * will throw an AccountExpiredException and prevent login.
      *
-     * @return bool true if the user's account is non expired, false otherwise
+     * @return bool true if the user"s account is non expired, false otherwise
      *
      * @see AccountExpiredException
      */
@@ -327,12 +437,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     }
 
     /**
-     * Checks whether the user's credentials (password) has expired.
+     * Checks whether the user"s credentials (password) has expired.
      *
      * Internally, if this method returns false, the authentication system
      * will throw a CredentialsExpiredException and prevent login.
      *
-     * @return bool true if the user's credentials are non expired, false otherwise
+     * @return bool true if the user"s credentials are non expired, false otherwise
      *
      * @see CredentialsExpiredException
      */
@@ -390,9 +500,9 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
      */
     public function isEqualTo(UserInterface $user)
     {
+        // This is using email address to compare.
         return $this->getUsername() == $user->getUsername();
     }
-
 
 }
 

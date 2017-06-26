@@ -1,0 +1,13 @@
+{% block file_widget %}
+
+    <div class="input-group">
+        <label class="input-group-btn">
+                        <span class="btn btn-primary">
+                            Browse&hellip;
+                            <input type="{{ type }}" {{ block('widget_attributes') }} style="display:none" {% if value is not empty %}value="{{ value }}" {% endif %}/>
+                        </span>
+        </label>
+        <input type="text" class="form-control" readonly>
+    </div>
+
+{% endblock %}

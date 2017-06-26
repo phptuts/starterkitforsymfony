@@ -1,0 +1,32 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('assets/css/main-panel.css') }}" rel="stylesheet" media="all">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="panel panel-default col-md-offset-3 col-md-6 main-panel" >
+            <div class="panel-heading">Register</div>
+            <div class="panel-body">
+                {{ form_start(registerForm, {'attr': {'novalidate': 'novalidate'}}) }}
+                    {{ form_row(registerForm.email) }}
+
+                    {{ form_row(registerForm.plain_password, {
+                        'label': 'Password'
+                    }) }}
+
+                <input type="hidden" name="redirect_url" value="{{ app.request.headers.get('referer')|default('/') }}" />
+                <div class="form-group submit-btn-container" >
+                    <button type="submit" class="btn btn-success pull-right">register</button>
+                </div>
+
+                {{ form_end(registerForm) }}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

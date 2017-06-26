@@ -1,0 +1,9 @@
+.main-panel {
+    margin-top: 100px;
+    padding: 0;
+}
+
+.submit-btn-container {
+    display: block;
+    height: 30px;
+}

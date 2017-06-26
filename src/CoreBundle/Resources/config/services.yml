@@ -2,3 +2,61 @@ services:
 #    core.example:
 #        class: CoreBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+    #GENERIC SERVICES
+    startsymfony.core.email:
+        class: CoreBundle\Service\EmailService
+        arguments:
+            - '@twig'
+            - '@mailer'
+            - '%from_email%'
+
+    #USER SERVICES
+    startsymfony.core.user_service:
+        class: CoreBundle\Service\User\UserService
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@security.encoder_factory'
+
+    startsymfony.core.forget_password:
+        class: CoreBundle\Service\User\ForgetPasswordService
+        arguments:
+            - '@startsymfony.core.user_service'
+            - '@startsymfony.core.email'
+
+    startsymfony.core.register_service:
+        class: CoreBundle\Service\User\RegisterService
+        arguments:
+            - '@startsymfony.core.user_service'
+            - '@startsymfony.core.email'
+
+
+    #REPOSITORIES
+    startsymfony.core.repository.user_repository:
+        class: CoreBundle\Repository\UserRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - CoreBundle\Entity\User
+
+
+    #DATA TRANSFORMER
+    startsymfony.core.email_to_user_transformer:
+        class: CoreBundle\Form\DataTransformer\UserEmailTransformer
+        arguments:
+            - '@startsymfony.core.repository.user_repository'
+
+    #FORM
+    startsymfony.core.forget_password_form:
+        class: CoreBundle\Form\User\ForgetPasswordType
+        arguments:
+            - '@startsymfony.core.email_to_user_transformer'
+        tags:
+            - { name: form.type, alias: CoreBundle\Form\User\ForgetPasswordUserType }
+
+    startsymfony.core.change_password_form:
+        class: CoreBundle\Form\User\ChangePasswordType
+        arguments:
+            - '@security.authorization_checker'
+        tags:
+            - { name: form.type, alias: CoreBundle\Form\User\ForgetPasswordUserType }

@@ -1,0 +1,44 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-xs">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"
+                        class="{% if app.request.get('_route') == 'update_user' %}active{% endif %}"><a
+                                href="{{ path('update_user') }}">Information</a></li>
+                    <li role="presentation"
+                        class="{% if app.request.get('_route') == 'change_password' %}active{% endif %}"><a
+                                href="{{ path('change_password') }}">Change Password</a></li>
+                </ul>
+            </div>
+            <div class="form-group visible-xs col-xs-12">
+                <label for="mobile_account_setting_nav">Navigation</label>
+                <select id="mobile_account_setting_nav" class="form-control">
+                    <option value="information">Information</option>
+                    <option value="change_password">Change Password</option>
+                </select>
+            </div>
+
+            <div class="col-md-9">
+
+                {% for flashMessage in app.session.flashbag.get('success') %}
+
+                    <div class="alert alert-success alert-dismissible" role="alert" >
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{ flashMessage }}
+                    </div>
+
+                {% endfor %}
+
+                {% block form_section %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

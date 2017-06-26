@@ -39,7 +39,9 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+        - 'form/fields.html.twig'
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -98,6 +100,7 @@ snc_redis:
            client: default
            entity_manager: default
 
+liip_functional_test: ~
 
 
 # Swiftmailer Configuration
@@ -106,5 +109,3 @@ swiftmailer:
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
-    spool: { type: memory }
-
