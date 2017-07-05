@@ -52,7 +52,6 @@ security:
                 login_path: login
                 check_path: login
             guard:
-                provider: facebook
                 authenticators:
                     - startsymfony.core.session_facebook_guard
                     - startsymfony.core.session_google_guard
