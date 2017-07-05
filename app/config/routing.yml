@@ -4,3 +4,7 @@ app:
 
 logout:
     path: /logout
+
+social_login_check:
+    path: /social_login_check
+    methods: ['POST']
