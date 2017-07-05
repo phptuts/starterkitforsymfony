@@ -5,6 +5,7 @@ namespace CoreBundle\Factory;
 
 use CoreBundle\Security\Guard\AbstractSocialGuard;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Intl\Exception\NotImplementedException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
@@ -39,6 +40,6 @@ class SocialUserProviderFactory
             return $this->container->get('startsymfony.core.security.google_provider');
         }
 
-        return null;
+        throw new NotImplementedException(sprintf("The '%s' social user provider has not been implemented.", $type));
     }
 }
