@@ -43,13 +43,6 @@ security:
 #                authenticators:
 #                    - AppBundle\Security\TokenAuthenticator
 
-#        facebook_auth_desktop:
-#            pattern: ^/facebook/login_session
-#            anonymous: false
-#            provider: facebook
-#            guard:
-#                authenticators:
-#                    - startsymfony.core.social_session_auth
 
         main:
             pattern: ^/*
