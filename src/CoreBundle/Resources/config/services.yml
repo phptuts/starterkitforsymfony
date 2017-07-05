@@ -96,18 +96,12 @@ services:
 
     #GUARDS
 
-    startsymfony.core.session_facebook_guard:
-        class: CoreBundle\Security\Guard\FacebookGuard
+    startsymfony.core.security.session_social_guard:
+        class: CoreBundle\Security\Guard\SessionSocialGuard
         arguments:
-            - '@security.authentication.guard_handler'
             - '@startsymfony.core.social_user_provider_factory'
-
-
-    startsymfony.core.session_google_guard:
-        class: CoreBundle\Security\Guard\GoogleGuard
-        arguments:
             - '@security.authentication.guard_handler'
-            - '@startsymfony.core.social_user_provider_factory'
+
 
     #SECURITY PROVIDERS
     startsymfony.core.security.facebook_provider:

@@ -53,9 +53,7 @@ security:
                 check_path: login
             guard:
                 authenticators:
-                    - startsymfony.core.session_facebook_guard
-                    - startsymfony.core.session_google_guard
-                entry_point: startsymfony.core.session_facebook_guard
+                    - startsymfony.core.security.session_social_guard
             logout:
                 path: /logout
                 target: /

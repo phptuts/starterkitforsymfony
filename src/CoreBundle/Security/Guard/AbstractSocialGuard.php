@@ -14,32 +14,63 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
-use Symfony\Component\Security\Guard\GuardAuthenticatorInterface;
 
 abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
 {
+    /**
+     * The place where the token is stored
+     * @var string
+     */
     const SOCIAL_TOKEN_FIELD = 'token';
 
+    /**
+     * The field to store provider for authenticating
+     * @var string
+     */
     const SOCIAL_TOKEN_TYPE_FIELD = 'social_type';
 
+    /**
+     * This means that security provider is facebook
+     * @var string
+     */
     const TOKEN_TYPE_FACEBOOK = 'facebook';
 
+    /**
+     * This means that security provider is google
+     * @var string
+     */
     const TOKEN_TYPE_GOOGLE = 'google';
 
-
-    /**
-     * @var GuardAuthenticatorHandler
-     */
-    private $authenticatorHandler;
     /**
      * @var SocialUserProviderFactory
      */
     private $socialUserProviderFactory;
 
-    public function __construct(GuardAuthenticatorHandler $authenticatorHandler, SocialUserProviderFactory $socialUserProviderFactory)
+    public function __construct(SocialUserProviderFactory $socialUserProviderFactory)
     {
-        $this->authenticatorHandler = $authenticatorHandler;
         $this->socialUserProviderFactory = $socialUserProviderFactory;
+    }
+
+    /**
+     * Gets the token and type
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function getCredentials(Request $request)
+    {
+        $post = json_decode($request->getContent(), true);
+
+        if ($request->attributes->get('_route') == 'social_login_check' &&
+            $request->isMethod(Request::METHOD_POST) &&
+            !empty($post[self::SOCIAL_TOKEN_FIELD]) &&
+            !empty($post[self::SOCIAL_TOKEN_TYPE_FIELD])
+        ) {
+            return $post;
+        }
+
+        return null;
     }
 
     /**
@@ -72,27 +103,6 @@ abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
         return true;
     }
 
-
-    /**
-     * Called when authentication executed and was successful!
-     *
-     * This should return the Response sent back to the user, like a
-     * RedirectResponse to the last page they visited.
-     *
-     * If you return null, the current request will continue, and the user
-     * will be authenticated. This makes sense, for example, with an API.
-     *
-     * @param Request $request
-     * @param TokenInterface $token
-     * @param string $providerKey The provider (i.e. firewall) key
-     *
-     * @return Response|null
-     */
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
-    {
-        $this->authenticatorHandler->authenticateWithToken($token, $request);
-        return new Response('Login Successful', Response::HTTP_OK);
-    }
 
     /**
      * Called when authentication executed, but failed (e.g. wrong username password).

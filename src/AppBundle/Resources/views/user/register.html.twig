@@ -10,6 +10,7 @@
     {{ parent() }}
     <script src="https://apis.google.com/js/api:client.js"></script>
 
+    {% include('@App/user/social/token-auth-js.html.twig') %}
     {% include('@App/user/social/facebook-auth-js.html.twig') %}
     {% include('@App/user/social/google-auth-js.html.twig') %}
 

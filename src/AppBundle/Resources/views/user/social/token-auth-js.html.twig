@@ -1,0 +1,30 @@
+<script>
+
+
+    /**
+     * This
+     *
+     *
+     * @param  token This is token we authenticate with the security provider
+     * @param  type this is the name of the provider
+     */
+    function authenticate(token, type) {
+
+        $.blockUI({message: 'We are logging you right now!! :)'});
+
+        $.ajax({
+            url: '{{ path('social_login_check') }}',
+            data: JSON.stringify({'token': token, 'social_type': type}),
+            contentType: 'application/json',
+            type: 'POST',
+            success: function (data) {
+                window.location.href = '{{ app.request.headers.get('referer')|default('/') }}';
+            },
+            error: function (e) {
+                alert('There was an error in trying to authenticate, please email ' + '{{ email }} .');
+            }
+        });
+    }
+
+
+</script>

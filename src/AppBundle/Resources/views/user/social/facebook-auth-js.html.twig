@@ -10,20 +10,7 @@
         $("#facebook_login_btn").on("click", function () {
             FB.login(function (response) {
                 if (response.authResponse) {
-                    $.blockUI({message: 'We are logging you right now!! :)'});
-                    var authToken = response.authResponse.accessToken;
-                    $.ajax({
-                        url: '{{ path('facebook_login_check') }}',
-                        data: JSON.stringify({'token': authToken}),
-                        contentType: 'application/json',
-                        type: 'POST',
-                        success: function (data) {
-                            window.location.href = '{{ app.request.headers.get('referer')|default('/') }}';
-                        },
-                        error: function (e) {
-                            alert('There was an error in trying to authenticate, please email ' + '{{ email }} .');
-                        }
-                    });
+                    authenticate(response.authResponse.accessToken, 'facebook');
                 } else {
 
                 }

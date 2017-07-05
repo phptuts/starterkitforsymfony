@@ -16,24 +16,10 @@
     function attachSignin(element) {
         auth2.attachClickHandler(element, {},
             function(googleUser) {
-                $.blockUI({message: 'We are logging you right now!! :)'});
-
-                $.ajax({
-                    url: '{{ path('google_login_check') }}',
-                    data: JSON.stringify({'token': googleUser.getAuthResponse().id_token}),
-                    contentType: 'application/json',
-                    type: 'POST',
-                    success: function (data) {
-                        window.location.href = '{{ app.request.headers.get('referer')|default('/') }}';
-                    },
-                    error: function (e) {
-                        alert('There was an error in trying to authenticate, please email ' + '{{ email }} .');
-                    }
-                });
+                authenticate(googleUser.getAuthResponse().id_token, 'google');
 
             }, function(error) {
                 console.log(error);
-                alert("Google Authentication Failed");
             });
     }
     startApp();
