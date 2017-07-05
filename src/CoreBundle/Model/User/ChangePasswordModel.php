@@ -4,6 +4,7 @@ namespace CoreBundle\Model\User;
 
 use Symfony\Component\Validator\Constraints as Constraints;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+use CoreBundle\Entity\User;
 
 /**
  * Class ChangePasswordModel
@@ -13,14 +14,14 @@ class ChangePasswordModel
 {
     /**
      * @var string
-     * @Constraints\Length(min=User::MIN_PASSWORD_LENGTH, max=User::MAX_PASSWORD_LENGTH)
+     * @UserPassword(message="The password you entered does not match your current password.")
      * @Constraints\NotBlank()
      */
     private $currentPassword;
 
     /**
-     * @UserPassword(message="The password you entered does not match your current password.")
      * @Constraints\NotBlank()
+     * @Constraints\Length(min=User::MIN_PASSWORD_LENGTH, max=User::MAX_PASSWORD_LENGTH)
      * @var string
      */
     private $newPassword;

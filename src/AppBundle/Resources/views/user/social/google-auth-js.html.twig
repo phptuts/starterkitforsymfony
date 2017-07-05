@@ -1,0 +1,40 @@
+<script>
+    var googleUser = {};
+    var startApp = function() {
+        gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '{{ google_client_id }}',
+                cookiepolicy: 'single_host_origin',
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('google_login_btn'));
+        });
+    };
+
+    function attachSignin(element) {
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+                $.blockUI({message: 'We are logging you right now!! :)'});
+
+                $.ajax({
+                    url: '{{ path('google_login_check') }}',
+                    data: JSON.stringify({'token': googleUser.getAuthResponse().id_token}),
+                    contentType: 'application/json',
+                    type: 'POST',
+                    success: function (data) {
+                        window.location.href = '{{ app.request.headers.get('referer')|default('/') }}';
+                    },
+                    error: function (e) {
+                        alert('There was an error in trying to authenticate, please email ' + '{{ email }} .');
+                    }
+                });
+
+            }, function(error) {
+                console.log(error);
+                alert("Google Authentication Failed");
+            });
+    }
+    startApp();
+</script>

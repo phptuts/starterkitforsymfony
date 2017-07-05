@@ -26,13 +26,17 @@ class AccountSettingController extends Controller
      */
     public function updateUserAction(Request $request)
     {
-        // TODO ADD FILE UPLOAD S3 Support
         $form = $this->createForm(UpdateUserType::class, $this->getUser());
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $this->get('startsymfony.core.user_service')->save($form->getData());
+            /** @var User $user */
+            $user = $form->getData();
+            $url = $this->get('startsymfony.core.s3_service')->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
+            $user->setImageUrl($url);
+
+            $this->get('startsymfony.core.user_service')->save($user);
             $this->addFlash('success', 'Your password was updated!');
         }
 

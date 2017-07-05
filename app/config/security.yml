@@ -13,6 +13,8 @@ security:
             entity:
                 class: CoreBundle:User
                 property: email
+        facebook:
+            id: startsymfony.core.security.facebook_provider
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -41,14 +43,27 @@ security:
 #                authenticators:
 #                    - AppBundle\Security\TokenAuthenticator
 
-
+#        facebook_auth_desktop:
+#            pattern: ^/facebook/login_session
+#            anonymous: false
+#            provider: facebook
+#            guard:
+#                authenticators:
+#                    - startsymfony.core.social_session_auth
 
         main:
             pattern: ^/*
             anonymous: ~
+            provider: core_proivder
             form_login:
                 login_path: login
                 check_path: login
+            guard:
+                provider: facebook
+                authenticators:
+                    - startsymfony.core.session_facebook_guard
+                    - startsymfony.core.session_google_guard
+                entry_point: startsymfony.core.session_facebook_guard
             logout:
                 path: /logout
                 target: /

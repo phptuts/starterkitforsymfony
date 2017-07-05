@@ -32,6 +32,15 @@ services:
             - '@startsymfony.core.email'
 
 
+    #AMAZON SERVICES
+    startsymfony.core.s3_service:
+        class: CoreBundle\Service\S3Service
+        arguments:
+            - '@startsymfony.core.s3client_factory'
+            - '%aws_s3_bucket_name%'
+            - '%kernel.environment%'
+
+
     #REPOSITORIES
     startsymfony.core.repository.user_repository:
         class: CoreBundle\Repository\UserRepository
@@ -60,3 +69,58 @@ services:
             - '@security.authorization_checker'
         tags:
             - { name: form.type, alias: CoreBundle\Form\User\ForgetPasswordUserType }
+
+    #FACTORIES
+    startsymfony.core.s3client_factory:
+        class: CoreBundle\Factory\S3ClientFactory
+        arguments:
+            - '%aws_region%'
+            - '%aws_api_version%'
+
+    startsymfony.core.facebook_client_factory:
+        class: CoreBundle\Factory\FaceBookClientFactory
+        arguments:
+            - '%facebook_app_id%'
+            - '%facebook_app_secret%'
+            - '%facebook_api_version%'
+
+    startsymfony.core.google_client_factory:
+        class: CoreBundle\Factory\GoogleClientFactory
+        arguments:
+            - '%google_client_id%'
+
+    startsymfony.core.social_user_provider_factory:
+        class: CoreBundle\Factory\SocialUserProviderFactory
+        arguments:
+            - '@service_container'
+
+    #GUARDS
+
+    startsymfony.core.session_facebook_guard:
+        class: CoreBundle\Security\Guard\FacebookGuard
+        arguments:
+            - '@security.authentication.guard_handler'
+            - '@startsymfony.core.social_user_provider_factory'
+
+
+    startsymfony.core.session_google_guard:
+        class: CoreBundle\Security\Guard\GoogleGuard
+        arguments:
+            - '@security.authentication.guard_handler'
+            - '@startsymfony.core.social_user_provider_factory'
+
+    #SECURITY PROVIDERS
+    startsymfony.core.security.facebook_provider:
+        class: CoreBundle\Security\Provider\FacebookProvider
+        arguments:
+            - '@startsymfony.core.facebook_client_factory'
+            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.register_service'
+
+
+    startsymfony.core.security.google_provider:
+        class: CoreBundle\Security\Provider\GoogleProvider
+        arguments:
+            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.register_service'
+            - '@startsymfony.core.google_client_factory'

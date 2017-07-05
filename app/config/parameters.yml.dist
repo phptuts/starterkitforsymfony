@@ -17,4 +17,20 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    # Email string
     from_email: email@gams.com
+
+    # Amazon s3
+    aws_api_version: 2006-03-01
+    aws_region: us-west-2
+    aws_s3_bucket_name: bucket
+
+    #Facebook
+    facebook_app_secret:
+    facebook_app_id:
+    facebook_api_version: v2.9
+
+    #GOOGLE
+    google_client_id:
+    google_client_secret:

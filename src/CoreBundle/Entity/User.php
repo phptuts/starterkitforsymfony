@@ -15,8 +15,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @link http://symfony.com/doc/current/security/entity_provider.html
  * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\UserRepository")
- * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUPS_DEFAULT})
- * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUPS_DEFAULT})
+ * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUP_DEFAULT})
+ * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
  */
 class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 {
@@ -25,7 +25,13 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
      * This is the default validation group used across all the user forms
      * @var string
      */
-    const VALIDATION_GROUPS_DEFAULT = "user_default_validation_group";
+    const VALIDATION_GROUP_DEFAULT = "user_default_validation_group";
+
+    /**
+     * The validation group for plain password.
+     * @var  string
+     */
+    const VALIDATION_GROUP_PLAIN_PASSWORD = "user_plain_password";
 
     /**
      * This is the min password length
@@ -57,8 +63,8 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
-     * @Constraints\NotBlank(groups={User::VALIDATION_GROUPS_DEFAULT})
-     * @Constraints\Email(groups={User::VALIDATION_GROUPS_DEFAULT})
+     * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\Email(groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     protected $email;
@@ -113,8 +119,8 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     protected $enabled;
 
     /**
-     * @Constraints\NotBlank(groups={User::VALIDATION_GROUPS_DEFAULT})
-     * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUPS_DEFAULT})
+     * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
+     * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
      * @var string
      */
     protected $plainPassword;
@@ -503,6 +509,8 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
         // This is using email address to compare.
         return $this->getUsername() == $user->getUsername();
     }
+
+
 
 }
 

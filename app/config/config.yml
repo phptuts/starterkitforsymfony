@@ -42,6 +42,11 @@ twig:
     form_themes:
         - 'bootstrap_3_layout.html.twig'
         - 'form/fields.html.twig'
+    globals:
+        facebook_app_id: '%facebook_app_id%'
+        facebook_api_version: '%facebook_api_version%'
+        email: '%from_email%'
+        google_client_id: '%google_client_id%'
 # Doctrine Configuration
 doctrine:
     dbal:
