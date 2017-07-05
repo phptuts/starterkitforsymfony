@@ -50,12 +50,12 @@ class GoogleProvider extends AbstractCustomProvider
 
             return $user;
         }
-        catch (\LogicException $e) {
-            throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $e->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_LOGIC_EXCEPTION);
+        catch (\LogicException $ex) {
+            throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_LOGIC_EXCEPTION);
 
         }
-        catch (\Exception $e) {
-            throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $e->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_EXCEPTION);
+        catch (\Exception $ex) {
+            throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_EXCEPTION);
         }
     }
 

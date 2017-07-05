@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="token-auth-js.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="token-auth-js.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -112,8 +111,8 @@
       <file leaf-file-name="FacebookProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="72" column="48" lean-forward="false" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+            <state relative-caret-position="471">
+              <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="107" selection-end-line="73" selection-end-column="107" />
               <folding>
                 <element signature="e#49#76#0#PHP" expanded="true" />
               </folding>
@@ -121,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleProvider.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GoogleProvider.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+            <state relative-caret-position="576">
+              <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
                 <element signature="e#50#77#0#PHP" expanded="true" />
               </folding>
@@ -215,11 +214,9 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GoogleGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/GoogleClientFactory.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php" />
@@ -238,6 +235,8 @@
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
       </list>
     </option>
   </component>
@@ -711,12 +710,12 @@
       <workItem from="1498830355801" duration="392000" />
       <workItem from="1498875168235" duration="2024000" />
       <workItem from="1498922677730" duration="253000" />
-      <workItem from="1498963872516" duration="38547000" />
+      <workItem from="1498963872516" duration="38740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125580000" />
+    <option name="totallyTimeSpent" value="125773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1131,16 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="606">
@@ -1175,36 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#45#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="72" column="48" lean-forward="false" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding>
-            <element signature="e#50#77#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-69">
@@ -1221,6 +1180,46 @@
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="e#400#418#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="e#49#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="107" selection-end-line="73" selection-end-column="107" />
+          <folding>
+            <element signature="e#49#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#77#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
