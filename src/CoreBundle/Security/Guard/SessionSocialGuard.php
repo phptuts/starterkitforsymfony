@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CoreBundle\Security\Guard;
-
 
 use CoreBundle\Factory\SocialUserProviderFactory;
 use Symfony\Component\HttpFoundation\Request;

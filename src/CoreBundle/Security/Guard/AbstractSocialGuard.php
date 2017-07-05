@@ -1,19 +1,15 @@
 <?php
 
-
 namespace CoreBundle\Security\Guard;
-
 
 use CoreBundle\Factory\SocialUserProviderFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
-use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
 abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
 {
@@ -58,7 +54,7 @@ abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
      *
      * @return array
      */
-    public function getCredentials(Request $request)
+    final public function getCredentials(Request $request)
     {
         $post = json_decode($request->getContent(), true);
 
