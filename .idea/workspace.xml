@@ -2,8 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Factory/FaceBookClientFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Factory/GoogleClientFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Factory/S3ClientFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/SessionSocialGuardTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CoreBundle/Service/S3ServiceTest.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CoreBundle/Service/User/FacebookService.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="$PROJECT_DIR$/report/ApiBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="$PROJECT_DIR$/report/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/index.html" afterPath="$PROJECT_DIR$/report/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Entity/ColorTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Entity/ColorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,21 +86,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="S3ClientFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoogleClientFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/GoogleClientFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="240">
+              <caret line="86" column="43" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -41,9 +99,45 @@
       <file leaf-file-name="FaceBookClientFactory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FaceBookClientFactoryTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/FaceBookClientFactoryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#44#66#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoogleClientFactoryTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/GoogleClientFactoryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#46#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="S3ClientFactoryTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/S3ClientFactoryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#45#65#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +145,8 @@
       <file leaf-file-name="SocialUserProviderFactory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="e#39#89#0#PHP" expanded="true" />
               </folding>
@@ -60,74 +154,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSocialGuard.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php">
+      <file leaf-file-name="SocialUserProviderFactoryTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="85" column="98" lean-forward="false" selection-start-line="85" selection-start-column="98" selection-end-line="85" selection-end-column="98" />
+            <state relative-caret-position="345">
+              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding>
-                <element signature="e#45#94#0#PHP" expanded="true" />
+                <element signature="e#46#96#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="token-auth-js.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
+      <file leaf-file-name="S3ServiceTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/S3ServiceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="666">
+              <caret line="57" column="104" lean-forward="false" selection-start-line="57" selection-start-column="104" selection-end-line="57" selection-end-column="104" />
               <folding>
-                <element signature="e#400#418#0#Twig" expanded="true" />
+                <element signature="e#45#60#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionSocialGuard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php">
+      <file leaf-file-name="S3Service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/S3Service.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#45#94#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="441">
+              <caret line="45" column="97" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="97" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractCustomProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
+      <file leaf-file-name="S3ClientFactory.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding>
-                <element signature="e#49#76#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="107" selection-end-line="73" selection-end-column="107" />
-              <folding>
-                <element signature="e#49#76#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoogleProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="e#50#77#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="555">
+              <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,11 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>success_handler</find>
-      <find>createListener</find>
-      <find>security.authentication.success_handler</find>
-      <find>setUp</find>
-      <find>setUp(</find>
       <find>tearDown</find>
       <find>validator</find>
       <find>validator&quot;</find>
@@ -166,11 +227,17 @@
       <find>data-scope</find>
       <find>locia</find>
       <find>AbstractSocialGuard</find>
+      <find>Test\</find>
+      <find>me?fields=email</find>
+      <find>_route</find>
+      <find>startsymfony.core.google_client_factory</find>
+      <find>GoogleClientFactory</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
       <replace>register</replace>
       <replace>&quot;</replace>
+      <replace>Test\CoreBundle\</replace>
       <replace>VALIDATION_GROUP_DEFAULT</replace>
     </replaceStrings>
     <dirStrings>
@@ -178,6 +245,7 @@
       <dir>$PROJECT_DIR$/vendor/symfony</dir>
       <dir>$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony</dir>
       <dir>$PROJECT_DIR$/app</dir>
+      <dir>$PROJECT_DIR$/tests/CoreBundle</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -186,18 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Color.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/S3ManagerFactory.php" />
-        <option value="$PROJECT_DIR$/vendor/aws/aws-sdk-php-symfony/src/DependencyInjection/AwsExtension.php" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/S3Manager.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/S3ClientFactory.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/User/RegisterType.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/User/ResetPasswordType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AccountSettingController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/S3Service.php" />
-        <option value="$PROJECT_DIR$/web/assets/css/account-settings.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/ChangePasswordModel.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookFactory.php" />
@@ -214,9 +270,7 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GoogleGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/GoogleClientFactory.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php" />
@@ -233,10 +287,24 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social-login.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+        <option value="$PROJECT_DIR$/tests/BaseTestCase.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Entity/ColorTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/SessionSocialGuardTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Factory/FaceBookClientFactoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Factory/GoogleClientFactoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Factory/S3ClientFactoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Service/S3ServiceTest.php" />
       </list>
     </option>
   </component>
@@ -276,8 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,7 +366,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,7 +380,29 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -332,85 +420,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Provider" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -435,8 +445,22 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,15 +478,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="CoreBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="Service" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,19 +500,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="CoreBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="Service" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
+              <option name="myItemId" value="User" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,45 +526,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="CoreBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="social" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="Factory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,6 +568,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -596,7 +580,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="php.override.implement.member.chooser.php.doc" value="COPY_ALWAYS" />
+    <property name="php.override.implement.member.chooser.php.doc" value="INHERIT" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SearchEverywhereHistoryKey" value="AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
@@ -710,12 +694,13 @@
       <workItem from="1498830355801" duration="392000" />
       <workItem from="1498875168235" duration="2024000" />
       <workItem from="1498922677730" duration="253000" />
-      <workItem from="1498963872516" duration="39365000" />
+      <workItem from="1498963872516" duration="45225000" />
+      <workItem from="1499303899874" duration="3193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126398000" />
+    <option name="totallyTimeSpent" value="135451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -786,191 +771,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserChecker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserProviderInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/AuthenticationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/UsernameNotFoundException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Util/TargetPathTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Authenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Http/EntryPoint/AuthenticationEntryPointInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Token/PostAuthenticationGuardToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/AbstractGuardAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#283#338#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Authenticator/AbstractFormLoginAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#297#359#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Tests/Authenticator/FormLoginAuthenticatorTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="56" column="44" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="249" column="20" lean-forward="false" selection-start-line="249" selection-start-column="20" selection-end-line="249" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AccountSettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/js/facebook-sdk-loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117">
           <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -986,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="77" column="18" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-717">
           <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,9 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="90" column="45" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="45" />
-          <folding>
-            <element signature="e#2153#2179#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,69 +814,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="48" column="42" lean-forward="false" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/GoogleGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/auth-token-js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/GoogleGuard.php" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/auth-token-js.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <element signature="e#12#33#0#Twig" expanded="false" />
-            <element signature="e#413#456#0#Twig" expanded="false" />
-            <element signature="e#798#803#0#Twig" expanded="false" />
-            <element signature="e#2289#2321#0#Twig" expanded="false" />
-            <element signature="e#2607#2650#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/FacebookGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/FacebookGuard.php" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#414#454#0#Twig" expanded="false" />
-            <element signature="e#476#519#0#Twig" expanded="false" />
-            <element signature="e#541#582#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,6 +849,112 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="55" column="69" lean-forward="false" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social-login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/FacebookResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="340" column="20" lean-forward="false" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Tests/Encoder/EncoderFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="137" column="6" lean-forward="false" selection-start-line="137" selection-start-column="6" selection-end-line="137" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding>
+            <element signature="e#50#77#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Facebook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Exceptions/FacebookResponseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="50" column="20" lean-forward="false" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="75" column="155" lean-forward="false" selection-start-line="75" selection-start-column="107" selection-end-line="75" selection-end-column="155" />
+          <folding>
+            <element signature="e#49#76#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/User/FacebookService.php" />
+    <entry file="file://$PROJECT_DIR$/tests/BaseTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Entity/ColorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#53#80#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5055">
+          <caret line="346" column="25" lean-forward="false" selection-start-line="346" selection-start-column="25" selection-end-line="346" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1114,31 +967,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="495">
+          <caret line="51" column="6" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social-login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/User/RegisterServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1146,80 +983,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="57" column="40" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserProviderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="86" column="149" lean-forward="false" selection-start-line="86" selection-start-column="119" selection-end-line="86" selection-end-column="149" />
           <folding>
-            <element signature="e#400#418#0#Twig" expanded="true" />
+            <element signature="e#45#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="34" column="69" lean-forward="false" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
           <folding>
-            <element signature="e#45#94#0#PHP" expanded="true" />
+            <element signature="e#45#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/User/ForgetPasswordServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-189">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/SessionSocialGuardTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="73" column="107" lean-forward="false" selection-start-line="73" selection-start-column="107" selection-end-line="73" selection-end-column="107" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="-1254">
+          <caret line="47" column="55" lean-forward="false" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
           <folding>
             <element signature="e#50#77#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1944">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding>
+            <element signature="e#52#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/GoogleClientFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="86" column="43" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/FaceBookClientFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#44#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/GoogleClientFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#75#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="31" />
           <folding>
             <element signature="e#39#89#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/S3ClientFactoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="85" column="98" lean-forward="false" selection-start-line="85" selection-start-column="98" selection-end-line="85" selection-end-column="98" />
+        <state relative-caret-position="165">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="e#45#94#0#PHP" expanded="true" />
+            <element signature="e#45#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#46#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/S3Service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="45" column="97" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/S3ServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="57" column="104" lean-forward="false" selection-start-line="57" selection-start-column="104" selection-end-line="57" selection-end-column="104" />
+          <folding>
+            <element signature="e#45#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

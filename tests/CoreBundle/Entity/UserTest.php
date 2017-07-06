@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Entity;
+namespace Test\CoreBundle\Entity;
 
 use CoreBundle\Entity\User;
 use PHPUnit\Framework\Assert;
@@ -9,7 +9,7 @@ use Tests\BaseTestCase;
 
 /**
  * Class UserTest
- * @package Test\Entity
+ * @package Test\CoreBundle\Entity
  */
 class UserTest extends BaseTestCase
 {

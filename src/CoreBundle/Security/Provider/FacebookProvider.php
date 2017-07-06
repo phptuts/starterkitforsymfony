@@ -71,9 +71,9 @@ class FacebookProvider extends AbstractCustomProvider
 
             return $user;
         } catch (FacebookResponseException $ex) {
-            throw new UsernameNotFoundException("Facebook AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::INVALID_FACEBOOK_ERROR_CODE);
+            throw new UsernameNotFoundException("Facebook AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::FACEBOOK_RESPONSE_EXCEPTION_CODE);
         } catch (FacebookSDKException $ex) {
-            throw new UsernameNotFoundException("Facebook SDK failed, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::INVALID_FACEBOOK_ERROR_CODE);
+            throw new UsernameNotFoundException("Facebook SDK failed, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::FACEBOOK_SDK_EXCEPTION_CODE);
         } catch (\Exception $ex) {
             throw new UsernameNotFoundException("Something unknown went wrong, ERROR MESSAGE  " . $ex->getMessage(), ProgrammerException::FACEBOOK_PROVIDER_EXCEPTION);
         }

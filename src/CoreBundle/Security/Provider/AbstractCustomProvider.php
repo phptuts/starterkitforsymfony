@@ -36,7 +36,7 @@ abstract class AbstractCustomProvider implements UserProviderInterface
      *
      * @throws UnsupportedUserException if the account is not supported
      */
-    public function refreshUser(UserInterface $user)
+    final public function refreshUser(UserInterface $user)
     {
         if (!$user instanceof User) {
             throw new UnsupportedUserException(
@@ -54,7 +54,7 @@ abstract class AbstractCustomProvider implements UserProviderInterface
      *
      * @return bool
      */
-    public function supportsClass($class)
+    final public function supportsClass($class)
     {
         return $class === User::class;
     }

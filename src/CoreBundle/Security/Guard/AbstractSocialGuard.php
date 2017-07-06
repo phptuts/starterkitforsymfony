@@ -2,6 +2,7 @@
 
 namespace CoreBundle\Security\Guard;
 
+use CoreBundle\Exception\ProgrammerException;
 use CoreBundle\Factory\SocialUserProviderFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -83,7 +84,7 @@ abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
             $userProvider = $this->socialUserProviderFactory->getUserProvider($credentials[self::SOCIAL_TOKEN_TYPE_FIELD]);
         }
         catch (NotImplementedException $ex) {
-            throw new UsernameNotFoundException('No invalid third party authentication network.');
+            throw new UsernameNotFoundException('No invalid third party authentication network.', ProgrammerException::NO_SOCIAL_PROVIDER_IMPLEMENTED);
         }
 
         return $userProvider->loadUserByUsername($credentials[self::SOCIAL_TOKEN_FIELD]);

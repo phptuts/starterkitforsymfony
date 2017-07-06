@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Repository;
+namespace Test\CoreBundle\Repository;
 
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;

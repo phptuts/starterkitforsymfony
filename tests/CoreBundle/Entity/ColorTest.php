@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Entity;
+namespace Test\CoreBundle\Entity;
 
 use CoreBundle\Entity\Color;
 use PHPUnit\Framework\Assert;

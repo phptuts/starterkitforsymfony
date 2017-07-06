@@ -24,13 +24,13 @@ class ProgrammerException extends \Exception
      * The invalid error for facebook
      * @var integer
      */
-    const INVALID_FACEBOOK_ERROR_CODE = 10233235;
+    const FACEBOOK_RESPONSE_EXCEPTION_CODE = 10233235;
 
     /**
      * This mean that there was an error in the facebook sdk
      * @var integer
      */
-    const INVALID_FACEBOOK_SDK_ERROR = 10233236;
+    const FACEBOOK_SDK_EXCEPTION_CODE = 10233236;
 
 
     /**
@@ -50,6 +50,12 @@ class ProgrammerException extends \Exception
      * @var integer
      */
     const GOOGLE_USER_PROVIDER_EXCEPTION = 10233239;
+
+    /**
+     * This is the error code for no social user provider implemented
+     * @var integer
+     */
+    const NO_SOCIAL_PROVIDER_IMPLEMENTED = 10233240;
 
 
 }
