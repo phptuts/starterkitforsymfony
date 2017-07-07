@@ -61,14 +61,14 @@ services:
         arguments:
             - '@startsymfony.core.email_to_user_transformer'
         tags:
-            - { name: form.type, alias: CoreBundle\Form\User\ForgetPasswordUserType }
+            - { name: form.type }
 
     startsymfony.core.change_password_form:
         class: CoreBundle\Form\User\ChangePasswordType
         arguments:
             - '@security.authorization_checker'
         tags:
-            - { name: form.type, alias: CoreBundle\Form\User\ForgetPasswordUserType }
+            - { name: form.type }
 
     #FACTORIES
     startsymfony.core.s3client_factory:

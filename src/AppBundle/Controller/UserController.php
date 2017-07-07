@@ -83,7 +83,6 @@ class UserController extends Controller
      */
     public function forgetPasswordAction(Request $request)
     {
-
         $form = $this->createForm(ForgetPasswordType::class);
         $form->handleRequest($request);
 
