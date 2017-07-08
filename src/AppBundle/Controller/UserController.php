@@ -62,12 +62,8 @@ class UserController extends Controller
 
             // This is a hidden form value in the twig.  It does not bind to the form.
             // This will not work for certain browsers like firefox or browser that don't do the referer.
-            if ($request->request->has('redirect_url')) {
-                // Redirects to the previous page
-                return new RedirectResponse($request->request->get('redirect_url'));
-            }
-
-            return $this->redirectToRoute('homepage');
+            // Redirects to the previous page. If the page does not have the referer it will redirect to the home page.
+            return new RedirectResponse($request->request->get('redirect_url'));
         }
 
         return $this->render('@App/user/register.html.twig', [

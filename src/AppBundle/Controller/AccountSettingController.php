@@ -33,11 +33,13 @@ class AccountSettingController extends Controller
 
             /** @var User $user */
             $user = $form->getData();
-            $url = $this->get('startsymfony.core.s3_service')->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
-            $user->setImageUrl($url);
+            if (!empty($user->getImage())) {
+                $url = $this->get('startsymfony.core.s3_service')->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
+                $user->setImageUrl($url);
+            }
 
             $this->get('startsymfony.core.user_service')->save($user);
-            $this->addFlash('success', 'Your password was updated!');
+            $this->addFlash('success', 'Your profile was successfully updated!');
         }
 
         return $this->render('@App/account-settings/update-user.html.twig', [

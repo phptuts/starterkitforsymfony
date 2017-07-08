@@ -42,7 +42,7 @@ class ForgetPasswordService
     {
         $tokenExpires = (new \DateTime())->modify('+2 days');
 
-        $user->setForgetPasswordToken(base64_encode(random_bytes(40)))
+        $user->setForgetPasswordToken(md5(uniqid(rand(), true)))
             ->setForgetPasswordExpired($tokenExpires);
 
         $this->userService->save($user);

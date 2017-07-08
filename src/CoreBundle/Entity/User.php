@@ -56,7 +56,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
-     * @Constraints\Length(min="5", max="100")
+     * @Constraints\Length(min="5", max="100", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="display_name", type="string", length=255, nullable=true, unique=true)
      */
     protected $displayName;
@@ -106,7 +106,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
-     * @Constraints\Length(max="3000")
+     * @Constraints\Length(max="3000", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="bio", type="text", nullable=true)
      */
     protected $bio;
@@ -128,7 +128,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var UploadedFile
      * // This is better to test end to end
-     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"})
+     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */
     protected $image;
 

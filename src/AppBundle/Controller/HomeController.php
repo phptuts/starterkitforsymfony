@@ -11,6 +11,7 @@ use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\RequestException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,7 +51,7 @@ class HomeController extends Controller
     }
 
     /**
-     * @Route("/blah", name="blah_page")
+     * @Route("/change_color", name="change_color_page")
      *
      * @return Response
      */
@@ -67,7 +68,8 @@ class HomeController extends Controller
             ->setCacheRegion('region_colors')
             ->getOneOrNullResult();
 
-        $color->setColor("Green");
+        $color = empty($color) ? new Color() : $color;
+        $color->setColor("BLUE");
 
         $this->getDoctrine()->getManager()->persist($color);
         $this->getDoctrine()->getManager()->flush();
@@ -78,21 +80,5 @@ class HomeController extends Controller
         ]);
     }
 
-    /**
-     * @Route("/blah_1/{token}", name="blah_page_1")
-     *
-     * @return Response
-     */
-    public function blah2Action($token) {
 
-
-        $client = $this->get('startsymfony.core.google_client_factory')->getGoogleClient();
-
-        dump($client->verifyIdToken($token));
-
-
-      //  dump(file_get_contents($fbUrl));
-
-        die();
-    }
 }

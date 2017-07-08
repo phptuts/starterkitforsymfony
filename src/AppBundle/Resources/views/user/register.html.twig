@@ -10,7 +10,6 @@
     {{ parent() }}
     <script src="https://apis.google.com/js/api:client.js"></script>
 
-    {% include('@App/user/social/token-auth-js.html.twig') %}
     {% include('@App/user/social/facebook-auth-js.html.twig') %}
     {% include('@App/user/social/google-auth-js.html.twig') %}
 
@@ -31,7 +30,7 @@
 
                 <input type="hidden" name="redirect_url" value="{{ app.request.headers.get('referer')|default('/') }}" />
                 <div class="form-group submit-btn-container" >
-                    <button type="submit" class="btn btn-success pull-right">register</button>
+                    <button type="submit" class="btn btn-success pull-right">Register</button>
                 </div>
                 {{ form_end(registerForm) }}
             </div>
@@ -46,4 +45,5 @@
 {% block javascripts %}
      {{ parent() }}
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js" integrity="sha256-oQaw+JJuUcJQ9QVYMcFnPxICDT+hv8+kuxT2FNzTGhc=" crossorigin="anonymous"></script>
+    {% include('@App/user/social/token-auth-js.html.twig') %}
 {% endblock %}

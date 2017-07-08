@@ -50,9 +50,9 @@ class UserEmailTransformer implements DataTransformerInterface
      */
     public function reverseTransform($user)
     {
-        // If the email field is null we return null
+        // If the email field is we pass the emtpy user back
         if (empty($user->getEmail())) {
-            return null;
+            return $user;
         }
 
         $user = $this->userRepository->findUserByEmail($user->getEmail());

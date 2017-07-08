@@ -68,15 +68,15 @@ class UserEmailTransformerTest extends BaseTestCase
     }
 
     /**
-     * Testing that an email with no user returns null
-     * We want this because it means they did not fill out the email and the form should return nothing
-     * NotBlank validator will handle the situation
+     * Testing that an email with no user returns the empty user
+     * The empty user won't have an email attached to it so it will trigger the NotBlank validation error
      */
     public function testNoEmailSetOnUserReturnsNull()
     {
         $userRet = $this->userEmailTransformer->reverseTransform(new User());
 
-        Assert::assertNull($userRet);
+        // asserting the email is blank
+        Assert::assertNull($userRet->getEmail());
     }
 
     /**

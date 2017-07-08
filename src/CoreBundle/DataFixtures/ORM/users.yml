@@ -24,8 +24,21 @@ CoreBundle\Entity\User:
 
     forget_password_3:
         email: 'forget_password_3@gmail.com'
+        displayName: 'forgotten'
         password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
         roles: ['ROLE_USER']
         enabled: true
         forgetPasswordToken: 'token_1'
         forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+
+    account_setting_user:
+        email: 'update_profile@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+
+    account_setting_change_password:
+        email: 'change_password@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true

@@ -51,8 +51,8 @@ class ForgetPasswordType extends AbstractType
             'error_mapping' => [
                 '.' => 'email'
             ],
-            'invalid_message' => 'Email was not found.'
-            // We don't do any validation groups because they only thing we care about is if the user exists
+            'invalid_message' => 'Email was not found.',
+            'validation_groups' => [User::VALIDATION_GROUP_DEFAULT]
         ]);
     }
 }
