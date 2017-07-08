@@ -7,10 +7,16 @@ use PHPUnit\Framework\Assert;
 
 class AccountSettingControllerTest extends WebTestCase
 {
+    /**
+     * Tests that account settings login is required
+     */
     public function testAccountSettingAuthRequired()
     {
         $client = $this->makeClient();
         $client->request('GET', '/account-settings/information');
+        $this->assertStatusCode(302, $client);
+
+        $client->request('GET', '/account-settings/change-password');
         $this->assertStatusCode(302, $client);
     }
 
