@@ -47,6 +47,11 @@ class AccountSettingControllerTest extends WebTestCase
         Assert::assertEquals('update_profile@gmail.com', $crawler->filter('#update_user_email')->first()->attr('value'));
         Assert::assertEquals('this is about me', $crawler->filter('#update_user_bio')->first()->text());
         Assert::assertEquals('blue_man', $crawler->filter('#update_user_display_name')->first()->attr('value'));
+        $user =  $this->getContainer()
+                            ->get('startsymfony.core.repository.user_repository')
+                            ->findUserByEmail('update_profile@gmail.com');
+
+        Assert::assertNotEmpty($user->getImageUrl());
     }
 
     /**
