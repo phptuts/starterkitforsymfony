@@ -28,7 +28,12 @@
                         'label': 'Password'
                     }) }}
 
-                <input type="hidden" name="redirect_url" value="{{ app.request.headers.get('referer')|default('/') }}" />
+                {% if app.request.headers.get('referer') == url('register') %}
+                    <input type="hidden" name="redirect_url" value="/" />
+                {% else %}
+                    <input type="hidden" name="redirect_url" value="{{ app.request.headers.get('referer')|default('/') }}" />
+                {% endif %}
+
                 <div class="form-group submit-btn-container" >
                     <button type="submit" class="btn btn-success pull-right">Register</button>
                 </div>

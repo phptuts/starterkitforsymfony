@@ -18,7 +18,12 @@
             contentType: 'application/json',
             type: 'POST',
             success: function (data) {
-                window.location.href = '{{ app.request.headers.get('referer')|default('/') }}';
+
+                var redirectUrl = '/';
+                {% if app.request.headers.get('referer') != url('login') %}
+                     redirectUrl = '{{ app.request.headers.get('referer')|default('/') }}';
+                {% endif %}
+                window.location.href = redirectUrl;
             },
             error: function (e) {
                 alert('There was an error in trying to authenticate, please email ' + '{{ email }} .');

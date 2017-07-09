@@ -38,12 +38,12 @@ class HomeController extends Controller
         // This query should come from redis cache region
         $color = $repo->createQueryBuilder('c')
             ->where('c.id = :id')
-            ->setParameters(['id' => 2])
+            ->setParameters(['id' => 1])
             ->getQuery()
             ->setCacheable(true)
             ->useResultCache(true)
             ->setCacheRegion('region_colors')
-            ->getResult();
+            ->getOneOrNullResult();
 
         return $this->render('@App/home/home.html.twig', [
             'color' => $color
@@ -61,7 +61,7 @@ class HomeController extends Controller
 
         $color = $repo->createQueryBuilder('c')
             ->where('c.id = :id')
-            ->setParameters(['id' => 2])
+            ->setParameters(['id' => 1])
             ->getQuery()
             ->setCacheable(true)
             ->useResultCache(true)
@@ -69,7 +69,7 @@ class HomeController extends Controller
             ->getOneOrNullResult();
 
         $color = empty($color) ? new Color() : $color;
-        $color->setColor("PURPLE");
+        $color->setColor("RED");
 
         $this->getDoctrine()->getManager()->persist($color);
         $this->getDoctrine()->getManager()->flush();
