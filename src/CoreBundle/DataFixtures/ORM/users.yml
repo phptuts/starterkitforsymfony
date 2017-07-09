@@ -14,6 +14,37 @@ CoreBundle\Entity\User:
         roles: ['ROLE_USER']
         enabled: true
 
+    regular_user:
+        email: 'regular_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+
+    admin_user:
+        email: 'admin_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+
+    change_email_user:
+        email: 'change_email_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+
+    disable_user:
+        email: 'disable_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+
+    change_password_user:
+        email: 'change_password_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+
+
 
     forget_password_1:
         email: 'forget_password_1@gmail.com'

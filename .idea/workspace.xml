@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/css/main-panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/css/social-btn.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="$PROJECT_DIR$/report/ApiBundle/index.html" />
@@ -82,19 +82,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="$PROJECT_DIR$/report/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/index.html" afterPath="$PROJECT_DIR$/report/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_tests.sh" afterPath="$PROJECT_DIR$/scripts/run_tests.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password-success.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password-success.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-invalid-token.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-invalid-token.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-success.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-success.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" afterPath="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,33 +97,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountSettingControllerTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="585">
+              <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="46" />
               <folding>
                 <element signature="e#42#83#0#PHP" expanded="true" />
+                <element signature="e#1030#1060#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/users/index.html.twig">
+      <file leaf-file-name="DashboardControllerTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/DashboardControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="40" />
-              <folding>
-                <element signature="e#12#35#0#Twig" expanded="false" />
-                <element signature="e#2217#2228#0#Twig" expanded="false" />
-                <element signature="e#2521#2532#0#Twig" expanded="false" />
-                <element signature="e#2772#2783#0#Twig" expanded="false" />
-                <element signature="e#4902#4918#0#Twig" expanded="false" />
-                <element signature="e#5883#5902#0#Twig" expanded="false" />
-                <element signature="e#6775#6792#0#Twig" expanded="false" />
-                <marker date="1499567887000" expanded="true" signature="4470:7898" ph="{% block javascripts ...%}" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,19 +150,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="e#42#101#0#PHP" expanded="true" />
-                <element signature="e#344#382#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -186,28 +163,40 @@
       <file leaf-file-name="users.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_tests.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run_tests.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phpunit.xml.dist" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
+      <file leaf-file-name="UserControllerTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="591">
+              <caret line="113" column="110" lean-forward="false" selection-start-line="113" selection-start-column="110" selection-end-line="113" selection-end-column="110" />
+              <folding>
+                <element signature="e#49#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordEncoderInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -217,7 +206,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>AbstractSocialGuard</find>
       <find>Test\</find>
       <find>me?fields=email</find>
       <find>_route</find>
@@ -245,8 +233,9 @@
       <find>assets/css/</find>
       <find>cu</find>
       <find>$this-&gt;getContainer()-&gt;get('startsymfony.core.repository.user_repository')</find>
-      <find>token</find>
       <find>testDuplicateTokenInDatabase</find>
+      <find>token</find>
+      <find>change_password_user</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
@@ -273,8 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CoreBundle/Form/User/ChangePasswordType.php" />
-        <option value="$PROJECT_DIR$/tests/CoreBundle/Form/User/ChangePasswordTypeTest.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Form/User/ForgetPasswordTypeTest.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Form/User/RegisterType.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Form/User/RegisterTypeTest.php" />
@@ -314,16 +301,18 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-success.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" />
         <option value="$PROJECT_DIR$/web/assets/css/admin/admin.css" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/macros.html.twig" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/users/index.html.twig" />
-        <option value="$PROJECT_DIR$/scripts/run_tests.sh" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/AdminBundle/Controller/DashboardControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" />
+        <option value="$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php" />
+        <option value="$PROJECT_DIR$/scripts/run_tests.sh" />
       </list>
     </option>
   </component>
@@ -430,6 +419,10 @@
               <option name="myItemId" value="AdminBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -442,6 +435,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataFixtures" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ORM" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -632,12 +669,12 @@
       <workItem from="1498922677730" duration="253000" />
       <workItem from="1498963872516" duration="45225000" />
       <workItem from="1499303899874" duration="31225000" />
-      <workItem from="1499533304162" duration="15666000" />
+      <workItem from="1499533304162" duration="17385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179149000" />
+    <option name="totallyTimeSpent" value="180868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -708,30 +745,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/facebook-auth-js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/google-auth-js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/cache/lib/Doctrine/Common/Cache/PredisCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Color.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1085,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1101,14 +1106,6 @@
             <element signature="e#42#101#0#PHP" expanded="true" />
             <element signature="e#344#382#1#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,19 +1135,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="585">
+          <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="46" />
           <folding>
             <element signature="e#42#83#0#PHP" expanded="true" />
+            <element signature="e#1030#1060#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/DashboardControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="113" column="110" lean-forward="false" selection-start-line="113" selection-start-column="110" selection-end-line="113" selection-end-column="110" />
+          <folding>
+            <element signature="e#49#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
