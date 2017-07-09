@@ -31,6 +31,8 @@ security:
             guard:
                 authenticators:
                     - startsymfony.core.security.api_login_guard
+                    - startsymfony.core.security.api_token_guard
+                entry_point: startsymfony.core.security.api_login_guard
 
         api:
             pattern: ^/api
@@ -50,7 +52,7 @@ security:
                 check_path: login
             guard:
                 authenticators:
-                    - startsymfony.core.security.session_social_guard
+                    - startsymfony.core.security.session_login_token_guard
             logout:
                 path: /logout
                 target: /

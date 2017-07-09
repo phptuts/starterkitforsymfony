@@ -12,7 +12,7 @@ class ResponseModel implements ResponseModelInterface
      * This means that it is a type jws response
      * @var string
      */
-    const JWS_RESPONSE_TYPE = 'jws_response';
+    const CREDENTIAL_RESPONSE = 'credentials';
 
     /**
      * @var mixed

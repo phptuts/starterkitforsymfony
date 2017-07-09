@@ -52,10 +52,10 @@ class ProgrammerException extends \Exception
     const GOOGLE_USER_PROVIDER_EXCEPTION = 10233239;
 
     /**
-     * This is the error code for no social user provider implemented
+     * This is the error code for no user provider implemented
      * @var integer
      */
-    const NO_SOCIAL_PROVIDER_IMPLEMENTED = 10233240;
+    const NO_TOKEN_PROVIDER_IMPLEMENTED = 10233240;
 
     /**
      * This means that the token format was not valid and un readable

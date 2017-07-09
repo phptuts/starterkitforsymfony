@@ -38,3 +38,6 @@ parameters:
     #JWT / JWS Passphrase
     jws_pass_phrase:
     jws_ttl: 5184000
+
+    #Refresh_tokens
+    refresh_token_ttl: 10368000

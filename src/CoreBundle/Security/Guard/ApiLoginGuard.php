@@ -3,17 +3,11 @@
 
 namespace CoreBundle\Security\Guard;
 
-
-use CoreBundle\Entity\User;
-use CoreBundle\Model\Response\ResponseModel;
-use CoreBundle\Service\JWSService;
-use CoreBundle\Service\ResponseSerializer;
+use CoreBundle\Service\Credential\CredentialResponseBuilderService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactory;
-use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
@@ -24,6 +18,9 @@ use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
  */
 class ApiLoginGuard extends AbstractGuardAuthenticator
 {
+
+    use GuardTrait;
+
     /**
      * The field where the email
      * @var string
@@ -42,20 +39,22 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
     private $encoderFactory;
 
     /**
-     * @var JWSService
+     * @var CredentialResponseBuilderService
      */
-    private $JWSService;
+    private $credentialResponseBuilderService;
 
     /**
-     * @var ResponseSerializer
+     * ApiLoginGuard constructor.
+     * @param EncoderFactory $encoderFactory
+     * @param CredentialResponseBuilderService $credentialResponseBuilderService
      */
-    private $responseSerializer;
-
-    public function __construct(EncoderFactory $encoderFactory, JWSService $JWSService, ResponseSerializer $responseSerializer)
+    public function __construct(
+        EncoderFactory $encoderFactory,
+        CredentialResponseBuilderService $credentialResponseBuilderService
+    )
     {
         $this->encoderFactory = $encoderFactory;
-        $this->JWSService = $JWSService;
-        $this->responseSerializer = $responseSerializer;
+        $this->credentialResponseBuilderService = $credentialResponseBuilderService;
     }
 
     /**
@@ -109,7 +108,7 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
     }
 
     /**
-     * This returns a json response with user serialized, token, and the expiration date wrapped in a envelope
+     * This returns a response with the token and refresh token and user serialized in an envelope
      *
      * @param Request $request
      * @param TokenInterface $token
@@ -118,46 +117,7 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
      */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        /** @var User $user */
-        $user = $token->getUser();
-
-        $jwsResponse = new ResponseModel($this->JWSService->createJWSTokenModel($user), ResponseModel::JWS_RESPONSE_TYPE);
-
-        return $this->responseSerializer->serializeResponse($jwsResponse, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_CREATED);
-    }
-
-    /**
-     * This returns a 403 and happens when the authentication fails
-     *
-     * @param Request $request
-     * @param AuthenticationException $exception
-     *
-     * @return Response
-     */
-    public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
-    {
-        return new Response('Authentication Failed.', Response::HTTP_FORBIDDEN);
-    }
-
-    /**
-     * This returns a 401 and happens when auth is required but none is provided
-     *
-     * @param Request $request
-     * @param AuthenticationException $authException
-     *
-     * @return Response
-     */
-    public function start(Request $request, AuthenticationException $authException = null)
-    {
-        return new Response('Authentication Required.', Response::HTTP_UNAUTHORIZED);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function supportsRememberMe()
-    {
-        return false;
+        return $this->credentialResponseBuilderService->createCredentialResponse($token->getUser());
     }
 
 }

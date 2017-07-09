@@ -1,8 +1,4 @@
 services:
-#    core.example:
-#        class: CoreBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
-
 
     #GENERIC SERVICES
     startsymfony.core.email:
@@ -13,15 +9,34 @@ services:
             - '%from_email%'
 
     startsymfony.core.response:
-        class: CoreBundle\Service\ResponseSerializer
+        class: CoreBundle\Service\ResponseSerializerService
         arguments:
             - '@jms_serializer.serializer'
 
     startsymfony.core.jws_service:
-        class: CoreBundle\Service\JWSService
+        class: CoreBundle\Service\Credential\JWSService
         arguments:
             - '%jws_pass_phrase%'
             - '%jws_ttl%'
+
+    startsymfony.core.refresh_token:
+        class: CoreBundle\Service\Credential\RefreshTokenService
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '%refresh_token_ttl%'
+
+    startsymfony.core.credential_model_builder:
+        class: CoreBundle\Service\Credential\CredentialModelBuilderService
+        arguments:
+            - '@startsymfony.core.jws_service'
+            - '@startsymfony.core.refresh_token'
+
+    startsymfony.core.credential_response_builder:
+        class: CoreBundle\Service\Credential\CredentialResponseBuilderService
+        arguments:
+            - '@startsymfony.core.credential_model_builder'
+            - '@startsymfony.core.response'
+
 
     #USER SERVICES
     startsymfony.core.user_service:
@@ -58,6 +73,12 @@ services:
         factory: ['@doctrine.orm.default_entity_manager', getRepository]
         arguments:
             - CoreBundle\Entity\User
+
+    startsymfony.core.repository.refreshtoken_repository:
+        class: CoreBundle\Repository\RefreshTokenRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - CoreBundle\Entity\RefreshToken
 
 
     #DATA TRANSFORMER
@@ -100,23 +121,31 @@ services:
         arguments:
             - '%google_client_id%'
 
-    startsymfony.core.social_user_provider_factory:
-        class: CoreBundle\Factory\SocialUserProviderFactory
+    startsymfony.core.user_provider_factory:
+        class: CoreBundle\Factory\UserProviderFactory
         arguments:
             - '@service_container'
 
     #GUARDS
-    startsymfony.core.security.session_social_guard:
-        class: CoreBundle\Security\Guard\SessionSocialGuard
+    startsymfony.core.security.session_login_token_guard:
+        class: CoreBundle\Security\Guard\Token\SessionLoginTokenGuard
         arguments:
-            - '@startsymfony.core.social_user_provider_factory'
+            - '@startsymfony.core.user_provider_factory'
             - '@security.authentication.guard_handler'
+
+    startsymfony.core.security.api_token_guard:
+        class: CoreBundle\Security\Guard\Token\ApiLoginTokenGuard
+        arguments:
+            - '@startsymfony.core.user_provider_factory'
+            - '@startsymfony.core.credential_response_builder'
+            - '@startsymfony.core.response'
+
 
     startsymfony.core.security.api_login_guard:
         class: CoreBundle\Security\Guard\ApiLoginGuard
         arguments:
             - '@security.encoder_factory'
-            - '@startsymfony.core.jws_service'
+            - '@startsymfony.core.credential_response_builder'
             - '@startsymfony.core.response'
 
     #SECURITY PROVIDERS

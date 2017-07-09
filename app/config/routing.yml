@@ -10,8 +10,8 @@ app:
 logout:
     path: /logout
 
-social_login_check:
-    path: /social_login_check
+token_login_check:
+    path: /token_login_check
     methods: ['POST']
 
 api_login:

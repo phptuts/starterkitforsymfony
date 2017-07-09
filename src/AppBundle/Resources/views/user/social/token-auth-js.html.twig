@@ -14,7 +14,7 @@
 
         $.ajax({
             url: '{{ path('social_login_check') }}',
-            data: JSON.stringify({'token': token, 'social_type': type}),
+            data: JSON.stringify({'token': token, 'type': type}),
             contentType: 'application/json',
             type: 'POST',
             success: function (data) {
