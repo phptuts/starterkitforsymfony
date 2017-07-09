@@ -8,7 +8,7 @@ use CoreBundle\Entity\User;
  * Class JWSModel
  * @package CoreBundle\Model\User
  */
-class JWSModel
+class JWSUserModel
 {
     /**
      * The user that the jws token belongs to
@@ -20,7 +20,7 @@ class JWSModel
      * The jws token
      * @var string
      */
-    private $jwsToken;
+    private $token;
 
     /**
      * The timestamp the jws token expires
@@ -31,13 +31,13 @@ class JWSModel
     /**
      * JWSModel constructor.
      * @param User $user
-     * @param string $jwsToken
+     * @param string $token
      * @param integer $expirationTimestamp
      */
-    public function __construct(User $user, $jwsToken, $expirationTimestamp)
+    public function __construct(User $user, $token, $expirationTimestamp)
     {
         $this->user = $user;
-        $this->jwsToken = $jwsToken;
+        $this->token = $token;
         $this->expirationTimestamp = $expirationTimestamp;
     }
 
@@ -52,9 +52,9 @@ class JWSModel
     /**
      * @return string
      */
-    public function getJwsToken()
+    public function getToken()
     {
-        return $this->jwsToken;
+        return $this->token;
     }
 
     /**

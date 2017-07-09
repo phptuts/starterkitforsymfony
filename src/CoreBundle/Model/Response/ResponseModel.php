@@ -1,8 +1,6 @@
 <?php
 
-namespace CoreBundle\Model;
-
-use CoreBundle\Model\Response\ResponseModelInterface;
+namespace CoreBundle\Model\Response;
 
 /**
  * Class ResponseModel
@@ -26,6 +24,11 @@ class ResponseModel implements ResponseModelInterface
      */
     private $type;
 
+    /**
+     * ResponseModel constructor.
+     * @param string $data this is data be serialized
+     * @param string $type this is the type of response
+     */
     public function __construct($data, $type)
     {
         $this->data = $data;
@@ -33,11 +36,11 @@ class ResponseModel implements ResponseModelInterface
     }
 
     /**
-     * Create a response envelope
+     * Create a response envelope that wraps the data.
      *
      * @return array
      */
-    public function toArray()
+    public function responseEnvelope()
     {
         return [
             'meta' => [

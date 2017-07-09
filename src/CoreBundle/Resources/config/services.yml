@@ -12,6 +12,17 @@ services:
             - '@mailer'
             - '%from_email%'
 
+    startsymfony.core.response:
+        class: CoreBundle\Service\ResponseSerializer
+        arguments:
+            - '@jms_serializer.serializer'
+
+    startsymfony.core.jws_service:
+        class: CoreBundle\Service\JWSService
+        arguments:
+            - '%jws_pass_phrase%'
+            - '%jws_ttl%'
+
     #USER SERVICES
     startsymfony.core.user_service:
         class: CoreBundle\Service\User\UserService
@@ -101,6 +112,12 @@ services:
             - '@startsymfony.core.social_user_provider_factory'
             - '@security.authentication.guard_handler'
 
+    startsymfony.core.security.api_login_guard:
+        class: CoreBundle\Security\Guard\ApiLoginGuard
+        arguments:
+            - '@security.encoder_factory'
+            - '@startsymfony.core.jws_service'
+            - '@startsymfony.core.response'
 
     #SECURITY PROVIDERS
     startsymfony.core.security.facebook_provider:

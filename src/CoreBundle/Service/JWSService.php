@@ -4,7 +4,7 @@ namespace CoreBundle\Service;
 
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
-use CoreBundle\Model\User\JWSModel;
+use CoreBundle\Model\User\JWSUserModel;
 use Namshi\JOSE\SimpleJWS;
 
 /**
@@ -82,7 +82,7 @@ class JWSService
 
         $jws->sign($privateKey);
 
-        return new JWSModel($user, $jws->getTokenString(), $expirationTimestamp);
+        return new JWSUserModel($user, $jws->getTokenString(), $expirationTimestamp);
     }
 
     /**

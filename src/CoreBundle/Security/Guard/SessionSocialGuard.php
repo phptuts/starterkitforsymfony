@@ -23,6 +23,28 @@ class SessionSocialGuard extends AbstractSocialGuard
     }
 
     /**
+     * Gets the token and type for the website users
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function getCredentials(Request $request)
+    {
+        $post = json_decode($request->getContent(), true);
+
+        if ($request->attributes->get('_route') == 'social_login_check' &&
+            $request->isMethod(Request::METHOD_POST) &&
+            !empty($post[self::SOCIAL_TOKEN_FIELD]) &&
+            !empty($post[self::SOCIAL_TOKEN_TYPE_FIELD])
+        ) {
+            return $post;
+        }
+
+        return null;
+    }
+
+    /**
      * This authenticates the session and returns OK
      *
      * @param Request $request

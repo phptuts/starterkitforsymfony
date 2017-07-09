@@ -9,6 +9,7 @@ use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * User
@@ -17,6 +18,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\UserRepository")
  * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUP_DEFAULT})
  * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
+ * @Serializer\ExclusionPolicy("ALL")
  */
 class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 {
@@ -34,6 +36,13 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     const VALIDATION_GROUP_PLAIN_PASSWORD = "user_plain_password";
 
     /**
+     * This serialization group exposes users personal information like email
+     *
+     * @var string
+     */
+    const USER_PERSONAL_SERIALIZATION_GROUP = 'users';
+
+    /**
      * This is the min password length
      * @var string
      */
@@ -48,6 +57,8 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var int
      *
+     * @Serializer\Expose()
+     *
      * @ORM\Column(name="id", type="string")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
@@ -56,6 +67,9 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
+     *
+     * @Serializer\Expose()
+     *
      * @Constraints\Length(min="5", max="100", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="display_name", type="string", length=255, nullable=true, unique=true)
      */
@@ -63,6 +77,10 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
 
     /**
      * @var string
+     *
+     * @Serializer\Expose()
+     * @Serializer\Groups({User::USER_PERSONAL_SERIALIZATION_GROUP})
+     *
      * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_DEFAULT})
      * @Constraints\Email(groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="email", type="string", length=255, unique=true)
@@ -72,12 +90,16 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var string
      *
+     * @Serializer\Exclude()
+     *
      * @ORM\Column(name="forget_password_token", type="string", nullable=true)
      */
     protected $forgetPasswordToken;
 
     /**
      * @var \DateTime
+     *
+     * @Serializer\Exclude()
      *
      * @ORM\Column(name="forget_password_expired", type="datetime", nullable=true)
      */
@@ -93,6 +115,8 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var string
      *
+     * @Serializer\Exclude()
+     *
      * @ORM\Column(name="password", type="string", length=255)
      */
     protected $password;
@@ -100,12 +124,17 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var array
      *
+     *
+     *
      * @ORM\Column(name="roles", type="json_array")
      */
     protected $roles;
 
     /**
      * @var string
+     *
+     * @Serializer\Expose()
+     *
      * @Constraints\Length(max="3000", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="bio", type="text", nullable=true)
      */
@@ -114,19 +143,26 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var boolean
      *
+     * @Serializer\Exclude()
+     *
      * @ORM\Column(name="enabled", type="boolean")
      */
     protected $enabled;
 
     /**
+     * @var string
+     *
+     * @Serializer\Exclude()
+     *
      * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
      * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
-     * @var string
      */
     protected $plainPassword;
 
     /**
      * @var UploadedFile
+     *
+     * @Serializer\Exclude()
      * // This is better to test end to end
      * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */

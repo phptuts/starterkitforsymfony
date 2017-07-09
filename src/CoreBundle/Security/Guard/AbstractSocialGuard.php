@@ -50,28 +50,6 @@ abstract class AbstractSocialGuard extends AbstractGuardAuthenticator
     }
 
     /**
-     * Gets the token and type
-     *
-     * @param Request $request
-     *
-     * @return array
-     */
-    final public function getCredentials(Request $request)
-    {
-        $post = json_decode($request->getContent(), true);
-
-        if ($request->attributes->get('_route') == 'social_login_check' &&
-            $request->isMethod(Request::METHOD_POST) &&
-            !empty($post[self::SOCIAL_TOKEN_FIELD]) &&
-            !empty($post[self::SOCIAL_TOKEN_TYPE_FIELD])
-        ) {
-            return $post;
-        }
-
-        return null;
-    }
-
-    /**
      * This gets a get the user provider for the third party authenticator and tries to fetch the user
      *
      * @param array $credentials

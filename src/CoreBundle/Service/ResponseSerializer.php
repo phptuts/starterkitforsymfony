@@ -32,9 +32,9 @@ class ResponseSerializer
      */
     public function serializeResponse(ResponseModelInterface $responseModel, $serializationGroups = [],  $statusCode = Response::HTTP_OK)
     {
-        $json = $this->serializer->serialize($responseModel->toArray(), 'array', $this->createSerializationContext($serializationGroups));
+        $json = $this->serializer->serialize($responseModel->responseEnvelope(), 'json', $this->createSerializationContext($serializationGroups));
 
-        return new JsonResponse($json, $statusCode);
+        return new JsonResponse($json, $statusCode, [], true);
     }
 
     /**

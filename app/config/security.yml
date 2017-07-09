@@ -13,8 +13,6 @@ security:
             entity:
                 class: CoreBundle:User
                 property: email
-        facebook:
-            id: startsymfony.core.security.facebook_provider
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -28,12 +26,11 @@ security:
             security: false
 
         api_login:
-            pattern: ^/api/login
-            anonymous: ~
+            pattern: ^/api/login_check
             stateless: true
-#            guard:
-#                authenticators:
-#                    - AppBundle\Security\TokenAuthenticator
+            guard:
+                authenticators:
+                    - startsymfony.core.security.api_login_guard
 
         api:
             pattern: ^/api
@@ -65,6 +62,7 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
 
