@@ -100,7 +100,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     /**
      * @var array
      *
-     * @ORM\Column(name="roles", type="array")
+     * @ORM\Column(name="roles", type="json_array")
      */
     protected $roles;
 

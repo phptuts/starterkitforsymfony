@@ -8,6 +8,7 @@ use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\NoResultException;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * TODO TEST
@@ -18,6 +19,8 @@ use Doctrine\ORM\NoResultException;
  */
 class UserRepository extends EntityRepository
 {
+    const PAGE_LIMIT = 10;
+
     /**
      * This will find one user by it's email, email is unique so it should only return one user.
      *
@@ -27,6 +30,17 @@ class UserRepository extends EntityRepository
     public function findUserByEmail($email)
     {
         return $this->findOneBy(['email' => $email]);
+    }
+
+    /**
+     * Returns true if the email exists
+     *
+     * @param string $email
+     * @return bool
+     */
+    public function doesEmailExist($email)
+    {
+        return !empty($this->findUserByEmail($email));
     }
 
     /**
@@ -42,7 +56,7 @@ class UserRepository extends EntityRepository
         try {
             $builder = $this->createQueryBuilder('u');
 
-            return  $builder->where($builder->expr()->eq('u.forgetPasswordToken', ':token'))
+            return $builder->where($builder->expr()->eq('u.forgetPasswordToken', ':token'))
                 ->andWhere($builder->expr()->isNotNull('u.forgetPasswordExpired'))
                 ->andWhere('u.forgetPasswordExpired >= :today')
                 ->setParameter('token', $token)
@@ -50,15 +64,41 @@ class UserRepository extends EntityRepository
                 ->getQuery()
                 ->getSingleResult();
 
-        }
-        catch (NoResultException $ex) {
+        } catch (NoResultException $ex) {
             // This means that nothing was found this thrown by the getSingleResult method
             return null;
-        }
-        catch (NonUniqueResultException $ex) {
+        } catch (NonUniqueResultException $ex) {
             // this means that there was more then one result found and we have duplicate tokens in our database.
             // Look up the code for the error message in the logs
             throw new ProgrammerException('Duplicate Forget Password Token was found.', ProgrammerException::FORGET_PASSWORD_TOKEN_DUPLICATE_EXCEPTION_CODE);
         }
+    }
+
+    /**
+     * Gets a paginated list of users
+     *
+     * @param null $searchString
+     * @param int $page
+     * @param int $limit
+     *
+     * @return Paginator
+     */
+    public function getUsers($searchString = null, $page = 1, $limit = 10)
+    {
+        $builder = $this->createQueryBuilder('u');
+
+        if (!empty($searchString)) {
+            $builder
+                ->where($builder->expr()->like('u.email', ':searchString'))
+                ->orWhere($builder->expr()->like('u.displayName', ':searchString'))
+                ->setParameter('searchString', '%' .$searchString . '%');
+        }
+
+        $paginator = new Paginator($builder->getQuery());
+        $paginator->getQuery()
+            ->setMaxResults($limit)
+            ->setFirstResult($limit * ($page - 1));
+
+        return $paginator;
     }
 }
