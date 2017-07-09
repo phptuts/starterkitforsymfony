@@ -20,7 +20,10 @@
             success: function (data) {
 
                 var redirectUrl = '/';
-                {% if app.request.headers.get('referer') != url('login') %}
+                {#
+                    If login url match register or login we redirect them keep it to the home page.
+                #}
+                {% if app.request.headers.get('referer') != url('login') or app.request.headers.get('referer') != url('register') %}
                      redirectUrl = '{{ app.request.headers.get('referer')|default('/') }}';
                 {% endif %}
                 window.location.href = redirectUrl;
