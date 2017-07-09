@@ -1,14 +1,15 @@
 <?php
 
-namespace CoreBundle\Security\Guard;
+namespace CoreBundle\Security\Guard\Token;
 
 use CoreBundle\Factory\SocialUserProviderFactory;
+use CoreBundle\Factory\UserProviderFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
-class SessionSocialGuard extends AbstractSocialGuard
+class SessionLoginTokenGuard extends AbstractTokenGuard
 {
 
     /**
@@ -16,9 +17,9 @@ class SessionSocialGuard extends AbstractSocialGuard
      */
     private $guardAuthenticatorHandler;
 
-    public function __construct(SocialUserProviderFactory $socialUserProviderFactory, GuardAuthenticatorHandler $guardAuthenticatorHandler)
+    public function __construct(UserProviderFactory $userProviderFactory, GuardAuthenticatorHandler $guardAuthenticatorHandler)
     {
-        parent::__construct($socialUserProviderFactory);
+        parent::__construct($userProviderFactory);
         $this->guardAuthenticatorHandler = $guardAuthenticatorHandler;
     }
 
@@ -33,10 +34,10 @@ class SessionSocialGuard extends AbstractSocialGuard
     {
         $post = json_decode($request->getContent(), true);
 
-        if ($request->attributes->get('_route') == 'social_login_check' &&
+        if ($request->attributes->get('_route') == 'token_login_check' &&
             $request->isMethod(Request::METHOD_POST) &&
-            !empty($post[self::SOCIAL_TOKEN_FIELD]) &&
-            !empty($post[self::SOCIAL_TOKEN_TYPE_FIELD])
+            !empty($post[self::TOKEN_FIELD]) &&
+            !empty($post[self::TOKEN_TYPE_FIELD])
         ) {
             return $post;
         }

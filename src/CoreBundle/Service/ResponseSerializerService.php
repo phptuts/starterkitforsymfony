@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  * Class ResponseSerializer
  * @package CoreBundle\Service
  */
-class ResponseSerializer
+class ResponseSerializerService
 {
     /**
      * @var Serializer

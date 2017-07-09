@@ -1,11 +1,11 @@
 <?php
 
-namespace Test\CoreBundle\Security\Guard;
+namespace Test\CoreBundle\Security\Guard\Token;
 
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
-use CoreBundle\Factory\SocialUserProviderFactory;
-use CoreBundle\Security\Guard\SessionSocialGuard;
+use CoreBundle\Factory\UserProviderFactory;
+use CoreBundle\Security\Guard\Token\SessionLoginTokenGuard;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,14 +22,14 @@ use Tests\BaseTestCase;
 class SessionSocialGuardTest extends BaseTestCase
 {
     /**
-     * @var SessionSocialGuard|Mock
+     * @var SessionLoginTokenGuard|Mock
      */
-    protected $sessionSocialGuard;
+    protected $sessionLoginGuard;
 
     /**
-     * @var SocialUserProviderFactory|Mock
+     * @var UserProviderFactory|Mock
      */
-    protected $socialUserProviderFactory;
+    protected $userProviderFactory;
 
     /**
      * @var GuardAuthenticatorHandler|Mock
@@ -40,8 +40,8 @@ class SessionSocialGuardTest extends BaseTestCase
     {
         parent::setUp();
         $this->guardHandler = \Mockery::mock(GuardAuthenticatorHandler::class);
-        $this->socialUserProviderFactory = \Mockery::mock(SocialUserProviderFactory::class);
-        $this->sessionSocialGuard = new SessionSocialGuard($this->socialUserProviderFactory, $this->guardHandler);
+        $this->userProviderFactory = \Mockery::mock(UserProviderFactory::class);
+        $this->sessionLoginGuard = new SessionLoginTokenGuard($this->userProviderFactory, $this->guardHandler);
     }
 
     /**
@@ -49,7 +49,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testServiceDefinition()
     {
-        Assert::assertInstanceOf(SessionSocialGuard::class, $this->getContainer()->get('startsymfony.core.security.session_social_guard'));
+        Assert::assertInstanceOf(SessionLoginTokenGuard::class, $this->getContainer()->get('startsymfony.core.security.session_login_token_guard'));
     }
 
     /**
@@ -59,7 +59,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testGetCredentialsOnBadRequests(Request $request)
     {
-        Assert::assertNull($this->sessionSocialGuard->getCredentials($request));
+        Assert::assertNull($this->sessionLoginGuard->getCredentials($request));
     }
 
     /**
@@ -68,13 +68,13 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testGetCredentialsOnValidRequest()
     {
-        $request = Request::create('/social_login_check', 'POST', [],[],[],[], json_encode(['token' => 'asdfasdf', 'social_type' => 'google']));
-        $request->attributes->set('_route', 'social_login_check');
+        $request = Request::create('/token_login_check', 'POST', [],[],[],[], json_encode(['token' => 'asdfasdf', 'type' => 'google']));
+        $request->attributes->set('_route', 'token_login_check');
 
-        $creds = $this->sessionSocialGuard->getCredentials($request);
+        $creds = $this->sessionLoginGuard->getCredentials($request);
 
         Assert::assertEquals($creds['token'], 'asdfasdf');
-        Assert::assertEquals($creds['social_type'], 'google');
+        Assert::assertEquals($creds['type'], 'google');
 
     }
 
@@ -84,9 +84,9 @@ class SessionSocialGuardTest extends BaseTestCase
     public function testGetUserOnNonImplementedSocialProvider()
     {
         $this->expectException(UsernameNotFoundException::class);
-        $this->expectExceptionCode(ProgrammerException::NO_SOCIAL_PROVIDER_IMPLEMENTED);
-        $this->socialUserProviderFactory->shouldReceive('getUserProvider')->with('github')->andThrow(new NotImplementedException('not implemented'));
-        $this->sessionSocialGuard->getUser(['social_type' => 'github', 'token' => 'token'], \Mockery::mock(UserProviderInterface::class));
+        $this->expectExceptionCode(ProgrammerException::NO_TOKEN_PROVIDER_IMPLEMENTED);
+        $this->userProviderFactory->shouldReceive('getUserProvider')->with('github')->andThrow(new NotImplementedException('not implemented'));
+        $this->sessionLoginGuard->getUser(['type' => 'github', 'token' => 'token'], \Mockery::mock(UserProviderInterface::class));
     }
 
     /**
@@ -97,8 +97,8 @@ class SessionSocialGuardTest extends BaseTestCase
         $user = new User();
         $userProviderFacebook = \Mockery::mock(UserInterface::class);
         $userProviderFacebook->shouldReceive('loadUserByUsername')->with('token')->andReturn($user);
-        $this->socialUserProviderFactory->shouldReceive('getUserProvider')->with('facebook')->andReturn($userProviderFacebook);
-        $returnUser = $this->sessionSocialGuard->getUser(['social_type' => 'facebook', 'token' => 'token'], \Mockery::mock(UserProviderInterface::class));
+        $this->userProviderFactory->shouldReceive('getUserProvider')->with('facebook')->andReturn($userProviderFacebook);
+        $returnUser = $this->sessionLoginGuard->getUser(['type' => 'facebook', 'token' => 'token'], \Mockery::mock(UserProviderInterface::class));
 
         Assert::assertEquals($user, $returnUser);
     }
@@ -108,7 +108,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testCheckCredentials()
     {
-        Assert::assertTrue($this->sessionSocialGuard->checkCredentials([], new User()));
+        Assert::assertTrue($this->sessionLoginGuard->checkCredentials([], new User()));
     }
 
     /**
@@ -116,7 +116,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testStart()
     {
-        $response = $this->sessionSocialGuard->start(\Mockery::mock(Request::class), \Mockery::mock(AuthenticationException::class));
+        $response = $this->sessionLoginGuard->start(\Mockery::mock(Request::class), \Mockery::mock(AuthenticationException::class));
         Assert::assertEquals(Response::HTTP_UNAUTHORIZED, $response->getStatusCode());
     }
 
@@ -125,7 +125,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testAuthenticationFailed()
     {
-        $response = $this->sessionSocialGuard->onAuthenticationFailure(\Mockery::mock(Request::class), \Mockery::mock(AuthenticationException::class));
+        $response = $this->sessionLoginGuard->onAuthenticationFailure(\Mockery::mock(Request::class), \Mockery::mock(AuthenticationException::class));
         Assert::assertEquals(Response::HTTP_FORBIDDEN, $response->getStatusCode());
     }
 
@@ -134,7 +134,7 @@ class SessionSocialGuardTest extends BaseTestCase
      */
     public function testRememberMe()
     {
-        Assert::assertFalse($this->sessionSocialGuard->supportsRememberMe());
+        Assert::assertFalse($this->sessionLoginGuard->supportsRememberMe());
     }
 
     /**
@@ -147,18 +147,18 @@ class SessionSocialGuardTest extends BaseTestCase
 
         $this->guardHandler->shouldReceive('authenticateWithToken')->once()->with($token, $request);
 
-        $response = $this->sessionSocialGuard->onAuthenticationSuccess($request, $token, 'main');
+        $response = $this->sessionLoginGuard->onAuthenticationSuccess($request, $token, 'main');
         Assert::assertEquals(Response::HTTP_OK, $response->getStatusCode());
     }
 
 
     public function dataProviderForGetCreds()
     {
-        $request = Request::create('/social_login_check', 'POST', [],[],[],[], json_encode(['social_type' => 'google', 'token' => null]));
+        $request = Request::create('/token_login_check', 'POST', [],[],[],[], json_encode(['type' => 'google', 'token' => null]));
         $request->attributes->set('_route', 'social_login_check');
 
 
-        $request2 = Request::create('/social_login_check', 'POST', [],[],[],[], json_encode(['token' => 'asdfasdf']));
+        $request2 = Request::create('/token_login_check', 'POST', [],[],[],[], json_encode(['token' => 'asdfasdf']));
         $request2->attributes->set('_route', 'social_login_check');
 
         return [

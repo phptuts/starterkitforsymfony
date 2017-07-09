@@ -1,10 +1,10 @@
 <?php
 
-namespace CoreBundle\Service;
+namespace CoreBundle\Service\Credential;
 
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
-use CoreBundle\Model\User\JWSUserModel;
+use CoreBundle\Model\Security\AuthTokenModel;
 use Namshi\JOSE\SimpleJWS;
 
 /**
@@ -60,11 +60,11 @@ class JWSService
      * Creates a jws token model
      *
      * @param User $user
-     * @return JWSModel
+     * @return AuthTokenModel
      */
-    public function createJWSTokenModel(User $user)
+    public function createAuthTokenModel(User $user)
     {
-        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../var/jwt/private.pem'), $this->passPhrase);
+        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), $this->passPhrase);
 
         $jws = new SimpleJWS([
             'alg' => self::ALG
@@ -82,7 +82,7 @@ class JWSService
 
         $jws->sign($privateKey);
 
-        return new JWSUserModel($user, $jws->getTokenString(), $expirationTimestamp);
+        return new AuthTokenModel($jws->getTokenString(), $expirationTimestamp);
     }
 
     /**
@@ -94,7 +94,7 @@ class JWSService
     public function isValid($token)
     {
         try {
-            $publicKey = openssl_pkey_get_public(file_get_contents(__DIR__ . '/../../../var/jwt/public.pem'));
+            $publicKey = openssl_pkey_get_public(file_get_contents(__DIR__ . '/../../../../var/jwt/public.pem'));
 
             $jws = SimpleJWS::load($token);
 

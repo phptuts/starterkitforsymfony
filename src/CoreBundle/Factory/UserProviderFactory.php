@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  * Class SocialUserProviderFactory
  * @package CoreBundle\Factory
  */
-class SocialUserProviderFactory
+class UserProviderFactory
 {
     /**
      * @var ContainerInterface
