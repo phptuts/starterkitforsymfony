@@ -57,5 +57,10 @@ class ProgrammerException extends \Exception
      */
     const NO_SOCIAL_PROVIDER_IMPLEMENTED = 10233240;
 
+    /**
+     * This means that the token format was not valid and un readable
+     * @var integer
+     */
+    const JWS_INVALID_TOKEN_FORMAT = 10233241;
 
 }

@@ -34,3 +34,7 @@ parameters:
     #GOOGLE
     google_client_id:
     google_client_secret:
+
+    #JWT / JWS Passphrase
+    jws_pass_phrase:
+    jws_ttl: 5184000

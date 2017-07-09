@@ -95,7 +95,6 @@ services:
             - '@service_container'
 
     #GUARDS
-
     startsymfony.core.security.session_social_guard:
         class: CoreBundle\Security\Guard\SessionSocialGuard
         arguments:
