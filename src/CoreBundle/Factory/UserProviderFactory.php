@@ -3,7 +3,7 @@
 
 namespace CoreBundle\Factory;
 
-use CoreBundle\Security\Guard\AbstractSocialGuard;
+use CoreBundle\Security\Guard\Token\AbstractTokenGuard;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Intl\Exception\NotImplementedException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -32,12 +32,20 @@ class UserProviderFactory
      */
     public function getUserProvider($type)
     {
-        if ($type == AbstractSocialGuard::TOKEN_TYPE_FACEBOOK) {
+        if ($type == AbstractTokenGuard::TOKEN_TYPE_FACEBOOK) {
             return $this->container->get('startsymfony.core.security.facebook_provider');
         }
 
-        if ($type == AbstractSocialGuard::TOKEN_TYPE_GOOGLE) {
+        if ($type == AbstractTokenGuard::TOKEN_TYPE_GOOGLE) {
             return $this->container->get('startsymfony.core.security.google_provider');
+        }
+
+        if ($type == AbstractTokenGuard::TOKEN_TYPE_REFRESH) {
+            return $this->container->get('startsymfony.core.security.refresh_token_provider');
+        }
+
+        if ($type == AbstractTokenGuard::TOKEN_TYPE_API) {
+            return $this->container->get('startsymfony.core.security.token_provider');
         }
 
         throw new NotImplementedException(sprintf("The '%s' social user provider has not been implemented.", $type));

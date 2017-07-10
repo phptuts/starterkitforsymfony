@@ -16,6 +16,11 @@ class ApiLoginTokenGuard extends AbstractTokenGuard
      */
     protected $credentialResponseBuilderService;
 
+    /**
+     * ApiLoginTokenGuard constructor.
+     * @param UserProviderFactory $userProviderFactory
+     * @param CredentialResponseBuilderService $credentialResponseBuilderService
+     */
     public function __construct(
         UserProviderFactory $userProviderFactory,
         CredentialResponseBuilderService $credentialResponseBuilderService

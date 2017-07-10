@@ -8,6 +8,10 @@ use CoreBundle\Entity\User;
 use CoreBundle\Service\AbstractEntityService;
 use Doctrine\ORM\EntityManager;
 
+/**
+ * Class RefreshTokenService
+ * @package CoreBundle\Service\Credential
+ */
 class RefreshTokenService extends AbstractEntityService
 {
     /**
@@ -15,6 +19,11 @@ class RefreshTokenService extends AbstractEntityService
      */
     private $refreshTokenTTL;
 
+    /**
+     * RefreshTokenService constructor.
+     * @param EntityManager $em
+     * @param $refreshTokenTTL
+     */
     public function __construct(EntityManager $em, $refreshTokenTTL)
     {
         parent::__construct($em);

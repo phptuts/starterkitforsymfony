@@ -13,6 +13,7 @@ services:
         arguments:
             - '@jms_serializer.serializer'
 
+    #Credential Services
     startsymfony.core.jws_service:
         class: CoreBundle\Service\Credential\JWSService
         arguments:
@@ -148,6 +149,11 @@ services:
             - '@startsymfony.core.credential_response_builder'
             - '@startsymfony.core.response'
 
+    startsymfony.core.security.api_guard:
+        class: CoreBundle\Security\Guard\Token\ApiGuard
+        arguments:
+            - '@startsymfony.core.user_provider_factory'
+
     #SECURITY PROVIDERS
     startsymfony.core.security.facebook_provider:
         class: CoreBundle\Security\Provider\FacebookProvider
@@ -163,3 +169,16 @@ services:
             - '@startsymfony.core.repository.user_repository'
             - '@startsymfony.core.register_service'
             - '@startsymfony.core.google_client_factory'
+
+    startsymfony.core.security.refresh_token_provider:
+        class: CoreBundle\Security\Provider\RefreshTokenProvider
+        arguments:
+            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.repository.refreshtoken_repository'
+            - '@startsymfony.core.refresh_token'
+
+    startsymfony.core.security.token_provider:
+        class: CoreBundle\Security\Provider\TokenProvider
+        arguments:
+            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.jws_service'

@@ -38,9 +38,9 @@ security:
             pattern: ^/api
             anonymous: ~
             stateless: true
-#            guard:
-#                authenticators:
-#                    - AppBundle\Security\TokenAuthenticator
+            guard:
+                authenticators:
+                    - startsymfony.core.security.api_guard
 
 
         main:

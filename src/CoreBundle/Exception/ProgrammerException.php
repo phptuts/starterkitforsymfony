@@ -63,4 +63,11 @@ class ProgrammerException extends \Exception
      */
     const JWS_INVALID_TOKEN_FORMAT = 10233241;
 
+    /**
+     * This means that there are duplicate refresh tokens in our system.
+     * @var integer
+     */
+    const REFRESH_TOKEN_DUPLICATE = 10233242;
+
+
 }

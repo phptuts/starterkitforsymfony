@@ -28,7 +28,7 @@ class ApiGuard extends AbstractTokenGuard
      */
     public function getCredentials(Request $request)
     {
-        $token = str_replace(self::BEARER, '',$request->headers->get(self::AUTHORIZATION_HEADER, ''));
+        $token = str_replace(self::BEARER, '', $request->headers->get(self::AUTHORIZATION_HEADER, ''));
 
         if (empty($token)) {
             return null;
