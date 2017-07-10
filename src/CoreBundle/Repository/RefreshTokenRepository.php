@@ -42,7 +42,7 @@ class RefreshTokenRepository extends EntityRepository
 
         }
         catch (NonUniqueResultException $ex) {
-            throw new ProgrammerException('Duplicate Token Found in system.', ProgrammerException::REFRESH_TOKEN_DUPLICATE);
+            throw new ProgrammerException('Duplicate Refresh Token Found in system.', ProgrammerException::REFRESH_TOKEN_DUPLICATE);
         }
     }
 }

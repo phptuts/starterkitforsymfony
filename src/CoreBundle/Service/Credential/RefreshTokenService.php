@@ -40,8 +40,7 @@ class RefreshTokenService extends AbstractEntityService
     {
         $refreshToken = new RefreshToken();
         $refreshToken->setUser($user)
-                ->setToken(bin2hex(random_bytes(90)))
-            ->setUser($user);
+                ->setToken(bin2hex(random_bytes(90)));
 
         $expirationDate = new \DateTime();
         $expirationDate->modify('+' . $this->refreshTokenTTL . ' seconds');

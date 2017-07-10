@@ -64,6 +64,7 @@ class UserTest extends BaseTestCase
        $user->setBio('blah');
        $user->setImageUrl('url');
        $user->setDisplayName('name');
+       $user->setSource('website');
        $image = \Mockery::mock(UploadedFile::class);
        $user->setImage($image);
 
@@ -76,6 +77,7 @@ class UserTest extends BaseTestCase
        Assert::assertTrue($user->isAccountNonLocked());
        Assert::assertEquals('url', $user->getImageUrl());
        Assert::assertEquals('name', $user->getDisplayName());
+       Assert::assertEquals('website', $user->getSource());
        Assert::assertEquals($user->getEmail(), $user2->getEmail());
        Assert::assertTrue($user->isCredentialsNonExpired());
        Assert::assertEquals(3,$user->getId());
