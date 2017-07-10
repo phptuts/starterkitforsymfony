@@ -160,6 +160,14 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     protected $plainPassword;
 
     /**
+     * @var string
+     * @Serializer\Exclude()
+     *
+     * @ORM\Column(name="source", type="string")
+     */
+    protected $source;
+
+    /**
      * @var UploadedFile
      *
      * @Serializer\Exclude()
@@ -398,7 +406,24 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
 
+    /**
+     * @param string $source
+     * @return User
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
+
+        return $this;
+    }
 
     /**
      * Returns the username used to authenticate the user.

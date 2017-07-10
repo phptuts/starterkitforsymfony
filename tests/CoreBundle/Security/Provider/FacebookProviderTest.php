@@ -65,7 +65,7 @@ class FacebookProviderTest extends BaseTestCase
 
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
-        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class));
+        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_FACEBOOK);
         $user = $this->facebookProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());

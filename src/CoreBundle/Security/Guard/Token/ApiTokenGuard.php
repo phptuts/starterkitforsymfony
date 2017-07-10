@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
  * Class ApiGuard
  * @package CoreBundle\Security\Guard\Token
  */
-class ApiGuard extends AbstractTokenGuard
+class ApiTokenGuard extends AbstractTokenGuard
 {
     /**
      * This is the key the token is stored under in the header

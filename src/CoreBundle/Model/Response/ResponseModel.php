@@ -40,7 +40,7 @@ class ResponseModel implements ResponseModelInterface
      *
      * @return array
      */
-    public function responseEnvelope()
+    public function getBody()
     {
         return [
             'meta' => [

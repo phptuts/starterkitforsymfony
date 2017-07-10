@@ -2,14 +2,116 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/README.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="$PROJECT_DIR$/report/ApiBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="$PROJECT_DIR$/report/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/index.html" afterPath="$PROJECT_DIR$/report/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_tests.sh" afterPath="$PROJECT_DIR$/scripts/run_tests.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" afterPath="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModelInterface.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModelInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Service/User/RegisterService.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Service/User/RegisterService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,109 +126,105 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <file leaf-file-name="JWSServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/Credential/JWSServiceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="token-auth-js.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="840">
+              <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
-                <element signature="e#400#417#0#Twig" expanded="true" />
+                <element signature="e#55#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiGuard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php">
+      <file leaf-file-name="UserServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/User/UserServiceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding>
-                <element signature="e#51#96#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractTokenGuard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-              <folding>
-                <element signature="e#51#96#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="471">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiLoginTokenGuard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php">
+      <file leaf-file-name="CredentialResponseBuilderService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseSerializerService.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RefreshToken.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_tests.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CredentialModelBuilderService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialModelBuilderService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CredentialModelBuilderServiceTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/Credential/CredentialModelBuilderServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
               <folding>
-                <element signature="e#51#94#0#PHP" expanded="true" />
+                <element signature="e#57#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionLoginTokenGuard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php">
+      <file leaf-file-name="JWSService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/JWSService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="546">
+              <caret line="120" column="67" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -136,11 +234,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FormFactoryInterface</find>
-      <find>isGranted</find>
-      <find>ROLE_ADMIN</find>
-      <find>plain_password</find>
-      <find>plainPassword</find>
       <find>register</find>
       <find>(Email was not found.)</find>
       <find>symfony/css-selector</find>
@@ -166,6 +259,11 @@
       <find>social_type</find>
       <find>startsymfony.core.security.session_login_token_guard</find>
       <find>startsymfony.core.security.api_token_guard</find>
+      <find>getDoctrine</find>
+      <find>flush</find>
+      <find>startsymfony.core.security.api_guard</find>
+      <find>isPasswordValid</find>
+      <find>CredentialModelBuilderService</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
@@ -185,8 +283,8 @@
       <dir>$PROJECT_DIR$/src/AppBundle</dir>
       <dir>$PROJECT_DIR$/vendor/jms/serializer</dir>
       <dir>$PROJECT_DIR$/vendor/jms</dir>
-      <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/tests</dir>
+      <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -195,57 +293,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/JWSModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Factory/SocialUserProviderFactory.php" />
-        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/SessionSocialGuardTest.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/AbstractSocialGuard.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/ApiSocialGuard.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/SessionSocialGuard.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiTokenGuard.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionTokenGuard.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/README.md" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php" />
-        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionSocialGuardTest.php" />
-        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/JWSUserModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/AuthModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/JWSTokenModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/CredentialModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/User/AuthTokenModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/RefreshTokenService.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/Security/AuthTokenModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/JWSService.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/CredentialModelBuilderService.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/CredentialResponseTrait.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Service/CredentialResponseBuilder.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Model/Security/CredentialModel.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/ApiLoginGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialModelBuilderService.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Service/Credential/JWSService.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Service/Credential/RefreshTokenService.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Repository/RefreshTokenRepository.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Factory/UserProviderFactory.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Cache/DefaultCacheFactory.php" />
+        <option value="$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Cache/Persister/Entity/ReadWriteCachedEntityPersister.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Color.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Service/User/RegisterService.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/README.md" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/RefreshTokenProviderServiceTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/TokenProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/ApiLoginGuardTest.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/ApiTokenGuardTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/ApiLoginTokenGuardTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Service/Credential/JWSServiceTest.php" />
+        <option value="$PROJECT_DIR$/tests/CoreBundle/Service/Credential/CredentialModelBuilderServiceTest.php" />
+        <option value="$PROJECT_DIR$/scripts/run_tests.sh" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php" />
       </list>
     </option>
   </component>
@@ -330,26 +428,8 @@
               <option name="myItemId" value="CoreBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
+              <option name="myItemId" value="Service" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,15 +451,77 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
+              <option name="myItemId" value="Service" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Guard" />
+              <option name="myItemId" value="User" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Token" />
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Credential" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -434,6 +576,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="User" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,50 +757,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Repository" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Factory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -669,217 +793,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="social" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ApiBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ApiBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -930,15 +858,15 @@
     <property name="php.override.implement.member.chooser.php.doc" value="INHERIT" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="ReadWriteCachedEntityPersister&#9;null&#9;null&#10;FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CoreBundle/Security/Guard" />
       <recent name="$PROJECT_DIR$/src/CoreBundle/Service/Credential" />
       <recent name="$PROJECT_DIR$/src/CoreBundle/Model/Security" />
       <recent name="$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token" />
       <recent name="$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token" />
-      <recent name="$PROJECT_DIR$/src/CoreBundle/Model/Response" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/AdminBundle/Resources/views" />
@@ -1048,12 +976,12 @@
       <workItem from="1498922677730" duration="253000" />
       <workItem from="1498963872516" duration="45225000" />
       <workItem from="1499303899874" duration="31225000" />
-      <workItem from="1499533304162" duration="47127000" />
+      <workItem from="1499533304162" duration="59597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210610000" />
+    <option name="totallyTimeSpent" value="223080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1124,287 +1052,140 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/phpcollection/phpcollection/src/PhpCollection/MapInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+        <state relative-caret-position="213">
+          <caret line="74" column="44" lean-forward="false" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/doc/cookbook/arrays.rst">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/AbstractEntityService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        <state relative-caret-position="450">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer-bundle/Resources/doc/configuration.rst">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/GoogleClientFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="160" column="30" lean-forward="false" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="255" column="38" lean-forward="false" selection-start-line="255" selection-start-column="31" selection-end-line="255" selection-end-column="38" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer-bundle/DependencyInjection/Configuration.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="209" column="29" lean-forward="false" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
+        <state relative-caret-position="-9">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1041">
-          <caret line="131" column="13" lean-forward="false" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AccountSettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jms/serializer/src/JMS/Serializer/Annotation/ExclusionPolicy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModelInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Color.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="81" column="66" lean-forward="false" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
+        <state relative-caret-position="201">
+          <caret line="167" column="22" lean-forward="false" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/JoinColumn.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/DataFixtures/ORM/users.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-          <folding>
-            <element signature="e#6#987#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="201">
+          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/User/ForgetPasswordService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#68#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="435">
+          <caret line="49" column="95" lean-forward="false" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Security/AuthTokenModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1689">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/CredentialResponseTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/JWSService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="96" column="91" lean-forward="false" selection-start-line="96" selection-start-column="91" selection-end-line="96" selection-end-column="91" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="57" lean-forward="true" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-          <folding>
-            <element signature="e#56#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialModelBuilderService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Security/CredentialModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/ApiLoginGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="119" column="61" lean-forward="false" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
-          <folding>
-            <element signature="e#46#113#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Query/Expr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="189" column="20" lean-forward="false" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="780" column="28" lean-forward="false" selection-start-line="780" selection-start-column="28" selection-end-line="780" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Exception/ProgrammerException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="66" column="72" lean-forward="false" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="71" lean-forward="false" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="e#49#76#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="1056">
+          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/User/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/User/RegisterService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/RefreshTokenService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="15">
           <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding>
             <element signature="e#50#85#0#PHP" expanded="false" />
@@ -1414,103 +1195,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="42" column="121" lean-forward="false" selection-start-line="42" selection-start-column="121" selection-end-line="42" selection-end-column="121" />
+        <state relative-caret-position="-23">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
           <folding>
-            <element signature="e#50#85#0#PHP" expanded="true" />
+            <element signature="e#50#85#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/GoogleProviderTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#41#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/UserProviderFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
-          <folding>
-            <element signature="e#39#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/RefreshTokenRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="e#41#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="151" column="40" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="40" />
+        <state relative-caret-position="735">
+          <caret line="60" column="140" lean-forward="false" selection-start-line="60" selection-start-column="140" selection-end-line="60" selection-end-column="140" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+        <state relative-caret-position="246">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding>
-            <element signature="e#50#77#0#PHP" expanded="true" />
+            <element signature="e#48#75#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/GuardTrait.php">
+    <entry file="file://$PROJECT_DIR$/tests/BaseTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/RefreshTokenProviderServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
           <folding>
-            <element signature="e#45#90#0#PHP" expanded="true" />
+            <element signature="e#54#89#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiGuard.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/TokenProviderTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="291">
+          <caret line="42" column="124" lean-forward="false" selection-start-line="42" selection-start-column="124" selection-end-line="42" selection-end-column="124" />
           <folding>
-            <element signature="e#51#96#0#PHP" expanded="true" />
+            <element signature="e#54#81#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserProviderInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#51#94#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Serializer/Encoder/EncoderInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="195">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="57" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="-45">
           <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#51#96#0#PHP" expanded="true" />
@@ -1518,61 +1299,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="144" column="46" lean-forward="false" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/ApiLoginGuard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="e#46#113#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        <state relative-caret-position="493">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/DependencyInjection/Configuration.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="531">
+          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+          <folding>
+            <element signature="e#51#94#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Guard/Token/ApiTokenGuard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="246">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#51#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/ApiTokenGuardTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="e#56#99#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/ApiLoginTokenGuardTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="69" column="51" lean-forward="false" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+          <folding>
+            <element signature="e#57#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/UserProviderFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/SocialUserProviderFactoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/Token/SessionLoginTokenGuardTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="351">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="169" selection-end-column="5" />
           <folding>
-            <element signature="e#400#417#0#Twig" expanded="true" />
+            <element signature="e#56#83#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Guard/ApiLoginGuardTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="20" />
+          <folding>
+            <element signature="e#51#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Security/AuthTokenModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/JWSService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="120" column="67" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/User/UserServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/Credential/JWSServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#55#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialModelBuilderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Service/Credential/CredentialModelBuilderServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <element signature="e#57#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/Credential/CredentialResponseBuilderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Service/ResponseSerializerService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

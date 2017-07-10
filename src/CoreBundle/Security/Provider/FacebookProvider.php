@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CoreBundle\Security\Provider;
 
 use CoreBundle\Entity\User;
@@ -15,6 +14,10 @@ use Facebook\FacebookClient;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+/**
+ * Class FacebookProvider
+ * @package CoreBundle\Security\Provider
+ */
 class FacebookProvider extends AbstractCustomProvider
 {
 
@@ -66,7 +69,7 @@ class FacebookProvider extends AbstractCustomProvider
             if (empty($user)) {
                 $user = (new User())->setEmail($email);
                 $user->setPlainPassword(base64_encode(random_bytes(20)));
-                $this->registerService->registerUser($user);
+                $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_FACEBOOK);
             }
 
             return $user;
@@ -78,6 +81,4 @@ class FacebookProvider extends AbstractCustomProvider
             throw new UsernameNotFoundException("Something unknown went wrong, ERROR MESSAGE  " . $ex->getMessage(), ProgrammerException::FACEBOOK_PROVIDER_EXCEPTION);
         }
     }
-
-
 }

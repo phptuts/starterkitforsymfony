@@ -1,6 +1,5 @@
 <?php
 
-
 namespace CoreBundle\Security\Provider;
 
 use CoreBundle\Entity\User;
@@ -9,7 +8,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 
-
+/**
+ * Class AbstractCustomProvider
+ * @package CoreBundle\Security\Provider
+ */
 abstract class AbstractCustomProvider implements UserProviderInterface
 {
     /**

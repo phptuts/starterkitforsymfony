@@ -39,10 +39,10 @@ class CredentialResponseBuilderService
     {
         $credentialModel = $this->credentialModelBuilderService->createCredentialModel($user);
 
-        $jwsResponse = new ResponseModel($credentialModel, ResponseModel::CREDENTIAL_RESPONSE);
+        $responseModel = new ResponseModel($credentialModel, ResponseModel::CREDENTIAL_RESPONSE);
 
         return $this->responseSerializerService
-                ->serializeResponse($jwsResponse, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_CREATED);
+                ->serializeResponse($responseModel, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_CREATED);
 
     }
 }

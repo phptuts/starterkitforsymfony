@@ -1,8 +1,6 @@
 <?php
 
-
 namespace CoreBundle\Security\Provider;
-
 
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
@@ -11,6 +9,10 @@ use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\User\RegisterService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
+/**
+ * Class GoogleProvider
+ * @package CoreBundle\Security\Provider
+ */
 class GoogleProvider extends AbstractCustomProvider
 {
     /**
@@ -45,7 +47,7 @@ class GoogleProvider extends AbstractCustomProvider
             if (empty($user)) {
                 $user = (new User())->setEmail($email);
                 $user->setPlainPassword(base64_encode(random_bytes(20)));
-                $this->registerService->registerUser($user);
+                $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_GOOGLE);
             }
 
             return $user;

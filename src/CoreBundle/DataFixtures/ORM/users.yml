@@ -6,6 +6,7 @@ CoreBundle\Entity\User:
         password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
         roles: ['ROLE_USER']
         enabled: true
+        source: 'website'
 
 
     example_user:
@@ -13,38 +14,42 @@ CoreBundle\Entity\User:
         password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
         roles: ['ROLE_USER']
         enabled: true
+        source: 'website'
 
     regular_user:
         email: 'regular_user@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_USER']
         enabled: true
+        source: 'website'
 
     admin_user:
         email: 'admin_user@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_ADMIN']
         enabled: true
+        source: 'website'
 
     change_email_user:
         email: 'change_email_user@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_ADMIN']
         enabled: true
+        source: 'website'
 
     disable_user:
         email: 'disable_user@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_ADMIN']
         enabled: true
+        source: 'website'
 
     change_password_user:
         email: 'change_password_user@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_ADMIN']
         enabled: true
-
-
+        source: 'website'
 
     forget_password_1:
         email: 'forget_password_1@gmail.com'
@@ -53,6 +58,7 @@ CoreBundle\Entity\User:
         enabled: true
         forgetPasswordToken: 'token'
         forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
 
     forget_password_2:
         email: 'forget_password_2@gmail.com'
@@ -61,6 +67,7 @@ CoreBundle\Entity\User:
         enabled: true
         forgetPasswordToken: 'token'
         forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
 
     forget_password_3:
         email: 'forget_password_3@gmail.com'
@@ -70,15 +77,18 @@ CoreBundle\Entity\User:
         enabled: true
         forgetPasswordToken: 'token_1'
         forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
 
     account_setting_user:
         email: 'update_profile@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_USER']
         enabled: true
+        source: 'website'
 
     account_setting_change_password:
         email: 'change_password@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
         roles: ['ROLE_USER']
         enabled: true
+        source: 'website'

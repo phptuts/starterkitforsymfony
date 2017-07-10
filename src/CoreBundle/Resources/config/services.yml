@@ -134,7 +134,7 @@ services:
             - '@startsymfony.core.user_provider_factory'
             - '@security.authentication.guard_handler'
 
-    startsymfony.core.security.api_token_guard:
+    startsymfony.core.security.api_login_token_guard:
         class: CoreBundle\Security\Guard\Token\ApiLoginTokenGuard
         arguments:
             - '@startsymfony.core.user_provider_factory'
@@ -149,8 +149,8 @@ services:
             - '@startsymfony.core.credential_response_builder'
             - '@startsymfony.core.response'
 
-    startsymfony.core.security.api_guard:
-        class: CoreBundle\Security\Guard\Token\ApiGuard
+    startsymfony.core.security.api_token_guard:
+        class: CoreBundle\Security\Guard\Token\ApiTokenGuard
         arguments:
             - '@startsymfony.core.user_provider_factory'
 

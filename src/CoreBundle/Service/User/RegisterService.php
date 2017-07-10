@@ -16,6 +16,30 @@ use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 class RegisterService
 {
     /**
+     * This means the user came registered the website
+     * @var string
+     */
+    const SOURCE_TYPE_WEBSITE = 'website';
+
+    /**
+     * This means the user registered from the api
+     * @var string
+     */
+    const SOURCE_TYPE_API = 'api';
+
+    /**
+     * This means the user registered from the google
+     * @var string
+     */
+    const SOURCE_TYPE_GOOGLE = 'google';
+
+    /**
+     * This means the user registered from the facebook
+     * @var string
+     */
+    const SOURCE_TYPE_FACEBOOK = 'facebook';
+
+    /**
      * @var UserService
      */
     protected $userService;
@@ -45,12 +69,14 @@ class RegisterService
      * 3. Sends registration email
      *
      * @param User $user
+     * @param $source
      *
      * @return User
      */
-    public function registerUser(User $user)
+    public function registerUser(User $user, $source = self::SOURCE_TYPE_WEBSITE)
     {
         $user->setRoles(["ROLE_USER"])
+                ->setSource($source)
                 ->setEnabled(true);
 
         $this->userService->saveUserWithPlainPassword($user);

@@ -58,7 +58,7 @@ class GoogleProviderTest extends BaseTestCase
         $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
         $token = 'asdfasdfasdfasdf';
         $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com']);
-        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class));
+        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_GOOGLE);
         $user = $this->googleProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());

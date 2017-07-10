@@ -14,7 +14,7 @@ class SocialUserProviderFactoryTest extends BaseTestCase
 {
     public function testFactory()
     {
-        $factory = $this->getContainer()->get('startsymfony.core.social_user_provider_factory');
+        $factory = $this->getContainer()->get('startsymfony.core.user_provider_factory');
 
         Assert::assertInstanceOf(FacebookProvider::class, $factory->getUserProvider('facebook'));
         Assert::assertInstanceOf(GoogleProvider::class, $factory->getUserProvider('google'));

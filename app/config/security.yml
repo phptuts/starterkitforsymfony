@@ -31,8 +31,8 @@ security:
             provider: core_proivder
             guard:
                 authenticators:
+                    - startsymfony.core.security.api_login_token_guard
                     - startsymfony.core.security.api_login_guard
-                    - startsymfony.core.security.api_token_guard
                 entry_point: startsymfony.core.security.api_login_guard
 
         api:
@@ -41,7 +41,7 @@ security:
             stateless: true
             guard:
                 authenticators:
-                    - startsymfony.core.security.api_guard
+                    - startsymfony.core.security.api_token_guard
 
 
         main:

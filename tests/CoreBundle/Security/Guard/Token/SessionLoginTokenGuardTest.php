@@ -155,15 +155,15 @@ class SessionSocialGuardTest extends BaseTestCase
     public function dataProviderForGetCreds()
     {
         $request = Request::create('/token_login_check', 'POST', [],[],[],[], json_encode(['type' => 'google', 'token' => null]));
-        $request->attributes->set('_route', 'social_login_check');
+        $request->attributes->set('_route', 'token_login_check');
 
 
         $request2 = Request::create('/token_login_check', 'POST', [],[],[],[], json_encode(['token' => 'asdfasdf']));
-        $request2->attributes->set('_route', 'social_login_check');
+        $request2->attributes->set('_route', 'token_login_check');
 
         return [
              [Request::create('/bad_end_point', 'POST')],
-             [Request::create('/social_login_check', 'GET')],
+             [Request::create('/token_login_check', 'GET')],
              [$request],
              [$request2]
         ];

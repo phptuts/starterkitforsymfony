@@ -27,12 +27,12 @@ class ResponseSerializerService
     /**
      * @param ResponseModelInterface $responseModel
      * @param array $serializationGroups
-     * @param $statusCode
+     * @param integer $statusCode
      * @return JsonResponse
      */
     public function serializeResponse(ResponseModelInterface $responseModel, $serializationGroups = [],  $statusCode = Response::HTTP_OK)
     {
-        $json = $this->serializer->serialize($responseModel->responseEnvelope(), 'json', $this->createSerializationContext($serializationGroups));
+        $json = $this->serializer->serialize($responseModel->getBody(), 'json', $this->createSerializationContext($serializationGroups));
 
         return new JsonResponse($json, $statusCode, [], true);
     }

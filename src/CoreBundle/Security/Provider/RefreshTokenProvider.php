@@ -11,6 +11,10 @@ use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\Credential\RefreshTokenService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
+/**
+ * Class RefreshTokenProvider
+ * @package CoreBundle\Security\Provider
+ */
 class RefreshTokenProvider extends AbstractCustomProvider
 {
     /**

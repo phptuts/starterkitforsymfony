@@ -13,5 +13,5 @@ interface ResponseModelInterface
      *
      * @return array
      */
-    public function responseEnvelope();
+    public function getBody();
 }

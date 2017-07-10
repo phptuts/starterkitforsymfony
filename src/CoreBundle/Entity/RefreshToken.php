@@ -59,16 +59,6 @@ class RefreshToken
     }
 
     /**
-     * @param int $id
-     * @return RefreshToken
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getToken()

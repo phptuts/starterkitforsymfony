@@ -1,14 +1,16 @@
 <?php
 
-
 namespace CoreBundle\Security\Provider;
-
 
 use CoreBundle\Entity\User;
 use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\Credential\JWSService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
+/**
+ * Class TokenProvider
+ * @package CoreBundle\Security\Provider
+ */
 class TokenProvider extends AbstractCustomProvider
 {
     /**
@@ -16,6 +18,11 @@ class TokenProvider extends AbstractCustomProvider
      */
     private $JWSService;
 
+    /**
+     * TokenProvider constructor.
+     * @param UserRepository $userRepository
+     * @param JWSService $JWSService
+     */
     public function __construct(UserRepository $userRepository, JWSService $JWSService)
     {
         parent::__construct($userRepository);
@@ -31,7 +38,7 @@ class TokenProvider extends AbstractCustomProvider
     public function loadUserByUsername($username)
     {
         if (!$this->JWSService->isValid($username)) {
-            throw new UsernameNotFoundException("INVALID TOKEN.");
+            throw new UsernameNotFoundException("Invalid Token.");
         }
 
         $payload = $this->JWSService->getPayLoad($username);
