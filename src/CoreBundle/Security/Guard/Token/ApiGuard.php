@@ -5,6 +5,10 @@ namespace CoreBundle\Security\Guard\Token;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 
+/**
+ * Class ApiGuard
+ * @package CoreBundle\Security\Guard\Token
+ */
 class ApiGuard extends AbstractTokenGuard
 {
     /**

@@ -109,6 +109,19 @@ snc_redis:
 liip_functional_test: ~
 
 
+fos_rest:
+    body_listener: true
+    format_listener:  true
+    param_fetcher_listener: true
+    view:
+        view_response_listener: 'force'
+        formats:
+            json: true
+    routing_loader:
+        default_format:  json
+        include_format:  false
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'

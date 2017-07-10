@@ -6,6 +6,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
+/**
+ * Class GuardTrait
+ * @package CoreBundle\Security\Guard
+ */
 trait GuardTrait
 {
     /**

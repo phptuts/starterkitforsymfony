@@ -28,6 +28,7 @@ security:
         api_login:
             pattern: ^/api/login_check
             stateless: true
+            provider: core_proivder
             guard:
                 authenticators:
                     - startsymfony.core.security.api_login_guard

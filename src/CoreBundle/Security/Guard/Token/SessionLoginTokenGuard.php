@@ -9,6 +9,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
+/**
+ * Class SessionLoginTokenGuard
+ * @package CoreBundle\Security\Guard\Token
+ */
 class SessionLoginTokenGuard extends AbstractTokenGuard
 {
 

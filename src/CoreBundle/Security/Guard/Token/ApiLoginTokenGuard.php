@@ -8,6 +8,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 
+/**
+ * Class ApiLoginTokenGuard
+ * @package CoreBundle\Security\Guard\Token
+ */
 class ApiLoginTokenGuard extends AbstractTokenGuard
 {
 

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new \FOS\RestBundle\FOSRestBundle(),
 
             new AppBundle\AppBundle(),
             new CoreBundle\CoreBundle(),
