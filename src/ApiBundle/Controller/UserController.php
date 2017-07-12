@@ -43,6 +43,8 @@ class UserController extends FOSRestController
         return $form;
     }
 
+
+
     /**
      * @REST\View()
      *

@@ -11,18 +11,32 @@ use FOS\RestBundle\Serializer\Normalizer\FormErrorHandler as FOSRestFormErrorHan
 
 class FormErrorHandler extends FOSRestFormErrorHandler
 {
+
+    /**
+     * This what serializes the form.  It's really complex and uses fos and jms serializer.
+     *
+     *
+     * @param JsonSerializationVisitor $visitor
+     * @param Form $form
+     * @param array $type
+     * @param Context|null $context
+     * @return array
+     */
     public function serializeFormToJson(JsonSerializationVisitor $visitor, Form $form, array $type, Context $context = null)
     {
-        $isRoot = null === $visitor->getRoot();
         $result = $this->adaptFormArray(parent::serializeFormToJson($visitor, $form, $type));
 
-        if ($isRoot) {
-            $visitor->setRoot($result);
-        }
+        $visitor->setRoot($result);
 
         return $result;
     }
 
+    /**
+     * This is what controls the response wrapper.
+     *
+     * @param \ArrayObject $serializedForm
+     * @return array
+     */
     protected function adaptFormArray(\ArrayObject $serializedForm)
     {
         return [
