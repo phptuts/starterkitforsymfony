@@ -19,7 +19,7 @@ class UpdateUserType extends AbstractType
     {
         $builder
             ->add('email', Types\EmailType::class)
-            ->add('display_name', Types\TextType::class)
+            ->add('displayName', Types\TextType::class)
             ->add('image', Types\FileType::class)
             ->add('bio', Types\TextareaType::class);
     }

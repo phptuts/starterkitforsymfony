@@ -154,6 +154,14 @@ services:
         arguments:
             - '@startsymfony.core.user_provider_factory'
 
+    #VOTERS
+    startsymfony.core.security.user_voter:
+        class: CoreBundle\Security\Voter\UserVoter
+        tags:
+            - { name: security.voter}
+        public: false
+
+
     #SECURITY PROVIDERS
     startsymfony.core.security.facebook_provider:
         class: CoreBundle\Security\Provider\FacebookProvider

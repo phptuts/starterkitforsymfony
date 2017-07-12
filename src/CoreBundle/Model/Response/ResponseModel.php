@@ -15,6 +15,12 @@ class ResponseModel implements ResponseModelInterface
     const CREDENTIAL_RESPONSE = 'credentials';
 
     /**
+     * This is the response for when we serialize a user
+     * @var string
+     */
+    const USER_RESPONSE = 'user';
+
+    /**
      * @var mixed
      */
     private $data;

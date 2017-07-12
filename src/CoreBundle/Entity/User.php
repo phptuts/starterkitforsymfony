@@ -288,6 +288,17 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
     }
 
     /**
+     * Returns true if the user has the role
+     *
+     * @param string $role
+     * @return bool
+     */
+    public function hasRole($role)
+    {
+        return in_array($role, $this->roles);
+    }
+
+    /**
      * Set bio
      *
      * @param string $bio

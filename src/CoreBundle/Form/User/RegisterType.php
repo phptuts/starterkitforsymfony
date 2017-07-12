@@ -24,7 +24,7 @@ class RegisterType extends AbstractType
     {
         $builder
             ->add('email', Types\EmailType::class)
-            ->add('plain_password', Types\PasswordType::class);
+            ->add('plainPassword', Types\PasswordType::class);
     }
 
     /**
@@ -34,7 +34,7 @@ class RegisterType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-            'validation_groups' => [User::VALIDATION_GROUP_DEFAULT, User::VALIDATION_GROUP_PLAIN_PASSWORD]
+            'validation_groups' => [ User::VALIDATION_GROUP_PLAIN_PASSWORD, User::VALIDATION_GROUP_DEFAULT,],
         ]);
     }
 }

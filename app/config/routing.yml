@@ -9,8 +9,8 @@ app:
 
 api:
     resource: '@ApiBundle/Controller/'
-    type: annotation
-
+    prefix: /api
+    type: rest
 
 logout:
     path: /logout

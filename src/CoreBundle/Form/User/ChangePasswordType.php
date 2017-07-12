@@ -29,12 +29,12 @@ class ChangePasswordType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('new_password', Types\PasswordType::class)
-            ->add('current_password', Types\PasswordType::class);
+            ->add('newPassword', Types\PasswordType::class)
+            ->add('currentPassword', Types\PasswordType::class);
 
         // If the user is role admin entering a a password is not required
         if ($this->authorizationChecker->isGranted('ROLE_ADMIN')) {
-            $builder->remove('current_password');
+            $builder->remove('currentPassword');
         }
     }
 

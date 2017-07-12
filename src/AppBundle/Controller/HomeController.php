@@ -3,17 +3,8 @@
 namespace AppBundle\Controller;
 
 use CoreBundle\Entity\Color;
-use CoreBundle\Entity\User;
-use Facebook\Exceptions\FacebookAuthenticationException;
-use Facebook\Exceptions\FacebookResponseException;
-use Facebook\Exceptions\FacebookSDKException;
-use GuzzleHttp\Exception\BadResponseException;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\RequestException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -24,11 +15,10 @@ class HomeController extends Controller
 {
     /**
      * @Route("/", name="homepage")
-     * @param Request $request
      *
      * @return Response
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         /**
          * This is a example of using cache regions

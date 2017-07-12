@@ -1,8 +1,8 @@
 # Learn more about services, parameters and containers at
 # https://symfony.com/doc/current/service_container.html
 parameters:
-    #parameter_name: value
-
+    jms_serializer.serialized_name_annotation_strategy.class: JMS\Serializer\Naming\IdenticalPropertyNamingStrategy
+    jms_serializer.form_error_handler.class: CoreBundle\Handler\FormErrorHandler
 services:
    redis_cache_service:
         class: '%snc_redis.doctrine_cache_predis.class%'

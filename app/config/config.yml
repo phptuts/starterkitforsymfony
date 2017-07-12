@@ -108,11 +108,13 @@ snc_redis:
 
 liip_functional_test: ~
 
+jms_serializer: ~
 
 fos_rest:
-    body_listener: true
-    format_listener:  true
-    param_fetcher_listener: true
+#    body_listener:
+#        array_normalizer:
+#            service: fos_rest.normalizer.camel_keys
+#            forms: true
     view:
         view_response_listener: 'force'
         formats:
@@ -120,7 +122,6 @@ fos_rest:
     routing_loader:
         default_format:  json
         include_format:  false
-
 
 # Swiftmailer Configuration
 swiftmailer:
