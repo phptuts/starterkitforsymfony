@@ -23,7 +23,7 @@ class FormErrorHandler extends FOSRestFormErrorHandler
         return $result;
     }
 
-    private function adaptFormArray(\ArrayObject $serializedForm)
+    protected function adaptFormArray(\ArrayObject $serializedForm)
     {
         return [
             'meta' => [

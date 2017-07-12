@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CoreBundle/Security/Voter/UserVoter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_tests.sh" afterPath="$PROJECT_DIR$/scripts/run_tests.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/User/ChangePasswordType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/User/ChangePasswordType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/User/RegisterType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/User/RegisterType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/User/ResetPasswordType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/User/ResetPasswordType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Form/User/UpdateUserType.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Form/User/UpdateUserType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Model/Response/ResponseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormErrorHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FormErrorHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
-              <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+            <state relative-caret-position="554">
+              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -125,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormErrorHandler.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FormErrorHandler.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="570">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#39#83#0#PHP" expanded="true" />
               </folding>
@@ -252,9 +236,9 @@
         <option value="$PROJECT_DIR$/src/CoreBundle/Service/FormErrorHandlerService.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php" />
       </list>
     </option>
   </component>
@@ -975,16 +959,16 @@
       <workItem from="1499741534162" duration="4076000" />
       <workItem from="1499746720093" duration="3030000" />
       <workItem from="1499774004767" duration="4663000" />
-      <workItem from="1499830372163" duration="2569000" />
+      <workItem from="1499830372163" duration="2651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246262000" />
+    <option name="totallyTimeSpent" value="246344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="821" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1437,21 +1421,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php">
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#83#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="554">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php">
+    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Handler/FormErrorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#83#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
