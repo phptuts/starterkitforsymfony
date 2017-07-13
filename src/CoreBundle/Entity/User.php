@@ -2,6 +2,7 @@
 
 namespace CoreBundle\Entity;
 
+use CoreBundle\Model\Response\ResponseTypeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
@@ -20,7 +21,7 @@ use JMS\Serializer\Annotation as Serializer;
  * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
  * @Serializer\ExclusionPolicy("ALL")
  */
-class User implements AdvancedUserInterface, \Serializable, EquatableInterface
+class User implements AdvancedUserInterface, \Serializable, EquatableInterface, ResponseTypeInterface
 {
 
     /**
@@ -582,6 +583,15 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface
         return $this->getUsername() == $user->getUsername();
     }
 
+    /**
+     * Returns the type of response being serialized
+     *
+     * @return string
+     */
+    public function getResponseType()
+    {
+        return 'users';
+    }
 
 
 }

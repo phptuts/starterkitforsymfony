@@ -63,7 +63,7 @@ class AccountSettingController extends Controller
 
             /** @var User $user */
             $user = $this->getUser();
-            $user->setPlainPassword($form->get('new_password')->getData());
+            $user->setPlainPassword($form->get('newPassword')->getData());
             $this->get('startsymfony.core.user_service')->saveUserWithPlainPassword($user);
             $this->addFlash('success', 'Your password was updated!');
         }

@@ -38,7 +38,7 @@ class AccountSettingControllerTest extends WebTestCase
 
         $form = $crawler->selectButton('Update')->form();
 
-        $form['update_user[display_name]']->setValue('blue_man');
+        $form['update_user[displayName]']->setValue('blue_man');
         $form['update_user[bio]']->setValue('this is about me');
         $form['update_user[image]']->upload(__DIR__ .'/cat.png');
         $crawler = $client->submit($form);
@@ -46,7 +46,7 @@ class AccountSettingControllerTest extends WebTestCase
         Assert::assertEquals(1, $crawler->filter('#success-flash-message')->count());
         Assert::assertEquals('update_profile@gmail.com', $crawler->filter('#update_user_email')->first()->attr('value'));
         Assert::assertEquals('this is about me', $crawler->filter('#update_user_bio')->first()->text());
-        Assert::assertEquals('blue_man', $crawler->filter('#update_user_display_name')->first()->attr('value'));
+        Assert::assertEquals('blue_man', $crawler->filter('#update_user_displayName')->first()->attr('value'));
         $user =  $this->getContainer()
                             ->get('startsymfony.core.repository.user_repository')
                             ->findUserByEmail('update_profile@gmail.com');
@@ -71,8 +71,8 @@ class AccountSettingControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/account-settings/change-password');
         $this->assertStatusCode(200, $client);
         $form = $crawler->selectButton('Change Password')->form();
-        $form->get('change_password[current_password]')->setValue('password');
-        $form->get('change_password[new_password]')->setValue('new_password');
+        $form->get('change_password[currentPassword]')->setValue('password');
+        $form->get('change_password[newPassword]')->setValue('new_password');
         $crawler = $client->submit($form);
         Assert::assertEquals(1,$crawler->filter('#success-flash-message')->count());
 

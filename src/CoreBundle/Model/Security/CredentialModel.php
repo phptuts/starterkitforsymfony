@@ -4,12 +4,13 @@
 namespace CoreBundle\Model\Security;
 
 use CoreBundle\Entity\User;
+use CoreBundle\Model\Response\ResponseTypeInterface;
 
 /**
  * Class JWSModel
  * @package CoreBundle\Model\User
  */
-class CredentialModel
+class CredentialModel implements ResponseTypeInterface
 {
     /**
      * The user that the jws token belongs to
@@ -64,5 +65,16 @@ class CredentialModel
     {
         return $this->user;
     }
+
+    /**
+     * Returns the type of response being serialized
+     *
+     * @return string
+     */
+    public function getResponseType()
+    {
+        return 'credentials';
+    }
+
 
 }

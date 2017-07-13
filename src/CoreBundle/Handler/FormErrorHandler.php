@@ -9,6 +9,11 @@ use JMS\Serializer\Context;
 
 use FOS\RestBundle\Serializer\Normalizer\FormErrorHandler as FOSRestFormErrorHandler;
 
+/**
+ * This is really hard to test so we do it end to end.
+ * Class FormErrorHandler
+ * @package CoreBundle\Handler
+ */
 class FormErrorHandler extends FOSRestFormErrorHandler
 {
 

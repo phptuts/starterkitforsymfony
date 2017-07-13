@@ -8,6 +8,10 @@ use CoreBundle\Service\ResponseSerializerService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * Class CredentialResponseBuilderService
+ * @package CoreBundle\Service\Credential
+ */
 class CredentialResponseBuilderService
 {
     /**
@@ -39,10 +43,8 @@ class CredentialResponseBuilderService
     {
         $credentialModel = $this->credentialModelBuilderService->createCredentialModel($user);
 
-        $responseModel = new ResponseModel($credentialModel, ResponseModel::CREDENTIAL_RESPONSE);
-
         return $this->responseSerializerService
-                ->serializeResponse($responseModel, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_CREATED);
+                ->serializeResponse(new ResponseModel($credentialModel), [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_CREATED);
 
     }
 }

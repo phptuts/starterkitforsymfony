@@ -25,20 +25,15 @@ class ResponseModel implements ResponseModelInterface
      */
     private $data;
 
-    /**
-     * @var string
-     */
-    private $type;
+
 
     /**
      * ResponseModel constructor.
-     * @param string $data this is data be serialized
-     * @param string $type this is the type of response
+     * @param ResponseTypeInterface $data this is data be serialized
      */
-    public function __construct($data, $type)
+    public function __construct($data)
     {
         $this->data = $data;
-        $this->type = $type;
     }
 
     /**
@@ -50,7 +45,7 @@ class ResponseModel implements ResponseModelInterface
     {
         return [
             'meta' => [
-                'type' => $this->type,
+                'type' => $this->data->getResponseType(),
                 'paginated' => false
             ],
             'data' => $this->data

@@ -25,7 +25,7 @@ class UserControllerTest extends WebTestCase
         $this->assertValidationErrors(['data.email', 'data.plainPassword'], $client->getContainer());
 
         $form = $crawler->selectButton('Register')->form();
-        $form->setValues(['register[email]' => self::EXAMPLE_USER_EMAIL, 'register[plain_password]' => 'password']);
+        $form->setValues(['register[email]' => self::EXAMPLE_USER_EMAIL, 'register[plainPassword]' => 'password']);
         $client->submit($form);
 
         $this->assertStatusCode(302, $client);
@@ -124,13 +124,13 @@ class UserControllerTest extends WebTestCase
         $form = $crawler->selectButton('Reset Password')->form();
 
         // Submitting password that should be too short and testing validation
-        $form->setValues(['reset_password[plain_password]' => 'sd']);
+        $form->setValues(['reset_password[plainPassword]' => 'sd']);
         $client->submit($form);
         $this->assertStatusCode(200, $client);
         $this->assertValidationErrors(['data.plainPassword'], $client->getContainer());
 
         // Submitting valid password
-        $form->setValues(['reset_password[plain_password]' => 'new_password']);
+        $form->setValues(['reset_password[plainPassword]' => 'new_password']);
         $client->submit($form);
         $this->assertStatusCode(302, $client);
 

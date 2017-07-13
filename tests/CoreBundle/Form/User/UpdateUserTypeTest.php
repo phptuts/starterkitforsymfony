@@ -16,7 +16,7 @@ class UpdateUserTypeTest extends TypeTestCase
     {
         $form = $this->factory->create(UpdateUserType::class);
         $image = \Mockery::mock(UploadedFile::class);
-        $form->submit(['email' => 'moo@gmaol.com', 'display_name' => 'madx', 'image' => $image, 'bio' => 'About me']);
+        $form->submit(['email' => 'moo@gmaol.com', 'displayName' => 'madx', 'image' => $image, 'bio' => 'About me']);
 
         Assert::assertTrue($form->isSynchronized());
 
@@ -30,8 +30,18 @@ class UpdateUserTypeTest extends TypeTestCase
         Assert::assertEquals($user, $form->getData());
 
         Assert::assertArrayHasKey('email', $form->createView()->children);
-        Assert::assertArrayHasKey('display_name', $form->createView()->children);
+        Assert::assertArrayHasKey('displayName', $form->createView()->children);
         Assert::assertArrayHasKey('image', $form->createView()->children);
+        Assert::assertArrayHasKey('bio', $form->createView()->children);
+    }
+
+    public function testApiRemovesImageFromForm()
+    {
+        $form = $this->factory->create(UpdateUserType::class, null, ['api' => true]);
+
+        Assert::assertArrayHasKey('email', $form->createView()->children);
+        Assert::assertArrayHasKey('displayName', $form->createView()->children);
+        Assert::assertArrayNotHasKey('image', $form->createView()->children);
         Assert::assertArrayHasKey('bio', $form->createView()->children);
     }
 }

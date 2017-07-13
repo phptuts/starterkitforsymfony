@@ -1,15 +1,14 @@
 <?php
 
-
 namespace Tests\CoreBundle\Service;
 
+use CoreBundle\Entity\User;
 use CoreBundle\Model\Response\ResponseModel;
 use CoreBundle\Service\ResponseSerializerService;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Tests\BaseTestCase;
 
 class ResponseSerializerServiceTest extends BaseTestCase
@@ -33,7 +32,7 @@ class ResponseSerializerServiceTest extends BaseTestCase
 
     public function testCreatingSerializeResponse()
     {
-        $responseModel = new ResponseModel(['blah' => true], 'real');
+        $responseModel = new ResponseModel(new User());
 
 
         $this->serializer->shouldReceive('serialize')->with(

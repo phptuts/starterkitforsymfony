@@ -40,7 +40,7 @@ class ChangePasswordTypeTest extends TypeTestCase
 
         $form = $this->factory->create(ChangePasswordType::class);
 
-        $form->submit(['new_password' => 'moomoo']);
+        $form->submit(['newPassword' => 'moomoo']);
 
         Assert::assertTrue($form->isSynchronized());
 
@@ -50,7 +50,7 @@ class ChangePasswordTypeTest extends TypeTestCase
 
         $view = $form->createView();
 
-        Assert::assertArrayHasKey('new_password',$view->children);
+        Assert::assertArrayHasKey('newPassword',$view->children);
 
         Assert::assertArrayNotHasKey('current_password',$view->children);
     }
@@ -61,7 +61,7 @@ class ChangePasswordTypeTest extends TypeTestCase
 
         $form = $this->factory->create(ChangePasswordType::class);
 
-        $form->submit(['new_password' => 'moomoo', 'current_password' => 'blue']);
+        $form->submit(['newPassword' => 'moomoo', 'currentPassword' => 'blue']);
 
         Assert::assertTrue($form->isSynchronized());
 
@@ -72,8 +72,8 @@ class ChangePasswordTypeTest extends TypeTestCase
 
         $view = $form->createView();
 
-        Assert::assertArrayHasKey('new_password',$view->children);
+        Assert::assertArrayHasKey('newPassword',$view->children);
 
-        Assert::assertArrayHasKey('current_password',$view->children);
+        Assert::assertArrayHasKey('currentPassword',$view->children);
     }
 }

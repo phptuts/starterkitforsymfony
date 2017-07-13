@@ -13,7 +13,7 @@ class ResetPasswordTypeTest extends TypeTestCase
     public function testFormCompiles()
     {
         $form = $this->factory->create(ResetPasswordType::class);
-        $form->submit(['plain_password' => 'word']);
+        $form->submit(['plainPassword' => 'word']);
 
         Assert::assertTrue($form->isSynchronized());
 
@@ -23,6 +23,6 @@ class ResetPasswordTypeTest extends TypeTestCase
 
         Assert::assertEquals($user, $form->getData());
 
-        Assert::assertArrayHasKey('plain_password', $form->createView()->children);
+        Assert::assertArrayHasKey('plainPassword', $form->createView()->children);
     }
 }

@@ -8,7 +8,7 @@ services:
             - '@mailer'
             - '%from_email%'
 
-    startsymfony.core.response:
+    startsymfony.core.response_serializer:
         class: CoreBundle\Service\ResponseSerializerService
         arguments:
             - '@jms_serializer.serializer'
@@ -36,7 +36,7 @@ services:
         class: CoreBundle\Service\Credential\CredentialResponseBuilderService
         arguments:
             - '@startsymfony.core.credential_model_builder'
-            - '@startsymfony.core.response'
+            - '@startsymfony.core.response_serializer'
 
 
     #USER SERVICES
@@ -139,7 +139,6 @@ services:
         arguments:
             - '@startsymfony.core.user_provider_factory'
             - '@startsymfony.core.credential_response_builder'
-            - '@startsymfony.core.response'
 
 
     startsymfony.core.security.api_login_guard:
@@ -147,7 +146,6 @@ services:
         arguments:
             - '@security.encoder_factory'
             - '@startsymfony.core.credential_response_builder'
-            - '@startsymfony.core.response'
 
     startsymfony.core.security.api_token_guard:
         class: CoreBundle\Security\Guard\Token\ApiTokenGuard

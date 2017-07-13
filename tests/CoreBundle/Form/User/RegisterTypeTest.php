@@ -12,7 +12,7 @@ class RegisterTypeTest extends TypeTestCase
     public function testFormCompiles()
     {
         $form = $this->factory->create(RegisterType::class);
-        $form->submit(['email' => 'moo@gmaol.com', 'plain_password' => 'masdfasd']);
+        $form->submit(['email' => 'moo@gmaol.com', 'plainPassword' => 'masdfasd']);
 
         Assert::assertTrue($form->isSynchronized());
 
@@ -23,6 +23,6 @@ class RegisterTypeTest extends TypeTestCase
         Assert::assertEquals($user, $form->getData());
 
         Assert::assertArrayHasKey('email', $form->createView()->children);
-        Assert::assertArrayHasKey('plain_password', $form->createView()->children);
+        Assert::assertArrayHasKey('plainPassword', $form->createView()->children);
     }
 }

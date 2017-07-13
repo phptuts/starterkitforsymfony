@@ -22,13 +22,18 @@ class UpdateUserType extends AbstractType
             ->add('displayName', Types\TextType::class)
             ->add('image', Types\FileType::class)
             ->add('bio', Types\TextareaType::class);
+
+        if ($options['api']) {
+            $builder->remove('image');
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => User::class,
-            'validation_groups' => [User::VALIDATION_GROUP_DEFAULT]
+            'validation_groups' => [User::VALIDATION_GROUP_DEFAULT],
+            'api' => false
         ]);
     }
 }

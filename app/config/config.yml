@@ -111,10 +111,7 @@ liip_functional_test: ~
 jms_serializer: ~
 
 fos_rest:
-#    body_listener:
-#        array_normalizer:
-#            service: fos_rest.normalizer.camel_keys
-#            forms: true
+    disable_csrf_role: IS_AUTHENTICATED_ANONYMOUSLY
     view:
         view_response_listener: 'force'
         formats:
