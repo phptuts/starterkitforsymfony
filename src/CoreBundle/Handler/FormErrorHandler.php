@@ -46,7 +46,7 @@ class FormErrorHandler extends FOSRestFormErrorHandler
     {
         return [
             'meta' => [
-                'type' => 'form_errors',
+                'type' => 'formErrors',
                 'paginated' => false,
             ],
             'data' => $serializedForm,

@@ -2,7 +2,6 @@
 
 namespace CoreBundle\Form\User;
 
-
 use CoreBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

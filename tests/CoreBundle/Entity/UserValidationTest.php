@@ -94,6 +94,10 @@ class UserValidationTest extends BaseTestCase
             ->setImage($uploadedFile);
         $constraintViolationList = $this->validator->validate($user, null, [User::VALIDATION_GROUP_DEFAULT]);
         Assert::assertEquals('image', $constraintViolationList->get(0)->getPropertyPath());
+
+        $user->setImage(null);
+        $constraintViolationList = $this->validator->validate($user, null, [User::VALIDATION_IMAGE_REQUIRED]);
+        Assert::assertEquals('image', $constraintViolationList->get(0)->getPropertyPath());
     }
 
     private function createString($length)

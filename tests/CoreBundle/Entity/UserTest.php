@@ -57,6 +57,8 @@ class UserTest extends BaseTestCase
        Assert::assertNull($user->getPlainPassword());
    }
 
+
+
    public function testBasics()
    {
        $user = new User();

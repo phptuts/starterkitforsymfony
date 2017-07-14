@@ -31,6 +31,13 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     const VALIDATION_GROUP_DEFAULT = "user_default_validation_group";
 
     /**
+     * This is the default validation group used across all the user forms
+     * @var string
+     */
+    const VALIDATION_IMAGE_REQUIRED = "user_image_required";
+
+
+    /**
      * The validation group for plain password.
      * @var  string
      */
@@ -172,7 +179,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      * @var UploadedFile
      *
      * @Serializer\Exclude()
-     * // This is better to test end to end
+     * @Constraints\NotBlank(groups={User::VALIDATION_IMAGE_REQUIRED})
      * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */
     protected $image;
@@ -296,7 +303,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      */
     public function hasRole($role)
     {
-        return in_array($role, $this->roles);
+        return in_array($role, $this->getRoles());
     }
 
     /**

@@ -47,7 +47,7 @@ class UserVoter extends Voter
         /** @var User $user */
         $user = $token->getUser();
 
-        return $user->hasRole('ROLE_ADMIN') || $user->isEqualTo($subject);
+        return $user instanceof User && ($user->hasRole('ROLE_ADMIN') || $user->isEqualTo($subject));
     }
 
 }

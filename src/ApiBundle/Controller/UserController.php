@@ -8,19 +8,18 @@ use CoreBundle\Form\User\ForgetPasswordType;
 use CoreBundle\Form\User\RegisterType;
 use CoreBundle\Form\User\ResetPasswordType;
 use CoreBundle\Form\User\UpdateUserType;
+use CoreBundle\Form\User\UserImageType;
 use CoreBundle\Security\Voter\UserVoter;
 use FOS\RestBundle\Controller\Annotations as REST;
 use CoreBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * TODO UPDATE IMAGE
- * TODO USERS END POINT MULTIPLE USERS
- * TODO USER VOTER TESTS
  * TODO API TESTS
  * TODO NELMIO API DOC BUNDLE
  * Class UserController
@@ -41,7 +40,7 @@ class UserController extends AbstractRestController
      */
     public function registerAction(Request $request)
     {
-        $form  = $this->createForm(RegisterType::class);
+        $form = $this->createForm(RegisterType::class);
 
         $form->submit($request->request->all());
 
@@ -110,6 +109,34 @@ class UserController extends AbstractRestController
     }
 
     /**
+     *
+     * @param Request $request
+     * @param User $user
+     *
+     * @REST\Post("users/{id}/image")
+     * @ParamConverter(name="user", class="CoreBundle:User")
+     *
+     * @return Response|FormInterface
+     */
+    public function imageAction(Request $request, User $user)
+    {
+        $form = $this->createForm(UserImageType::class, $user);
+
+        $form->submit(['image' => $request->files->get('image')]);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $url = $this->get('startsymfony.core.s3_service')
+                ->uploadFile($user->getImage(), 'profile_pics', md5($user->getId() . '_profile_id'));
+            $user->setImageUrl($url);
+            $this->get('startsymfony.core.user_service')->save($user);
+
+            return new Response('', Response::HTTP_NO_CONTENT);
+        }
+
+        return $form;
+    }
+
+    /**
      * @REST\View()
      *
      * @param Request $request
@@ -151,7 +178,7 @@ class UserController extends AbstractRestController
      */
     public function updateUserAction(Request $request, User $user)
     {
-        $form  = $this->createForm(UpdateUserType::class, $user, ['api' => true]);
+        $form = $this->createForm(UpdateUserType::class, $user, ['api' => true]);
 
         $form->submit($request->request->all());
 
@@ -182,10 +209,34 @@ class UserController extends AbstractRestController
      */
     public function getUserAction(User $user)
     {
-       $this->denyAccessUnlessGranted(UserVoter::USER_CAN_VIEW_EDIT, $user);
+        $this->denyAccessUnlessGranted(UserVoter::USER_CAN_VIEW_EDIT, $user);
 
         return $this->serializeSingleObject($user, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_OK);
     }
 
+    /**
+     *
+     * @Security("has_role('ROLE_ADMIN')")
+     * @REST\View()
+     * @REST\Get(path="users")
+     * @REST\QueryParam(name="q", description="The search query", nullable=true)
+     * @REST\QueryParam(name="page", description="The current page ", nullable=true)
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function getUsersAction(Request $request)
+    {
+        $page = $request->query->get('page', 1);
+
+        $users = $this
+            ->get('startsymfony.core.repository.user_repository')
+            ->getUsers(
+                $request->query->get('q'),
+                $page
+            );
+
+        return $this->serializeList($users, 'users', $page, [User::USER_PERSONAL_SERIALIZATION_GROUP], Response::HTTP_OK);
+    }
 
 }
