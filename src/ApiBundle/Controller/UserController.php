@@ -10,6 +10,7 @@ use CoreBundle\Form\User\ResetPasswordType;
 use CoreBundle\Form\User\UpdateUserType;
 use CoreBundle\Form\User\UserImageType;
 use CoreBundle\Security\Voter\UserVoter;
+use Facebook\FacebookRequest;
 use FOS\RestBundle\Controller\Annotations as REST;
 use CoreBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -109,6 +110,34 @@ class UserController extends AbstractRestController
     }
 
     /**
+     * @REST\View()
+     *
+     * @param Request $request
+     * @param User $user
+     *
+     * @REST\Patch(path="users/{id}/password")
+     * @ParamConverter(name="user", class="CoreBundle:User")
+     *
+     * @return FormInterface|Response
+     */
+    public function changePasswordAction(Request $request, User $user)
+    {
+        $form = $this->createForm(ChangePasswordType::class);
+
+        $form->submit($request->request->all());
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $user->setPlainPassword($form->get('newPassword')->getData());
+            $this->get('startsymfony.core.user_service')->saveUserWithPlainPassword($user);
+
+            return new Response('', Response::HTTP_NO_CONTENT);
+        }
+
+        return $form;
+    }
+
+    /**
      *
      * @param Request $request
      * @param User $user
@@ -142,43 +171,14 @@ class UserController extends AbstractRestController
      * @param Request $request
      * @param User $user
      *
-     * @REST\Post(path="users/{id}/password")
-     * @ParamConverter(name="user", class="CoreBundle:User")
-     *
-     * @return FormInterface|Response
-     */
-    public function changePasswordAction(Request $request, User $user)
-    {
-        $form = $this->createForm(ChangePasswordType::class);
-
-        $form->submit($request->request->all());
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $user->setPlainPassword($form->get('newPassword')->getData());
-            $this->get('startsymfony.core.user_service')->saveUserWithPlainPassword($user);
-
-            return new Response('', Response::HTTP_NO_CONTENT);
-        }
-
-        return $form;
-    }
-
-
-    /**
-     * @REST\View()
-     *
-     * @param Request $request
-     * @param User $user
-     *
-     * @REST\Post(path="users/{id}")
+     * @REST\Patch(path="users/{id}")
      * @ParamConverter(name="user", class="CoreBundle:User")
      *
      * @return FormInterface|Response
      */
     public function updateUserAction(Request $request, User $user)
     {
-        $form = $this->createForm(UpdateUserType::class, $user, ['api' => true]);
+        $form = $this->createForm(UpdateUserType::class, $user);
 
         $form->submit($request->request->all());
 

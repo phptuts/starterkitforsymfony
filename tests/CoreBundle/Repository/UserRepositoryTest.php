@@ -60,7 +60,7 @@ class UserRepositoryTest extends BaseTestCase
     public function testGetUser()
     {
         $pageUser = $this->repository->getUsers('forget_password');
-        Assert::assertEquals(3, $pageUser->count());
+        Assert::assertEquals(4, $pageUser->count());
 
         $pageUser = $this->repository->getUsers('forget_password_2');
         Assert::assertEquals(1, $pageUser->count());

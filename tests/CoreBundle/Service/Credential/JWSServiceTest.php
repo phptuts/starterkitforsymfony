@@ -42,7 +42,7 @@ class JWSServiceTest extends BaseTestCase
         Assert::assertTrue($lessThanExpirationTimeStamp < $model->getExpirationTimeStamp());
         Assert::assertTrue($greaterThanExpirationTimeStamp > $model->getExpirationTimeStamp());
         Assert::assertTrue($this->JWSService->isValid($model->getToken()));
-        $payload = $this->JWSService->getPayLoad($model->getToken());
+        $payload = $this->JWSService->getPayload($model->getToken());
         Assert::assertEquals(15, $payload['user_id']);
         Assert::assertEquals($model->getExpirationTimeStamp(), $payload['exp']);
         Assert::assertArrayHasKey('iat', $payload);
@@ -53,7 +53,7 @@ class JWSServiceTest extends BaseTestCase
         $this->expectException(ProgrammerException::class);
         $this->expectExceptionCode(ProgrammerException::JWS_INVALID_TOKEN_FORMAT);
         $this->expectExceptionMessage('Unable to read jws token.');
-        $this->JWSService->getPayLoad('token');
+        $this->JWSService->getPayload('token');
     }
 
     /**

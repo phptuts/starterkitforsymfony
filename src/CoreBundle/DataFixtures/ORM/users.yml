@@ -79,6 +79,30 @@ CoreBundle\Entity\User:
         forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
         source: 'website'
 
+    forget_password_end_2_end:
+        email: 'forget_password_end_2_end@gmail.com'
+        displayName: 'forget_password_end_2_end'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    change_password_end_2_end:
+        email: 'change_password_end_2_end@gmail.com'
+        displayName: 'change_password_end_2_end'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    update_user_e2e:
+        email: update_user_e2e@email.com
+        displayName: 'update_user_e2e'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
     account_setting_user:
         email: 'update_profile@gmail.com'
         password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password

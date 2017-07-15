@@ -41,7 +41,7 @@ class TokenProvider extends AbstractCustomProvider
             throw new UsernameNotFoundException("Invalid Token.");
         }
 
-        $payload = $this->JWSService->getPayLoad($username);
+        $payload = $this->JWSService->getPayload($username);
 
         if (empty($payload[JWSService::USER_ID_KEY])) {
             throw new UsernameNotFoundException("No user_id in token payload");

@@ -597,7 +597,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      */
     public function getResponseType()
     {
-        return 'users';
+        return 'user';
     }
 
 

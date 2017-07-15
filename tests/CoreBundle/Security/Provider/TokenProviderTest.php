@@ -47,7 +47,7 @@ class TokenProviderTest extends BaseTestCase
     {
         $user = new User();
         $this->jwsService->shouldReceive('isValid')->with('token')->andReturn(true);
-        $this->jwsService->shouldReceive('getPayLoad')->with('token')->andReturn(['user_id' => 33]);
+        $this->jwsService->shouldReceive('getPayload')->with('token')->andReturn(['user_id' => 33]);
         $this->userRepo->shouldReceive('find')->with('33')->andReturn($user);
         $userFound = $this->tokenProvider->loadUserByUsername('token');
 
@@ -66,7 +66,7 @@ class TokenProviderTest extends BaseTestCase
     {
         $this->expectException(UsernameNotFoundException::class);
         $this->jwsService->shouldReceive('isValid')->with('token')->andReturn(true);
-        $this->jwsService->shouldReceive('getPayLoad')->with('token')->andReturn(['id' => 33]);
+        $this->jwsService->shouldReceive('getPayload')->with('token')->andReturn(['id' => 33]);
 
         $this->tokenProvider->loadUserByUsername('token');
     }
@@ -75,7 +75,7 @@ class TokenProviderTest extends BaseTestCase
     {
         $this->expectException(UsernameNotFoundException::class);
         $this->jwsService->shouldReceive('isValid')->with('token')->andReturn(true);
-        $this->jwsService->shouldReceive('getPayLoad')->with('token')->andReturn(['user_id' => 33]);
+        $this->jwsService->shouldReceive('getPayload')->with('token')->andReturn(['user_id' => 33]);
 
         $this->userRepo->shouldReceive('find')->with('33')->andReturnNull();
         $this->tokenProvider->loadUserByUsername('token');

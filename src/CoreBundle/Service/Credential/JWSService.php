@@ -111,7 +111,7 @@ class JWSService
      * @return array
      * @throws ProgrammerException
      */
-    public function getPayLoad($token)
+    public function getPayload($token)
     {
         try {
             $jws = SimpleJWS::load($token);

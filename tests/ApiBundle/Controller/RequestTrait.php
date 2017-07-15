@@ -21,15 +21,21 @@ trait RequestTrait
     {
         $headers = ['HTTP_Content-type' => 'application/json'];
 
-        if (empty($authToken)) {
-            $headers['HTTP_Authorization'] = $authToken;
+        if (!empty($authToken)) {
+            $headers['HTTP_Authorization'] = 'Bearer ' . $authToken;
         }
 
-        $client->request($method, $url, $data, [], $headers);
+        $client->request($method, $url, $data, [], $headers, json_encode($data));
 
         return $client->getResponse();
     }
 
+    /**
+     * Gets the an array from json response.
+     *
+     * @param Response $response
+     * @return array
+     */
     public function getJsonResponse(Response $response)
     {
         return json_decode($response->getContent(), true);
