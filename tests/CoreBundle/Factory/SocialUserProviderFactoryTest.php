@@ -14,6 +14,9 @@ use Tests\BaseTestCase;
 
 class SocialUserProviderFactoryTest extends BaseTestCase
 {
+    /**
+     * Testing the user provider factory returns the right provider
+     */
     public function testFactory()
     {
         $factory = $this->getContainer()->get('startsymfony.core.user_provider_factory');

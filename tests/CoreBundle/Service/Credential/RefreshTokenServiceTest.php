@@ -38,10 +38,14 @@ class RefreshTokenServiceTest extends BaseTestCase
         $this->refreshTokenService = new RefreshTokenService($this->em, 1000);
     }
 
+    /**
+     * Tests that create refresh token saves the correct expiration date, token and that the token is not used
+     * Basically making sure everything is valid
+     */
     public function testCreateRefreshToken()
     {
-        $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . 1000 - 500 .  ' seconds')->getTimestamp();
-        $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . 1000 + 500 .  ' seconds')->getTimestamp();
+        $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . (1000 - 500) .  ' seconds')->getTimestamp();
+        $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . (1000 + 500) .  ' seconds')->getTimestamp();
 
         $user = new User();
         $this->em->shouldReceive('persist')->once()->with(\Mockery::type(RefreshToken::class));

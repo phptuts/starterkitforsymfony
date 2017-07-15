@@ -8,6 +8,9 @@ use Tests\BaseTestCase;
 
 class ChangePasswordModelTest extends BaseTestCase
 {
+    /**
+     * Basic password model test
+     */
     public function testModel()
     {
         $changePasswordModel = new ChangePasswordModel();

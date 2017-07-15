@@ -94,6 +94,9 @@ class UserControllerTest extends WebTestCase
         Assert::assertFalse($user->isEnabled());
     }
 
+    /**
+     * Tests that an admin can change the password of another user
+     */
     public function testUserChangePassword()
     {
         $user = $this->userRepository->findUserByEmail('change_password_user@gmail.com');

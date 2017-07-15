@@ -10,6 +10,9 @@ use Tests\BaseTestCase;
 
 class RefreshTokenTest extends BaseTestCase
 {
+    /**
+     * Vanity test for code coverage
+     */
     public function testGetId()
     {
         $refreshToken = new RefreshToken();

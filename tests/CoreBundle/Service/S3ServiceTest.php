@@ -33,11 +33,9 @@ class S3ServiceTest extends BaseTestCase
         $this->s3Service = new S3Service($s3ClientFactory, 'bucket_name', 'dev');
     }
 
-    public function testServiceDefinition()
-    {
-        Assert::assertInstanceOf(S3Service::class, $this->getContainer()->get('startsymfony.core.s3_service'));
-    }
-
+    /**
+     * Tests that upload works and that we get can back a url to put into the db
+     */
     public function testUpload()
     {
         $uploadedFile = \Mockery::mock(UploadedFile::class);

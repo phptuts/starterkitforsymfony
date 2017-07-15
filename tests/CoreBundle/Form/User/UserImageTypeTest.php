@@ -13,6 +13,9 @@ use Symfony\Component\Form\Test\TypeTestCase;
 class UserImageTypeTest extends TypeTestCase
 {
 
+    /**
+     * Testing that the form compiles with the right field
+     */
     public function testFormCompiles()
     {
         $form = $this->factory->create(UserImageType::class);

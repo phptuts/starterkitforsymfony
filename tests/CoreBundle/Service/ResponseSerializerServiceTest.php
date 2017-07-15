@@ -30,6 +30,9 @@ class ResponseSerializerServiceTest extends BaseTestCase
         $this->responseSerializerService = new ResponseSerializerService($this->serializer);
     }
 
+    /**
+     * Tests that we can serialize a response model
+     */
     public function testCreatingSerializeResponse()
     {
         $responseModel = new ResponseModel(new User());

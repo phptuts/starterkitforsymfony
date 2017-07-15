@@ -8,6 +8,9 @@ use Tests\BaseTestCase;
 
 class FaceBookClientFactoryTest extends BaseTestCase
 {
+    /**
+     * testing facebook factory return the facebook client
+     */
     public function testFactory()
     {
         $factory = $this->getContainer()->get('startsymfony.core.facebook_client_factory');

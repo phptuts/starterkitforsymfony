@@ -48,11 +48,9 @@ class GoogleProviderTest extends BaseTestCase
         $this->googleProvider = new GoogleProvider($this->userRepository, $this->registerService, $googleClientFactory);
     }
 
-    public function testServiceId()
-    {
-        Assert::assertInstanceOf(GoogleProvider::class, $this->getContainer()->get('startsymfony.core.security.google_provider'));
-    }
-
+    /**
+     * Test that if a new user auth with google that we register the user in our database
+     */
     public function testNewUser()
     {
         $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
@@ -65,7 +63,10 @@ class GoogleProviderTest extends BaseTestCase
         Assert::assertNotEmpty($user->getEmail());
     }
 
-    public function testUserFound()
+    /**
+     * Tests if the google access token is found we return the found user
+     */
+    public function testUserFoundInOurDatabase()
     {
         $user = new User();
         $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturn($user);
@@ -77,6 +78,9 @@ class GoogleProviderTest extends BaseTestCase
         Assert::assertEquals($user, $returnedUser);
     }
 
+    /**
+     * Tests that if the google sdk throws an exception we transfer it to a UsernameNotFoundException
+     */
     public function testLogicExceptionIsThrownTransformedToUsernameNotFoundException()
     {
         $token = 'asdfasdfasdfasdf';
@@ -89,6 +93,9 @@ class GoogleProviderTest extends BaseTestCase
         $this->googleProvider->loadUserByUsername($token);
     }
 
+    /**
+     * Tests that if there is an Exception thrown  we transfer it to a UsernameNotFoundException
+     */
     public function testExceptionIsThrownTransformedToUsernameNotFoundException()
     {
         $token = 'asdfasdfasdfasdf';
@@ -102,12 +109,18 @@ class GoogleProviderTest extends BaseTestCase
 
     }
 
+    /**
+     * Test refresh user must be an instance of Usr
+     */
     public function testRefreshUserWithUnsupportedUserThrowsException()
     {
         $this->expectException(UnsupportedUserException::class);
         $this->googleProvider->refreshUser(new BlahUser());
     }
 
+    /**
+     * Test that refresh user return the same user that match the email provided
+     */
     public function testRefreshUserValidUserReturns()
     {
         $user = new User();
@@ -120,6 +133,9 @@ class GoogleProviderTest extends BaseTestCase
 
     }
 
+    /**
+     * Asserts that only class User is supported
+     */
     public function testSupportedClass()
     {
         Assert::assertTrue($this->googleProvider->supportsClass(User::class));

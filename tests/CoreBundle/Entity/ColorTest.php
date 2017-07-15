@@ -8,6 +8,9 @@ use Tests\BaseTestCase;
 
 class ColorTest extends BaseTestCase
 {
+    /**
+     * Basic Entity Test
+     */
     public function testColorBasics()
     {
         $color = new Color();

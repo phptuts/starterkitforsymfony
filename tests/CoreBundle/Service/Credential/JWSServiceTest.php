@@ -27,6 +27,9 @@ class JWSServiceTest extends BaseTestCase
         Assert::assertInstanceOf(JWSService::class, $this->getContainer()->get('startsymfony.core.jws_service'));
     }
 
+    /**
+     * Tests that the jws service can create an auth model
+     */
     public function testAuthModelCreate()
     {
         $user = new User();
@@ -48,6 +51,9 @@ class JWSServiceTest extends BaseTestCase
         Assert::assertArrayHasKey('iat', $payload);
     }
 
+    /**
+     * Tests that a bad token when reading the payload will throw an exception.
+     */
     public function testInvalidTokenThrowsProgrammerException()
     {
         $this->expectException(ProgrammerException::class);
@@ -57,6 +63,7 @@ class JWSServiceTest extends BaseTestCase
     }
 
     /**
+     * Asserts that bad tokens are not valid
      * @dataProvider badTokens
      * @param $token
      */
@@ -65,6 +72,10 @@ class JWSServiceTest extends BaseTestCase
         Assert::assertFalse($this->JWSService->isValid($token));
     }
 
+    /**
+     * A data provider for bad tokens
+     * @return array
+     */
     public function badTokens()
     {
         return [

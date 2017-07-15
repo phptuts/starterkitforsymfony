@@ -41,6 +41,9 @@ class CredentialResponseBuilderServiceTest extends BaseTestCase
         $this->credentialResponseBuilderService = new CredentialResponseBuilderService($this->credentialModelBuilderService, $this->responseSerializerService);
     }
 
+    /**
+     * Tests that an auth response model is create with the user in the body.
+     */
     public function testCreateCredentialResponse()
     {
         $user = new User();

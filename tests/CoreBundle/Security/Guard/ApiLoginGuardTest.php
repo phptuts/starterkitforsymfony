@@ -15,6 +15,10 @@ use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Tests\BaseTestCase;
 
+/**
+ * Class ApiLoginGuardTest
+ * @package Tests\CoreBundle\Security\Guard
+ */
 class ApiLoginGuardTest extends BaseTestCase
 {
     /**
@@ -42,14 +46,6 @@ class ApiLoginGuardTest extends BaseTestCase
     }
 
     /**
-     * Tests that the service definition is setup right
-     */
-    public function testServiceDefinition()
-    {
-        Assert::assertInstanceOf(ApiLoginGuard::class, $this->getContainer()->get('startsymfony.core.security.api_login_guard'));
-    }
-
-    /**
      * This tests a bunch of invalid requests
      * @param Request $request
      * @dataProvider dataProviderForGetCreds
@@ -59,6 +55,10 @@ class ApiLoginGuardTest extends BaseTestCase
         Assert::assertNull($this->apiLoginGuard->getCredentials($request));
     }
 
+    /**
+     * This tests that the login guard can take a valid request and return the an array with the
+     * email and password to validate
+     */
     public function testValidGetCredentials()
     {
         $request = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['password' => 'asdfasdf', 'email' => 'blue@gmailcom']));
@@ -70,6 +70,9 @@ class ApiLoginGuardTest extends BaseTestCase
         Assert::assertEquals('blue@gmailcom', $creds['email']);
     }
 
+    /**
+     * This tests that guard return whatever user the user provider found via the email.
+     */
     public function testGetUser()
     {
         $user = new User();
@@ -81,6 +84,10 @@ class ApiLoginGuardTest extends BaseTestCase
         Assert::assertEquals($user, $userFound);
     }
 
+    /**
+     * This tests that if raw password match the user it return true.
+     * If it returns onAuthenticationSuccess is called
+     */
     public function testCheckCredentials()
     {
         $user =new User();
@@ -93,6 +100,10 @@ class ApiLoginGuardTest extends BaseTestCase
         Assert::assertTrue($this->apiLoginGuard->checkCredentials(['password' => 'password'],$user));
     }
 
+    /**
+     * This tests a credentials response is return
+     * Called when auth success is good.
+     */
     public function testOnAuthenticationSuccess()
     {
         $user = new User();
@@ -109,6 +120,11 @@ class ApiLoginGuardTest extends BaseTestCase
     }
 
 
+    /**
+     * This provides a bunch of invalid requests for testing the api login guard
+     *
+     * @return array
+     */
     public function dataProviderForGetCreds()
     {
         $request = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['type' => 'google', 'token' => null]));

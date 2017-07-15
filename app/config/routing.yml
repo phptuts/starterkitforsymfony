@@ -22,3 +22,7 @@ token_login_check:
 api_login:
     path: /api/login_check
     methods: ['POST']
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc

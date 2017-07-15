@@ -155,6 +155,5 @@ class BaseApiTestCase extends WebTestCase
         $response = $facebookClient->get('/me?fields=email', $userAccessToken);
 
         return ['email' => $response->getGraphUser()->getEmail(), 'token' => $userAccessToken];
-
     }
 }

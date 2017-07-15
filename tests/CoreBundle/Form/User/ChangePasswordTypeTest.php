@@ -25,6 +25,10 @@ class ChangePasswordTypeTest extends TypeTestCase
         parent::setUp();
     }
 
+    /**
+     * This allows for us mock the AuthorizationCheckerInterface in the form
+     * @return array
+     */
     protected function getExtensions()
     {
         $changePasswordType = new ChangePasswordType($this->authorizationChecker);
@@ -34,6 +38,10 @@ class ChangePasswordTypeTest extends TypeTestCase
         ];
     }
 
+    /**
+     * Testing that admin form for changing password don't have current_password
+     * This allows admin's to change other user's password
+     */
     public function testAdminChangePassword()
     {
         $this->authorizationChecker->shouldReceive('isGranted')->withAnyArgs()->andReturn(true);
@@ -55,6 +63,9 @@ class ChangePasswordTypeTest extends TypeTestCase
         Assert::assertArrayNotHasKey('current_password',$view->children);
     }
 
+    /**
+     * Tests that regular user have currentPassword field in their
+     */
     public function testRegularUserChangePassword()
     {
         $this->authorizationChecker->shouldReceive('isGranted')->withAnyArgs()->andReturn(false);

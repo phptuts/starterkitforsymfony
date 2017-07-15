@@ -38,11 +38,9 @@ class TokenProviderTest extends BaseTestCase
         $this->tokenProvider = new TokenProvider($this->userRepo, $this->jwsService);
     }
 
-    public function testServiceName()
-    {
-        Assert::assertInstanceOf(TokenProvider::class, $this->getContainer()->get('startsymfony.core.security.token_provider'));
-    }
-
+    /**
+     * Tests happy path a valid token with a user id that is valid returns the User object
+     */
     public function testValidToken()
     {
         $user = new User();
@@ -54,6 +52,9 @@ class TokenProviderTest extends BaseTestCase
         Assert::assertEquals($user, $userFound);
     }
 
+    /**
+     * Tests that an invalid throws the UsernameNotFoundException
+     */
     public function testInvalidToken()
     {
         $this->expectException(UsernameNotFoundException::class);
@@ -62,6 +63,9 @@ class TokenProviderTest extends BaseTestCase
         $this->tokenProvider->loadUserByUsername('token');
     }
 
+    /**
+     * Tests a token without user_id in payload throw UsernameNotFoundException
+     */
     public function testTokenWithNoUserIdInPayload()
     {
         $this->expectException(UsernameNotFoundException::class);
@@ -71,6 +75,9 @@ class TokenProviderTest extends BaseTestCase
         $this->tokenProvider->loadUserByUsername('token');
     }
 
+    /**
+     * Tests that if the user id is not found in the db it throws UsernameNotFoundException
+     */
     public function testUserIdNotFoundInDatabase()
     {
         $this->expectException(UsernameNotFoundException::class);

@@ -39,6 +39,9 @@ class CredentialModelBuilderServiceTest extends BaseTestCase
         $this->credentialModelBuilderService = new CredentialModelBuilderService($this->jwsTokenService, $this->refreshTokenService);
     }
 
+    /**
+     * Tests the insides of a Credential Model to make sure everything is set
+     */
     public function testCreateCredentialModel()
     {
         $user = new User();

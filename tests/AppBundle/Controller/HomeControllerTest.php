@@ -7,6 +7,9 @@ use Liip\FunctionalTestBundle\Test\WebTestCase;
 
 class HomeControllerTest extends WebTestCase
 {
+    /**
+     * Testing that the home page loads
+     */
     public function testHomePageAndChangeColorPage()
     {
         $client = $this->makeClient();

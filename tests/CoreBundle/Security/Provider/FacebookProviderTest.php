@@ -52,6 +52,9 @@ class FacebookProviderTest extends BaseTestCase
         $this->facebookProvider = new FacebookProvider($facebookClientFactory, $this->userRepository, $this->registerService);
     }
 
+    /**
+     * Tests that if the user does not exists in our database that we create them via register service
+     */
     public function testUserNotFound()
     {
         $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
@@ -73,6 +76,9 @@ class FacebookProviderTest extends BaseTestCase
 
     }
 
+    /**
+     * Tests that if the user is found that we
+     */
     public function testUserFound()
     {
         $user = new User();
@@ -94,6 +100,9 @@ class FacebookProviderTest extends BaseTestCase
         Assert::assertEquals($user, $returnedUser);
     }
 
+    /**
+     * Test that if we get a bad response from facebook we throw a UsernameNotFoundException
+     */
     public function testFacebookResponseExceptionThrown()
     {
         $token = 'asdfasdfasdfasdf';
@@ -108,6 +117,9 @@ class FacebookProviderTest extends BaseTestCase
 
     }
 
+    /**
+     * Test that if we get a sdk error  we throw a UsernameNotFoundException
+     */
     public function testFacebookSDKExceptionThrown()
     {
         $token = 'asdfasdfasdfasdf';
@@ -122,7 +134,10 @@ class FacebookProviderTest extends BaseTestCase
 
     }
 
-    public function testGeneralExceptionThorwn()
+    /**
+     * Test that if we get any exception  we throw a UsernameNotFoundException
+     */
+    public function testGeneralExceptionThrown()
     {
         $token = 'asdfasdfasdfasdf';
 

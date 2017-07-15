@@ -63,6 +63,9 @@ class ApiTokenGuardTest extends BaseTestCase
 
     }
 
+    /**
+     * Asserts that it returns null which means the request is allowed to go through
+     */
     public function testOnAuthenticationSuccess()
     {
         $token = \Mockery::mock(TokenInterface::class);
@@ -73,6 +76,10 @@ class ApiTokenGuardTest extends BaseTestCase
     }
 
 
+    /**
+     * Provides a bunch of requests without authorization credenials
+     * @return array
+     */
     public function dataProviderForGetCreds()
     {
         $request = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['type' => 'google', 'token' => null]));

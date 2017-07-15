@@ -108,6 +108,19 @@ snc_redis:
 
 liip_functional_test: ~
 
+nelmio_api_doc:
+    name: 'Symfony Starter Api'
+    sandbox:
+        authentication:
+            name: Authorization
+            delivery:  http
+            type: bearer
+        body_format:
+            formats: [json, form]
+            default_format: json
+
+
+
 jms_serializer: ~
 
 fos_rest:

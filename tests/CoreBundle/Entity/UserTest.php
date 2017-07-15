@@ -48,6 +48,10 @@ class UserTest extends BaseTestCase
        Assert::assertTrue($user->isEqualTo($user2));
    }
 
+    /**
+     * Test that erase creds nulls the plain password field
+     * This is done for security
+     */
    public function testEraseCreds()
    {
        $user = new User();
@@ -57,8 +61,10 @@ class UserTest extends BaseTestCase
        Assert::assertNull($user->getPlainPassword());
    }
 
-
-
+    /**
+     * Basic user test to make sure that all model is valid
+     * Because we only use a little of the AdvancedUserInterface we make sure the ones we don't use return true
+     */
    public function testBasics()
    {
        $user = new User();
@@ -75,14 +81,17 @@ class UserTest extends BaseTestCase
 
        Assert::assertEquals('blah', $user->getBio());
        Assert::assertEquals($image, $user->getImage());
-       Assert::assertTrue($user->isAccountNonExpired());
-       Assert::assertTrue($user->isAccountNonLocked());
        Assert::assertEquals('url', $user->getImageUrl());
        Assert::assertEquals('name', $user->getDisplayName());
        Assert::assertEquals('website', $user->getSource());
        Assert::assertEquals($user->getEmail(), $user2->getEmail());
-       Assert::assertTrue($user->isCredentialsNonExpired());
        Assert::assertEquals(3,$user->getId());
+
+       // The AdvancedUserInterface we don't use
+       Assert::assertTrue($user->isAccountNonExpired());
+       Assert::assertTrue($user->isAccountNonLocked());
+       Assert::assertTrue($user->isCredentialsNonExpired());
+
 
    }
 }

@@ -44,7 +44,7 @@ class ApiLoginTokenGuard extends AbstractTokenGuard
     {
         $post = json_decode($request->getContent(), true);
 
-        if ($request->attributes->get('_route') == 'api_login' &&
+        if ($request->getPathInfo() == '/api/login_check' &&
             $request->isMethod(Request::METHOD_POST) &&
             !empty($post[self::TOKEN_FIELD]) &&
             !empty($post[self::TOKEN_TYPE_FIELD])

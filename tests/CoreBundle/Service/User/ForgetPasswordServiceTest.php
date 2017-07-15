@@ -34,11 +34,9 @@ class ForgetPasswordServiceTest extends BaseTestCase
         $this->forgetPasswordService = new ForgetPasswordService($this->userService, $this->emailService);
     }
 
-    public function testForgetPasswordService()
-    {
-        Assert::assertInstanceOf(ForgetPasswordService::class, $this->getContainer()->get('startsymfony.core.forget_password'));
-    }
-
+    /**
+     * Test that forget password saves the token and expiration date.
+     */
     public function testForgetPassword()
     {
         $user = new User();

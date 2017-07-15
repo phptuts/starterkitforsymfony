@@ -41,13 +41,6 @@ class ApiLoginTokenGuardTest extends BaseTestCase
         $this->apiLoginTokenGuard = new ApiLoginTokenGuard($this->userProviderFactory, $this->credentialResponseBuilderService);
     }
 
-    /**
-     * Tests that the service definition is setup right
-     */
-    public function testServiceDefinition()
-    {
-        Assert::assertInstanceOf(ApiLoginTokenGuard::class, $this->getContainer()->get('startsymfony.core.security.api_login_token_guard'));
-    }
 
     /**
      * This tests a bunch of invalid requests
@@ -59,6 +52,11 @@ class ApiLoginTokenGuardTest extends BaseTestCase
         Assert::assertNull($this->apiLoginTokenGuard->getCredentials($request));
     }
 
+    /**
+     * Tests that a valid request is passed through
+     * This is used for authenticating refresh tokens / facebook / google / etc
+     * They pass in a token and a type
+     */
     public function testValidGetCredentials()
     {
         $request = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['token' => 'token', 'type' => 'google']));
@@ -70,7 +68,9 @@ class ApiLoginTokenGuardTest extends BaseTestCase
         Assert::assertEquals('google', $creds['type']);
     }
 
-
+    /**
+     * This tests that a credential response is returned when token auth works
+     */
     public function testOnAuthenticationSuccess()
     {
         $user = new User();
@@ -86,18 +86,16 @@ class ApiLoginTokenGuardTest extends BaseTestCase
         Assert::assertEquals($response, $responseReturned);
     }
 
+    /**
+     *
+     * Provides a bunch of invalid request to make sure they all return null
+     * @return array
+     */
     public function dataProviderForGetCreds()
     {
         $request = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['type' => 'google', 'token' => null]));
-        $request->attributes->set('_route', 'api_login');
-
-
         $request2 = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['email' => 'asdfasdf']));
-        $request2->attributes->set('_route', 'api_login');
-
-
         $request3 = Request::create('/api/login_check', 'POST', [],[],[],[], json_encode(['password' => 'asdfasdf']));
-        $request3->attributes->set('_route', 'api_login');
 
         return [
             [Request::create('/bad_end_point', 'POST')],

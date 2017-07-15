@@ -9,6 +9,9 @@ use Symfony\Component\Form\Test\TypeTestCase;
 
 class RegisterTypeTest extends TypeTestCase
 {
+    /**
+     * Testing that the form compiles with the right field
+     */
     public function testFormCompiles()
     {
         $form = $this->factory->create(RegisterType::class);

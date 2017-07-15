@@ -31,6 +31,9 @@ class EmailServiceTest extends BaseTestCase
         $this->emailService = new EmailService($this->twig, $this->mailer, 'email@gmail.com');
     }
 
+    /**
+     * Tests that we can send out a forgot password email.  Tests the twig compiles
+     */
     public function testForgetPasswordEmail()
     {
         $user = new User();
@@ -41,6 +44,9 @@ class EmailServiceTest extends BaseTestCase
         $this->emailService->sendForgetPasswordEmail($user);
     }
 
+    /**
+     * Tests we can send out a register email and that the twig compiles
+     */
     public function testRegisterEmail()
     {
         $user = new User();

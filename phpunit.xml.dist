@@ -32,6 +32,11 @@
                 <directory>src/*Bundle/DataFixtures</directory>
                 <directory>src/*/*Bundle/Resources</directory>
                 <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <!--
+                  This is done because security controller is only for documentation and is qa.  Not called in prod so it should
+                  not count against end to end test.
+                  -->
+                <directory>src/ApiBundle/Controller/SecurityController.php</directory>
             </exclude>
         </whitelist>
     </filter>

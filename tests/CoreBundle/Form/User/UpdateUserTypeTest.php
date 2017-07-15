@@ -12,6 +12,10 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class UpdateUserTypeTest extends TypeTestCase
 {
+    /**
+     * Testing that the form compiles with the right field
+     * If the api option is false we should see the image field
+     */
     public function testFormCompiles()
     {
         $form = $this->factory->create(UpdateUserType::class);
@@ -35,6 +39,10 @@ class UpdateUserTypeTest extends TypeTestCase
         Assert::assertArrayHasKey('bio', $form->createView()->children);
     }
 
+    /**
+     * Testing that the form compiles with the right field
+     * If the api option is true the image field should not be their
+     */
     public function testApiRemovesImageFromForm()
     {
         $form = $this->factory->create(UpdateUserType::class, null, ['api' => true]);

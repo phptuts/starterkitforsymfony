@@ -24,6 +24,10 @@ class ForgetPasswordTypeTest extends TypeTestCase
         parent::setUp();
     }
 
+    /**
+     * Allows us to mock the transformer
+     * @return array
+     */
     protected function getExtensions()
     {
         $forgetPasswordType = new ForgetPasswordType($this->transformer);
@@ -33,6 +37,9 @@ class ForgetPasswordTypeTest extends TypeTestCase
         ];
     }
 
+    /**
+     * Testing that the form compiles with the right field
+     */
     public function testFormCompilesWithTransformer()
     {
         $user = new User();

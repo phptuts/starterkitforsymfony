@@ -47,11 +47,9 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
             new RefreshTokenProvider($this->userRepository,$this->refreshTokenRepository, $this->refreshTokenService);
     }
 
-    public function testServiceName()
-    {
-        Assert::assertInstanceOf(RefreshTokenProvider::class, $this->getContainer()->get('startsymfony.core.security.refresh_token_provider'));
-    }
-
+    /**
+     * Tests taht a valid refresh token can find a user.  Once the user is we test that token is marked used so it can not be used again.
+     */
     public function testValidRefreshTokenFound()
     {
         $refreshToken = new RefreshToken();
@@ -65,6 +63,9 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
         Assert::assertTrue($refreshToken->isUsed());
     }
 
+    /**
+     * test that if a valid refresh token is not found a UsernameNotFoundException is thrown
+     */
     public function testRefreshTokenNotFound()
     {
         $this->expectException(UsernameNotFoundException::class);
@@ -75,6 +76,10 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
         $this->refreshTokenProvider->loadUserByUsername('token');
     }
 
+    /**
+     * Tests that if duplicate refresh tokens our found that the special
+     * exception code and message are thrown in the UsernameNotFoundException.
+     */
     public function testDuplicateRefreshToken()
     {
         $this->expectException(UsernameNotFoundException::class);

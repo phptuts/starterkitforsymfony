@@ -13,6 +13,9 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 
 /**
+ * The api login guard is for authenticating user through the api that want to login with a email and password
+ * This returns back a credentialed response with a jws token / refresh token / user
+ *
  * Class ApiLoginGuard
  * @package CoreBundle\Security\Guard
  */
@@ -69,7 +72,7 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
     {
         $post = json_decode($request->getContent(), true);
 
-        if ($request->attributes->get('_route') == 'api_login' &&
+        if ($request->getPathInfo() == '/api/login_check' &&
             $request->isMethod(Request::METHOD_POST) &&
             !empty($post[self::EMAIL_FIELD]) &&
             !empty($post[self::PASSWORD_FIELD])

@@ -10,9 +10,9 @@ use CoreBundle\Form\User\ResetPasswordType;
 use CoreBundle\Form\User\UpdateUserType;
 use CoreBundle\Form\User\UserImageType;
 use CoreBundle\Security\Voter\UserVoter;
-use Facebook\FacebookRequest;
 use FOS\RestBundle\Controller\Annotations as REST;
 use CoreBundle\Entity\User;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\FormInterface;
@@ -21,8 +21,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * TODO API TESTS
- * TODO NELMIO API DOC BUNDLE
  * Class UserController
  * @package ApiBundle\Controller
  * @REST\NamePrefix("api_users_")
@@ -31,8 +29,16 @@ class UserController extends AbstractRestController
 {
 
     /**
-     * @REST\View()
+     * <p>This is the json body for register request.</p>
+     * <pre> {"email" : "example@gmail.com", "plainPassword" : "******" } </pre>
      *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="This is for registering the user",
+     *  section="Users"
+     * )
+     *
+     * @REST\View()
      * @REST\Post(path="users")
      *
      * @param Request $request
@@ -56,11 +62,20 @@ class UserController extends AbstractRestController
     }
 
     /**
-     * @REST\View()
+     * <p>This is the json body for forget passwor request.</p>
+     * <pre> {"email" : "example@gmail.com" } </pre>
      *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="For creating a forget password email and token",
+     *  section="Users"
+     * )
+     *
+     * @REST\View()
      * @REST\Post(path="/users/forget-password")
      *
      * @param Request $request
+     *
      * @return \Symfony\Component\Form\Form|Response
      */
     public function forgetPasswordAction(Request $request)
@@ -79,12 +94,20 @@ class UserController extends AbstractRestController
     }
 
     /**
+     * <p>This is the json body for resetting the password using a forget password token.</p>
+     * <pre> {"plainPassword" : "******" } </pre>
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="For reset's the user's password using a reset password token",
+     *  section="Users"
+     * )
+     *
      * @REST\View()
+     * @REST\Patch("users/reset-password/{token}")
      *
      * @param Request $request
      * @param string $token
-     *
-     * @REST\Patch("users/reset-password/{token}")
      *
      * @return Response|FormInterface
      */
@@ -110,13 +133,28 @@ class UserController extends AbstractRestController
     }
 
     /**
+     * @Security("has_role('ROLE_USER')")
+     *
+     * <p>If the user is not an admin they are required to enter their current password.</p>
+     * <pre> {"newPassword": "*****", "currentPassword": "****" }</pre>
+     *
+     * <p>If the user is an admin</pre>
+     * <pre> {"newPassword": "*****" }</pre>
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Changes the user's password",
+     *  section="Users",
+     *  authentication=true
+     * )
+     *
      * @REST\View()
+     * @REST\Patch(path="users/{id}/password")
+     *
+     * @ParamConverter(name="user", class="CoreBundle:User")
      *
      * @param Request $request
      * @param User $user
-     *
-     * @REST\Patch(path="users/{id}/password")
-     * @ParamConverter(name="user", class="CoreBundle:User")
      *
      * @return FormInterface|Response
      */
@@ -138,12 +176,27 @@ class UserController extends AbstractRestController
     }
 
     /**
+     * @Security("has_role('ROLE_USER')")
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Update the image for a user",
+     *  section="Users",
+     *  authentication=true,
+     *  parameters={
+     *      {
+     *          "name"="image",
+     *          "dataType"="file",
+     *          "required"=true,
+     *          "description"="The image profile image it can only be jpg, gif, png."
+     *      }
+     *  }
+     *  )
+     * @REST\Post("users/{id}/image")
+     * @ParamConverter(name="user", class="CoreBundle:User")
      *
      * @param Request $request
      * @param User $user
-     *
-     * @REST\Post("users/{id}/image")
-     * @ParamConverter(name="user", class="CoreBundle:User")
      *
      * @return Response|FormInterface
      */
@@ -166,6 +219,17 @@ class UserController extends AbstractRestController
     }
 
     /**
+     * @Security("has_role('ROLE_USER')")
+     *
+     * <p>This updates the user.  Whatever user field you have.</pre>
+     * <pre> {"displayName": "jo32", "email": "example@sdf.com" }</pre>
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Update's the user",
+     *  section="Users",
+     *  authentication=true
+     * )
      * @REST\View()
      *
      * @param Request $request
@@ -197,8 +261,16 @@ class UserController extends AbstractRestController
 
 
     /**
-     * @REST\View()
+     * @Security("has_role('ROLE_USER')")
      *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Get's a user",
+     *  section="Users",
+     *  authentication=true
+     * )
+     *
+     * @REST\View()
      * @REST\Get(path="users/{id}")
      *
      * @ParamConverter(name="user", class="CoreBundle:User")
@@ -215,12 +287,21 @@ class UserController extends AbstractRestController
     }
 
     /**
-     *
      * @Security("has_role('ROLE_ADMIN')")
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Get's a list of users, admin only.",
+     *  section="Users",
+     *  authentication=true
+     * )
+     *
      * @REST\View()
      * @REST\Get(path="users")
+     *
      * @REST\QueryParam(name="q", description="The search query", nullable=true)
      * @REST\QueryParam(name="page", description="The current page ", nullable=true)
+     *
      * @param Request $request
      *
      * @return Response
