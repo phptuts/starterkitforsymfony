@@ -1,0 +1,68 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Documentation{% endblock %}
+
+
+{% block body %}
+
+    <div class="container">
+        <h1>Documentation</h1>
+
+        <ol>
+            <li><a href="{{ path('doc_setup') }}">Setup</a></li>
+            <li><a href="{{ path('doc_security') }}">Security Yml</a></li>
+            <li><a href="{{ path('doc_social_auth_website') }}">Facebook Google Auth For Website</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Facebook / Google Auth High Level</a></li>
+            <li><a href="{{ path('doc_login_registration_website') }}">Registration / Login Website</a></li>
+            <li><a href="{{ path('doc_token_guard_workflow') }}">Token Guard Workflow</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Api Login Guard</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">User Provider Facebook / Google</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Refresh Tokens</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Credentialed Response</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Voters</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Custom File Upload Twig</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">File Upload with s3</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Emails</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Forget Password Workflow</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Account Setting Mobile Navigation</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Change Password</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Update User Profile</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Admin User Management</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">FOS Form Error Handler</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Exception Handling for api / desktop</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">FOS Rest Bundle</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Nelmio Api Bundle</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">DataFixtures and Migrations</a></li>
+            <li><a href="{{ path('doc_social_auth_high_level') }}">Testing</a></li>
+        </ol>
+
+
+        <h2>Security.yml File Explained</h2>
+
+
+
+
+
+        <h2>Custom File Upload Field Type</h2>
+
+        <p> We have a custom file uploader field type that can be found here.  It renders out the file uploader using some nice bootstrap magic.
+            If you want to use it else where you have to include the js  associated with it.  An example of that can be found on the account setting page.
+            Here an example <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/account-settings/update-user.html.twig">page</a>.
+            Here is where the twig is to render the form. <a href="https://github.com/phptuts/symfonystarter/blob/master/app/Resources/views/form/fields.html.twig">Twig</a>
+        </p>
+
+        <h2>File Uploads </h2>
+
+        <p>
+            Right now file uploads are handle by this <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Service/S3Service.php">s3 service</a>.
+            It uses a <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Factory/S3ClientFactory.php">factory</a> to create an s3 client.
+            All the upload service does is return a url that is stored in the database.  When you use the service you specify the folder that the the file will go in.  The service
+            also depends on the environment as well.  So you if you specify the medical folder you and you are on the dev environment you will upload the file to /yourbucket/dev/medical.
+        </p>
+
+
+
+
+    </div>
+
+{% endblock %}

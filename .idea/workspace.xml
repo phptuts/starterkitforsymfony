@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/documentation.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/change-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/change-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/update-user.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/update-user.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/email-layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/email-layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/email/forget-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/email/forget-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/email/register.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/email/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/documentation.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/documentation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password-success.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password-success.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/forget-password/forget-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-invalid-token.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-invalid-token.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-success.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password-success.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/user/reset-password/reset-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Service/EmailService.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Service/EmailService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,23 +26,47 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/login.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#33#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="documentation.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/documentation.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+                <element signature="e#211#220#0#Twig" expanded="true" />
+                <element signature="e#276#288#0#Twig" expanded="true" />
+                <element signature="e#351#374#0#Twig" expanded="true" />
+                <element signature="e#457#483#0#Twig" expanded="true" />
+                <element signature="e#567#597#0#Twig" expanded="true" />
+                <element signature="e#771#797#0#Twig" expanded="true" />
+                <element signature="e#863#889#0#Twig" expanded="true" />
+                <element signature="e#971#997#0#Twig" expanded="true" />
+                <element signature="e#1062#1088#0#Twig" expanded="true" />
+                <element signature="e#1160#1186#0#Twig" expanded="true" />
+                <element signature="e#1243#1269#0#Twig" expanded="true" />
+                <element signature="e#1343#1369#0#Twig" expanded="true" />
+                <element signature="e#1439#1465#0#Twig" expanded="true" />
+                <element signature="e#1522#1548#0#Twig" expanded="true" />
+                <element signature="e#1623#1649#0#Twig" expanded="true" />
+                <element signature="e#1733#1759#0#Twig" expanded="true" />
+                <element signature="e#1825#1851#0#Twig" expanded="true" />
+                <element signature="e#1921#1947#0#Twig" expanded="true" />
+                <element signature="e#2019#2045#0#Twig" expanded="true" />
+                <element signature="e#2118#2144#0#Twig" expanded="true" />
+                <element signature="e#2231#2257#0#Twig" expanded="true" />
+                <element signature="e#2323#2349#0#Twig" expanded="true" />
+                <element signature="e#2417#2443#0#Twig" expanded="true" />
+                <element signature="e#2521#2547#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="token-guard-workflow.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
                 <element signature="e#12#33#0#Twig" expanded="true" />
               </folding>
@@ -59,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig">
+      <file leaf-file-name="website-registration-login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="270">
+              <caret line="18" column="263" lean-forward="false" selection-start-line="18" selection-start-column="263" selection-end-line="18" selection-end-column="263" />
               <folding>
                 <element signature="e#12#33#0#Twig" expanded="true" />
               </folding>
@@ -71,73 +86,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change-password.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/change-password.html.twig">
+      <file leaf-file-name="social-auth-highlevel.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding>
-                <element signature="e#12#66#0#Twig" expanded="true" />
+                <element signature="e#12#33#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update-user.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/update-user.html.twig">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-              <folding>
-                <element signature="e#12#66#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-              <folding>
-                <element signature="e#40#84#0#PHP" expanded="true" />
-                <element signature="e#3448#3509#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            <state relative-caret-position="315">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="e#541#568#1#PHP" expanded="true" />
-                <element signature="e#747#782#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountSettingController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AccountSettingController.php">
+      <file leaf-file-name="DocumentationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+            <state relative-caret-position="561">
+              <caret line="72" column="74" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="74" />
               <folding>
-                <element signature="e#1497#1542#0#PHP" expanded="true" />
+                <element signature="e#41#89#0#PHP" expanded="true" />
+                <element signature="e#425#469#1#PHP" expanded="true" />
+                <element signature="e#642#678#1#PHP" expanded="true" />
+                <element signature="e#867#910#1#PHP" expanded="true" />
+                <element signature="e#1123#1173#1#PHP" expanded="true" />
+                <element signature="e#1394#1446#1#PHP" expanded="true" />
+                <element signature="e#1680#1737#1#PHP" expanded="true" />
+                <element signature="e#1953#2004#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/register.html.twig">
+      <file leaf-file-name="setup.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#12#33#0#Twig" expanded="true" />
               </folding>
@@ -145,12 +151,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="social-login.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social-login.html.twig">
+      <file leaf-file-name="security-yml.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="59" column="69" lean-forward="false" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="desktop-social-auth.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -229,14 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Service/User/UserService.php" />
-        <option value="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Repository/RefreshTokenRepository.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/AbstractCustomProvider.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/RefreshTokenProvider.php" />
-        <option value="$PROJECT_DIR$/src/CoreBundle/Security/Provider/TokenProvider.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Repository/UserRepositoryTest.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Service/User/RegisterServiceTest.php" />
         <option value="$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php" />
@@ -280,6 +292,14 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/change-password.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/update-user.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig" />
       </list>
     </option>
   </component>
@@ -554,92 +574,6 @@
               <option name="myItemId" value="Security" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Voter" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Provider" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Token" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -682,6 +616,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Handler" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoreBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Factory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -884,6 +840,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="email" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documentation" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1229,11 +1215,11 @@
       <recent name="$PROJECT_DIR$/tests/CoreBundle/Mock" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
       <recent name="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception" />
       <recent name="$PROJECT_DIR$/src/CoreBundle/Security/Guard" />
       <recent name="$PROJECT_DIR$/src/CoreBundle/Service/Credential" />
-      <recent name="$PROJECT_DIR$/src/CoreBundle/Model/Security" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Service">
@@ -1349,12 +1335,12 @@
       <workItem from="1499902538431" duration="8785000" />
       <workItem from="1500001144874" duration="8202000" />
       <workItem from="1500068045853" duration="18921000" />
-      <workItem from="1500104175000" duration="44164000" />
+      <workItem from="1500104175000" duration="48492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328640000" />
+    <option name="totallyTimeSpent" value="332968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1425,62 +1411,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/UpdateUserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/GetUserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/ForgetPasswordWorkFlowTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/ChangePasswordTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/HomeControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1547,14 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/facebook-auth-js.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1584,8 +1506,8 @@
         <state relative-caret-position="420">
           <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding>
-            <element signature="e#400#417#0#Twig" expanded="true" />
-            <element signature="e#844#849#0#Twig" expanded="true" />
+            <element signature="e#400#417#0#Twig" expanded="false" />
+            <element signature="e#844#849#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1690,14 +1612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/email-layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1721,7 +1635,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#12#39#0#Twig" expanded="true" />
+            <element signature="e#12#39#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1731,7 +1645,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#12#33#0#Twig" expanded="true" />
+            <element signature="e#12#33#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1804,16 +1718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/documentation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#33#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1865,13 +1769,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="315">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="e#541#568#1#PHP" expanded="true" />
-            <element signature="e#747#782#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="69" lean-forward="false" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="72" column="74" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="74" />
+          <folding>
+            <element signature="e#41#89#0#PHP" expanded="true" />
+            <element signature="e#425#469#1#PHP" expanded="true" />
+            <element signature="e#642#678#1#PHP" expanded="true" />
+            <element signature="e#867#910#1#PHP" expanded="true" />
+            <element signature="e#1123#1173#1#PHP" expanded="true" />
+            <element signature="e#1394#1446#1#PHP" expanded="true" />
+            <element signature="e#1680#1737#1#PHP" expanded="true" />
+            <element signature="e#1953#2004#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+            <element signature="e#211#220#0#Twig" expanded="true" />
+            <element signature="e#276#288#0#Twig" expanded="true" />
+            <element signature="e#351#374#0#Twig" expanded="true" />
+            <element signature="e#457#483#0#Twig" expanded="true" />
+            <element signature="e#567#597#0#Twig" expanded="true" />
+            <element signature="e#771#797#0#Twig" expanded="true" />
+            <element signature="e#863#889#0#Twig" expanded="true" />
+            <element signature="e#971#997#0#Twig" expanded="true" />
+            <element signature="e#1062#1088#0#Twig" expanded="true" />
+            <element signature="e#1160#1186#0#Twig" expanded="true" />
+            <element signature="e#1243#1269#0#Twig" expanded="true" />
+            <element signature="e#1343#1369#0#Twig" expanded="true" />
+            <element signature="e#1439#1465#0#Twig" expanded="true" />
+            <element signature="e#1522#1548#0#Twig" expanded="true" />
+            <element signature="e#1623#1649#0#Twig" expanded="true" />
+            <element signature="e#1733#1759#0#Twig" expanded="true" />
+            <element signature="e#1825#1851#0#Twig" expanded="true" />
+            <element signature="e#1921#1947#0#Twig" expanded="true" />
+            <element signature="e#2019#2045#0#Twig" expanded="true" />
+            <element signature="e#2118#2144#0#Twig" expanded="true" />
+            <element signature="e#2231#2257#0#Twig" expanded="true" />
+            <element signature="e#2323#2349#0#Twig" expanded="true" />
+            <element signature="e#2417#2443#0#Twig" expanded="true" />
+            <element signature="e#2521#2547#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="263" lean-forward="false" selection-start-line="18" selection-start-column="263" selection-end-line="18" selection-end-column="263" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

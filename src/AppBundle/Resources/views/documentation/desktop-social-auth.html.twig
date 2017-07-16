@@ -1,0 +1,26 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title 'Facebook / Google Auth' %}
+
+{% block body %}
+    <div class="container">
+        <h2>Website Facebook & Google Authentication</h2>
+
+        <p>Here are the setups for authentication via facebook / google on the desktop we are gonna go over guards a lot more later in the docs.</p>
+        <ol>
+            <li>Setup use the
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/user/social/facebook-auth-js.html.twig#L11">facebook</a>
+                /
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/user/social/google-auth-js.html.twig#L17">google</a>
+                library to request a token.  For facebook a modal will popup. For google, their library will take them to a new tab.  </li>
+            <li>
+                Once we have the token we send it to /token_login_check with <code>{"type": "facebook", "token": "fb_token" }</code>
+            </li>
+            <li>It will then go through the <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php#L16">SessionLoginTokenGuard</a>.  This will authenticate the session.</li>
+            <li>From there <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig#L29">js</a> will redirect the user.</li>
+        </ol>
+
+        <p>Also note for google that they library needs the client id in the <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/layout.html.twig">header</a>.</p>
+    </div>
+
+{% endblock %}

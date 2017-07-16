@@ -26,16 +26,6 @@ class HomeController extends Controller
     }
 
     /**
-     * @Route("/docs", name="documentation")
-     *
-     * @return Response
-     */
-    public function documentationAction()
-    {
-        return $this->render('@App/home/documentation.html.twig');
-    }
-
-    /**
      * @Route("/exception", name="exception_example")
      *
      * @throws ProgrammerException

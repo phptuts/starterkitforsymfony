@@ -1,0 +1,53 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Setup Documentation{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Setup</h1>
+        <p>These are the basic setup instructions for localhost.</p>
+
+        <ul>
+
+            <li>git clone the repo: <code>git clone https://github.com/phptuts/symfonystarter.git</code></li>
+            <li>navigate to the symfonystarter folder: <code>cd symfonystarter</code></li>
+            <li>Install composer and run composer install: <code>composer install</code></li>
+            <li>Go to facebook and setup your app.</li>
+            <li>Go into your app -> config -> parameters.yml and replace these fields with the right value:
+                <ul>
+                    <li>facebook_app_secret</li>
+                    <li>facebook_app_id</li>
+                    <li>facebook_api_version</li>
+                </ul>
+            </li>
+            <li>Go to google setup your app.</li>
+            <li>Go into your app -> config -> parameters.yml and replace these fields with the right value:
+                <ul>
+                    <li>google_client_id:</li>
+                    <li>google_client_secret:</li>
+                </ul>
+            </li>
+            <li>
+                Go to Amazon and setup your s3 bucket. You will need to create 3 folders or a folder for each
+                environment.
+                So ours would be dev | test | prod.
+                Inside each of those folder you will need create a folder called. profile_pics.
+                This is where your user's profile pictures will be stored.
+                Here how the "magic" happens:
+                <a href="https://github.com/phptuts/symfonystarter/blob/126a5b9441de032ecebd3c643111feb1411eb5dd/src/AppBundle/Controller/AccountSettingController.php#L37-L37">Accounting
+                    Controller</a>
+                |
+                <a href="https://github.com/phptuts/symfonystarter/blob/4a203bee836fdebaadfea4967c5eee7bf2b85d4d/src/ApiBundle/Controller/UserController.php#L212-L212">Api
+                    User Controller</a>
+            </li>
+            <li>Go to your app -> config -> parameters.yml and if you have not already setup your smtp and doctrine
+                config
+            </li>
+            <li>Run <code>bin/console doctrine:database:create</code></li>
+            <li>Run <code>bin/console doctrine:migrations:migrate</code></li>
+            <li>Run <code>bin/console server:run</code> to see the code in action</li>
+        </ul>
+    </div>
+
+{% endblock %}
