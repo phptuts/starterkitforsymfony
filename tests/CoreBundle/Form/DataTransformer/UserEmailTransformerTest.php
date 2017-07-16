@@ -5,6 +5,7 @@ namespace Tests\CoreBundle\Form\DataTransformer;
 use CoreBundle\Entity\User;
 use CoreBundle\Form\DataTransformer\UserEmailTransformer;
 use CoreBundle\Repository\UserRepository;
+use CoreBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Form\Exception\TransformationFailedException;
@@ -16,7 +17,7 @@ class UserEmailTransformerTest extends BaseTestCase
     /**
      * @var UserRepository|Mock
      */
-    protected $userRepository;
+    protected $userService;
 
     /**
      * @var UserEmailTransformer
@@ -25,8 +26,8 @@ class UserEmailTransformerTest extends BaseTestCase
 
     public function setUp()
     {
-        $this->userRepository = \Mockery::mock(UserRepository::class);
-        $this->userEmailTransformer = new UserEmailTransformer($this->userRepository);
+        $this->userService = \Mockery::mock(UserService::class);
+        $this->userEmailTransformer = new UserEmailTransformer($this->userService);
     }
 
     /**
@@ -37,7 +38,7 @@ class UserEmailTransformerTest extends BaseTestCase
         $user = new User();
         $user->setEmail('example@gmail.com');
 
-        $this->userRepository
+        $this->userService
             ->shouldReceive('findUserByEmail')
             ->once()
             ->with($user->getEmail())
@@ -57,7 +58,7 @@ class UserEmailTransformerTest extends BaseTestCase
 
         $userFound = new User();
 
-        $this->userRepository
+        $this->userService
             ->shouldReceive('findUserByEmail')
             ->once()
             ->with($user->getEmail())

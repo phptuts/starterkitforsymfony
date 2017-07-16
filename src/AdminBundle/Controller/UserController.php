@@ -22,8 +22,8 @@ class UserController extends Controller
     public function indexAction(Request $request)
     {
 
-        $users = $this->get('startsymfony.core.repository.user_repository')
-            ->getUsers(
+        $users = $this->get('startsymfony.core.user_service')
+            ->searchUser(
                 $request->query->get('q'),
                 $request->query->get('page', 1)
             );
@@ -55,15 +55,15 @@ class UserController extends Controller
     {
         $email = $request->request->get('email');
 
-        $userRepo = $this->get('startsymfony.core.repository.user_repository');
+        $userService = $this->get('startsymfony.core.user_service');
 
-        if ($userRepo->doesEmailExist($email)) {
+        if ($userService->doesEmailExist($email)) {
             return new JsonResponse(['message' => 'Email already exists.'], Response::HTTP_BAD_REQUEST);
         }
 
         $user->setEmail($email);
 
-        $this->get('startsymfony.core.user_service')->save($user);
+        $userService->save($user);
 
         return new Response('', Response::HTTP_NO_CONTENT);
     }

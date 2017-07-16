@@ -66,7 +66,7 @@ class BaseApiTestCase extends WebTestCase
         // Asserting that the user can view itself
         Assert::assertEquals(Response::HTTP_OK, $response->getStatusCode());
 
-        $userEntity = $this->getContainer()->get('startsymfony.core.repository.user_repository')->find($user['id']);
+        $userEntity = $this->getContainer()->get('startsymfony.core.user_service')->findUserById($user['id']);
 
         Assert::assertInstanceOf(User::class, $userEntity);
 
@@ -82,7 +82,7 @@ class BaseApiTestCase extends WebTestCase
     public function assertJWSToken($token, $email, $exp)
     {
         $jwsService = $this->getContainer()->get('startsymfony.core.jws_service');
-        $userRepo = $this->getContainer()->get('startsymfony.core.repository.user_repository');
+        $userService = $this->getContainer()->get('startsymfony.core.user_service');
 
         // Asserts that the token is valid
         Assert::assertTrue($jwsService->isValid($token));
@@ -94,7 +94,7 @@ class BaseApiTestCase extends WebTestCase
         Assert::assertNotEmpty($tokenPayload['iat']);
 
         // Asserts that the token's user id match the email of user who got it
-        $user = $userRepo->findUserByEmail($email);
+        $user = $userService->findUserByEmail($email);
         Assert::assertEquals($user->getId(), $tokenPayload['user_id']);
 
         $ttlForTokenInSeconds = $this->getContainer()->getParameter('jws_ttl');
@@ -117,9 +117,9 @@ class BaseApiTestCase extends WebTestCase
      */
     public function assertRefreshToken($token, $email, $exp)
     {
-        $refreshTokenRepo = $this->getContainer()->get('startsymfony.core.repository.refreshtoken_repository');
+        $refreshTokenService = $this->getContainer()->get('startsymfony.core.refresh_token');
 
-        $refreshToken = $refreshTokenRepo->getValidRefreshToken($token);
+        $refreshToken = $refreshTokenService->getValidRefreshToken($token);
 
         Assert::assertEquals($refreshToken->getUser()->getEmail(), $email);
 

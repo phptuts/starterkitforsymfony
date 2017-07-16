@@ -113,7 +113,8 @@ class UserController extends AbstractRestController
      */
     public function resetPasswordAction(Request $request, $token)
     {
-        $user = $this->get('startsymfony.core.repository.user_repository')->findUserByForgetPasswordToken(urldecode($token));
+        $userService = $this->get('startsymfony.core.user_service');
+        $user = $userService->findUserByForgetPasswordToken(urldecode($token));
 
         if (empty($user)) {
 
@@ -124,7 +125,7 @@ class UserController extends AbstractRestController
         $form->submit($request->request->all());
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->get('startsymfony.core.user_service')->saveUserForResetPassword($user);
+            $userService->saveUserForResetPassword($user);
 
             return new Response('', Response::HTTP_NO_CONTENT);
         }
@@ -311,8 +312,8 @@ class UserController extends AbstractRestController
         $page = $request->query->get('page', 1);
 
         $users = $this
-            ->get('startsymfony.core.repository.user_repository')
-            ->getUsers(
+            ->get('startsymfony.core.user_service')
+            ->searchUser(
                 $request->query->get('q'),
                 $page
             );

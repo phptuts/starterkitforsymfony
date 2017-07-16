@@ -8,6 +8,7 @@ use CoreBundle\Factory\FaceBookClientFactory;
 use CoreBundle\Repository\UserRepository;
 use CoreBundle\Security\Provider\FacebookProvider;
 use CoreBundle\Service\User\RegisterService;
+use CoreBundle\Service\User\UserService;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
@@ -23,7 +24,7 @@ class FacebookProviderTest extends BaseTestCase
     /**
      * @var UserRepository|Mock
      */
-    private $userRepository;
+    private $userService;
 
     /**
      * @var RegisterService|Mock
@@ -40,16 +41,18 @@ class FacebookProviderTest extends BaseTestCase
      */
     protected $facebookProvider;
 
+
     protected function setUp()
     {
         parent::setUp();
-        $this->userRepository = \Mockery::mock(UserRepository::class);
+        $this->userService = \Mockery::mock(UserRepository::class);
         $this->registerService = \Mockery::mock(RegisterService::class);
         $facebookClientFactory = \Mockery::mock(FaceBookClientFactory::class);
         $this->facebookClient = \Mockery::mock(Facebook::class);
         $facebookClientFactory->shouldReceive('getFacebookClient')->once()->andReturn($this->facebookClient);
+        $this->userService = \Mockery::mock(UserService::class);
 
-        $this->facebookProvider = new FacebookProvider($facebookClientFactory, $this->userRepository, $this->registerService);
+        $this->facebookProvider = new FacebookProvider($facebookClientFactory,  $this->registerService, $this->userService);
     }
 
     /**
@@ -57,37 +60,48 @@ class FacebookProviderTest extends BaseTestCase
      */
     public function testUserNotFound()
     {
-        $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
+        $this->userService->shouldReceive('findByFacebookUserId')->with('324323423')->once()->andReturnNull();
+        $this->userService->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
+
         $token = 'asdfasdfasdfasdf';
 
         $graphUser = \Mockery::mock(GraphUser::class);
         $graphUser->shouldReceive('getEmail')->andReturn('blue@gmail.com');
+        $graphUser->shouldReceive('getId')->andReturn('324323423');
 
         $facebookResponse = \Mockery::mock(FacebookResponse::class);
         $facebookResponse->shouldReceive('getGraphUser')->andReturn($graphUser);
 
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
-        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_FACEBOOK);
-        $user = $this->facebookProvider->loadUserByUsername($token);
+        $this->registerService
+            ->shouldReceive('registerUser')
+            ->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_FACEBOOK);
+
+        /** @var User $user */
+       $user = $this->facebookProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());
         Assert::assertNotEmpty($user->getEmail());
+        Assert::assertEquals('324323423', $user->getFacebookUserId());
+
 
     }
 
     /**
-     * Tests that if the user is found that we
+     * Tests that if a user's email is found that we save the user with facebook user id and return it
      */
-    public function testUserFound()
+    public function testUserEmailFound()
     {
         $user = new User();
         $user->setEmail('blue@gmail.com');
-        $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturn($user);
+        $this->userService->shouldReceive('findByFacebookUserId')->with('324323423')->once()->andReturnNull();
+        $this->userService->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturn($user);
         $token = 'asdfasdfasdfasdf';
 
         $graphUser = \Mockery::mock(GraphUser::class);
         $graphUser->shouldReceive('getEmail')->andReturn('blue@gmail.com');
+        $graphUser->shouldReceive('getId')->andReturn('324323423');
 
         $facebookResponse = \Mockery::mock(FacebookResponse::class);
         $facebookResponse->shouldReceive('getGraphUser')->andReturn($graphUser);
@@ -95,6 +109,41 @@ class FacebookProviderTest extends BaseTestCase
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
         $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('save')->with(\Mockery::type(User::class));
+
+        /** @var User $returnedUser */
+        $returnedUser = $this->facebookProvider->loadUserByUsername($token);
+
+        Assert::assertEquals($user, $returnedUser);
+        Assert::assertEquals('324323423', $returnedUser->getFacebookUserId());
+
+    }
+
+    /**
+     * Testing that if the facebook token is found that we just return that user
+     */
+    public function testFacebookUserIdFound()
+    {
+        $token = 'adfasdfasdfasd';
+        $user = new User();
+        $user->setEmail('blue@gmail.com');
+        $user->setFacebookUserId('324323423');
+        $this->userService->shouldReceive('findByFacebookUserId')->with('324323423')->once()->andReturn($user);
+
+        $graphUser = \Mockery::mock(GraphUser::class);
+        $graphUser->shouldReceive('getEmail')->andReturn('blue@gmail.com');
+        $graphUser->shouldReceive('getId')->andReturn('324323423');
+
+        $facebookResponse = \Mockery::mock(FacebookResponse::class);
+        $facebookResponse->shouldReceive('getGraphUser')->andReturn($graphUser);
+
+
+        $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
+        $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('save')->with(\Mockery::type(User::class));
+
+
+        /** @var User $returnedUser */
         $returnedUser = $this->facebookProvider->loadUserByUsername($token);
 
         Assert::assertEquals($user, $returnedUser);

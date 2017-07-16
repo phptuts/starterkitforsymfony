@@ -10,7 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Intl\Exception\NotImplementedException;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 /**
@@ -113,7 +112,8 @@ class UserController extends Controller
      */
     public function resetPasswordAction(Request $request, $token)
     {
-        $user = $this->get('startsymfony.core.repository.user_repository')->findUserByForgetPasswordToken(urldecode($token));
+        $userService = $this->get('startsymfony.core.user_service');
+        $user = $userService->findUserByForgetPasswordToken(urldecode($token));
 
         if (empty($user)) {
 
@@ -124,7 +124,7 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->get('startsymfony.core.user_service')->saveUserForResetPassword($user);
+            $userService->saveUserForResetPassword($user);
 
             return $this->redirectToRoute('reset_password_success');
         }

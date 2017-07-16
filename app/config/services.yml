@@ -6,8 +6,16 @@ parameters:
     jms_serializer.form_error_handler.class: CoreBundle\Handler\FormErrorHandler
 
 services:
-   redis_cache_service:
+    redis_cache_service:
         class: '%snc_redis.doctrine_cache_predis.class%'
         arguments:
             - '@snc_redis.default'
 
+    exception_handler:
+        class: CoreBundle\Handler\ExceptionHandler
+        arguments:
+            - '@twig'
+            - '@logger'
+            - '%from_email%'
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

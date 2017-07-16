@@ -7,6 +7,7 @@ use CoreBundle\Entity\User;
 use CoreBundle\Repository\UserRepository;
 use CoreBundle\Security\Provider\TokenProvider;
 use CoreBundle\Service\Credential\JWSService;
+use CoreBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
@@ -25,17 +26,17 @@ class TokenProviderTest extends BaseTestCase
     protected $jwsService;
 
     /**
-     * @var UserRepository|Mock
+     * @var UserService|Mock
      */
-    protected $userRepo;
+    protected $userService;
 
     public function setUp()
     {
         parent::setUp();
 
         $this->jwsService = \Mockery::mock(JWSService::class);
-        $this->userRepo = \Mockery::mock(UserRepository::class);
-        $this->tokenProvider = new TokenProvider($this->userRepo, $this->jwsService);
+        $this->userService = \Mockery::mock(UserService::class);
+        $this->tokenProvider = new TokenProvider($this->userService, $this->jwsService);
     }
 
     /**
@@ -46,7 +47,7 @@ class TokenProviderTest extends BaseTestCase
         $user = new User();
         $this->jwsService->shouldReceive('isValid')->with('token')->andReturn(true);
         $this->jwsService->shouldReceive('getPayload')->with('token')->andReturn(['user_id' => 33]);
-        $this->userRepo->shouldReceive('find')->with('33')->andReturn($user);
+        $this->userService->shouldReceive('findUserById')->with('33')->andReturn($user);
         $userFound = $this->tokenProvider->loadUserByUsername('token');
 
         Assert::assertEquals($user, $userFound);
@@ -84,7 +85,7 @@ class TokenProviderTest extends BaseTestCase
         $this->jwsService->shouldReceive('isValid')->with('token')->andReturn(true);
         $this->jwsService->shouldReceive('getPayload')->with('token')->andReturn(['user_id' => 33]);
 
-        $this->userRepo->shouldReceive('find')->with('33')->andReturnNull();
+        $this->userService->shouldReceive('findUserById')->with('33')->andReturnNull();
         $this->tokenProvider->loadUserByUsername('token');
     }
 }

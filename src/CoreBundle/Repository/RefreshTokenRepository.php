@@ -3,7 +3,6 @@
 namespace CoreBundle\Repository;
 
 use CoreBundle\Entity\RefreshToken;
-use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\NonUniqueResultException;

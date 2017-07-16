@@ -2,6 +2,7 @@
 
 namespace Tests\ApiBundle\Controller\User;
 
+use CoreBundle\Entity\User;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -121,6 +122,12 @@ class AuthTest extends BaseApiTestCase
         );
 
         $this->assertCredentialsResponse($response, $client, $facebookAuthToken['email']);
+
+        $user = $this->getContainer()->get('startsymfony.core.user_service')->findUserByEmail($facebookAuthToken['email']);
+
+        Assert::assertInstanceOf(User::class, $user);
+        // Tests that the facebook user id is not empty
+        Assert::assertNotEmpty($user->getFacebookUserId());
 
     }
 }

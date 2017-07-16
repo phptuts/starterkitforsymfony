@@ -31,7 +31,7 @@ class ForgetPasswordWorkFlowTest extends BaseApiTestCase
         Assert::assertEquals(Response::HTTP_NO_CONTENT, $response->getStatusCode());
 
         return $this->getContainer()
-                    ->get('startsymfony.core.repository.user_repository')
+                    ->get('startsymfony.core.user_service')
                     ->findUserByEmail(self::TEST_EMAIL)
                     ->getForgetPasswordToken();
     }

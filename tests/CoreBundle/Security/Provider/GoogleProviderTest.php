@@ -7,6 +7,7 @@ use CoreBundle\Factory\GoogleClientFactory;
 use CoreBundle\Repository\UserRepository;
 use CoreBundle\Security\Provider\GoogleProvider;
 use CoreBundle\Service\User\RegisterService;
+use CoreBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -16,10 +17,7 @@ use Tests\BaseTestCase;
 
 class GoogleProviderTest extends BaseTestCase
 {
-    /**
-     * @var UserRepository|Mock
-     */
-    private $userRepository;
+   
 
     /**
      * @var RegisterService|Mock
@@ -36,16 +34,22 @@ class GoogleProviderTest extends BaseTestCase
      */
     protected $googleProvider;
 
+    /**
+     * @var UserService|Mock
+     */
+    protected $userService;
+
+
     protected function setUp()
     {
         parent::setUp();
-        $this->userRepository = \Mockery::mock(UserRepository::class);
         $this->registerService = \Mockery::mock(RegisterService::class);
         $googleClientFactory = \Mockery::mock(GoogleClientFactory::class);
         $this->googleClient = \Mockery::mock(\Google_Client::class);
         $googleClientFactory->shouldReceive('getGoogleClient')->once()->andReturn($this->googleClient);
+        $this->userService = \Mockery::mock(UserService::class);
 
-        $this->googleProvider = new GoogleProvider($this->userRepository, $this->registerService, $googleClientFactory);
+        $this->googleProvider = new GoogleProvider($this->registerService, $googleClientFactory, $this->userService);
     }
 
     /**
@@ -53,29 +57,47 @@ class GoogleProviderTest extends BaseTestCase
      */
     public function testNewUser()
     {
-        $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
+        $this->userService->shouldReceive('findByGoogleUserId')->with(32423323)->once()->andReturnNull();
+        $this->userService->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
         $token = 'asdfasdfasdfasdf';
-        $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com']);
+        $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com', 'sub' => 32423323]);
         $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_GOOGLE);
         $user = $this->googleProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());
-        Assert::assertNotEmpty($user->getEmail());
+        Assert::assertEquals('blue@gmail.com',$user->getEmail());
+        Assert::assertEquals(32423323, $user->getGoogleUserId());
     }
 
     /**
-     * Tests if the google access token is found we return the found user
+     * Tests if the if the user email is found in the database we return it and save google user id
      */
-    public function testUserFoundInOurDatabase()
+    public function testUserEmailFoundInDatabase()
     {
         $user = new User();
-        $this->userRepository->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturn($user);
+        $this->userService->shouldReceive('findByGoogleUserId')->with(32423323)->once()->andReturnNull();
+        $this->userService->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturn($user);
+
         $token = 'asdfasdfasdfasdf';
-        $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com']);
+        $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com', 'sub' => 32423323]);
         $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('save')->with($user)->once();
         $returnedUser = $this->googleProvider->loadUserByUsername($token);
 
         Assert::assertEquals($user, $returnedUser);
+        Assert::assertEquals(32423323, $user->getGoogleUserId());
+    }
+
+    public function testThatIfGoogleUserIdIsFoundUserIsReturned()
+    {
+        $user = new User();
+        $token = 'asdfasdfasdfasdf';
+        $this->userService->shouldReceive('findByGoogleUserId')->with(32423323)->once()->andReturn($user);
+        $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com', 'sub' => 32423323]);
+        $returnedUser = $this->googleProvider->loadUserByUsername($token);
+
+        Assert::assertEquals($user, $returnedUser);
+
     }
 
     /**
@@ -125,7 +147,7 @@ class GoogleProviderTest extends BaseTestCase
     {
         $user = new User();
         $user->setEmail('bluemoo@gmail.com');
-        $this->userRepository->shouldReceive('findUserByEmail')->with('bluemoo@gmail.com')->once()->andReturn($user);
+        $this->userService->shouldReceive('findUserByEmail')->with('bluemoo@gmail.com')->once()->andReturn($user);
 
         /** @var User $userRefreshed */
         $userRefreshed =  $this->googleProvider->refreshUser($user);

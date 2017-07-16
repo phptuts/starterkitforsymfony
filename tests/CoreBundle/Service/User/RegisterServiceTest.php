@@ -32,7 +32,6 @@ class RegisterServiceTest extends BaseTestCase
         $this->userService = \Mockery::mock(UserService::class);
         $this->emailService = \Mockery::mock(EmailService::class);
         $this->registerService = new RegisterService($this->userService, $this->emailService);
-
     }
 
     public function testService()

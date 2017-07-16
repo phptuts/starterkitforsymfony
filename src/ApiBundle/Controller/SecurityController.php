@@ -3,6 +3,7 @@
 
 namespace ApiBundle\Controller;
 
+use CoreBundle\Exception\ProgrammerException;
 use FOS\RestBundle\Controller\Annotations as REST;
 use FOS\RestBundle\Controller\FOSRestController;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
@@ -64,6 +65,19 @@ class SecurityController extends FOSRestController
         $response = $facebookClient->get('/me?fields=email', $userAccessToken);
 
         return ['email' => $response->getGraphUser()->getEmail(), 'token' => $userAccessToken];
+    }
 
+    /**
+     * @REST\Get(path="stupid_exception")
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="example of an exception",
+     *  section="Security"
+     * )
+     */
+    public function testStupidExceptionApiAction()
+    {
+        throw new ProgrammerException('I am a stupid exception.', ProgrammerException::STUPID_EXCEPTION);
     }
 }

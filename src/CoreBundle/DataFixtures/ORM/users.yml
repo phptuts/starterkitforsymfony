@@ -116,3 +116,19 @@ CoreBundle\Entity\User:
         roles: ['ROLE_USER']
         enabled: true
         source: 'website'
+
+    facebook_user_id_test:
+        email: 'facebook_user_id_test@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        facebookUserId: 'facebook_test_user_id32'
+
+    google_user_id_test:
+        email: 'google_user_id_test@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        googleUserId: 'google_user_id_dsf3'

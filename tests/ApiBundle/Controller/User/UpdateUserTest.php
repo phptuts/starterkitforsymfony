@@ -17,7 +17,7 @@ class UpdateUserTest extends BaseApiTestCase
     public function testUpdateUser()
     {
         $client = $this->makeClient();
-        $user = $this->getContainer()->get('startsymfony.core.repository.user_repository')->findUserByEmail(self::TEST_EMAIL);
+        $user = $this->getContainer()->get('startsymfony.core.user_service')->findUserByEmail(self::TEST_EMAIL);
         $authToken = $this->getAuthToken($user);
         $url = sprintf('/api/users/%s', $user->getId());
         $response = $this->makeJsonRequest(

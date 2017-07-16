@@ -22,7 +22,7 @@ class GetUserTest extends BaseApiTestCase
     {
         $client = $this->makeClient();
         $user = $this->getContainer()
-                    ->get('startsymfony.core.repository.user_repository')
+                    ->get('startsymfony.core.user_service')
                     ->findUserByEmail(self::TEST_EMAIL);
 
         $authToken = $this->getAuthToken($user);
@@ -57,7 +57,7 @@ class GetUserTest extends BaseApiTestCase
     {
         $client = $this->makeClient();
         $user = $this->getContainer()
-            ->get('startsymfony.core.repository.user_repository')
+            ->get('startsymfony.core.user_service')
             ->findUserByEmail(self::TEST_EMAIL);
 
         $authToken = $this->getAuthToken($user);

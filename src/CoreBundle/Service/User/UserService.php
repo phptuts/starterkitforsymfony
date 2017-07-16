@@ -20,13 +20,22 @@ class UserService extends AbstractEntityService
      * @var EncoderFactory
      */
     protected $encoderFactory;
+    /**
+     * @var UserRepository
+     */
+    private $userRepository;
 
 
-    public function __construct(EntityManager $em, EncoderFactory $encoderFactory)
-    {
+    public function __construct(
+        EntityManager $em,
+        EncoderFactory $encoderFactory,
+        UserRepository $userRepository
+    ) {
         parent::__construct($em);
         $this->encoderFactory = $encoderFactory;
+        $this->userRepository = $userRepository;
     }
+
 
     /**
      * @param User $user
@@ -54,6 +63,84 @@ class UserService extends AbstractEntityService
             ->setForgetPasswordExpired(null);
 
         $this->saveUserWithPlainPassword($user);
+    }
+
+    /**
+     * Finds a user by email
+     *
+     * @param $email
+     * @return User|null
+     */
+    public function findUserByEmail($email)
+    {
+        return $this->userRepository->findUserByEmail($email);
+    }
+
+    /**
+     * Finds a user by their id
+     *
+     * @param $id
+     * @return User|null|object
+     */
+    public function findUserById($id)
+    {
+        return $this->userRepository->find($id);
+    }
+
+    /**
+     * Finds a user by their facebook user id
+     *
+     * @param $facebookUserId
+     * @return User|null|object
+     */
+    public function findByFacebookUserId($facebookUserId)
+    {
+        return $this->userRepository->findByFacebookUserId($facebookUserId);
+    }
+
+    /**
+     * Finds a user by their google user id
+     *
+     * @param $googleUserId
+     * @return User|null|object
+     */
+    public function findByGoogleUserId($googleUserId)
+    {
+        return $this->userRepository->findByGoogleUserId($googleUserId);
+    }
+
+    /**
+     * Return a paginator of users
+     *
+     * @param $searchTerm
+     * @param int $page
+     * @return \Doctrine\ORM\Tools\Pagination\Paginator
+     */
+    public function searchUser($searchTerm, $page = 1)
+    {
+        return $this->userRepository->getUsers($searchTerm, $page);
+    }
+
+    /**
+     * Returns true if the email exists
+     *
+     * @param string $email
+     * @return bool
+     */
+    public function doesEmailExist($email)
+    {
+        return !empty($this->findUserByEmail($email));
+    }
+
+    /**
+     * Finds the user by the forgot password token
+     *
+     * @param string $token
+     * @return User|null
+     */
+    public function findUserByForgetPasswordToken($token)
+    {
+        return $this->userRepository->findUserByForgetPasswordToken($token);
     }
 
 }

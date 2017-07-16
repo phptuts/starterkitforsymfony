@@ -24,6 +24,7 @@ services:
         class: CoreBundle\Service\Credential\RefreshTokenService
         arguments:
             - '@doctrine.orm.default_entity_manager'
+            - '@startsymfony.core.repository.refreshtoken_repository'
             - '%refresh_token_ttl%'
 
     startsymfony.core.credential_model_builder:
@@ -45,6 +46,7 @@ services:
         arguments:
             - '@doctrine.orm.default_entity_manager'
             - '@security.encoder_factory'
+            - '@startsymfony.core.repository.user_repository'
 
     startsymfony.core.forget_password:
         class: CoreBundle\Service\User\ForgetPasswordService
@@ -86,7 +88,7 @@ services:
     startsymfony.core.email_to_user_transformer:
         class: CoreBundle\Form\DataTransformer\UserEmailTransformer
         arguments:
-            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.user_service'
 
     #FORM
     startsymfony.core.forget_password_form:
@@ -165,26 +167,25 @@ services:
         class: CoreBundle\Security\Provider\FacebookProvider
         arguments:
             - '@startsymfony.core.facebook_client_factory'
-            - '@startsymfony.core.repository.user_repository'
             - '@startsymfony.core.register_service'
+            - '@startsymfony.core.user_service'
 
 
     startsymfony.core.security.google_provider:
         class: CoreBundle\Security\Provider\GoogleProvider
         arguments:
-            - '@startsymfony.core.repository.user_repository'
             - '@startsymfony.core.register_service'
             - '@startsymfony.core.google_client_factory'
+            - '@startsymfony.core.user_service'
 
     startsymfony.core.security.refresh_token_provider:
         class: CoreBundle\Security\Provider\RefreshTokenProvider
         arguments:
-            - '@startsymfony.core.repository.user_repository'
-            - '@startsymfony.core.repository.refreshtoken_repository'
+            - '@startsymfony.core.user_service'
             - '@startsymfony.core.refresh_token'
 
     startsymfony.core.security.token_provider:
         class: CoreBundle\Security\Provider\TokenProvider
         arguments:
-            - '@startsymfony.core.repository.user_repository'
+            - '@startsymfony.core.user_service'
             - '@startsymfony.core.jws_service'

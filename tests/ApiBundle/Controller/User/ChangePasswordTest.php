@@ -16,7 +16,7 @@ class ChangePasswordTest extends BaseApiTestCase
      */
     public function testChangePasswordAction()
     {
-        $user = $this->getContainer()->get('startsymfony.core.repository.user_repository')->findUserByEmail(self::TEST_EMAIL);
+        $user = $this->getContainer()->get('startsymfony.core.user_service')->findUserByEmail(self::TEST_EMAIL);
         $authToken = $this->getAuthToken($user);
         $client = $this->makeClient();
         $url = sprintf('/api/users/%s/password', $user->getId());

@@ -5,8 +5,8 @@ namespace CoreBundle\Security\Provider;
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
 use CoreBundle\Factory\GoogleClientFactory;
-use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\User\RegisterService;
+use CoreBundle\Service\User\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
 /**
@@ -25,14 +25,23 @@ class GoogleProvider extends AbstractCustomProvider
      */
     private $googleClient;
 
-    public function __construct(UserRepository $userRepository, RegisterService $registerService, GoogleClientFactory $googleClientFactory)
+
+    public function __construct(
+        RegisterService $registerService,
+        GoogleClientFactory $googleClientFactory,
+        UserService $userService
+    )
     {
-        parent::__construct($userRepository);
+        parent::__construct($userService);
         $this->registerService = $registerService;
         $this->googleClient = $googleClientFactory->getGoogleClient();
     }
 
     /**
+     * 1) We validate the access token by fetching the user information
+     * 2) We search for google user id and if one is found we return that user
+     * 3) Then we search by email and if one is found we update the user to have that google user id
+     * 4) If nothing is found we register the user with google user id
      * @param string $username
      * @return User
      */
@@ -41,16 +50,23 @@ class GoogleProvider extends AbstractCustomProvider
         try {
             $payload = $this->googleClient->verifyIdToken($username);
             $email = $payload['email'];
-            $user = $this->userRepository->findUserByEmail($email);
+            $googleUserId = $payload['sub'];
 
-            // This means that the user is registering for the first time
-            if (empty($user)) {
-                $user = (new User())->setEmail($email);
-                $user->setPlainPassword(base64_encode(random_bytes(20)));
-                $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_GOOGLE);
+            $user = $this->userService->findByGoogleUserId($googleUserId);
+
+            if (!empty($user)) {
+                return $user;
             }
 
-            return $user;
+            $user = $this->userService->findUserByEmail($email);
+
+            // This means that the user is registering for the first time
+            if (!empty($user)) {
+                $this->updateUserWithGoogleUserId($user, $googleUserId);
+                return $user;
+            }
+
+            return $this->registerUser($email, $googleUserId);
         }
         catch (\LogicException $ex) {
             throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_LOGIC_EXCEPTION);
@@ -59,6 +75,36 @@ class GoogleProvider extends AbstractCustomProvider
         catch (\Exception $ex) {
             throw new UsernameNotFoundException("Google AuthToken Did Not validate, ERROR MESSAGE " . $ex->getMessage(), ProgrammerException::GOOGLE_USER_PROVIDER_EXCEPTION);
         }
+    }
+
+    /**
+     * Updates the user with their google id creating a link between their google account and user information.
+     *
+     * @param User $user
+     * @param string $googleUserId
+     */
+    protected function updateUserWithGoogleUserId(User $user, $googleUserId)
+    {
+        $user->setGoogleUserId($googleUserId);
+        $this->userService->save($user);
+    }
+
+    /**
+     * We register the user with their google id and email.
+     *
+     * @param string $email
+     * @param string $googleUserId
+     * @return User
+     */
+    protected function registerUser($email, $googleUserId)
+    {
+        $user = (new User())
+            ->setEmail($email)
+            ->setGoogleUserId($googleUserId)
+            ->setPlainPassword(base64_encode(random_bytes(20)));
+        $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_GOOGLE);
+
+        return $user;
     }
 
 }

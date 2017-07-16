@@ -3,7 +3,7 @@
 namespace CoreBundle\Security\Provider;
 
 use CoreBundle\Entity\User;
-use CoreBundle\Repository\UserRepository;
+use CoreBundle\Service\User\UserService;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -17,11 +17,11 @@ abstract class AbstractCustomProvider implements UserProviderInterface
     /**
      * @var UserProviderInterface
      */
-    protected $userRepository;
+    protected $userService;
 
-    public function __construct(UserRepository $userRepository)
+    public function __construct(UserService $userService)
     {
-        $this->userRepository = $userRepository;
+        $this->userService = $userService;
     }
 
     /**
@@ -46,7 +46,7 @@ abstract class AbstractCustomProvider implements UserProviderInterface
             );
         }
 
-        return $this->userRepository->findUserByEmail($user->getUsername());
+        return $this->userService->findUserByEmail($user->getUsername());
     }
 
     /**

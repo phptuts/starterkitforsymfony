@@ -8,10 +8,24 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ path('register') }}">Symfony Starter</a>
+            <a class="navbar-brand" href="#">Symfony Starter Kit</a>
         </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="{% if app.request.get('_route') == 'homepage' %}active{% endif %}" ><a  href="{{ path('homepage') }}">Home</a></li>
+                <li class="{% if app.request.get('_route') == 'login' %}active{% endif %}" ><a  href="{{ path('login') }}">Login</a></li>
+                <li class="{% if app.request.get('_route') == 'register' %}active{% endif %}" ><a  href="{{ path('register') }}">Register</a></li>
+                <li class="{% if app.request.get('_route') == 'documentation' %}active{% endif %}" ><a  href="{{ path('documentation') }}">Documentation</a></li>
+                <li  ><a  href="{{ path('nelmio_api_doc_index') }}">Api Docs</a></li>
 
+                <li class="{% if app.request.get('_route') == 'exception_example' %}active{% endif %}" ><a  href="{{ path('exception_example') }}">Exception Example</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="#">Exception Example</a></li>
+                {% endif %}
+            </ul>
 
+        </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

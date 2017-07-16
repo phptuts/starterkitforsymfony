@@ -3,8 +3,8 @@
 namespace CoreBundle\Security\Provider;
 
 use CoreBundle\Entity\User;
-use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\Credential\JWSService;
+use CoreBundle\Service\User\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
 /**
@@ -20,12 +20,12 @@ class TokenProvider extends AbstractCustomProvider
 
     /**
      * TokenProvider constructor.
-     * @param UserRepository $userRepository
+     * @param UserService $userService
      * @param JWSService $JWSService
      */
-    public function __construct(UserRepository $userRepository, JWSService $JWSService)
+    public function __construct(UserService $userService, JWSService $JWSService)
     {
-        parent::__construct($userRepository);
+        parent::__construct($userService);
         $this->JWSService = $JWSService;
     }
 
@@ -50,7 +50,7 @@ class TokenProvider extends AbstractCustomProvider
         $userId = $payload[JWSService::USER_ID_KEY];
 
         /** @var User $user */
-        $user = $this->userRepository->find($userId);
+        $user = $this->userService->findUserById($userId);
 
         if (empty($user)) {
             throw new UsernameNotFoundException("No user found with id provided.");

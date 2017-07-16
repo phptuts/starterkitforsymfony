@@ -48,6 +48,7 @@ twig:
         facebook_api_version: '%facebook_api_version%'
         email: '%from_email%'
         google_client_id: '%google_client_id%'
+
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -76,17 +77,6 @@ doctrine:
         result_cache_driver:
             type: redis
             id: redis_cache_service
-        second_level_cache:
-            region_cache_driver:
-                type: service
-                id: redis_cache_service
-            enabled: true
-            regions:
-                region_colors:
-                    lifetime: 1800
-                    cache_driver:
-                        type: service
-                        id: redis_cache_service
 
 snc_redis:
    clients:
@@ -106,7 +96,6 @@ snc_redis:
            client: default
            entity_manager: default
 
-liip_functional_test: ~
 
 nelmio_api_doc:
     name: 'Symfony Starter Api'
@@ -120,7 +109,6 @@ nelmio_api_doc:
             default_format: json
 
 
-
 jms_serializer: ~
 
 fos_rest:
@@ -132,6 +120,11 @@ fos_rest:
     routing_loader:
         default_format:  json
         include_format:  false
+    format_listener:
+        rules:
+            - { path: '^/api', priorities: ['json'], fallback_format: json, prefer_extension: false }
+            - { path: '^/*',  fallback_format: html } # Available for version >= 1.5
+
 
 # Swiftmailer Configuration
 swiftmailer:

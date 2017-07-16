@@ -4,6 +4,7 @@ namespace Tests\AdminBundle\Controller;
 
 
 use CoreBundle\Repository\UserRepository;
+use CoreBundle\Service\User\UserService;
 use Liip\FunctionalTestBundle\Test\WebTestCase;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,14 +12,14 @@ use Symfony\Component\HttpFoundation\Response;
 class UserControllerTest extends WebTestCase
 {
     /**
-     * @var UserRepository
+     * @var UserService
      */
-    protected $userRepository;
+    protected $userService;
 
     public function setUp()
     {
         parent::setUp();
-        $this->userRepository = $this->getContainer()->get('startsymfony.core.repository.user_repository');
+        $this->userService = $this->getContainer()->get('startsymfony.core.user_service');
     }
 
     /**
@@ -62,7 +63,7 @@ class UserControllerTest extends WebTestCase
         $form->setValues(['_username' => 'admin_user@gmail.com', '_password' => 'password']);
         $client->submit($form);
 
-        $user = $this->userRepository->findUserByEmail('change_email_user@gmail.com');
+        $user = $this->userService->findUserByEmail('change_email_user@gmail.com');
 
         $client->request('PATCH', '/admin/users/' . $user->getId() . '/email', ['email' => 'change_email_user@gmail.com']);
         $this->assertStatusCode(Response::HTTP_BAD_REQUEST, $client);
@@ -70,7 +71,7 @@ class UserControllerTest extends WebTestCase
         $client->request('PATCH', '/admin/users/' . $user->getId() . '/email', ['email' => 'change_email_user_1@gmail.com']);
         $this->assertStatusCode(Response::HTTP_NO_CONTENT, $client);
 
-        Assert::assertTrue($this->userRepository->doesEmailExist('change_email_user_1@gmail.com'));
+        Assert::assertTrue($this->userService->doesEmailExist('change_email_user_1@gmail.com'));
     }
 
     /**
@@ -78,7 +79,7 @@ class UserControllerTest extends WebTestCase
      */
     public function testUserDisablingUser()
     {
-        $user = $this->userRepository->findUserByEmail('disable_user@gmail.com');
+        $user = $this->userService->findUserByEmail('disable_user@gmail.com');
         Assert::assertTrue($user->isEnabled());
 
         $client = $this->makeClient();
@@ -99,7 +100,7 @@ class UserControllerTest extends WebTestCase
      */
     public function testUserChangePassword()
     {
-        $user = $this->userRepository->findUserByEmail('change_password_user@gmail.com');
+        $user = $this->userService->findUserByEmail('change_password_user@gmail.com');
         $encoder = $this->getContainer()->get('security.encoder_factory')->getEncoder($user);
 
         Assert::assertTrue($encoder->isPasswordValid($user->getPassword(), 'password', $user->getSalt()));

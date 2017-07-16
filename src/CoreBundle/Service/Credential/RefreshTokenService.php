@@ -5,6 +5,7 @@ namespace CoreBundle\Service\Credential;
 
 use CoreBundle\Entity\RefreshToken;
 use CoreBundle\Entity\User;
+use CoreBundle\Repository\RefreshTokenRepository;
 use CoreBundle\Service\AbstractEntityService;
 use Doctrine\ORM\EntityManager;
 
@@ -20,14 +21,21 @@ class RefreshTokenService extends AbstractEntityService
     private $refreshTokenTTL;
 
     /**
+     * @var RefreshTokenRepository
+     */
+    private $refreshTokenRepository;
+
+    /**
      * RefreshTokenService constructor.
      * @param EntityManager $em
      * @param $refreshTokenTTL
+     * @param RefreshTokenRepository $refreshTokenRepository
      */
-    public function __construct(EntityManager $em, $refreshTokenTTL)
+    public function __construct(EntityManager $em, RefreshTokenRepository $refreshTokenRepository, $refreshTokenTTL)
     {
         parent::__construct($em);
         $this->refreshTokenTTL = $refreshTokenTTL;
+        $this->refreshTokenRepository = $refreshTokenRepository;
     }
 
     /**
@@ -50,5 +58,16 @@ class RefreshTokenService extends AbstractEntityService
         $this->save($refreshToken);
 
         return $refreshToken;
+    }
+
+    /**
+     * Returns null or a valid refresh token
+     *
+     * @param $token
+     * @return RefreshToken|null
+     */
+    public function getValidRefreshToken($token)
+    {
+        return $this->refreshTokenRepository->getValidRefreshToken($token);
     }
 }

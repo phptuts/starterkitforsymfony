@@ -6,9 +6,8 @@ namespace CoreBundle\Security\Provider;
 
 use CoreBundle\Entity\RefreshToken;
 use CoreBundle\Exception\ProgrammerException;
-use CoreBundle\Repository\RefreshTokenRepository;
-use CoreBundle\Repository\UserRepository;
 use CoreBundle\Service\Credential\RefreshTokenService;
+use CoreBundle\Service\User\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 
 /**
@@ -17,10 +16,6 @@ use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
  */
 class RefreshTokenProvider extends AbstractCustomProvider
 {
-    /**
-     * @var RefreshTokenRepository
-     */
-    private $refreshTokenRepository;
 
     /**
      * @var RefreshTokenService
@@ -29,17 +24,14 @@ class RefreshTokenProvider extends AbstractCustomProvider
 
     /**
      * RefreshTokenProvider constructor.
-     * @param UserRepository $userRepository
-     * @param RefreshTokenRepository $refreshTokenRepository
+     * @param UserService $userService
      * @param RefreshTokenService $refreshTokenService
      */
-    public function __construct(UserRepository $userRepository,
-                                RefreshTokenRepository $refreshTokenRepository,
+    public function __construct(UserService $userService,
                                 RefreshTokenService $refreshTokenService
     )
     {
-        parent::__construct($userRepository);
-        $this->refreshTokenRepository = $refreshTokenRepository;
+        parent::__construct($userService);
         $this->refreshTokenService = $refreshTokenService;
     }
 
@@ -52,7 +44,7 @@ class RefreshTokenProvider extends AbstractCustomProvider
     public function loadUserByUsername($username)
     {
         try{
-            $token = $this->refreshTokenRepository->getValidRefreshToken($username);
+            $token = $this->refreshTokenService->getValidRefreshToken($username);
         }
         catch (ProgrammerException $ex) {
             throw new UsernameNotFoundException($ex->getMessage(), ProgrammerException::REFRESH_TOKEN_DUPLICATE);

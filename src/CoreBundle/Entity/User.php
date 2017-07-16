@@ -95,6 +95,29 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      */
     protected $email;
 
+
+    /**
+     * This would be something like their facebook user id
+     *
+     * @var string
+     *
+     * @Serializer\Exclude()
+     *
+     * @ORM\Column(name="facebook_user_id", type="string", nullable=true, unique=true)
+     */
+    protected $facebookUserId;
+
+    /**
+     * This would be something like their google user id
+     *
+     * @var string
+     *
+     * @Serializer\Exclude()
+     *
+     * @ORM\Column(name="google_user_id", type="string", nullable=true, unique=true)
+     */
+    protected $googleUserId;
+
     /**
      * @var string
      *
@@ -598,6 +621,44 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     public function getResponseType()
     {
         return 'user';
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookUserId()
+    {
+        return $this->facebookUserId;
+    }
+
+    /**
+     * @param string $facebookUserId
+     * @return User
+     */
+    public function setFacebookUserId($facebookUserId)
+    {
+        $this->facebookUserId = $facebookUserId;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGoogleUserId()
+    {
+        return $this->googleUserId;
+    }
+
+    /**
+     * @param string $googleUserId
+     * @return User
+     */
+    public function setGoogleUserId($googleUserId)
+    {
+        $this->googleUserId = $googleUserId;
+
+        return $this;
     }
 
 

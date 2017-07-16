@@ -69,5 +69,10 @@ class ProgrammerException extends \Exception
      */
     const REFRESH_TOKEN_DUPLICATE = 10233242;
 
+    /**
+     * No docs lol.
+     * @var integer
+     */
+    const STUPID_EXCEPTION = 10233243;
 
 }

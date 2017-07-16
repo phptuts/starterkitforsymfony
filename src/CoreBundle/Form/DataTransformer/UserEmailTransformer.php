@@ -4,6 +4,7 @@ namespace CoreBundle\Form\DataTransformer;
 
 use CoreBundle\Entity\User;
 use CoreBundle\Repository\UserRepository;
+use CoreBundle\Service\User\UserService;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
@@ -16,13 +17,13 @@ use Symfony\Component\Form\Exception\TransformationFailedException;
 class UserEmailTransformer implements DataTransformerInterface
 {
     /**
-     * @var UserRepository
+     * @var UserService
      */
-    private $userRepository;
+    private $userService;
 
-    public function __construct(UserRepository $userRepository)
+    public function __construct(UserService $userService)
     {
-        $this->userRepository = $userRepository;
+        $this->userService = $userService;
     }
 
     /**
@@ -55,7 +56,7 @@ class UserEmailTransformer implements DataTransformerInterface
             return $user;
         }
 
-        $user = $this->userRepository->findUserByEmail($user->getEmail());
+        $user = $this->userService->findUserByEmail($user->getEmail());
 
         if (null === $user) {
             throw new TransformationFailedException('Email was not found.');

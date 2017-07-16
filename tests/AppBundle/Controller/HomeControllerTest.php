@@ -15,10 +15,5 @@ class HomeControllerTest extends WebTestCase
         $client = $this->makeClient();
         $client->request('GET', '/');
         $this->assertStatusCode(200, $client);
-
-
-        $client = $this->makeClient();
-        $client->request('GET', '/change_color');
-        $this->assertStatusCode(200, $client);
     }
 }

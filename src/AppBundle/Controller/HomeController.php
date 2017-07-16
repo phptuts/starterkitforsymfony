@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use CoreBundle\Entity\Color;
+use CoreBundle\Exception\ProgrammerException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class HomeController extends Controller
 {
+
     /**
      * @Route("/", name="homepage")
      *
@@ -20,55 +22,27 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
-        /**
-         * This is a example of using cache regions
-         */
-        $repo = $this->getDoctrine()->getRepository(Color::class);
-
-        // This query should come from redis cache region
-        $color = $repo->createQueryBuilder('c')
-            ->where('c.id = :id')
-            ->setParameters(['id' => 1])
-            ->getQuery()
-            ->setCacheable(true)
-            ->useResultCache(true)
-            ->setCacheRegion('region_colors')
-            ->getOneOrNullResult();
-
-        return $this->render('@App/home/home.html.twig', [
-            'color' => $color
-        ]);
+        return $this->render('@App/home/index.html.twig');
     }
 
     /**
-     * @Route("/change_color", name="change_color_page")
+     * @Route("/docs", name="documentation")
      *
      * @return Response
      */
-    public function blahAction() {
-
-        $repo = $this->getDoctrine()->getRepository(Color::class);
-
-        $color = $repo->createQueryBuilder('c')
-            ->where('c.id = :id')
-            ->setParameters(['id' => 1])
-            ->getQuery()
-            ->setCacheable(true)
-            ->useResultCache(true)
-            ->setCacheRegion('region_colors')
-            ->getOneOrNullResult();
-
-        $color = empty($color) ? new Color() : $color;
-        $color->setColor("RED");
-
-        $this->getDoctrine()->getManager()->persist($color);
-        $this->getDoctrine()->getManager()->flush();
-
-
-        return $this->render('@App/home/home.html.twig', [
-            'color' => $color
-        ]);
+    public function documentationAction()
+    {
+        return $this->render('@App/home/documentation.html.twig');
     }
 
+    /**
+     * @Route("/exception", name="exception_example")
+     *
+     * @throws ProgrammerException
+     */
+    public function exceptionAction()
+    {
+        throw new ProgrammerException('Silly Exception', ProgrammerException::STUPID_EXCEPTION);
+    }
 
 }

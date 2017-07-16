@@ -9,6 +9,7 @@ use CoreBundle\Repository\RefreshTokenRepository;
 use CoreBundle\Repository\UserRepository;
 use CoreBundle\Security\Provider\RefreshTokenProvider;
 use CoreBundle\Service\Credential\RefreshTokenService;
+use CoreBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
@@ -22,29 +23,24 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
     protected $refreshTokenProvider;
 
     /**
-     * @var UserRepository|Mock
+     * @var UserService|Mock
      */
-    protected $userRepository;
+    protected $userService;
 
     /**
      * @var RefreshTokenService|Mock
      */
     protected $refreshTokenService;
 
-    /**
-     * @var RefreshTokenRepository|Mock
-     */
-    protected $refreshTokenRepository;
 
     public function setUp()
     {
         parent::setUp();
-        $this->userRepository = \Mockery::mock(UserRepository::class);
+        $this->userService = \Mockery::mock(UserService::class);
         $this->refreshTokenService = \Mockery::mock(RefreshTokenService::class);
-        $this->refreshTokenRepository = \Mockery::mock(RefreshTokenRepository::class);
 
         $this->refreshTokenProvider =
-            new RefreshTokenProvider($this->userRepository,$this->refreshTokenRepository, $this->refreshTokenService);
+            new RefreshTokenProvider($this->userService, $this->refreshTokenService);
     }
 
     /**
@@ -55,7 +51,7 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
         $refreshToken = new RefreshToken();
         Assert::assertFalse($refreshToken->isUsed());
 
-        $this->refreshTokenRepository->shouldReceive('getValidRefreshToken')->with('token')->andReturn($refreshToken);
+        $this->refreshTokenService->shouldReceive('getValidRefreshToken')->with('token')->andReturn($refreshToken);
         $this->refreshTokenService->shouldReceive('save')->with($refreshToken);
 
         $this->refreshTokenProvider->loadUserByUsername('token');
@@ -72,7 +68,7 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
         $refreshToken = new RefreshToken();
         Assert::assertFalse($refreshToken->isUsed());
 
-        $this->refreshTokenRepository->shouldReceive('getValidRefreshToken')->with('token')->andReturnNull();
+        $this->refreshTokenService->shouldReceive('getValidRefreshToken')->with('token')->andReturnNull();
         $this->refreshTokenProvider->loadUserByUsername('token');
     }
 
@@ -88,7 +84,7 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
         $refreshToken = new RefreshToken();
         Assert::assertFalse($refreshToken->isUsed());
 
-        $this->refreshTokenRepository
+        $this->refreshTokenService
             ->shouldReceive('getValidRefreshToken')
             ->with('token')
             ->andThrow(new ProgrammerException('Duplicate Refresh Token.', ProgrammerException::REFRESH_TOKEN_DUPLICATE));

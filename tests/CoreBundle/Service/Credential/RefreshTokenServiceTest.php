@@ -6,6 +6,7 @@ namespace Tests\CoreBundle\Service\Credential;
 
 use CoreBundle\Entity\RefreshToken;
 use CoreBundle\Entity\User;
+use CoreBundle\Exception\ProgrammerException;
 use CoreBundle\Repository\RefreshTokenRepository;
 use CoreBundle\Service\Credential\RefreshTokenService;
 use Doctrine\ORM\EntityManager;
@@ -34,8 +35,8 @@ class RefreshTokenServiceTest extends BaseTestCase
     public function setUp()
     {
         $this->em = \Mockery::mock(EntityManager::class);
-        $this->refreshTokenRepo = \Mockery::mock(RefreshTokenRepository::class);
-        $this->refreshTokenService = new RefreshTokenService($this->em, 1000);
+        $this->refreshTokenRepo = $this->getContainer()->get('startsymfony.core.repository.refreshtoken_repository');
+        $this->refreshTokenService = new RefreshTokenService($this->em, $this->refreshTokenRepo, 1000);
     }
 
     /**
@@ -58,5 +59,40 @@ class RefreshTokenServiceTest extends BaseTestCase
         Assert::assertTrue($greaterThanExpirationTimeStamp > $refreshToken->getExpires()->getTimestamp());
         Assert::assertFalse($refreshToken->isUsed());
         Assert::assertNotNull($refreshToken->getToken());
+    }
+
+    /**
+     * Tests that if their are duplicate valid refresh tokens a special expection is thrown
+     */
+    public function testDuplicateRefreshToken()
+    {
+        $this->expectException(ProgrammerException::class);
+        $this->expectExceptionCode(ProgrammerException::REFRESH_TOKEN_DUPLICATE);
+
+        $this->refreshTokenService->getValidRefreshToken('token_dup');
+    }
+
+    /**
+     * Tests that expired refresh token are not valid
+     */
+    public function testExpiredToken()
+    {
+        Assert::assertNull($this->refreshTokenService->getValidRefreshToken('token_expired'));
+    }
+
+    /**
+     * Tests that used refresh tokens are not valid
+     */
+    public function testUsedToken()
+    {
+        Assert::assertNull($this->refreshTokenService->getValidRefreshToken('used_token'));
+    }
+
+    /**
+     * Tests that the method can find a valid refresh token
+     */
+    public function testValidToken()
+    {
+        Assert::assertInstanceOf(RefreshToken::class, $this->refreshTokenService->getValidRefreshToken('valid_refresh_token'));
     }
 }
