@@ -1,0 +1,21 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Exception Handling{% endblock %}
+
+{% block body %}
+
+    <h1>Exception Handling</h1>
+
+    <h2>
+        <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Handler/ExceptionHandler.php">
+            ExceptionHandler
+        </a>
+    </h2>
+
+    <p>
+        This will intercept all exceptions.  If it the response an api aka has application/json for the content we will intercept it.
+        We will also intercept all 500 response that the user has the desktop.
+        We provide the user with a number special number to give to customer service that we put in the logs that allows us to see what blew up.
+    </p>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Update User Profile{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Update User Profile</h1>
+
+    <p>
+        The only thing to notice with this is that if a profile picture is upload the <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Controller/AccountSettingController.php#L36">website controller</a> will upload the picture to s3.
+        For the api there is a separate end point for this.
+        <a href="https://github.com/phptuts/symfonystarter/blob/master/src/ApiBundle/Controller/UserController.php#L205">Api Controller</a>
+    </p>
+
+</div>
+
+{% endblock %}

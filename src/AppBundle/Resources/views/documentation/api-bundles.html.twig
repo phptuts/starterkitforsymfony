@@ -1,0 +1,45 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title 'Api Bundles' %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>Api Bundle</h1>
+
+        <h2>
+            <a href="http://symfony.com/doc/master/bundles/FOSRestBundle/index.html">FOS Rest Bundle</a>
+        </h2>
+
+        <p>
+            We use the fos rest bundle for our api it handles our routing for the api / wraps around symfony routing.
+            It also puts the json body into the request for us.
+            A little magic.
+            One thing to note is that we use camelCase Serialization.  This keeps our api and php class consistant.
+            We over ride that in jms serializer.
+        </p>
+
+        <p>
+            One thing to note is that we turn off csrf for all forms that our with the api.
+            This done here: https://github.com/phptuts/symfonystarter/blob/master/app/config/config.yml#L115
+        </p>
+
+
+        <h2>
+            <a href="http://jmsyst.com/bundles/JMSSerializerBundle">JMS Serializer</a>
+        </h2>
+
+        <p>
+            This bundle is used to take our objects and turn them into json.  We use concepts like serialization groups.
+        </p>
+
+        <h2>
+            <a href="https://github.com/nelmio/NelmioApiDocBundle">Nelmio Api Doc Bundle</a>
+        </h2>
+
+        <p>
+            This bundle is used to auto generate documentation for our api.
+        </p>
+    </div>
+
+{% endblock %}

@@ -5,7 +5,11 @@
 {% block body %}
 
     <div class="container">
-        <h1>Facebook / Google Auth High Level From Server Point of view.</h1>
+        <h1>
+            <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Security/Provider/FacebookProvider.php">Facebook</a>
+            /
+            <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Security/Provider/GoogleProvider.php">Google</a>
+            Auth High Level From Server Point of view.</h1>
 
         <ol>
             <li>Validate the access token by fetching the user and the email.</li>
@@ -16,6 +20,8 @@
 
         <p>The reason you check the facebook / google user id first is because they might change their email address on facebook / google,
             but not on your sight.  If stuff like that happens you won't create duplicate users that are really the same.</p>
+
+
     </div>
 
 

@@ -1,0 +1,24 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title %}Token Provider{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>
+            <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Security/Provider/TokenProvider.php">Token Provider</a> WorkFlow
+        </h1>
+
+        <p>Used to validate a jws token and get the user from it.</p>
+        <ol>
+            <li>Validate the token if it's invalid throw a UsernameNotFoundException</li>
+            <li>Check that user_id key is in the token's payload, if not throw a UsernameNotFoundException</li>
+            <li>Check if the user id exists in our database: if not throw a UsernameNotFoundException</li>
+            <li>Return the user found.</li>
+        </ol>
+
+
+    </div>
+
+{% endblock %}

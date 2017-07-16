@@ -1,0 +1,19 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block title 'Admin User Management' %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>Admin User Management</h1>
+
+        <p>
+            This uses some ajax /jquery to make 3 calls.  We can enable / disable the user.
+            This will toggle the enabled boolean on the user which allow / disallow the user to login.
+            We also can change the user's email address and change the user's password to a random set characters.
+            The toggle library we use is: <a href="http://www.bootstraptoggle.com/">bootstrap-toggle</a>
+        </p>
+
+    </div>
+
+{% endblock %}
