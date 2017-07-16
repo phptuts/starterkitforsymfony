@@ -1,5 +1,8 @@
 {% extends '@App/layout.html.twig' %}
 
+{% block title %}Documentation{% endblock %}
+
+
 {% block body %}
 
     <div class="container">
@@ -135,9 +138,7 @@
             It uses a <a href="https://github.com/phptuts/symfonystarter/blob/master/src/CoreBundle/Factory/S3ClientFactory.php">factory</a> to create an s3 client.
             All the upload service does is return a url that is stored in the database.  When you use the service you specify the folder that the the file will go in.  The service
             also depends on the environment as well.  So you if you specify the medical folder you and you are on the dev environment you will upload the file to /yourbucket/dev/medical.
-
         </p>
-
 
 
 

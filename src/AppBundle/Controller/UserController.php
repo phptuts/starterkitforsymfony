@@ -36,7 +36,7 @@ class UserController extends Controller
 
         return $this->render('@App/user/login.html.twig', [
             'last_username' => $lastUsername,
-            'error' => $error,
+            'error' => $error
         ]);
     }
 
@@ -89,6 +89,7 @@ class UserController extends Controller
 
         return $this->render('@App/user/forget-password/forget-password.html.twig', [
             'forgetPasswordForm' => $form->createView()
+
         ]);
     }
 
@@ -99,7 +100,7 @@ class UserController extends Controller
      */
     public function forgetPasswordSuccessAction()
     {
-        return $this->render('@App/user/forget-password/forget-password-success.html.twig');
+        return $this->render('@App/user/forget-password/forget-password-success.html.twig', ['title' => 'Forget Password']);
     }
 
     /**
@@ -130,7 +131,7 @@ class UserController extends Controller
         }
 
         return $this->render('@App/user/reset-password/reset-password.html.twig', [
-            'resetPasswordForm' => $form->createView()
+            'resetPasswordForm' => $form->createView(),
         ]);
     }
 
