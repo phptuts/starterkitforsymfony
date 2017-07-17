@@ -15,8 +15,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="{% if app.request.get('_route') == 'homepage' %}active{% endif %}" ><a  href="{{ path('homepage') }}">Home</a></li>
+                {% if is_granted('ROLE_USER') == false %}
                 <li class="{% if app.request.get('_route') == 'login' %}active{% endif %}" ><a  href="{{ path('login') }}">Login</a></li>
                 <li class="{% if app.request.get('_route') == 'register' %}active{% endif %}" ><a  href="{{ path('register') }}">Register</a></li>
+                {% else %}
+                    <li class="{% if app.request.get('_route') == 'update_user' or app.request.get('_route') == 'change_password' %}active{% endif %}" ><a  href="{{ path('update_user') }}">Account Settings</a></li>
+                {% endif %}
                 <li class="{% if app.request.get('_route') == 'documentation' %}active{% endif %}" ><a  href="{{ path('documentation') }}">Documentation</a></li>
                 <li  ><a  href="{{ path('nelmio_api_doc_index') }}">Api Docs</a></li>
 
