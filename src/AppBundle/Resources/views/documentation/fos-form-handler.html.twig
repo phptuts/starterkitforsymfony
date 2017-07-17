@@ -1,9 +1,9 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}FOS Form Handler{% endblock %}
 
 
-{% block body %}
+{% block content %}
 
 <div class="container">
 
@@ -19,5 +19,12 @@
     </p>
 
 </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://symfony.com/doc/master/bundles/FOSRestBundle/2-the-view-layer.html#forms-and-views">FOS Rest Bundle Forms</a></li>
+    </ul>
 
 {% endblock %}

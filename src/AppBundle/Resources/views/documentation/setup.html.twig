@@ -1,15 +1,14 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Setup Documentation{% endblock %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>Setup</h1>
         <p>These are the basic setup instructions for localhost.</p>
 
         <ul>
-            {# TODO JWS Setup #}
             <li>git clone the repo: <code>git clone https://github.com/phptuts/symfonystarter.git</code></li>
             <li>navigate to the symfonystarter folder: <code>cd symfonystarter</code></li>
             <li>Run <code>mkdir var/jwt</code></li>
@@ -68,4 +67,16 @@
         </ul>
     </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://symfony.com/doc/master/bundles/FOSRestBundle/index.html">FOS Rest Bundle</a></li>
+        <li><a href="http://jmsyst.com/bundles/JMSSerializerBundle">JMS Serializer</a></li>
+        <li><a href="https://github.com/nelmio/NelmioApiDocBundle">Nelmio Api Doc Bundle</a></li>
+        <li><a href="https://aws.amazon.com/documentation/s3/">Amazon S3 Documentation</a></li>
+        <li><a href="https://developers.facebook.com/docs/php/howto/example_facebook_login">Facebook Login</a></li>
+        <li><a href="https://developers.google.com/api-client-library/php/guide/aaa_idtoken">Google Auth Guide PHP</a></li>
+
+    </ul>
 {% endblock %}

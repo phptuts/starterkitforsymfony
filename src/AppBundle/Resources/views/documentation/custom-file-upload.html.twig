@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Custom File Upload Field Type' %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>Custom File Upload Field Type</h1>
@@ -13,5 +13,14 @@
             Here is where the twig is to render the form. <a href="https://github.com/phptuts/symfonystarter/blob/master/app/Resources/views/form/fields.html.twig">Twig</a>
         </p>
     </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+
+    <ul>
+        <li><a href="http://symfony.com/doc/current/form/create_custom_field_type.html">Custom Field / Type Documentation</a></li>
+        <li><a href="https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3">HTML / JS Source</a></li>
+    </ul>
 
 {% endblock %}

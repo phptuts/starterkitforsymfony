@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Api Bundles' %}
 
-{% block body %}
+{% block content %}
     <div class="container">
 
         <h1>Api Bundle</h1>
@@ -42,4 +42,12 @@
         </p>
     </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://symfony.com/doc/master/bundles/FOSRestBundle/index.html">FOS Rest Bundle</a></li>
+        <li><a href="http://jmsyst.com/bundles/JMSSerializerBundle">JMS Serializer</a></li>
+        <li><a href="https://github.com/nelmio/NelmioApiDocBundle">Nelmio Api Doc Bundle</a></li>
+    </ul>
 {% endblock %}

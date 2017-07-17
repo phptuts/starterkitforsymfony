@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Api Login Guard' %}
 
-{% block body %}
+{% block content %}
 <div class="container">
 
     <h1>
@@ -89,4 +89,14 @@
     <h5>Also handled in the trait is the supportsRememberMe which always returns false.  You can't change it here because it's an api, so it has to always return false.</h5>
 </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://symfony.com/doc/current/security/guard_authentication.html">Custom Guard Symfony Doc</a></li>
+        <li><a href="https://symfony.com/doc/current/security/multiple_guard_authenticators.html">Multiple Guards</a></li>
+        <li><a href="https://github.com/hwi/HWIOAuthBundle">HWIOAuthBundle</a> Does facebook / google and ton more oauth login providers.</li>
+        <li><a href="https://github.com/lexik/LexikJWTAuthenticationBundle">JWT Bundle</a> A great bundle that does jwt tokens.</li>
+        <li><a href="https://github.com/gesdinet/JWTRefreshTokenBundle">JWT Refresh Token Bundle</a> Works the bundle above to provide refresh tokens.</li>
+    </ul>
 {% endblock %}

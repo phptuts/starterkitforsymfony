@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Token Guard Workflow{% endblock %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>Token Guard Workflow</h1>
@@ -127,4 +127,12 @@
     </div>
 
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://symfony.com/doc/current/security/guard_authentication.html">Custom Guard Symfony Doc</a></li>
+        <li><a href="https://symfony.com/doc/current/security/multiple_guard_authenticators.html">Multiple Guards</a></li>
+        <li><a href="https://knpuniversity.com/screencast/symfony-security">Good Course on symfony security</a>  Cost money but worth it. </li>
+    </ul>
 {% endblock %}

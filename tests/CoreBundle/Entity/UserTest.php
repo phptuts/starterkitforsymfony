@@ -91,7 +91,28 @@ class UserTest extends BaseTestCase
        Assert::assertTrue($user->isAccountNonExpired());
        Assert::assertTrue($user->isAccountNonLocked());
        Assert::assertTrue($user->isCredentialsNonExpired());
+   }
 
+    /**
+     * Tests that prePersists update the createdAt and updatedAt fields
+     */
+   public function testPrePersist()
+   {
+       $user = new User();
+       $user->prePersist();
 
+       Assert::assertNotEmpty($user->getCreatedAt());
+       Assert::assertNotEmpty($user->getUpdatedAt());
+   }
+
+    /**
+     * Tests that preupdate updates the updatedAt field
+     */
+   public function testPreUpdate()
+   {
+       $user = new User();
+       $user->preUpdate();
+
+       Assert::assertNotEmpty($user->getUpdatedAt());
    }
 }

@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Facebook / Google Auth High Level{% endblock %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>
@@ -21,8 +21,14 @@
         <p>The reason you check the facebook / google user id first is because they might change their email address on facebook / google,
             but not on your sight.  If stuff like that happens you won't create duplicate users that are really the same.</p>
 
-
     </div>
 
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://developers.facebook.com/docs/php/howto/example_facebook_login">Facebook Login</a></li>
+        <li><a href="https://developers.google.com/api-client-library/php/guide/aaa_idtoken">Google Auth Guide PHP</a></li>
+    </ul>
 {% endblock %}

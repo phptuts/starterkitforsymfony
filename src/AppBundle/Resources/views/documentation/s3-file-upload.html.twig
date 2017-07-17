@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'S3 file upload' %}
 
-{% block body %}
+{% block content %}
 
 <div class="container">
     <h1>S3 File Uploads</h1>
@@ -14,4 +14,11 @@
     </p>
 </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://aws.amazon.com/documentation/s3/">Amazon S3 Documentation</a></li>
+        <li><a href="https://symfony.com/doc/current/controller/upload_file.html">Symfony File Upload Example</a></li>
+    </ul>
 {% endblock %}

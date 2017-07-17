@@ -14,15 +14,21 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * User
- * @link http://symfony.com/doc/current/security/entity_provider.html
+ *
  * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\UserRepository")
+ * @ORM\HasLifecycleCallbacks()
+ *
  * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUP_DEFAULT})
  * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
+ *
+ * @link http://symfony.com/doc/current/security/entity_provider.html
  * @Serializer\ExclusionPolicy("ALL")
  */
 class User implements AdvancedUserInterface, \Serializable, EquatableInterface, ResponseTypeInterface
 {
+
+    use TimeStampTrait;
 
     /**
      * This is the default validation group used across all the user forms

@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}User Voter{% endblock %}
 
-{% block body %}
+{% block content %}
 
 <div class="container">
 
@@ -20,4 +20,10 @@
 
 </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://symfony.com/doc/current/security/voters.html">Symfony Voters</a></li>
+    </ul>
 {% endblock %}

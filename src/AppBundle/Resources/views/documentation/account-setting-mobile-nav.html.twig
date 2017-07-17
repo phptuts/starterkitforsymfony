@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Account Setting Mobile Nav' %}
 
-{% block body %}
+{% block content %}
 <div class="container">
 
     <h1>Account Setting Mobile Nav</h1>
@@ -11,9 +11,15 @@
         We use a js library called: <a href="http://silviomoreto.github.io/bootstrap-select">bootstrap-select</a>.
         This allows us to add data attribute to our select html element so that we can provide a mobile nave.
         We use the onChange jquery event to trigger the page navigation via javascript.
-
     </p>
 
 </div>
+{% endblock %}
+
+{% block helpfulLinks %}
+
+    <ul>
+        <li><a href="http://silviomoreto.github.io/bootstrap-select">bootstrap-select</a></li>
+    </ul>
 
 {% endblock %}

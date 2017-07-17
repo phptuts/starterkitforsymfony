@@ -1,9 +1,9 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Documentation{% endblock %}
 
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1><a href="https://github.com/phptuts/symfonystarter/blob/master/app/config/security.yml">Security Yml File</a></h1>
@@ -61,4 +61,10 @@
         </p>
     </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://symfony.com/doc/current/security.html">Symfony Security</a> It goes over most of this.</li>
+    </ul>
 {% endblock %}

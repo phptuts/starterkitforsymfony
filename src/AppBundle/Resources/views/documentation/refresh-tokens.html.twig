@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Refresh Toknes' %}
 
-{% block body %}
+{% block content %}
 
     <div class="container">
 
@@ -65,4 +65,10 @@
         </ol>
     </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://auth0.com/learn/refresh-tokens/">Refresh Tokens Explained</a></li>
+    </ul>
 {% endblock %}

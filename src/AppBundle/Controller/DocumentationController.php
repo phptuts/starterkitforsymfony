@@ -249,4 +249,24 @@ class DocumentationController extends FOSRestController
         return $this->render('@App/documentation/api-bundles.html.twig');
     }
 
+    /**
+     * @Route("/docs/api_response_serializer", name="doc_response_serializer")
+     *
+     * @return Response
+     */
+    public function apiResponseSerializerAction()
+    {
+        return $this->render('@App/documentation/response-serializer.html.twig');
+    }
+
+    /**
+     * @Route("/docs/testing", name="doc_testing")
+     *
+     * @return Response
+     */
+    public function testingAction()
+    {
+        return $this->render('@App/documentation/testing.html.twig');
+    }
+
 }

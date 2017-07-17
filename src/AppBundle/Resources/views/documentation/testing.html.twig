@@ -1,0 +1,46 @@
+{% extends '@App/documentation/document-layout.html.twig' %}
+
+{% block title 'Testing' %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Testing</h1>
+
+    <p>We use three libraries to test things:</p>
+
+    <ol>
+        <li>PHPUnit: For unit and functional testing, the base</li>
+        <li>Mockery: Used to create mocks for dependency injection.</li>
+        <li>LiipFunctionalTestingBundle: For sqlite database support and form validation testing.</li>
+    </ol>
+
+    <p>We have way more unit tests then we do functional / end to end tests.  To run the tests locally run: sh scripts/run_tests.sh. </p>
+
+</div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li>
+            <a href="http://symfony.com/doc/current/testing.html">Symfony Testing</a>
+        </li>
+
+        <li>
+           <a href="https://phpunit.de/"> PHPUnit</a>
+        </li>
+        <li>
+            <a href="https://github.com/mockery/mockery">Mockery</a>
+        </li>
+        <li>
+            <a href="https://github.com/liip/LiipFunctionalTestBundle">LiipFunctionTestingBundle</a>
+        </li>
+        <li>
+            <a href="https://symfony.com/doc/current/best_practices/tests.html">Symfony Best Practices For Testing</a>
+        </li>
+    </ul>
+
+
+{% endblock %}

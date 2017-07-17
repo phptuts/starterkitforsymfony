@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Update User Profile{% endblock %}
 
-{% block body %}
+{% block content %}
 
 <div class="container">
     <h1>Update User Profile</h1>
@@ -15,4 +15,10 @@
 
 </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://php.net/manual/en/features.file-upload.post-method.php">PHP File Upload</a></li>
+    </ul>
 {% endblock %}

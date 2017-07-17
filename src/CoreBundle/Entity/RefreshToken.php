@@ -9,10 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Color
  * @ORM\Table(name="RefreshToken")
+ * @ORM\HasLifecycleCallbacks()
  * @ORM\Entity(repositoryClass="CoreBundle\Repository\RefreshTokenRepository")
  */
 class RefreshToken
 {
+
+    use TimeStampTrait;
+
     /**
      * @var int
      *

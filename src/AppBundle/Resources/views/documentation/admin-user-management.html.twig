@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Admin User Management' %}
 
-{% block body %}
+{% block content %}
     <div class="container">
 
         <h1>Admin User Management</h1>
@@ -16,4 +16,12 @@
 
     </div>
 
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://www.bootstraptoggle.com/">Bootstrap Toggle</a></li>
+        <li><a href="https://sonata-project.org/bundles/admin/3-x/doc/index.html/">Sonata Admin</a> (A bundle for creating admin in symfony)</li>
+        <li><a href="http://symfony.com/doc/current/bundles/EasyAdminBundle/index.html">Easy Admin</a> (A bundle for creating admin in symfony)</li>
+    </ul>
 {% endblock %}

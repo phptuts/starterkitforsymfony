@@ -1,9 +1,9 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}JWS / JWT Tokens{% endblock %}
 
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>JWS / JWT Token</h1>
@@ -30,5 +30,13 @@
             </li>
         </ul>
     </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="http://jwt.io">jwt.io</a> great for learning and debuging jwt / jws tokens</li>
+        <li><a href="https://github.com/namshi/jose">NAMSHI | JOSE</a> The php package we use for jwt tokens</li>
+    </ul>
 
 {% endblock %}

@@ -1,8 +1,8 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title 'Facebook / Google Auth' %}
 
-{% block body %}
+{% block content %}
     <div class="container">
         <h2>Website Facebook & Google Authentication</h2>
 
@@ -22,5 +22,16 @@
 
         <p>Also note for google that they library needs the client id in the <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Resources/views/layout.html.twig">header</a>.</p>
     </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+
+    <ul>
+        <li><a href="https://developers.facebook.com/docs/php/howto/example_facebook_login">Facebook Login</a></li>
+        <li><a href="https://developers.google.com/api-client-library/php/guide/aaa_idtoken">Google Auth Guide PHP</a></li>
+        <li><a href="https://symfony.com/doc/current/security/guard_authentication.html">Custom Guard Symfony Doc</a></li>
+        <li><a href="http://symfony.com/doc/current/security/custom_provider.html">User Provider</a></li>
+    </ul>
 
 {% endblock %}

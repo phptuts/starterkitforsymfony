@@ -1,9 +1,9 @@
-{% extends '@App/layout.html.twig' %}
+{% extends '@App/documentation/document-layout.html.twig' %}
 
 {% block title %}Documentation{% endblock %}
 
 
-{% block body %}
+{% block content %}
 
     <div class="container">
         <h1>Documentation</h1>
@@ -32,11 +32,22 @@
             <li><a href="{{ path('doc_fos_form_handler') }}">FOS Form Error Handler</a></li>
             <li><a href="{{ path('doc_exception_handling') }}">Exception Handling for api / desktop</a></li>
             <li><a href="{{ path('doc_api_bundles') }}">Api Bundles Used</a></li>
-            <li><a href="{{ path('doc_social_auth_high_level') }}">Response Serializer</a></li>
-            <li><a href="{{ path('doc_social_auth_high_level') }}">Testing</a></li>
-            <li><a href="{{ path('doc_social_auth_high_level') }}">Side Notes</a></li>
+            <li><a href="{{ path('doc_response_serializer') }}">Response Serializer</a></li>
+            <li><a href="{{ path('doc_testing') }}">Testing</a></li>
         </ol>
 
     </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+
+
+        <ul>
+            <li><a href="https://symfony.com/doc/current/index.html">Symfony</a></li>
+            <li><a href="http://symfony.com/doc/master/bundles/FOSRestBundle/index.html">FOS Rest Bundle</a></li>
+            <li><a href="http://jmsyst.com/bundles/JMSSerializerBundle">JMS Serializer</a></li>
+            <li><a href="https://github.com/nelmio/NelmioApiDocBundle">Nelmio Api Doc Bundle</a></li>
+        </ul>
 
 {% endblock %}
