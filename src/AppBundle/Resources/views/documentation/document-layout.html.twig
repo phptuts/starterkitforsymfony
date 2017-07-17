@@ -3,6 +3,12 @@
 
 {% block body %}
 
+    <div class="container">
+        {% if  app.request.get('_route')  != 'documentation' %}
+        <a href="{{ path('documentation') }}">Home Docs</a>
+            {% endif %}
+    </div>
+
     {% block content %}
 
     {% endblock %}

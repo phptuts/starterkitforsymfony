@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/response-serializer.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/TimeStampTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/account-setting-mobile-nav.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/account-setting-mobile-nav.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/admin-user-management.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/admin-user-management.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-bundles.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-bundles.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-login-guard.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-login-guard.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/change-password.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/change-password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/credentials.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/credentials.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/custom-file-upload.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/custom-file-upload.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/email.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/email.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/exception-handling.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/exception-handling.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/forget-password-workflow.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/forget-password-workflow.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/fos-form-handler.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/fos-form-handler.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/jwt-jws-token.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/jwt-jws-token.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/refresh-tokens.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/refresh-tokens.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/s3-file-upload.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/s3-file-upload.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/security-yml.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-provider.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-provider.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/update-user-profile.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/update-user-profile.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/user-voter.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/user-voter.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/menu/menu.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/menu/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/RefreshToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CoreBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php" afterPath="$PROJECT_DIR$/tests/CoreBundle/Entity/UserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,56 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="desktop-social-auth.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/desktop-social-auth.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api-login-guard.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-login-guard.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="96" column="31" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="social-auth-highlevel.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/social-auth-highlevel.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="78" lean-forward="false" selection-start-line="40" selection-start-column="78" selection-end-line="40" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="token-guard-workflow.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/token-guard-workflow.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,13 +57,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="website-registration-login.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="website-registration-login.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
               <caret line="29" column="70" lean-forward="false" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
               <folding>
                 <element signature="e#12#56#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documentation.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+              <folding>
+                <element signature="e#237#246#0#Twig" expanded="true" />
+                <element signature="e#302#314#0#Twig" expanded="true" />
+                <element signature="e#377#400#0#Twig" expanded="true" />
+                <element signature="e#483#509#0#Twig" expanded="true" />
+                <element signature="e#593#623#0#Twig" expanded="true" />
+                <element signature="e#702#726#0#Twig" expanded="true" />
+                <element signature="e#797#816#0#Twig" expanded="true" />
+                <element signature="e#882#900#0#Twig" expanded="true" />
+                <element signature="e#965#983#0#Twig" expanded="true" />
+                <element signature="e#1048#1061#0#Twig" expanded="true" />
+                <element signature="e#1127#1150#0#Twig" expanded="true" />
+                <element signature="e#1222#1236#0#Twig" expanded="true" />
+                <element signature="e#1297#1324#0#Twig" expanded="true" />
+                <element signature="e#1398#1417#0#Twig" expanded="true" />
+                <element signature="e#1487#1497#0#Twig" expanded="true" />
+                <element signature="e#1554#1582#0#Twig" expanded="true" />
+                <element signature="e#1657#1687#0#Twig" expanded="true" />
+                <element signature="e#1771#1790#0#Twig" expanded="true" />
+                <element signature="e#1856#1874#0#Twig" expanded="true" />
+                <element signature="e#1944#1969#0#Twig" expanded="true" />
+                <element signature="e#2041#2061#0#Twig" expanded="true" />
+                <element signature="e#2134#2156#0#Twig" expanded="true" />
+                <element signature="e#2243#2258#0#Twig" expanded="true" />
+                <element signature="e#2325#2348#0#Twig" expanded="true" />
+                <element signature="e#2418#2429#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document-layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+                <element signature="e#176#189#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testing.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account-setting-layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="80" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="token-auth-js.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="41" />
+              <folding>
+                <element signature="e#400#417#0#Twig" expanded="false" />
+                <element signature="e#844#849#0#Twig" expanded="false" />
+                <element signature="e#898#906#0#Twig" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -254,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DocumentationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/menu/menu.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/home/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/account-setting-mobile-nav.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/admin-user-management.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-bundles.html.twig" />
@@ -281,6 +281,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/update-user-profile.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/user-voter.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/website-registration-login.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig" />
       </list>
     </option>
   </component>
@@ -627,6 +628,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="social" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1340,18 +1375,18 @@
       <workItem from="1499902538431" duration="8785000" />
       <workItem from="1500001144874" duration="8202000" />
       <workItem from="1500068045853" duration="18921000" />
-      <workItem from="1500104175000" duration="69816000" />
+      <workItem from="1500104175000" duration="70118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354292000" />
+    <option name="totallyTimeSpent" value="354594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486632" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1416,14 +1451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1457,16 +1484,6 @@
         <state relative-caret-position="180">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding>
-            <element signature="e#12#33#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1695,50 +1712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#12#33#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
-          <folding>
-            <element signature="e#237#246#0#Twig" expanded="true" />
-            <element signature="e#302#314#0#Twig" expanded="true" />
-            <element signature="e#377#400#0#Twig" expanded="true" />
-            <element signature="e#483#509#0#Twig" expanded="true" />
-            <element signature="e#593#623#0#Twig" expanded="true" />
-            <element signature="e#702#726#0#Twig" expanded="true" />
-            <element signature="e#797#816#0#Twig" expanded="true" />
-            <element signature="e#882#900#0#Twig" expanded="true" />
-            <element signature="e#965#983#0#Twig" expanded="true" />
-            <element signature="e#1048#1061#0#Twig" expanded="true" />
-            <element signature="e#1127#1150#0#Twig" expanded="true" />
-            <element signature="e#1222#1236#0#Twig" expanded="true" />
-            <element signature="e#1297#1324#0#Twig" expanded="true" />
-            <element signature="e#1398#1417#0#Twig" expanded="true" />
-            <element signature="e#1487#1497#0#Twig" expanded="true" />
-            <element signature="e#1554#1582#0#Twig" expanded="true" />
-            <element signature="e#1657#1687#0#Twig" expanded="true" />
-            <element signature="e#1771#1790#0#Twig" expanded="true" />
-            <element signature="e#1856#1874#0#Twig" expanded="true" />
-            <element signature="e#1944#1969#0#Twig" expanded="true" />
-            <element signature="e#2041#2061#0#Twig" expanded="true" />
-            <element signature="e#2134#2156#0#Twig" expanded="true" />
-            <element signature="e#2243#2258#0#Twig" expanded="true" />
-            <element signature="e#2325#2348#0#Twig" expanded="true" />
-            <element signature="e#2418#2429#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/exception-handling.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1843,14 +1816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="78" lean-forward="false" selection-start-line="40" selection-start-column="78" selection-end-line="40" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-login-guard.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -1898,6 +1863,81 @@
           <folding>
             <element signature="e#12#56#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+          <folding>
+            <element signature="e#237#246#0#Twig" expanded="true" />
+            <element signature="e#302#314#0#Twig" expanded="true" />
+            <element signature="e#377#400#0#Twig" expanded="true" />
+            <element signature="e#483#509#0#Twig" expanded="true" />
+            <element signature="e#593#623#0#Twig" expanded="true" />
+            <element signature="e#702#726#0#Twig" expanded="true" />
+            <element signature="e#797#816#0#Twig" expanded="true" />
+            <element signature="e#882#900#0#Twig" expanded="true" />
+            <element signature="e#965#983#0#Twig" expanded="true" />
+            <element signature="e#1048#1061#0#Twig" expanded="true" />
+            <element signature="e#1127#1150#0#Twig" expanded="true" />
+            <element signature="e#1222#1236#0#Twig" expanded="true" />
+            <element signature="e#1297#1324#0#Twig" expanded="true" />
+            <element signature="e#1398#1417#0#Twig" expanded="true" />
+            <element signature="e#1487#1497#0#Twig" expanded="true" />
+            <element signature="e#1554#1582#0#Twig" expanded="true" />
+            <element signature="e#1657#1687#0#Twig" expanded="true" />
+            <element signature="e#1771#1790#0#Twig" expanded="true" />
+            <element signature="e#1856#1874#0#Twig" expanded="true" />
+            <element signature="e#1944#1969#0#Twig" expanded="true" />
+            <element signature="e#2041#2061#0#Twig" expanded="true" />
+            <element signature="e#2134#2156#0#Twig" expanded="true" />
+            <element signature="e#2243#2258#0#Twig" expanded="true" />
+            <element signature="e#2325#2348#0#Twig" expanded="true" />
+            <element signature="e#2418#2429#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/token-auth-js.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="e#400#417#0#Twig" expanded="false" />
+            <element signature="e#844#849#0#Twig" expanded="false" />
+            <element signature="e#898#906#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="80" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+            <element signature="e#176#189#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
