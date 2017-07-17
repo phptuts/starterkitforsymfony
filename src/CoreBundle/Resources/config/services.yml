@@ -110,7 +110,10 @@ services:
         class: CoreBundle\Factory\S3ClientFactory
         arguments:
             - '%aws_region%'
+            - '%aws_key%'
+            - '%aws_secret%'
             - '%aws_api_version%'
+
 
     startsymfony.core.facebook_client_factory:
         class: CoreBundle\Factory\FaceBookClientFactory
