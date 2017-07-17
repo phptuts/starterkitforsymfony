@@ -20,16 +20,18 @@
                 <li  ><a  href="{{ path('nelmio_api_doc_index') }}">Api Docs</a></li>
                 <li class="{% if app.request.get('_route') == 'exception_example' %}active{% endif %}" ><a  href="{{ path('exception_example') }}">Exception Example</a></li>
 
+
+
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li  ><a  href="{{ path('admin_dashboard') }}">Admin Dashboard</a></li>
+                {% endif %}
+
                 {% if is_granted('ROLE_USER') == false %}
                     <li class="{% if app.request.get('_route') == 'login' %}active{% endif %}" ><a  href="{{ path('login') }}">Login</a></li>
                     <li class="{% if app.request.get('_route') == 'register' %}active{% endif %}" ><a  href="{{ path('register') }}">Register</a></li>
                 {% else %}
                     <li class="{% if app.request.get('_route') == 'update_user' or app.request.get('_route') == 'change_password' %}active{% endif %}" ><a  href="{{ path('update_user') }}">Account Settings</a></li>
                     <li  ><a  href="{{ path('logout') }}">Logout</a></li>
-                {% endif %}
-
-                {% if is_granted('ROLE_ADMIN') %}
-                    <li  ><a  href="{{ path('admin_dashboard') }}">Admin Dashboard</a></li>
                 {% endif %}
             </ul>
 
