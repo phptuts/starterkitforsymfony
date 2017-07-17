@@ -20,6 +20,7 @@
                 <li class="{% if app.request.get('_route') == 'register' %}active{% endif %}" ><a  href="{{ path('register') }}">Register</a></li>
                 {% else %}
                     <li class="{% if app.request.get('_route') == 'update_user' or app.request.get('_route') == 'change_password' %}active{% endif %}" ><a  href="{{ path('update_user') }}">Account Settings</a></li>
+                    <li  ><a  href="{{ path('logout') }}">Logout</a></li>
                 {% endif %}
                 <li class="{% if app.request.get('_route') == 'documentation' %}active{% endif %}" ><a  href="{{ path('documentation') }}">Documentation</a></li>
                 <li  ><a  href="{{ path('nelmio_api_doc_index') }}">Api Docs</a></li>
