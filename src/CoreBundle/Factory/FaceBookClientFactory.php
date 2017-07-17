@@ -29,6 +29,7 @@ class FaceBookClientFactory
             'app_id' => $appId, // Replace {app-id} with your app id
             'app_secret' => $appSecret,
             'default_graph_version' => $apiVersion,
+            'http_client_handler' => 'curl'
         ]);
     }
 

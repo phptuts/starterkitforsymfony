@@ -35,4 +35,13 @@ class HomeController extends Controller
         throw new ProgrammerException('Silly Exception', ProgrammerException::STUPID_EXCEPTION);
     }
 
+    /**
+     * @Route("/privacy-policy", name="privacy-policy")
+     *
+     * @return Response
+     */
+    public function privacyPolicyAction()
+    {
+        return $this->render('@App/home/privacy-policy.html.twig');
+    }
 }
