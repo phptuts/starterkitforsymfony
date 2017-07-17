@@ -31,10 +31,6 @@ DirectoryIndex app.php
     RewriteRule ^(.*) - [E=BASE:%1]
 
     RewriteEngine On
-    RewriteCond %{HTTP:Authorization} ^(.*)
-    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
-    SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
-
 
     # Sets the HTTP_AUTHORIZATION header removed by Apache
     RewriteCond %{HTTP:Authorization} .
