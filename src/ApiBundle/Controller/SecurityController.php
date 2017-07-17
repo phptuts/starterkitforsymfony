@@ -37,18 +37,15 @@ class SecurityController extends FOSRestController
 
     /**
      * @REST\Get(path="fake_facebook_token")
-     *
-     * @ApiDoc(
-     *  resource=true,
-     *  description="Get's a fake facebook token",
-     *  section="Security"
-     * )
-     *
      */
     public function getFakeFacebookTokenAction()
     {
+        if ($this->getParameter('kernel.environment') == 'prod') {
+            throw $this->createNotFoundException();
+        }
+
         $url = 'https://graph.facebook.com/oauth/access_token?client_id=' . $this->getParameter('facebook_app_id')
-            . '&client_secret=' . $this->getParameter('facebook_app_secret') . '&grant_type=client_credentials&redirect_uri=http://skfsp.info&permissions=email';
+            . '&client_secret=' . $this->getParameter('facebook_app_secret') . '&grant_type=client_credentials&redirect_uri=http://bigfootlocator.com';
 
         $data = json_decode(file_get_contents($url), true);
 
