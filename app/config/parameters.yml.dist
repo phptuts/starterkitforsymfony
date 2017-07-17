@@ -25,6 +25,8 @@ parameters:
     aws_api_version: 2006-03-01
     aws_region: us-west-2
     aws_s3_bucket_name: bucket
+    aws_key:
+    aws_secret:
 
     #Facebook
     facebook_app_secret:
