@@ -30,12 +30,13 @@
       <file leaf-file-name="menu.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/menu/menu.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="330">
+              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding>
-                <element signature="e#1541#1552#0#Twig" expanded="true" />
-                <element signature="e#1630#1636#0#Twig" expanded="true" />
-                <element signature="e#2031#2046#0#Twig" expanded="true" />
+                <element signature="e#1372#1389#0#Twig" expanded="true" />
+                <element signature="e#1973#1984#0#Twig" expanded="true" />
+                <element signature="e#2062#2068#0#Twig" expanded="true" />
+                <element signature="e#2215#2230#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1106,12 +1107,12 @@
       <workItem from="1499902538431" duration="8785000" />
       <workItem from="1500001144874" duration="8202000" />
       <workItem from="1500068045853" duration="18921000" />
-      <workItem from="1500104175000" duration="77708000" />
+      <workItem from="1500104175000" duration="78028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362184000" />
+    <option name="totallyTimeSpent" value="362504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1627,12 +1628,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/menu/menu.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="330">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
           <folding>
-            <element signature="e#1541#1552#0#Twig" expanded="true" />
-            <element signature="e#1630#1636#0#Twig" expanded="true" />
-            <element signature="e#2031#2046#0#Twig" expanded="true" />
+            <element signature="e#1372#1389#0#Twig" expanded="true" />
+            <element signature="e#1973#1984#0#Twig" expanded="true" />
+            <element signature="e#2062#2068#0#Twig" expanded="true" />
+            <element signature="e#2215#2230#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
