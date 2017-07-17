@@ -56,7 +56,16 @@
                     <li>aws_api_version</li>
                     <li>aws_region</li>
                     <li>aws_s3_bucket_name</li>
+                    <li>aws_key</li>
+                    <li>aws_secret</li>
                 </ul>
+            </li>
+            <li>
+                If you are running apache2 you will need to add this to your conf file.
+                <pre>
+                    RewriteCond %{HTTP:Authorization} ^(.*)
+                    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]</pre>
+                For some crazy reason apache remove Authorization headers.  Don't ask.
             </li>
             <li>Go to your app -> config -> parameters.yml and if you have not already setup your smtp and doctrine
                 config.  Also be sure to setup the from_email so that email service knows which email to put from part.
