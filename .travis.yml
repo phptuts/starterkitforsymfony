@@ -1,0 +1,34 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+services:
+  - sqlite
+
+matrix:
+  include:
+    - php: 7.1
+      env: SYMFONY_VERSION="2.8.*"
+    - php: 7.1
+      env: SYMFONY_VERSION="3.2.*"
+    - php: 7.1
+      env: SYMFONY_VERSION="3.3.*"
+  fast_finish: true
+
+install:
+  - composer install
+
+before_script:
+  - sh scripts/run_before_travis.sh
+
+# In phpunit.xml.dist, tests annotated with "@group mysql" are excluded,
+# revert this.
+script: php bin/phpunit
