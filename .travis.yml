@@ -29,8 +29,8 @@ install:
 before_script:
   - cp app/config/parameters.yml.dist app/config/parameters.yml
   - mkdir var/jwt
-  - cp private.pem var/jwt/
-  - cp public.pem var/jwt/
+  - cp scripts/private.pem var/jwt/private.pem
+  - cp scripts/public.pem var/jwt/public.pem
   - sh scripts/run_before_travis.sh
 
 # In phpunit.xml.dist, tests annotated with "@group mysql" are excluded,
