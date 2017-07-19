@@ -22,8 +22,8 @@ parameters:
     from_email: email@gams.com
 
     # Amazon s3
-    aws_api_version: 2006-03-01
-    aws_region: us-west-2
+    aws_api_version: '2006-03-01'
+    aws_region: 'us-west-2'
     aws_s3_bucket_name: bucket
     aws_key: fake_crap
     aws_secret: fake_crap
