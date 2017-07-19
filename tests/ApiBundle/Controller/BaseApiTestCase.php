@@ -39,7 +39,7 @@ class BaseApiTestCase extends WebTestCase
         $json = $this->getJsonResponse($response);
 
         // Asserting meta data in response
-        Assert::assertEquals('credentials',$json['meta']['type']);
+        Assert::assertEquals('credentials',$json['meta']['type'], $response->getContent());
         Assert::assertFalse($json['meta']['paginated']);
 
         // Asserting tokens in credential response

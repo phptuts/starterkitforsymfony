@@ -2,7 +2,124 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AdminBundle/index.html" afterPath="$PROJECT_DIR$/report/AdminBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/AbstractRestController.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/Controller/AbstractRestController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/ApiBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/ApiBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/ApiBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="$PROJECT_DIR$/report/ApiBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/DocumentationController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/DocumentationController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/AppBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/AppBundle/index.html" afterPath="$PROJECT_DIR$/report/AppBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/RefreshToken.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/RefreshToken.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/TimeStampTrait.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/TimeStampTrait.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UserImageType.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/UserImageType.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/ExceptionHandler.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Handler/ExceptionHandler.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/FormErrorHandler.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Handler/FormErrorHandler.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Handler/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Handler/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponsePageModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponsePageModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseTypeInterface.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseTypeInterface.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/AuthTokenModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Security/AuthTokenModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/CredentialModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Security/CredentialModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Security/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/Security/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/RefreshTokenRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/RefreshTokenRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/RefreshTokenProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/RefreshTokenProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/TokenProvider.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/TokenProvider.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/UserVoter.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/UserVoter.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialModelBuilderService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialModelBuilderService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialResponseBuilderService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialResponseBuilderService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/JWSService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/JWSService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/RefreshTokenService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/RefreshTokenService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializerService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializerService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" afterPath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/CoreBundle/index.html" afterPath="$PROJECT_DIR$/report/CoreBundle/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="$PROJECT_DIR$/report/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/index.html" afterPath="$PROJECT_DIR$/report/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php" afterPath="$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,26 +134,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/users/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="account-setting-layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/account-settings/account-setting-layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +164,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/AuthTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseApiTestCase.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="41" column="89" lean-forward="false" selection-start-line="41" selection-start-column="89" selection-end-line="41" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -194,7 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/api-login-guard.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/change-password.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/credentials.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/custom-file-upload.html.twig" />
@@ -245,6 +361,7 @@
         <option value="$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php" />
         <option value="$PROJECT_DIR$/scripts/run_before_travis.sh" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php" />
       </list>
     </option>
   </component>
@@ -382,6 +499,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApiBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApiBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="User" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,12 +728,12 @@
       <workItem from="1500299448518" duration="323000" />
       <workItem from="1500303533570" duration="922000" />
       <workItem from="1500423165144" duration="7180000" />
-      <workItem from="1500441252870" duration="323000" />
+      <workItem from="1500441252870" duration="745000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373134000" />
+    <option name="totallyTimeSpent" value="373556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="819" extended-state="6" />
@@ -625,20 +804,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/document-layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/testing.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -984,7 +1149,23 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/AuthTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="41" column="89" lean-forward="false" selection-start-line="41" selection-start-column="89" selection-end-line="41" selection-end-column="89" />
           <folding />
         </state>
       </provider>
