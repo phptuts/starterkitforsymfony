@@ -2,10 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/nv.d3.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/file.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/holder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/html5shiv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/nv.d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/AbstractRestController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/SecurityController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/UserController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/DocumentationController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/LoadData.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/RefreshToken.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/TimeStampTrait.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/SocialUserProviderFactory.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UserImageType.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/ExceptionHandler.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/FormErrorHandler.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponsePageModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseTypeInterface.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/AuthTokenModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/CredentialModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/JWSUserModel.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/RefreshTokenRepository.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/AbstractSocialGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/SessionSocialGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiTokenGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/RefreshTokenProvider.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/TokenProvider.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/UserVoter.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialModelBuilderService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialResponseBuilderService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/JWSService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/RefreshTokenService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/JWSService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializer.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializerService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/FacebookService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,21 +167,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/User/AuthTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="111" column="28" lean-forward="false" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="28" />
+            <state relative-caret-position="435">
+              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -43,28 +180,18 @@
       <file leaf-file-name="AccountSettingControllerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
+            <state relative-caret-position="668">
               <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseApiTestCase.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/ApiBundle/Controller/BaseApiTestCase.php">
+      <file leaf-file-name="phpunit.xml.dist" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -197,7 +324,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/custom-file-upload.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/email.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/exception-handling.html.twig" />
@@ -248,6 +374,7 @@
         <option value="$PROJECT_DIR$/scripts/run_before_travis.sh" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/phpunit.xml.dist" />
       </list>
     </option>
   </component>
@@ -487,20 +614,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -676,12 +789,12 @@
       <workItem from="1500423165144" duration="7180000" />
       <workItem from="1500441252870" duration="3949000" />
       <workItem from="1500473715436" duration="259000" />
-      <workItem from="1500476514308" duration="242000" />
+      <workItem from="1500476514308" duration="523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377261000" />
+    <option name="totallyTimeSpent" value="377542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="819" extended-state="6" />
@@ -752,13 +865,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/home/privacy-policy.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1049,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
@@ -1089,14 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -1107,8 +1197,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding />
         </state>
       </provider>

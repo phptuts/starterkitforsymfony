@@ -19,11 +19,6 @@
             <directory>tests</directory>
         </testsuite>
     </testsuites>
-    <logging>
-        <log type="coverage-html" target="./report" charset="UTF-8"
-             yui="true" highlight="true"
-             lowUpperBound="50" highLowerBound="80" />
-    </logging>
     <filter>
         <whitelist>
             <directory>src</directory>
