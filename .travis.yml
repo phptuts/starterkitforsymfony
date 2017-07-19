@@ -35,4 +35,7 @@ before_script:
 
 # In phpunit.xml.dist, tests annotated with "@group mysql" are excluded,
 # revert this.
-script: php bin/phpunit --exclude-group exclude_travis
+script:
+    - php bin/phpunit --exclude-group exclude_travis  --coverage-clover build/logs/clover.xml
+    - CODECLIMATE_REPO_TOKEN=1433a11a7f5ee1e98bf92f114bccdfe47935a8aeb93dd012c3bd5f77ce8cb99a ./vendor/bin/test-reporter
+

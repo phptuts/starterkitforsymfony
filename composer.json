@@ -45,6 +45,7 @@
         "twig/twig": "^1.0||^2.0"
     },
     "require-dev": {
+        "codeclimate/php-test-reporter": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "^2.3",
         "liip/functional-test-bundle": "^1.8",
         "mockery/mockery": "^0.9.9",
