@@ -57,7 +57,7 @@ class UserController extends Controller
 
         $userService = $this->get('startsymfony.core.user_service');
 
-        if ($userService->doesEmailExist($email)) {
+        if ($userService->doesEmailExist($email) && $user->getEmail() != $email) {
             return new JsonResponse(['message' => 'Email already exists.'], Response::HTTP_BAD_REQUEST);
         }
 
@@ -84,6 +84,31 @@ class UserController extends Controller
         $user->setPlainPassword($request->request->get('password'));
 
         $this->get('startsymfony.core.user_service')->saveUserForResetPassword($user);
+
+        return new Response('', Response::HTTP_NO_CONTENT);
+    }
+
+    /**
+     * Toggles the user's access
+     *
+     * @param Request $request
+     * @param User $user
+     * @param string $access
+     *
+     * @Route(path="/users/{id}/admin-toggle/{access}", methods={"PATCH"}, name="admin_user_role_admin")
+     * @ParamConverter(name="user", class="CoreBundle:User")
+     *
+     * @return Response
+     */
+    public function roleAdminAction(Request $request, User $user, $access)
+    {
+        $user->setRoles(['ROLE_USER']);
+
+        if ($access == 1) {
+            $user->setRoles(['ROLE_ADMIN']);
+        }
+
+        $this->get('startsymfony.core.user_service')->save($user);
 
         return new Response('', Response::HTTP_NO_CONTENT);
     }

@@ -1,14 +1,11 @@
 {% extends '@Admin/layout.html.twig' %}
 {% import _self as helpers %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-{% endblock %}
-
 {% block title 'User Management' %}
 
 {% block body %}
+    <div class='notifications top-right'></div>
+
     <h1>Users</h1>
     <form method="GET" role="form">
         <div class="row">
@@ -96,9 +93,8 @@
                         <div class="col-md-8">
                             <input type="email" value="{{ user.email }}" class="form-control"/>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <button class="btn btn-success btn-sm update-email" data-user-id="{{ user.id }}">Update</button>
-
                         </div>
                     </div>
 
@@ -125,7 +121,6 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script>
 
 
@@ -136,13 +131,14 @@
             var userId = $(this).data('user-id');
             var url = '{{ path('admin_user_email', {'id': 'REPLACE_USER_ID'}) }}'
             url = url.replace('REPLACE_USER_ID', userId);
-
             $.ajax({
                 url: url,
                 data: {'email': email},
                 type: 'PATCH',
                 success: function () {
-                    alert('User Updated!');
+                    $('.top-right').notify({
+                        message: { text: 'Email was updated. (High Five) ', 'type': 'success' }
+                    }).show()
                 },
                 error: function (xhr, status, error) {
                     if (xhr.status == 400) {
@@ -155,6 +151,7 @@
                 }
             });
         });
+
 
         // This will update the user's password and display a modal with the new password in it
         $(".update-password").on("click", function () {
@@ -179,9 +176,17 @@
         });
 
         // This will enable and disable the user
-        $(".user-enable-toggle").on("change", function () {
-            var userId = $(this).data('user-id');
-            var checked = $(this).is(":checked") ? 1 : 0;
+        $(".user-enable-toggle").change(function () {
+            var element = $(this);
+
+            // This means the request failed and it being toggled back so we don't want to call the api again.
+            if (element.data('error')) {
+                element.data('error', false);
+                return;
+            }
+
+            var userId = element.data('user-id');
+            var checked = element.is(":checked") ? 1 : 0;
 
             var url = '{{ path('admin_user_enable', {'id': 'REPLACE_USER_ID', 'enable': 'REPLACE_USER_ENABLE'}) }}'
             url = url.replace('REPLACE_USER_ID', userId).replace('REPLACE_USER_ENABLE', checked);
@@ -189,15 +194,10 @@
             $.ajax({
                 url: url,
                 type: 'PATCH',
-                success: function () {
-
-                    var userState = checked == 1 ? 'enabled' : 'disabled';
-
-                    alert('The user is now ' + userState  + '.')
-
-                },
                 error: function (xhr, status, error) {
-                    alert('There was an error updating user.');
+                    alert('Failed updating the user.');
+                    element.data('error', true);
+                    element.bootstrapToggle('toggle');
                 }
             });
         });
