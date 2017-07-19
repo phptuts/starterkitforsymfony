@@ -209,7 +209,7 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      *
      * @Serializer\Exclude()
      * @Constraints\NotBlank(groups={User::VALIDATION_IMAGE_REQUIRED})
-     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jgp", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jpeg", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */
     protected $image;
 
