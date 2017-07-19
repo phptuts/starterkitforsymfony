@@ -27,8 +27,12 @@ install:
   - composer install
 
 before_script:
+  - cp app/config/parameters.yml.dist app/config/parameters.yml
+  - mkdir var/jwt
+  - cp private.pem var/jwt/
+  - cp public.pem var/jwt/
   - sh scripts/run_before_travis.sh
 
 # In phpunit.xml.dist, tests annotated with "@group mysql" are excluded,
 # revert this.
-script: php bin/phpunit
+script: php bin/phpunit --exclude-group exclude_travis

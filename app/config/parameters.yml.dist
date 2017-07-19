@@ -38,7 +38,7 @@ parameters:
     google_client_secret:
 
     #JWT / JWS Passphrase
-    jws_pass_phrase:
+    jws_pass_phrase: blah
     jws_ttl: 5184000
 
     #Refresh_tokens

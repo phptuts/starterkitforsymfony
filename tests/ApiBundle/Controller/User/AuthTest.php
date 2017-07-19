@@ -107,6 +107,9 @@ class AuthTest extends BaseApiTestCase
     }
 
     /**
+     * This is excluded from travis ci because it involves a secret
+     *
+     * @group exclude_travis
      * Tests that a facebook user can login
      */
     public function testFacebookLogin()
