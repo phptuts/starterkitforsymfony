@@ -25,17 +25,17 @@ parameters:
     aws_api_version: 2006-03-01
     aws_region: us-west-2
     aws_s3_bucket_name: bucket
-    aws_key:
-    aws_secret:
+    aws_key: fake_crap
+    aws_secret: fake_crap
 
     #Facebook
-    facebook_app_secret:
-    facebook_app_id:
+    facebook_app_secret: fake_crap
+    facebook_app_id: fake_crap
     facebook_api_version: v2.9
 
     #GOOGLE
-    google_client_id:
-    google_client_secret:
+    google_client_id: fake_crap
+    google_client_secret: fake_crap
 
     #JWT / JWS Passphrase
     jws_pass_phrase: blah
