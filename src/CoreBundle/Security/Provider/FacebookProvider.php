@@ -27,7 +27,7 @@ class FacebookProvider extends AbstractCustomProvider
     protected $facebookClient;
 
     /**
-     * @var EntityManager
+     * @var RegisterService
      */
     private $registerService;
 

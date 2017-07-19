@@ -5,7 +5,6 @@ namespace Test\CoreBundle\Security\Provider;
 use CoreBundle\Entity\User;
 use CoreBundle\Exception\ProgrammerException;
 use CoreBundle\Factory\FaceBookClientFactory;
-use CoreBundle\Repository\UserRepository;
 use CoreBundle\Security\Provider\FacebookProvider;
 use CoreBundle\Service\User\RegisterService;
 use CoreBundle\Service\User\UserService;
@@ -22,7 +21,7 @@ use Tests\BaseTestCase;
 class FacebookProviderTest extends BaseTestCase
 {
     /**
-     * @var UserRepository|Mock
+     * @var UserService|Mock
      */
     private $userService;
 
@@ -45,7 +44,6 @@ class FacebookProviderTest extends BaseTestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->userService = \Mockery::mock(UserRepository::class);
         $this->registerService = \Mockery::mock(RegisterService::class);
         $facebookClientFactory = \Mockery::mock(FaceBookClientFactory::class);
         $this->facebookClient = \Mockery::mock(Facebook::class);
