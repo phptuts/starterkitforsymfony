@@ -65,7 +65,7 @@ class UserControllerTest extends WebTestCase
 
         $user = $this->userService->findUserByEmail('change_email_user@gmail.com');
 
-        $client->request('PATCH', '/admin/users/' . $user->getId() . '/email', ['email' => 'change_email_user@gmail.com']);
+        $client->request('PATCH', '/admin/users/' . $user->getId() . '/email', ['email' => 'admin_user@gmail.com']);
         $this->assertStatusCode(Response::HTTP_BAD_REQUEST, $client);
 
         $client->request('PATCH', '/admin/users/' . $user->getId() . '/email', ['email' => 'change_email_user_1@gmail.com']);
@@ -116,5 +116,27 @@ class UserControllerTest extends WebTestCase
 
         $this->getContainer()->get('doctrine.orm.entity_manager')->refresh($user);
         Assert::assertTrue($encoder->isPasswordValid($user->getPassword(), 'new_password', $user->getSalt()));
+    }
+
+    /**
+     * Testing that I can toggle role admin for a regular user
+     */
+    public function testToggleAdminFeature()
+    {
+        $user = $this->userService->findUserByEmail('future_admin_user@gmail.com');
+        Assert::assertEquals(['ROLE_USER'], $user->getRoles());
+
+        $client = $this->makeClient();
+        $crawler = $client->request('GET', '/login');
+        $form = $crawler->selectButton('Login')->form();
+        $form->setValues(['_username' => 'admin_user@gmail.com', '_password' => 'password']);
+        $client->submit($form);
+
+
+        $client->request('PATCH', '/admin/users/' . $user->getId() . '/admin-toggle/1');
+        $this->assertStatusCode(Response::HTTP_NO_CONTENT, $client);
+
+        $this->getContainer()->get('doctrine.orm.entity_manager')->refresh($user);
+        Assert::assertEquals(['ROLE_ADMIN'], $user->getRoles());
     }
 }

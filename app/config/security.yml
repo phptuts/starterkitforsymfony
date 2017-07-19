@@ -15,8 +15,7 @@ security:
                 property: email
 
     role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH ]
+        ROLE_ADMIN:  [ROLE_USER, ROLE_ALLOWED_TO_SWITCH]
 
 
     firewalls:
@@ -48,6 +47,7 @@ security:
             pattern: ^/*
             anonymous: ~
             provider: core_proivder
+            switch_user: true
             form_login:
                 login_path: login
                 check_path: login

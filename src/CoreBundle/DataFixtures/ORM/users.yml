@@ -51,6 +51,14 @@ CoreBundle\Entity\User:
         enabled: true
         source: 'website'
 
+    future_admin_user:
+        email: 'future_admin_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+
     forget_password_1:
         email: 'forget_password_1@gmail.com'
         password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.

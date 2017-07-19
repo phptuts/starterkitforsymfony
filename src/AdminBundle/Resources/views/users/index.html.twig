@@ -82,7 +82,9 @@
             <th>Email</th>
             <th>Display Name</th>
             <th>Enabled</th>
+            <th>Admin</th>
             <th>Reset Password</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -106,11 +108,17 @@
 
                 </td>
                 <td>
+                    <input type="checkbox" data-user-id="{{ user.id }}" class="user-role-admin-toggle" data-toggle="toggle" {% if user.hasRole('ROLE_ADMIN') %}checked="checked"{% endif %} />
+                </td>
+                <td>
                     <div class="form-group">
                         <button class="btn btn-success btn-sm update-password" data-user-id="{{ user.id }}">Update
                             Password
                         </button>
                     </div>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('homepage', {'_switch_user': user.getUsername() }) }}">Switch User</a>
                 </td>
             </tr>
         {% endfor %}
@@ -190,6 +198,32 @@
 
             var url = '{{ path('admin_user_enable', {'id': 'REPLACE_USER_ID', 'enable': 'REPLACE_USER_ENABLE'}) }}'
             url = url.replace('REPLACE_USER_ID', userId).replace('REPLACE_USER_ENABLE', checked);
+
+            $.ajax({
+                url: url,
+                type: 'PATCH',
+                error: function (xhr, status, error) {
+                    alert('Failed updating the user.');
+                    element.data('error', true);
+                    element.bootstrapToggle('toggle');
+                }
+            });
+        });
+
+        $(".user-role-admin-toggle").change(function () {
+            var element = $(this);
+
+            // This means the request failed and it being toggled back so we don't want to call the api again.
+            if (element.data('error')) {
+                element.data('error', false);
+                return;
+            }
+
+            var userId = element.data('user-id');
+            var checked = element.is(":checked") ? 1 : 0;
+
+            var url = '{{ path('admin_user_role_admin', {'id': 'REPLACE_USER_ID', 'access': 'REPLACE_USER_ADMIN'}) }}'
+            url = url.replace('REPLACE_USER_ID', userId).replace('REPLACE_USER_ADMIN', checked);
 
             $.ajax({
                 url: url,

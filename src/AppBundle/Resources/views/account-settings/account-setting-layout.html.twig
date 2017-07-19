@@ -3,13 +3,20 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app/account-setting.css') }}" />
 {% endblock %}
 
 {% block body %}
 
     <div class="container">
         <div class="row">
+
             <div class="col-md-3 hidden-xs hidden-sm">
+                {% if app.user.imageUrl is not empty %}
+                <div class="row">
+                    <img src="{{ app.user.imageUrl }}" class="col-md-12 img-rounded profile_pic" />
+                </div>
+                {% endif %}
                 <ul class="nav nav-pills nav-stacked">
                     <li role="presentation"
                         class="{% if app.request.get('_route') == 'update_user' %}active{% endif %}"><a
