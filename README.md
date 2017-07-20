@@ -12,12 +12,15 @@ The starter project include:
 * Forget Password Workflow with emails
 * Accounting Setting (Change Password / Edit Profile)
 * Admin Panel for user management (Disable / Reset Password / Change Email / Make User's Admin)
-* Api with stateless authentication
+* Api with stateless authentication with jws / jwt tokens
 * Api Login with (email / password), facebook, google
 * Api refresh tokens
 * Standard Response Envelopes for the api
 * Error handling with custom number for the api and desktop
 * s3 File Upload Service
 * Redis Caching
-* JWS Token 
-* User Voter For more custom authorization
+* User Voter For more custom authorizatio
+
+## Setup Guide
+
+
