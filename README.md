@@ -19,7 +19,7 @@ The starter project include:
 * Error handling with custom number for the api and desktop
 * s3 File Upload Service
 * Redis Caching
-* User Voter For more custom authorizatio
+* User Voter For more custom authorization
 
 ## Setup Guide
 
