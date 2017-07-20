@@ -2,157 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/nv.d3.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/file.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/holder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/html5shiv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/nv.d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/.js/respond.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/AdminBundle.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/DashboardController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/UserController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/Controller/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AdminBundle/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/ApiBundle.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/AbstractRestController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/SecurityController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/UserController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/Controller/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/ApiBundle/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/AppBundle.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/AccountSettingController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/DocumentationController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/HomeController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/UserController.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/Controller/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/AppBundle/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/CoreBundle.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/LoadData.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/ORM/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/DataFixtures/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/Color.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/RefreshToken.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/TimeStampTrait.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/User.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Entity/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/ProgrammerException.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Exception/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/FaceBookClientFactory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/GoogleClientFactory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/S3ClientFactory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/SocialUserProviderFactory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/UserProviderFactory.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Factory/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/UserEmailTransformer.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/DataTransformer/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ChangePasswordType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ForgetPasswordType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/RegisterType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/ResetPasswordType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UpdateUserType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/UserImageType.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/User/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Form/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/ExceptionHandler.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/FormErrorHandler.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Handler/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseModelInterface.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponsePageModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/ResponseTypeInterface.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Response/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/AuthTokenModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/CredentialModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/Security/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/ChangePasswordModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/JWSUserModel.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/User/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Model/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/ColorRepository.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/RefreshTokenRepository.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/UserRepository.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Repository/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/AbstractSocialGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/ApiLoginGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/GuardTrait.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/SessionSocialGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/AbstractTokenGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiLoginTokenGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/ApiTokenGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/SessionLoginTokenGuard.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/Token/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Guard/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/AbstractCustomProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/FacebookProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/GoogleProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/RefreshTokenProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/TokenProvider.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Provider/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/UserVoter.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/Voter/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Security/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/AbstractEntityService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialModelBuilderService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/CredentialResponseBuilderService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/JWSService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/RefreshTokenService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/Credential/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/EmailService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/JWSService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializer.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/ResponseSerializerService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/S3Service.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/FacebookService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/ForgetPasswordService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/RegisterService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/UserService.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/User/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/Service/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/CoreBundle/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SymfonyStart.iml" afterPath="$PROJECT_DIR$/.idea/SymfonyStart.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -167,82 +20,129 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              <folding />
+      <file leaf-file-name="_defaults.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/_defaults.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountSettingControllerTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="documents.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/media/documents.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phpunit.xml.dist" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding />
+      <file leaf-file-name="video.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/media/video.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_tests.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="images.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/media/images.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_before_travis.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_before_travis.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="phone.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/contact-syncing/phone.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-              <folding />
+      <file leaf-file-name="facebook.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_docs/contact-syncing/facebook.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="S3ClientFactoryTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Factory/S3ClientFactoryTest.php">
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-772">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserControllerTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AdminBundle/Controller/UserControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="121" column="62" lean-forward="false" selection-start-line="121" selection-start-column="62" selection-end-line="121" selection-end-column="62" />
-              <folding />
+      <file leaf-file-name="2016-01-12-media-support.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2016-01-12-media-support.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_defaults.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/_defaults.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -324,11 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/documentation.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/email.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/exception-handling.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/forget-password-workflow.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/fos-form-handler.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/jwt-jws-token.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/refresh-tokens.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/response-serializer.html.twig" />
@@ -375,6 +270,11 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
+        <option value="$PROJECT_DIR$/docs/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/docs/_includes/disqus.html" />
+        <option value="$PROJECT_DIR$/docs/_config.yml" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
       </list>
     </option>
   </component>
@@ -414,6 +314,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -614,6 +515,158 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_layouts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devices" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contact-syncing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -638,7 +691,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -789,18 +841,19 @@
       <workItem from="1500423165144" duration="7180000" />
       <workItem from="1500441252870" duration="3949000" />
       <workItem from="1500473715436" duration="259000" />
-      <workItem from="1500476514308" duration="523000" />
+      <workItem from="1500476514308" duration="680000" />
+      <workItem from="1500525039156" duration="1822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377542000" />
+    <option name="totallyTimeSpent" value="379521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="819" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486632" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -865,112 +918,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CoreBundle/Security/Provider/FacebookProviderTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApiBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/ngnix.txt" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/facebook/graph-sdk/src/Facebook/Facebook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="124" column="20" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/FaceBookClientFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/FacebookProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="75" column="43" lean-forward="false" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/user/social/facebook-auth-js.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Security/Provider/GoogleProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Factory/S3ClientFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="24" lean-forward="false" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/documentation/setup.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -1207,13 +1154,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/AccountSettingControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
+        <state relative-caret-position="750">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
@@ -1223,6 +1169,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_includes/disqus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/bin/jekyll-page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/media/documents.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/media/video.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/media/images.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/contact-syncing/phone.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/contact-syncing/facebook.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_docs/_defaults.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2016-01-12-media-support.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/_defaults.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-772">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
