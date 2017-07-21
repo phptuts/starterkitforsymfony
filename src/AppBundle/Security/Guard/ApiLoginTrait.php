@@ -23,6 +23,8 @@ trait ApiLoginTrait
     {
         $post = json_decode($request->getContent(), true);
         $postFields = array_keys($post);
+        sort($fields);
+        sort($postFields);
 
         // We check that they are hitting the api login end point and that the request is a post
         // That all the required fields match the request.
