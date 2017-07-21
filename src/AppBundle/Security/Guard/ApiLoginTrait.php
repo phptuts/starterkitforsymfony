@@ -23,7 +23,7 @@ trait ApiLoginTrait
     {
         $post = json_decode($request->getContent(), true);
 
-        if (empty($post) || is_array($post)) {
+        if (empty($post) || !is_array($post)) {
             return null;
         }
 
