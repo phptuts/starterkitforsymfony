@@ -58,6 +58,9 @@ class ExceptionHandler
         $this->logger->error('LOOK UP ERROR CODE ' . $lookupCode .  '_lookup_code Stack Trace : ' . $exception->getTraceAsString());
 
 
+        $response = new Response();
+        $response->setContent($this->twig->render('error500.html.twig', ['error_number' => $lookupCode, 'email' => $this->email]));
+
         if ($event->getRequest()->headers->get('Content-Type') == 'application/json') {
             $response = new JsonResponse([
                 'meta' => [
@@ -70,12 +73,8 @@ class ExceptionHandler
                     'message' => $exception->getMessage()
                 ]
             ]);
+        }
 
-        }
-        else {
-            $response = new Response();
-            $response->setContent($this->twig->render('error500.html.twig', ['error_number' => $lookupCode, 'email' => $this->email]));
-        }
 
         $event->setResponse($response);
     }
