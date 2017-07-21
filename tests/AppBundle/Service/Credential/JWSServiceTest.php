@@ -19,7 +19,8 @@ class JWSServiceTest extends BaseTestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->JWSService = $this->getContainer()->get('AppBundle\Service\Credential\JWSService');
+        $this->JWSService =
+            new JWSService($this->getContainer()->getParameter('jws_pass_phrase'), $this->getContainer()->getParameter('jws_ttl'));
     }
 
 

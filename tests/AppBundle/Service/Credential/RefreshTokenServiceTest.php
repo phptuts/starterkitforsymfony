@@ -35,7 +35,7 @@ class RefreshTokenServiceTest extends BaseTestCase
     public function setUp()
     {
         $this->em = \Mockery::mock(EntityManager::class);
-        $this->refreshTokenRepo = $this->getContainer()->get('AppBundle\Repository\RefreshTokenRepository');
+        $this->refreshTokenRepo = $this->getContainer()->get('doctrine')->getRepository(RefreshToken::class);
         $this->refreshTokenService = new RefreshTokenService($this->em, $this->refreshTokenRepo, 1000);
     }
 

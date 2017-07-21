@@ -4,6 +4,7 @@
 namespace Tests\AppBundle\Factory;
 
 
+use AppBundle\Factory\GoogleClientFactory;
 use PHPUnit\Framework\Assert;
 use Tests\BaseTestCase;
 
@@ -14,7 +15,7 @@ class GoogleClientFactoryTest extends BaseTestCase
      */
     public function testFactory()
     {
-        $factory = $this->getContainer()->get('AppBundle\Factory\GoogleClientFactory');
+        $factory = new GoogleClientFactory('google_client_id');
 
         Assert::assertInstanceOf(\Google_Client::class, $factory->getGoogleClient());
     }

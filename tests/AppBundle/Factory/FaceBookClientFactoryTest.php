@@ -2,6 +2,7 @@
 
 namespace Tests\AppBundle\Factory;
 
+use AppBundle\Factory\FaceBookClientFactory;
 use Facebook\Facebook;
 use PHPUnit\Framework\Assert;
 use Tests\BaseTestCase;
@@ -13,7 +14,7 @@ class FaceBookClientFactoryTest extends BaseTestCase
      */
     public function testFactory()
     {
-        $factory = $this->getContainer()->get('AppBundle\Factory\FaceBookClientFactory');
+        $factory = new FaceBookClientFactory('app_id', 'app_secret', 'v2.9');
 
         Assert::assertInstanceOf(Facebook::class, $factory->getFacebookClient());
     }

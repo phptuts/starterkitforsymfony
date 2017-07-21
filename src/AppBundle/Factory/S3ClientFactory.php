@@ -22,7 +22,15 @@ class S3ClientFactory
      * @var string
      */
     private $apiVersion;
+
+    /**
+     * @var string
+     */
     private $key;
+
+    /**
+     * @var string
+     */
     private $secret;
 
 

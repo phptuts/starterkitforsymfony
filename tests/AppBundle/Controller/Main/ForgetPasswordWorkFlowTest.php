@@ -2,12 +2,25 @@
 
 namespace Tests\AppBundle\Controller\Main;
 
+use AppBundle\Entity\User;
+use AppBundle\Repository\UserRepository;
 use Liip\FunctionalTestBundle\Test\WebTestCase;
 use PHPUnit\Framework\Assert;
 
 class ForgetPasswordWorkFlowTest extends WebTestCase
 {
     const EXAMPLE_USER_EMAIL = 'example_user@gmail.com';
+
+    /**
+     * @var UserRepository
+     */
+    protected $userRepository;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->userRepository = $this->getContainer()->get('doctrine')->getRepository(User::class);
+    }
 
     /**
      * This tests that a user can register
@@ -114,9 +127,7 @@ class ForgetPasswordWorkFlowTest extends WebTestCase
         Assert::assertEquals(0,$crawler->selectButton('Reset Password')->count());
 
 
-        $user = $this->getContainer()
-            ->get('AppBundle\Service\User\UserService')
-            ->findUserByEmail(self::EXAMPLE_USER_EMAIL);
+        $user = $this->userRepository->findUserByEmail(self::EXAMPLE_USER_EMAIL);
 
         // Going to the forget password page to
         $crawler = $client->request('GET', '/reset-password/' . twig_urlencode_filter($user->getForgetPasswordToken()));

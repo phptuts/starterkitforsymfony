@@ -33,7 +33,7 @@ class UserServiceTest extends BaseTestCase
     {
         $this->encoderFactory = \Mockery::mock(EncoderFactory::class);
         $this->em = \Mockery::mock(EntityManager::class);
-        $repository = $this->getContainer()->get('AppBundle\Repository\UserRepository');
+        $repository = $this->getContainer()->get('doctrine')->getRepository(User::class);
         $this->userService = new UserService($this->em, $this->encoderFactory, $repository);
     }
 
