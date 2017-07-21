@@ -3,16 +3,109 @@
 parameters:
 
     jms_serializer.serialized_name_annotation_strategy.class: JMS\Serializer\Naming\IdenticalPropertyNamingStrategy
-    jms_serializer.form_error_handler.class: CoreBundle\Handler\FormErrorHandler
+    jms_serializer.form_error_handler.class: AppBundle\Handler\FormErrorHandler
 
 services:
-    redis_cache_service:
+    # default configuration for services in *this* file
+    _defaults:
+        # automatically injects dependencies in your services
+        autowire: true
+        # automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true
+        # this means you cannot fetch services directly from the container via $container->get()
+        # if you need to do this, you can override this setting on individual services
+        public: false
+
+    # makes classes in src/AppBundle available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    AppBundle\:
+        resource: '../../src/AppBundle/*'
+        # you can exclude directories or files
+        # but if a service is unused, it's removed anyway
+        exclude: '../../src/AppBundle/{Entity,Repository,Model}'
+
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    AppBundle\Controller\:
+        resource: '../../src/AppBundle/Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
+    # Third Party Bundle Services
+    Doctrine\Common\Cache\PredisCache:
         class: '%snc_redis.doctrine_cache_predis.class%'
         arguments:
             - '@snc_redis.default'
 
-    exception_handler:
-        class: CoreBundle\Handler\ExceptionHandler
+    # Services with parameters
+    AppBundle\Service\S3Service:
+        class: AppBundle\Service\S3Service
+        arguments:
+            - '@AppBundle\Factory\S3ClientFactory'
+            - '%aws_s3_bucket_name%'
+            - '%kernel.environment%'
+
+    AppBundle\Service\EmailService:
+        class: AppBundle\Service\EmailService
+        arguments:
+            - '@twig'
+            - '@mailer'
+            - '%from_email%'
+
+    AppBundle\Service\Credential\JWSService:
+        class: AppBundle\Service\Credential\JWSService
+        arguments:
+            - '%jws_pass_phrase%'
+            - '%jws_ttl%'
+
+    AppBundle\Service\Credential\RefreshTokenService:
+        class: AppBundle\Service\Credential\RefreshTokenService
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@AppBundle\Repository\RefreshTokenRepository'
+            - '%refresh_token_ttl%'
+
+
+    # FACTORIES
+    AppBundle\Factory\S3ClientFactory:
+        class: AppBundle\Factory\S3ClientFactory
+        arguments:
+            - '%aws_region%'
+            - '%aws_key%'
+            - '%aws_secret%'
+            - '%aws_api_version%'
+
+
+    AppBundle\Factory\FaceBookClientFactory:
+        class: AppBundle\Factory\FaceBookClientFactory
+        arguments:
+            - '%facebook_app_id%'
+            - '%facebook_app_secret%'
+            - '%facebook_api_version%'
+
+    AppBundle\Factory\GoogleClientFactory:
+        class: AppBundle\Factory\GoogleClientFactory
+        arguments:
+            - '%google_client_id%'
+
+
+    #REPOSITORIES
+    AppBundle\Repository\UserRepository:
+        class: AppBundle\Repository\UserRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - AppBundle\Entity\User
+
+    AppBundle\Repository\RefreshTokenRepository:
+        class: AppBundle\Repository\RefreshTokenRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - AppBundle\Entity\RefreshToken
+
+
+    # EVENT LISTENERS
+    AppBundle\Handler\ExceptionHandler:
+        class: AppBundle\Handler\ExceptionHandler
         arguments:
             - '@twig'
             - '@logger'

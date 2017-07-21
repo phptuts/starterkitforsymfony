@@ -1,0 +1,38 @@
+AppBundle\Entity\User:
+    refresh_token_user:
+        email: 'refresh_token_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+
+AppBundle\Entity\RefreshToken:
+
+    dup_refresh_token_1:
+        token: 'token_dup'
+        expires: <dateTimeBetween("+10 days", "+20 days")>
+        user: '@refresh_token_user'
+
+
+    dup_refresh_token_2:
+        token: 'token_dup'
+        user: '@refresh_token_user'
+        expires: <dateTimeBetween("+10 days", "+20 days")>
+
+    refresh_token_expired:
+        token: 'token_expired'
+        user: '@refresh_token_user'
+        expires: <dateTimeBetween("-5 days", "-1 days")>
+
+    refresh_token_used:
+        token: 'used_token'
+        user: '@refresh_token_user'
+        expires: <dateTimeBetween("+10 days", "+20 days")>
+        used: true
+
+    refresh_token_valid:
+        token: 'valid_refresh_token'
+        user: '@refresh_token_user'
+        expires: <dateTimeBetween("+10 days", "+20 days")>
+        used: false

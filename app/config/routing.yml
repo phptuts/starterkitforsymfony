@@ -1,17 +1,3 @@
-admin:
-    resource: "@AdminBundle/Controller/"
-    type:     annotation
-    prefix:   /admin
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
-
-api:
-    resource: '@ApiBundle/Controller/'
-    prefix: /api
-    type: rest
-
 logout:
     path: /logout
 
@@ -22,6 +8,22 @@ token_login_check:
 api_login:
     path: /api/login_check
     methods: ['POST']
+
+
+admin:
+    resource: "@AppBundle/Controller/Admin/"
+    type:     annotation
+    prefix:   /admin
+
+app:
+    resource: '@AppBundle/Controller/Main/'
+    type: annotation
+
+api:
+    resource: '@ApiBundle/Controller/'
+    prefix: /api
+    type: rest
+
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

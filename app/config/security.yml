@@ -3,15 +3,15 @@
 security:
 
     encoders:
-        CoreBundle\Entity\User:
+        AppBundle\Entity\User:
             algorithm: bcrypt
             cost: 12
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        core_proivder:
+        app_proivder:
             entity:
-                class: CoreBundle:User
+                class: AppBundle:User
                 property: email
 
     role_hierarchy:
@@ -27,12 +27,12 @@ security:
         api_login:
             pattern: ^/api/login_check
             stateless: true
-            provider: core_proivder
+            provider: app_proivder
             guard:
                 authenticators:
-                    - startsymfony.core.security.api_login_token_guard
-                    - startsymfony.core.security.api_login_guard
-                entry_point: startsymfony.core.security.api_login_guard
+                    - AppBundle\Security\Guard\ApiLoginGuard
+                    - AppBundle\Security\Guard\Token\ApiLoginTokenGuard
+                entry_point: AppBundle\Security\Guard\ApiLoginGuard
 
         api:
             pattern: ^/api
@@ -40,20 +40,20 @@ security:
             stateless: true
             guard:
                 authenticators:
-                    - startsymfony.core.security.api_token_guard
+                    - AppBundle\Security\Guard\Token\ApiTokenGuard
 
 
         main:
             pattern: ^/*
             anonymous: ~
-            provider: core_proivder
+            provider: app_proivder
             switch_user: true
             form_login:
                 login_path: login
                 check_path: login
             guard:
                 authenticators:
-                    - startsymfony.core.security.session_login_token_guard
+                    - AppBundle\Security\Guard\Token\SessionLoginTokenGuard
             logout:
                 path: /logout
                 target: /

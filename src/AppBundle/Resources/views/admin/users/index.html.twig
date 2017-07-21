@@ -1,0 +1,256 @@
+{% extends '@App/admin/layout.html.twig' %}
+{% import _self as helpers %}
+
+{% block title 'User Management' %}
+
+{% block body %}
+    <div class='notifications top-right'></div>
+
+    <h1>Users</h1>
+    <form method="GET" role="form">
+        <div class="row">
+            <div class="form-group col-md-10">
+                <label for="user-search">Search</label>
+                <input type="search" value="{{ app.request.query.get('q') }}" name="q" class="form-control"
+                       id="user-search"/>
+                <input type="hidden" name="page" value="1"/>
+            </div>
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-success pull-right" id="user-search-btn">Search</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div id="users-list" class="row">
+        <div class="col-md-12">
+            {% if users.count > 0 %}
+                {{ helpers.renderUserTable(users) }}
+            {% else %}
+                <p>No User Found.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="password-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">New Password</h4>
+                </div>
+                <div class="modal-body">
+                    <p>The user's new password: <span id="new-password-text"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    {% if maxPages > 1 %}
+        <ul class="pagination pagination-sm">
+            {# `«` arrow  #}
+            <li {{ currentPage == 1 ? 'class="disabled"' }}>
+                <a href="{{ path('admin_users', {page: currentPage-1 < 1 ? 1 : currentPage-1,  q: app.request.query.get('q')}) }}">«</a>
+            </li>
+
+            {# Render each page number #}
+            {% for i in 1..maxPages %}
+                <li {{ currentPage == i ? 'class="active"' }}>
+                    <a href="{{ path('admin_users', {page: i,  q: app.request.query.get('q')}) }}">{{ i }}</a>
+                </li>
+            {% endfor %}
+
+            {# `»` arrow #}
+            <li {{ currentPage == maxPages ? 'class="disabled"' }}>
+                <a href="{{ path('admin_users', { page: currentPage + 1 <= maxPages ? currentPage + 1 : currentPage, q: app.request.query.get('q')}) }}">»</a>
+            </li>
+        </ul>
+    {% endif %}
+
+
+{% endblock %}
+
+{% macro renderUserTable(users) %}
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Display Name</th>
+            <th>Enabled</th>
+            <th>Admin</th>
+            <th>Reset Password</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users.iterator.arrayCopy %}
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <input type="email" value="{{ user.email }}" class="form-control"/>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-success btn-sm update-email" data-user-id="{{ user.id }}">Update</button>
+                        </div>
+                    </div>
+
+
+                </td>
+                <td>{{ user.displayName }}</td>
+                <td>
+                    <input type="checkbox" data-user-id="{{ user.id }}" class="user-enable-toggle" data-toggle="toggle" {% if user.enabled %}checked="checked"{% endif %} />
+
+                </td>
+                <td>
+                    <input type="checkbox" data-user-id="{{ user.id }}" class="user-role-admin-toggle" data-toggle="toggle" {% if user.hasRole('ROLE_ADMIN') %}checked="checked"{% endif %} />
+                </td>
+                <td>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-sm update-password" data-user-id="{{ user.id }}">Update
+                            Password
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('homepage', {'_switch_user': user.getUsername() }) }}">Switch User</a>
+                </td>
+            </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+
+{% endmacro %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+
+
+        // This updates the user's email address from the field
+        $(".update-email").on("click", function () {
+
+            var email = $(this).parent().parent().find('input').val();
+            var userId = $(this).data('user-id');
+            var url = '{{ path('admin_user_email', {'id': 'REPLACE_USER_ID'}) }}'
+            url = url.replace('REPLACE_USER_ID', userId);
+            $.ajax({
+                url: url,
+                data: {'email': email},
+                type: 'PATCH',
+                success: function () {
+                    $('.top-right').notify({
+                        message: { text: 'Email was updated. (High Five) ', 'type': 'success' }
+                    }).show()
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status == 400) {
+                        var response = JSON.parse(xhr.responseText);
+                        alert(response.message);
+                    }
+                    else {
+                        alert('There was an server error please contact admin.');
+                    }
+                }
+            });
+        });
+
+
+        // This will update the user's password and display a modal with the new password in it
+        $(".update-password").on("click", function () {
+            var userId = $(this).data('user-id');
+            var url = '{{ path('admin_user_password', {'id': 'REPLACE_USER_ID'}) }}'
+            url = url.replace('REPLACE_USER_ID', userId);
+            var password = passwordGenerator(7);
+            $.ajax({
+                url: url,
+                data: {'password': password},
+                type: 'PATCH',
+                success: function () {
+
+                    $("#password-modal").modal('show');
+                    $("#new-password-text").html(password);
+
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error updating the user\'s password.');
+                }
+            });
+        });
+
+        // This will enable and disable the user
+        $(".user-enable-toggle").change(function () {
+            var element = $(this);
+
+            // This means the request failed and it being toggled back so we don't want to call the api again.
+            if (element.data('error')) {
+                element.data('error', false);
+                return;
+            }
+
+            var userId = element.data('user-id');
+            var checked = element.is(":checked") ? 1 : 0;
+
+            var url = '{{ path('admin_user_enable', {'id': 'REPLACE_USER_ID', 'enable': 'REPLACE_USER_ENABLE'}) }}'
+            url = url.replace('REPLACE_USER_ID', userId).replace('REPLACE_USER_ENABLE', checked);
+
+            $.ajax({
+                url: url,
+                type: 'PATCH',
+                error: function (xhr, status, error) {
+                    alert('Failed updating the user.');
+                    element.data('error', true);
+                    element.bootstrapToggle('toggle');
+                }
+            });
+        });
+
+        $(".user-role-admin-toggle").change(function () {
+            var element = $(this);
+
+            // This means the request failed and it being toggled back so we don't want to call the api again.
+            if (element.data('error')) {
+                element.data('error', false);
+                return;
+            }
+
+            var userId = element.data('user-id');
+            var checked = element.is(":checked") ? 1 : 0;
+
+            var url = '{{ path('admin_user_role_admin', {'id': 'REPLACE_USER_ID', 'access': 'REPLACE_USER_ADMIN'}) }}'
+            url = url.replace('REPLACE_USER_ID', userId).replace('REPLACE_USER_ADMIN', checked);
+
+            $.ajax({
+                url: url,
+                type: 'PATCH',
+                error: function (xhr, status, error) {
+                    alert('Failed updating the user.');
+                    element.data('error', true);
+                    element.bootstrapToggle('toggle');
+                }
+            });
+        });
+
+        /**
+         * This generates a random string
+         * @param length
+         * @returns {string}
+         */
+        function passwordGenerator(length) {
+            var password = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < length; i++)
+                password += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return password;
+        }
+
+    </script>
+
+{% endblock %}

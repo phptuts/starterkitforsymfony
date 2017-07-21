@@ -1,0 +1,24 @@
+{% extends '@App/documentation/document-layout.html.twig' %}
+
+{% block title 'S3 file upload' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>S3 File Uploads</h1>
+    <p>
+        Right now file uploads are handle by this <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Service/S3Service.php">s3 service</a>.
+        It uses a <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Factory/S3ClientFactory.php">factory</a> to create an s3 client.
+        All the upload service does is return a url that is stored in the database.  When you use the service you specify the folder that the the file will go in.  The service
+        also depends on the environment as well.  So you if you specify the medical folder you and you are on the dev environment you will upload the file to /yourbucket/dev/medical.
+    </p>
+</div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://aws.amazon.com/documentation/s3/">Amazon S3 Documentation</a></li>
+        <li><a href="https://symfony.com/doc/current/controller/upload_file.html">Symfony File Upload Example</a></li>
+    </ul>
+{% endblock %}
