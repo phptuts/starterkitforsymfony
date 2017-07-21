@@ -3,6 +3,7 @@
 namespace AppBundle\Security\Guard\Token;
 
 use AppBundle\Factory\UserProviderFactory;
+use AppBundle\Security\Guard\ApiLoginTrait;
 use AppBundle\Service\Credential\CredentialResponseBuilderService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +16,7 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 class ApiLoginTokenGuard extends AbstractTokenGuard
 {
 
+    use ApiLoginTrait;
     /**
      * @var CredentialResponseBuilderService
      */
@@ -42,17 +44,7 @@ class ApiLoginTokenGuard extends AbstractTokenGuard
      */
     public function getCredentials(Request $request)
     {
-        $post = json_decode($request->getContent(), true);
-
-        if ($request->getPathInfo() == '/api/login_check' &&
-            $request->isMethod(Request::METHOD_POST) &&
-            !empty($post[self::TOKEN_FIELD]) &&
-            !empty($post[self::TOKEN_TYPE_FIELD])
-        ) {
-            return $post;
-        }
-
-        return null;
+        return $this->getLoginCredentials($request,[self::TOKEN_FIELD, self::TOKEN_TYPE_FIELD]);
     }
 
     /**

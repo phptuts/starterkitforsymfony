@@ -24,6 +24,8 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
 
     use GuardTrait;
 
+    use ApiLoginTrait;
+
     /**
      * The field where the email
      * @var string
@@ -70,17 +72,7 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
      */
     public function getCredentials(Request $request)
     {
-        $post = json_decode($request->getContent(), true);
-
-        if ($request->getPathInfo() == '/api/login_check' &&
-            $request->isMethod(Request::METHOD_POST) &&
-            !empty($post[self::EMAIL_FIELD]) &&
-            !empty($post[self::PASSWORD_FIELD])
-        ) {
-            return $post;
-        }
-
-        return null;
+        $this->getLoginCredentials($request, [self::EMAIL_FIELD, self::PASSWORD_FIELD]);
     }
 
     /**
