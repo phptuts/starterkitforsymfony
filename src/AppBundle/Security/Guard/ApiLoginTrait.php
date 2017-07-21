@@ -22,6 +22,11 @@ trait ApiLoginTrait
     protected function getLoginCredentials(Request $request, $fields)
     {
         $post = json_decode($request->getContent(), true);
+
+        if (empty($post) || is_array($post)) {
+            return null;
+        }
+
         $postFields = array_keys($post);
         sort($fields);
         sort($postFields);
