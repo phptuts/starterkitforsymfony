@@ -7,6 +7,11 @@ use FOS\RestBundle\Controller\Annotations as REST;
 use FOS\RestBundle\Controller\FOSRestController;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
+/**
+ * Class UserController
+ * @package ApiBundle\Controller\Api
+ * @REST\NamePrefix("api_users_")
+ */
 class LoginController extends FOSRestController
 {
 

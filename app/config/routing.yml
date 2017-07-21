@@ -15,14 +15,16 @@ admin:
     type:     annotation
     prefix:   /admin
 
-app:
+api:
+    resource: '@AppBundle/Controller/Api/'
+    prefix: /api
+    type: rest
+
+main:
     resource: '@AppBundle/Controller/Main/'
     type: annotation
 
-api:
-    resource: '@ApiBundle/Controller/'
-    prefix: /api
-    type: rest
+
 
 
 NelmioApiDocBundle:

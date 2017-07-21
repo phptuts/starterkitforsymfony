@@ -10,7 +10,13 @@ use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use FOS\RestBundle\Controller\Annotations as REST;
 
+/**
+ * Class RegisterController
+ * @package ApiBundle\Controller\Api
+ * @REST\NamePrefix("api_users_")
+ */
 class RegisterController extends FOSRestController
 {
     /**

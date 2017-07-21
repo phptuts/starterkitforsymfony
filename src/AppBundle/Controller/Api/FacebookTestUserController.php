@@ -6,6 +6,11 @@ use AppBundle\Factory\FaceBookClientFactory;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations as REST;
 
+/**
+ * Class UserController
+ * @package ApiBundle\Controller\Api
+ * @REST\NamePrefix("api_users_")
+ */
 class FacebookTestUserController extends Controller
 {
     /**

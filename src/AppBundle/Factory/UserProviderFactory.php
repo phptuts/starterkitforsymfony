@@ -4,7 +4,10 @@
 namespace AppBundle\Factory;
 
 use AppBundle\Security\Guard\Token\AbstractTokenGuard;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use AppBundle\Security\Provider\FacebookProvider;
+use AppBundle\Security\Provider\GoogleProvider;
+use AppBundle\Security\Provider\RefreshTokenProvider;
+use AppBundle\Security\Provider\TokenProvider;
 use Symfony\Component\Intl\Exception\NotImplementedException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
@@ -14,14 +17,38 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  */
 class UserProviderFactory
 {
-    /**
-     * @var ContainerInterface
-     */
-    private $container;
 
-    public function __construct(ContainerInterface $container)
-    {
-        $this->container = $container;
+    /**
+     * @var FacebookProvider
+     */
+    private $facebookProvider;
+
+    /**
+     * @var GoogleProvider
+     */
+    private $googleProvider;
+
+    /**
+     * @var RefreshTokenProvider
+     */
+    private $refreshTokenProvider;
+
+    /**
+     * @var TokenProvider
+     */
+    private $tokenProvider;
+
+    public function __construct(
+        FacebookProvider $facebookProvider,
+        GoogleProvider $googleProvider,
+        RefreshTokenProvider $refreshTokenProvider,
+        TokenProvider $tokenProvider
+    ){
+
+        $this->facebookProvider = $facebookProvider;
+        $this->googleProvider = $googleProvider;
+        $this->refreshTokenProvider = $refreshTokenProvider;
+        $this->tokenProvider = $tokenProvider;
     }
 
     /**
@@ -33,19 +60,19 @@ class UserProviderFactory
     public function getUserProvider($type)
     {
         if ($type == AbstractTokenGuard::TOKEN_TYPE_FACEBOOK) {
-            return $this->container->get('startsymfony.core.security.facebook_provider');
+            return $this->facebookProvider;
         }
 
         if ($type == AbstractTokenGuard::TOKEN_TYPE_GOOGLE) {
-            return $this->container->get('startsymfony.core.security.google_provider');
+            return $this->googleProvider;
         }
 
         if ($type == AbstractTokenGuard::TOKEN_TYPE_REFRESH) {
-            return $this->container->get('startsymfony.core.security.refresh_token_provider');
+            return $this->refreshTokenProvider;
         }
 
         if ($type == AbstractTokenGuard::TOKEN_TYPE_API) {
-            return $this->container->get('startsymfony.core.security.token_provider');
+            return $this->tokenProvider;
         }
 
         throw new NotImplementedException(sprintf("The '%s' social user provider has not been implemented.", $type));

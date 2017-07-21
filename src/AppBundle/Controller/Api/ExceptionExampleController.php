@@ -1,12 +1,16 @@
 <?php
 
-
 namespace AppBundle\Controller\Api;
-
 
 use AppBundle\Exception\ProgrammerException;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use FOS\RestBundle\Controller\Annotations as REST;
 
+/**
+ * Class UserController
+ * @package ApiBundle\Controller\Api
+ * @REST\NamePrefix("api_users_")
+ */
 class ExceptionExampleController extends AbstractRestController
 {
     /**

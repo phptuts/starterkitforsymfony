@@ -15,7 +15,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use FOS\RestBundle\Controller\Annotations as REST;
 
+/**
+ * Class UserPasswordController
+ * @package ApiBundle\Controller\Api
+ * @REST\NamePrefix("api_users_")
+ */
 class UserPasswordController extends FOSRestController
 {
     /**

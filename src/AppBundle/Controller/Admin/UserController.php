@@ -14,6 +14,7 @@ use AppBundle\Entity\User;
 
 class UserController extends Controller
 {
+
     /**
      * @var UserService
      */

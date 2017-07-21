@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class UserController
- * @package ApiBundle\Controller
+ * @package ApiBundle\Controller\Api
  * @REST\NamePrefix("api_users_")
  */
 class UserController extends AbstractRestController

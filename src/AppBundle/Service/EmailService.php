@@ -50,7 +50,7 @@ class EmailService
             ->setFrom($this->fromEmail)
             ->setTo($user->getEmail())
             ->setBody(
-                $this->twig->render('@App/email/register.html.twig', ['user' => $user, 'title' => 'Thank you for registering']),
+                $this->twig->render('@App/main/email/register.html.twig', ['user' => $user, 'title' => 'Thank you for registering']),
                 'text/html'
             );
 
@@ -68,7 +68,7 @@ class EmailService
             ->setFrom($this->fromEmail)
             ->setTo($user->getEmail())
             ->setBody(
-                $this->twig->render('@App/email/forget-password.html.twig', ['user' => $user, 'title' => 'Forget Password']),
+                $this->twig->render('@App/main/email/forget-password.html.twig', ['user' => $user, 'title' => 'Forget Password']),
                 'text/html'
             );
 
