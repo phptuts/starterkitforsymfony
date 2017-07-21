@@ -72,7 +72,7 @@ class ApiLoginGuard extends AbstractGuardAuthenticator
      */
     public function getCredentials(Request $request)
     {
-        $this->getLoginCredentials($request, [self::EMAIL_FIELD, self::PASSWORD_FIELD]);
+        return $this->getLoginCredentials($request, [self::EMAIL_FIELD, self::PASSWORD_FIELD]);
     }
 
     /**
