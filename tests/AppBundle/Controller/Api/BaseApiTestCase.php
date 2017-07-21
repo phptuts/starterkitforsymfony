@@ -42,17 +42,17 @@ class BaseApiTestCase extends WebTestCase
     {
         parent::setUp();
         $this->jwsService = new JWSService(
-            $this->getContainer()->getParameter('jws_pass_phrase'),
-            $this->getContainer()->getParameter('jws_ttl')
+            $this->getContainer()->getParameter('app.jws_pass_phrase'),
+            $this->getContainer()->getParameter('app.jws_ttl')
         );
 
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $this->refreshTokenRepository = $em->getRepository(RefreshToken::class);
         $this->userRepository = $em->getRepository(User::class);
         $this->facebookClientFactory = new FaceBookClientFactory(
-            $this->getContainer()->getParameter('facebook_app_id'),
-            $this->getContainer()->getParameter('facebook_app_secret'),
-            $this->getContainer()->getParameter('facebook_api_version')
+            $this->getContainer()->getParameter('app.facebook_app_id'),
+            $this->getContainer()->getParameter('app.facebook_app_secret'),
+            $this->getContainer()->getParameter('app.facebook_api_version')
         );
     }
 
@@ -136,7 +136,7 @@ class BaseApiTestCase extends WebTestCase
         $user = $this->userRepository->findUserByEmail($email);
         Assert::assertEquals($user->getId(), $tokenPayload['user_id']);
 
-        $ttlForTokenInSeconds = $this->getContainer()->getParameter('jws_ttl');
+        $ttlForTokenInSeconds = $this->getContainer()->getParameter('app.jws_ttl');
         $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds - 500) .  ' seconds')->getTimestamp();
         $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds + 500) .  ' seconds')->getTimestamp();
 
@@ -161,7 +161,7 @@ class BaseApiTestCase extends WebTestCase
 
         Assert::assertEquals($refreshToken->getUser()->getEmail(), $email);
 
-        $ttlForTokenInSeconds = $this->getContainer()->getParameter('refresh_token_ttl');
+        $ttlForTokenInSeconds = $this->getContainer()->getParameter('app.refresh_token_ttl');
         $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds - 1500) .  ' seconds')->getTimestamp();
         $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds + 1500) .  ' seconds')->getTimestamp();
 
@@ -179,14 +179,14 @@ class BaseApiTestCase extends WebTestCase
      */
     protected function getFacebookAuthTokenAndEmail()
     {
-        $url = 'https://graph.facebook.com/oauth/access_token?client_id=' . $this->getContainer()->getParameter('facebook_app_id')
-            . '&client_secret=' . $this->getContainer()->getParameter('facebook_app_secret') . '&grant_type=client_credentials&redirect_uri=http://skfsp.info';
+        $url = 'https://graph.facebook.com/oauth/access_token?client_id=' . $this->getContainer()->getParameter('app.facebook_app_id')
+            . '&client_secret=' . $this->getContainer()->getParameter('app.facebook_app_secret') . '&grant_type=client_credentials&redirect_uri=http://skfsp.info';
 
         $data = json_decode(file_get_contents($url), true);
 
         $facebookClient = $this->facebookClientFactory->getFacebookClient();
 
-        $response = $facebookClient->get('/'. $this->getContainer()->getParameter('facebook_app_id') . '/accounts/test-users', $data['access_token']);
+        $response = $facebookClient->get('/'. $this->getContainer()->getParameter('app.facebook_app_id') . '/accounts/test-users', $data['access_token']);
 
         $userAccessToken = $response->getDecodedBody()['data'][0]['access_token'];
 

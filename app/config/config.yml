@@ -11,7 +11,7 @@ parameters:
 framework:
     #esi: ~
     #translator: { fallbacks: ['%locale%'] }
-    secret: '%secret%'
+    secret: '%app.secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
         strict_requirements: ~
@@ -41,20 +41,20 @@ twig:
         - 'bootstrap_3_layout.html.twig'
         - 'form/fields.html.twig'
     globals:
-        facebook_app_id: '%facebook_app_id%'
-        facebook_api_version: '%facebook_api_version%'
-        email: '%from_email%'
-        google_client_id: '%google_client_id%'
+        facebook_app_id: '%app.facebook_app_id%'
+        facebook_api_version: '%app.facebook_api_version%'
+        email: '%app.from_email%'
+        google_client_id: '%app.google_client_id%'
 
 # Doctrine Configuration
 doctrine:
     dbal:
         driver: pdo_mysql
-        host: '%database_host%'
-        port: '%database_port%'
-        dbname: '%database_name%'
-        user: '%database_user%'
-        password: '%database_password%'
+        host: '%app.database_host%'
+        port: '%app.database_port%'
+        dbname: '%app.database_name%'
+        user: '%app.database_user%'
+        password: '%app.database_password%'
         charset: UTF8
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
@@ -125,7 +125,7 @@ fos_rest:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: '%mailer_transport%'
-    host: '%mailer_host%'
-    username: '%mailer_user%'
-    password: '%mailer_password%'
+    transport: '%app.mailer_transport%'
+    host: '%app.mailer_host%'
+    username: '%app.mailer_user%'
+    password: '%app.mailer_password%'

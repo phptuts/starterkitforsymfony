@@ -42,7 +42,7 @@ services:
         class: AppBundle\Service\S3Service
         arguments:
             - '@AppBundle\Factory\S3ClientFactory'
-            - '%aws_s3_bucket_name%'
+            - '%app.aws_s3_bucket_name%'
             - '%kernel.environment%'
 
     AppBundle\Service\EmailService:
@@ -50,43 +50,43 @@ services:
         arguments:
             - '@twig'
             - '@mailer'
-            - '%from_email%'
+            - '%app.from_email%'
 
     AppBundle\Service\Credential\JWSService:
         class: AppBundle\Service\Credential\JWSService
         arguments:
-            - '%jws_pass_phrase%'
-            - '%jws_ttl%'
+            - '%app.jws_pass_phrase%'
+            - '%app.jws_ttl%'
 
     AppBundle\Service\Credential\RefreshTokenService:
         class: AppBundle\Service\Credential\RefreshTokenService
         arguments:
             - '@doctrine.orm.default_entity_manager'
             - '@AppBundle\Repository\RefreshTokenRepository'
-            - '%refresh_token_ttl%'
+            - '%app.refresh_token_ttl%'
 
 
     # FACTORIES
     AppBundle\Factory\S3ClientFactory:
         class: AppBundle\Factory\S3ClientFactory
         arguments:
-            - '%aws_region%'
-            - '%aws_key%'
-            - '%aws_secret%'
-            - '%aws_api_version%'
+            - '%app.aws_region%'
+            - '%app.aws_key%'
+            - '%app.aws_secret%'
+            - '%app.aws_api_version%'
 
 
     AppBundle\Factory\FaceBookClientFactory:
         class: AppBundle\Factory\FaceBookClientFactory
         arguments:
-            - '%facebook_app_id%'
-            - '%facebook_app_secret%'
-            - '%facebook_api_version%'
+            - '%app.facebook_app_id%'
+            - '%app.facebook_app_secret%'
+            - '%app.facebook_api_version%'
 
     AppBundle\Factory\GoogleClientFactory:
         class: AppBundle\Factory\GoogleClientFactory
         arguments:
-            - '%google_client_id%'
+            - '%app.google_client_id%'
 
 
     #REPOSITORIES
@@ -109,6 +109,6 @@ services:
         arguments:
             - '@twig'
             - '@logger'
-            - '%from_email%'
+            - '%app.from_email%'
         tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

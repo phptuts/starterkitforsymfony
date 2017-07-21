@@ -20,7 +20,7 @@ class JWSServiceTest extends BaseTestCase
     {
         parent::setUp();
         $this->JWSService =
-            new JWSService($this->getContainer()->getParameter('jws_pass_phrase'), $this->getContainer()->getParameter('jws_ttl'));
+            new JWSService($this->getContainer()->getParameter('app.jws_pass_phrase'), $this->getContainer()->getParameter('app.jws_ttl'));
     }
 
 
@@ -35,7 +35,7 @@ class JWSServiceTest extends BaseTestCase
 
         $model = $this->JWSService->createAuthTokenModel($user);
 
-        $ttl = $this->getContainer()->getParameter('jws_ttl');
+        $ttl = $this->getContainer()->getParameter('app.jws_ttl');
 
         $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . $ttl - 500 .  ' seconds')->getTimestamp();
         $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . $ttl + 500 .  ' seconds')->getTimestamp();

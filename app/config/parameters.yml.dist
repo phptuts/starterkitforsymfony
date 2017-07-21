@@ -2,44 +2,44 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host: 127.0.0.1
-    database_port: ~
-    database_name: symfony
-    database_user: root
-    database_password: ~
+    app.database_host: 127.0.0.1
+    app.database_port: ~
+    app.database_name: symfony
+    app.database_user: root
+    app.database_password: ~
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: ~
-    mailer_password: ~
+    app.mailer_transport: smtp
+    app.mailer_host: 127.0.0.1
+    app.mailer_user: ~
+    app.mailer_password: ~
 
     # A secret key that's used to generate certain security-related tokens
-    secret: ThisTokenIsNotSoSecretChangeIt
+    app.secret: ThisTokenIsNotSoSecretChangeIt
 
     # Email string
-    from_email: email@gams.com
+    app.from_email: email@gams.com
 
     # Amazon s3
-    aws_api_version: '2006-03-01'
-    aws_region: 'us-west-2'
-    aws_s3_bucket_name: bucket
-    aws_key: fake_crap
-    aws_secret: fake_crap
+    app.aws_api_version: '2006-03-01'
+    app.aws_region: 'us-west-2'
+    app.aws_s3_bucket_name: bucket
+    app.aws_key: fake_crap
+    app.aws_secret: fake_crap
 
     #Facebook
-    facebook_app_secret: fake_crap
-    facebook_app_id: fake_crap
-    facebook_api_version: v2.9
+    app.facebook_app_secret: fake_crap
+    app.facebook_app_id: fake_crap
+    app.facebook_api_version: v2.9
 
     #GOOGLE
-    google_client_id: fake_crap
-    google_client_secret: fake_crap
+    app.google_client_id: fake_crap
+    app.google_client_secret: fake_crap
 
     #JWT / JWS Passphrase
-    jws_pass_phrase: blah
-    jws_ttl: 5184000
+    app.jws_pass_phrase: blah
+    app.jws_ttl: 5184000
 
     #Refresh_tokens
-    refresh_token_ttl: 10368000
+    app.refresh_token_ttl: 10368000
