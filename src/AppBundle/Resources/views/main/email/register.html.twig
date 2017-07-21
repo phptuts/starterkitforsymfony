@@ -1,0 +1,12 @@
+{% extends '@App/main/email-layout.html.twig' %}
+
+{% block title %}Thank you for registering.{% endblock %}
+
+
+{% block body %}
+
+    <h3>Hey {{ user.getEmail() }}</h3>
+
+    <p>Thank you for register!!</p>
+
+{% endblock %}

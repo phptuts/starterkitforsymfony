@@ -1,0 +1,31 @@
+{% extends '@App/main/account-settings/account-setting-layout.html.twig' %}
+
+{% block title %}Update Your Profile{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+     {# Add this every time you need to use the file uploader #}
+    <script src="{{ asset('assets/js/file-upload-bootstrap.js') }}" ></script>
+{% endblock %}
+
+{% block form_section %}
+
+    <h2>Update Your Information</h2>
+
+    {{ form_start(updateUserForm, {'attr': {'novalidate': 'novalidate'}}) }}
+
+    {{ form_row(updateUserForm.email) }}
+    {{ form_row(updateUserForm.displayName) }}
+    {{ form_row(updateUserForm.image) }}
+    {{ form_row(updateUserForm.bio) }}
+
+
+    <div class="form-group submit-btn-container">
+        <button type="submit" class="btn btn-success pull-right">Update</button>
+    </div>
+
+    {{ form_end(updateUserForm) }}
+
+
+{% endblock %}

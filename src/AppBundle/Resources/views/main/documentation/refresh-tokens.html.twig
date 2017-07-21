@@ -1,0 +1,74 @@
+{% extends '@App/documentation/document-layout.html.twig' %}
+
+{% block title 'Refresh Toknes' %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h1>Refresh Token</h1>
+
+        <h2>The idea:</h2>
+
+        <p>Refresh tokens allow a client (phone / website / etc) to log back into the website without request credentials from the user.  </p>
+
+        <h2>
+            <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Entity/RefreshToken.php">
+                Refresh Token Entity
+            </a>
+        </h2>
+
+        <ul>
+            <li>token: The string that is the refresh token.</li>
+            <li>expires: When the refresh token will expire and no longer be valid.</li>
+            <li>used: A boolean that means the refresh token was used.  In our system refresh tokens can only be used once.</li>
+            <li>user: The user that the refresh token is attached to.</li>
+        </ul>
+
+        <h2>
+            <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Service/Credential/RefreshTokenService.php">
+                Refresh Token Service
+            </a>
+        </h2>
+
+        <p>
+            This is used to validate refresh token.
+            Meaning it has not been used and is not expired.
+            It is also used to create refresh tokens.
+        </p>
+
+        <h2>
+            Workflow
+        </h2>
+
+        <ol>
+            <li>
+                Refresh Token are created during api login.
+                They are created by the
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Service/Credential/CredentialModelBuilderService.php">CredentialModelBuilderService</a>
+                which passes model to the
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Service/Credential/CredentialResponseBuilderService.php">CredentialResponseBuilderService</a>
+                which then
+                returns the response to the guard that is calling it.
+            </li>
+            <li>
+                So when a client calls the api login guard with a request like this:
+                <code>["token": "asdfasdf", "type" : "refresh_token"]</code>.  The
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Security/Guard/Token/AbstractTokenGuard.php#L79">api login guard / abstract token guard</a>
+                will call the
+                <a href="https://github.com/phptuts/symfonystarter/blob/master/src/AppBundle/Security/Provider/RefreshTokenProvider.php">refresh token user provider</a>
+                .
+                This will use the refresh token service to see if the a valid token exists in the database.  If it does it will invalidate the
+                token by marking it as being used and will return the user.  If this is successful a new credential response will be issued and a
+                new refresh token will be created.
+            </li>
+        </ol>
+    </div>
+
+{% endblock %}
+
+{% block helpfulLinks %}
+    <ul>
+        <li><a href="https://auth0.com/learn/refresh-tokens/">Refresh Tokens Explained</a></li>
+    </ul>
+{% endblock %}
