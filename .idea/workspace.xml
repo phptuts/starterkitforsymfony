@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-digital-ocean.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-homestead.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22_doc_1_setup-local-host.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22_doc_2_setup-production.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22_ref_1_walk-through.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,8 +85,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22_2_setup-production.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md">
+      <file leaf-file-name="2017-07-22_doc_2_setup-production.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_doc_2_setup-production.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="30">
@@ -98,12 +98,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22_1_setup-local-host.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md">
+      <file leaf-file-name="2017-07-22_doc_1_setup-local-host.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_doc_1_setup-local-host.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -111,8 +111,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22_1_walk-through.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md">
+      <file leaf-file-name="2017-07-22_ref_1_walk-through.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_ref_1_walk-through.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="75">
@@ -361,32 +361,6 @@
               <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ref" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -450,11 +424,11 @@
       <recent name="$PROJECT_DIR$/tests/CoreBundle/Mock" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/_posts" />
       <recent name="$PROJECT_DIR$/docs/_posts/ref" />
       <recent name="$PROJECT_DIR$/docs/_posts/docs" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tests/AppBundle" />
-      <recent name="$PROJECT_DIR$/tests/AppBundle/Controller/Admin" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Service">
@@ -580,12 +554,12 @@
       <workItem from="1500476514308" duration="680000" />
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
-      <workItem from="1500741765070" duration="3933000" />
+      <workItem from="1500741765070" duration="4055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404706000" />
+    <option name="totallyTimeSpent" value="404828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1010,15 +984,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_ref_1_walk-through.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
@@ -1029,7 +995,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_doc_2_setup-production.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
@@ -1040,11 +1006,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md">
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22_doc_1_setup-local-host.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             <folding />
           </first_editor>
           <second_editor />
