@@ -23,7 +23,8 @@ sections: [
     ['website', 'Website'],
     ['api', 'API'],
     ['tut', 'Tutorial'],
-    ['sug', 'Suggestions']
+    ['sug', 'Suggestions'],
+    ['credits', 'Credit / Thanks']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
