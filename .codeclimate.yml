@@ -6,10 +6,3 @@ engines:
                 enabled: false
             UnusedFormalParameter:
                 enabled: false
-
-exclude_paths:
-    - "tests/"
-    - "app/"
-    - "vender/"
-    - "scripts/"
-    - "!src/"
