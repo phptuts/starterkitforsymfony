@@ -12,31 +12,50 @@ use Symfony\Component\HttpFoundation\Request;
  */
 trait ApiLoginTrait
 {
+
     /**
      * A common way of handling api login requests.
+     * 1) Validate that the request is valid
+     * 2) Validate that all the fields are set with a non null value
+     *
      *
      * @param Request $request
-     * @param $fields
+     * @param array $fields
      * @return mixed|null
      */
     protected function getLoginCredentials(Request $request, $fields)
     {
-        $post = json_decode($request->getContent(), true);
-
-        if (empty($post) || !is_array($post)) {
+        // We check that they are hitting the api login end point and that the request is a post
+        if ($request->getPathInfo() != '/api/login_check' || !$request->isMethod(Request::METHOD_POST)) {
             return null;
         }
 
-        $postFields = array_keys($post);
-        sort($fields);
-        sort($postFields);
+        $post = json_decode($request->getContent(), true);
 
-        // We check that they are hitting the api login end point and that the request is a post
-        // That all the required fields match the request.
-        if ($request->getPathInfo() == '/api/login_check' && $request->isMethod(Request::METHOD_POST) && $postFields == $fields) {
-            return $post;
+        // If it does not have all the fields return null.
+        if (!$this->hasAllFields($post, $fields)) {
+            return null;
         }
 
-        return null;
+        return $post;
     }
+
+    /**
+     * Validates that's all the fields are in the post data.
+     *
+     * @param array $post the json post data in an array
+     * @param array $fields all the fields that should be in the post data
+     * @return bool
+     */
+    protected function hasAllFields($post, $fields)
+    {
+        foreach ($fields as $field) {
+            if (empty($post[$field])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 }
