@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-digital-ocean.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-digital-ocean.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-homestead.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-homestead.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-digital-ocean.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-homestead.md" afterPath="$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,12 +85,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-setup-digital-ocean.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-digital-ocean.md">
+      <file leaf-file-name="2017-07-22_2_setup-production.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="45">
-                <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -98,12 +98,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-setup-homestead.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-homestead.md">
+      <file leaf-file-name="2017-07-22_1_setup-local-host.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="45">
-                <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -111,12 +111,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-walk-through.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md">
+      <file leaf-file-name="2017-07-22_1_walk-through.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -208,9 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/main/register/register.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/main/login/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/RegisterController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserPasswordController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/LoginController.php" />
@@ -259,6 +256,9 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-digital-ocean.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-homestead.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-local-host.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-production.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md" />
       </list>
     </option>
   </component>
@@ -361,6 +361,10 @@
               <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ref" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -446,11 +450,11 @@
       <recent name="$PROJECT_DIR$/tests/CoreBundle/Mock" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/_posts/ref" />
       <recent name="$PROJECT_DIR$/docs/_posts/docs" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tests/AppBundle" />
       <recent name="$PROJECT_DIR$/tests/AppBundle/Controller/Admin" />
-      <recent name="$PROJECT_DIR$/tests/AppBundle/Controller/Api" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.Service">
@@ -576,12 +580,12 @@
       <workItem from="1500476514308" duration="680000" />
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
-      <workItem from="1500741765070" duration="3742000" />
+      <workItem from="1500741765070" duration="3933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404515000" />
+    <option name="totallyTimeSpent" value="404706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -1014,33 +1018,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-digital-ocean.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/ref/2017-07-22_1_walk-through.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22-setup-homestead.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_2_setup-production.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/docs/2017-07-22_1_setup-local-host.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-walk-through.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
             <folding />
           </first_editor>
           <second_editor />
