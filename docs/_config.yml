@@ -3,7 +3,7 @@ title: 'Starter Kit For Symfony Projects'
 subtitle: 'Just add business logic.'
 
 # if you wish to integrate disqus on pages set your shortname here
-disqus_shortname: 'skfsp'
+disqus_shortname: ''
 
 # if you use google analytics, add your tracking id here
 google_analytics_id: ''
@@ -15,7 +15,7 @@ google_analytics_id: ''
 navigation: 1
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/bruth/jekyll-docs-template'
+codeurl: 'https://github.com/phptuts/starterkitforsymfony'
 
 # Default categories (in order) to appear in the navigation
 sections: [
@@ -28,7 +28,8 @@ sections: [
 
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: ''
+baseurl: '/docs'
+repo_url: ''
 
 # Dates are not included in permalinks
 permalink: none
