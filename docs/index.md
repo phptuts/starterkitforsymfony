@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Jekyll Docs Template"
+title: "Symfony Starter Kit"
 ---
 
 ### Get Started
