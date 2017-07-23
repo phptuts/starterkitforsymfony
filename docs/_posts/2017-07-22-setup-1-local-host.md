@@ -33,23 +33,22 @@ disqus: 1
 git clone https://github.com/phptuts/starterkitforsymfony.git
 ```
 6. Go into your Homestead.yml file and add a site to match where you cloned the repo.  Mine looks like this.
-``` 
-folders:
-    - map: ~/vagrant/code
-      to: /home/vagrant/Code
-
-sites:
-    - map: bigfootlocator.app
-      to: /home/vagrant/Code/Symfony/SymfonyStart/web
-      type: symfony2
-```
-
+    ``` 
+    folders:
+        - map: ~/vagrant/code
+          to: /home/vagrant/Code
+    
+    sites:
+        - map: bigfootlocator.app
+          to: /home/vagrant/Code/Symfony/SymfonyStart/web
+          type: symfony2
+    ```
 7. Also add a database to your config
-``` 
-databases:
-    - homestead
-    - skfsp
-```
+    ``` 
+    databases:
+        - homestead
+        - skfsp
+    ```
 8. vagrant up and then do a vagrant provision in the homestead folder.
 9. vagrant ssh to ssh into the vagrant box.
 10. cd into the directory where your project is
