@@ -8,7 +8,7 @@ disqus: 1
 ---
 
 
-Username and password login is done through the form_login in symfony security.yml file. Notice that we use the user_provider located under the provider section.  Also note that it looks for email as the property and not username.  
+Email and password login is done through the form_login in symfony security.yml file. Notice that we use the user_provider located under the provider section.  Also note that it looks for email as the property and not username.  
 
 #### Form Login With Provider
 
