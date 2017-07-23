@@ -51,7 +51,7 @@ This is the part where we store the type, page information for list responses, a
 
 ## Workflow
 
-1) Create a ResponseModel.  We have to a [ResponseModel]() for single items and a [ResponsePageModel]() for a list of items.  Each of these implement a ResponseInterface which has a getBody Method.  This is where you create the response envelope.  
+1) Create a ResponseModel.  We have to a [ResponseModel](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Response/ResponseModel.php) for single items and a [ResponsePageModel](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Response/ResponsePageModel.php) for a list of items.  Each of these implement a ResponseInterface which has a getBody Method.  This is where you create the response envelope.  
 
 #### Response Model Example
 
@@ -73,7 +73,7 @@ public function getBody()
 }
 ```
 
-2) The response model is then passed into the [ResponseSerializeService]().  This will take a [ResponseModelInterface]() interface and serialize it with the JMSSerializer Bundle.  Serialization is done in the standard way through entity annotations.  See the [User]() entity for an example.
+2) The response model is then passed into the [ResponseSerializeService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/ResponseSerializerService.php).  This will take a [ResponseModelInterface](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Response/ResponseModelInterface.php) interface and serialize it with the JMSSerializer Bundle.  Serialization is done in the standard way through entity annotations.  See the [User](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Entity/User.php) entity for an example.
  
  
  ## JMS Serializer Notes
