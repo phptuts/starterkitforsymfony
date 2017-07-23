@@ -80,6 +80,7 @@ public function getBody()
  
  We use annotations with the jms serializer.  Also for the user we use [Exclusion Policy=All](http://jmsyst.com/libs/serializer/master/reference/annotations#exclusionpolicy).  What this means is that we have to use the [Expose annotation](http://jmsyst.com/libs/serializer/master/reference/annotations#expose) to make it visible to the client consuming the api.  We also use [serialization groups](http://jmsyst.com/libs/serializer/master/reference/annotations#groups) to hide and expose properties of the user.  A google example is if the user or admin is accessing a user you may want to expose the user's email address, but if user is just being serialized as part of a a piece of content, say she is author, then you don't want to expose their email address.
  
- 
+ ### Helpful Links
+
  - [JMS Serialization Library Docs](http://jmsyst.com/libs/serializer)
  - [JMS Serializer Bundle Doc](http://jmsyst.com/bundles/JMSSerializerBundle)

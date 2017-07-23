@@ -186,6 +186,7 @@ public function onAuthenticationSuccess(Request $request, TokenInterface $token,
     return $this->credentialResponseBuilderService->createCredentialResponse($token->getUser());
 }
 ```
+### Helpful Links
 
 - [Symfony Authentication](https://symfony.com/doc/current/components/security/authentication.html)
 - [Security Yaml Docs](https://symfony.com/doc/current/security.html)
