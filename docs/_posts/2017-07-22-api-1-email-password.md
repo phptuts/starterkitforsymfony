@@ -12,7 +12,7 @@ disqus: 1
 
 The api uses a custom guards to authenticate requests.  A guard is a class that implements the [GuardAuthenticatorInterface](http://api.symfony.com/master/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html).  It calls a series of methods and determines if the user is valid.  Guards only deal with authentication, meaning who the user is.  They don't deal with whether user has access or not.
 
-What determines if symfony security will use a guard is in the security.yml file.  In our you will notice we use multiple guards.  It will try the first one or the one specified in the entry point.  So it will try the ApiLoginGuard first.  This is the guard that authenticates the email and password.
+What determines if symfony security will use a guard is in the [security.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/security.yml) file.  In our you will notice we use multiple guards.  It will try the first one or the one specified in the entry point.  So it will try the ApiLoginGuard first.  This is the guard that authenticates the email and password.
 
 [security.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/security.yml)
 ```
@@ -131,3 +131,10 @@ public function onAuthenticationSuccess(Request $request, TokenInterface $token,
     return $this->credentialResponseBuilderService->createCredentialResponse($token->getUser());
 }
 ```
+
+### Helpful Links
+
+- [Symfony Authentication](https://symfony.com/doc/current/components/security/authentication.html)
+- [Security Yaml Docs](https://symfony.com/doc/current/security.html)
+- [Custom Guard in symfony](https://symfony.com/doc/current/security/guard_authentication.html)
+- [Multiple Guards in symfony](https://symfony.com/doc/current/security/multiple_guard_authenticators.html)
