@@ -94,6 +94,6 @@ td, th {
 }
 
 li.active {
-    background: lightgray;
-    font-weight: 200;
+    background: #ded8d8;
+    font-weight: 400;
 }
