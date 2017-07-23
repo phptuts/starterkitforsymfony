@@ -32,8 +32,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <first_editor relative-caret-position="120">
+                <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="132" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -45,8 +45,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="465">
-                <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <first_editor relative-caret-position="409">
+                <caret line="176" column="19" lean-forward="false" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -551,12 +551,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="7239000" />
+      <workItem from="1500769724787" duration="8784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415610000" />
+    <option name="totallyTimeSpent" value="417155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1063,7 +1063,7 @@
         <state relative-caret-position="135">
           <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="39" selection-end-column="14" />
           <folding>
-            <element signature="e#12#56#0#Twig" expanded="true" />
+            <element signature="e#12#56#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,8 +1081,8 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <first_editor relative-caret-position="120">
+            <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="132" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1092,8 +1092,8 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="465">
-            <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <first_editor relative-caret-position="409">
+            <caret line="176" column="19" lean-forward="false" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
             <folding />
           </first_editor>
           <second_editor />
