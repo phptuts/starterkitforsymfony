@@ -7,8 +7,6 @@ order: 2
 disqus: 1
 ---
 
-## Standard symfony forms
-
 We use forms the way recommended in the best practices.  Meaning we don't do any validation in our forms.  We use validation_groups and annotations to add validation to the form.  Thus our forms are only responsible for what is what data is being processed.
 
 
