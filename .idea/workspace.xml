@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-how-to-add-a-page-to-account-setting.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-admin.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-an-api-endpoint.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-1-setup-local-host.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-1-local-host.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_config.yml" afterPath="$PROJECT_DIR$/docs/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-1-unit.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-1-unit.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional-api.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional-api.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-3-functional-website.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-3-functional-website.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-twig.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-twig.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,17 +67,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="390">
+              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-setup-1-local-host.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-setup-1-local-host.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-setup-1-local-host.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -292,11 +282,11 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-credits-1-open-source.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-twig.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
-        <option value="$PROJECT_DIR$/docs/_config.yml" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-1-unit.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-3-functional-website.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-setup-1-local-host.md" />
+        <option value="$PROJECT_DIR$/docs/_config.yml" />
       </list>
     </option>
   </component>
@@ -1155,12 +1145,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="34143000" />
+      <workItem from="1500769724787" duration="34183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442514000" />
+    <option name="totallyTimeSpent" value="442554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1711,14 +1701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-setup-1-local-host.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1727,6 +1709,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
