@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_config.yml" afterPath="$PROJECT_DIR$/docs/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-username-password.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-username-password.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-form-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-form-errors.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-api-docs.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-api-docs.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-api-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-api-errors.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-credits-1-open-source.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-credits-1-open-source.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-sug-1-website.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-sug-1-website.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-sug-2-website.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-sug-2-website.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-1-setup-local-host.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-1-setup-local-host.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-setup-production.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-setup-production.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-github-login.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-github-login.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-a-page-to-account-setting.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-a-page-to-account-setting.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-5-how-to-add-a-page-to-admin.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-5-how-to-add-a-page-to-admin.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-6-how-to-add-a-test.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-6-how-to-add-a-test.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-7-how-to-add-an-api-endpoint.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-7-how-to-add-an-api-endpoint.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-1-desktop-walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-1-desktop-walk-through.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-2-api-walk-through.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-2-api-walk-through.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-username-password.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-username-password.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-forget-password-workflow.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-forget-password-workflow.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-side-notes.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-side-notes.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.md" afterPath="$PROJECT_DIR$/docs/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_layouts/default.html" afterPath="$PROJECT_DIR$/docs/_layouts/default.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-2-facebook-google-auth.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-api-2-facebook-google-auth.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -136,34 +108,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-sug-2-website.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-sug-2-website.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="2017-07-22-api-6-response-envelops.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-sug-1-website.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-sug-1-website.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="90">
@@ -278,7 +244,6 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-form-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-credits-2-people-that-influence-me.md" />
         <option value="$PROJECT_DIR$/docs/_includes/navigation.html" />
-        <option value="$PROJECT_DIR$/docs/_layouts/default.html" />
         <option value="$PROJECT_DIR$/docs/css/main.css" />
         <option value="$PROJECT_DIR$/docs/_includes/header.html" />
         <option value="$PROJECT_DIR$/docs/_config.yml" />
@@ -310,6 +275,7 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" />
+        <option value="$PROJECT_DIR$/docs/_layouts/default.html" />
       </list>
     </option>
   </component>
@@ -624,12 +590,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="3718000" />
+      <workItem from="1500769724787" duration="3824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412089000" />
+    <option name="totallyTimeSpent" value="412195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="6" />
@@ -761,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-credits-2-people-that-influence-me.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -777,14 +735,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,6 +1083,22 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
