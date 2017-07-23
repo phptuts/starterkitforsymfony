@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-form-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-form-errors.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-response-envelops.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,12 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-07-22-api-6-form-errors.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-form-errors.md">
+      <file leaf-file-name="2017-07-22-api-9-form-errors.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-form-errors.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -46,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1140">
-                <caret line="48" column="145" lean-forward="false" selection-start-line="48" selection-start-column="145" selection-end-line="48" selection-end-column="145" />
+              <first_editor relative-caret-position="-356">
+                <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -117,12 +117,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-9-response-envelops.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-response-envelops.md">
+      <file leaf-file-name="2017-07-22-api-6-response-envelops.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <first_editor relative-caret-position="150">
+                <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -240,7 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-account-setting.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-ref-3-desktop-facebook-google-auth.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-desktop-auth.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-desktop-forget-password-workflow.md" />
@@ -287,10 +286,11 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-credentialed-response.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-response-envelops.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-response-envelops.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-form-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-response-envelops.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-form-errors.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-form-errors.md" />
       </list>
     </option>
   </component>
@@ -653,12 +653,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="13437000" />
+      <workItem from="1500769724787" duration="13681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421808000" />
+    <option name="totallyTimeSpent" value="422052000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1130,44 +1130,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-response-envelops.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-api-errors.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
             <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-api-docs.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-form-errors.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1196,11 +1163,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-api-docs.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-form-errors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1140">
-            <caret line="48" column="145" lean-forward="false" selection-start-line="48" selection-start-column="145" selection-end-line="48" selection-end-column="145" />
+          <first_editor relative-caret-position="-356">
+            <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
             <folding />
           </first_editor>
           <second_editor />
