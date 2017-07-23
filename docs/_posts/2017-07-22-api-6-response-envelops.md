@@ -75,7 +75,6 @@ public function getBody()
 
 2) The response model is then passed into the [ResponseSerializeService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/ResponseSerializerService.php).  This will take a [ResponseModelInterface](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Response/ResponseModelInterface.php) interface and serialize it with the JMSSerializer Bundle.  Serialization is done in the standard way through entity annotations.  See the [User](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Entity/User.php) entity for an example.
  
- 
  ## JMS Serializer Notes
  
  We use [JMS\Serializer\Naming\IdenticalPropertyNamingStrategy](https://knpuniversity.com/screencast/symfony-rest/serializer-basics) for serializing our json.  This means that the json will be camelcased and not snake cased.  This is being done in the [services.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/services.yml#L5) file.  The property we are over riding is,  jms_serializer.serialized_name_annotation_strategy.class.
