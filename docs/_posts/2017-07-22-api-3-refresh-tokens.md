@@ -67,7 +67,6 @@ The refresh token are authenticated through a custom guard. A guard is a class t
      return $userProvider->loadUserByUsername($credentials[self::TOKEN_FIELD]);
  }
  ```
- 
  ### [Refresh Token UserProvider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/RefreshTokenProvider.php) WorkFlow
 
 
