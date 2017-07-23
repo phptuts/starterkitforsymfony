@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-forget-password-workflow.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-6-register.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-6-register.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-email-password.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-username-password.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,20 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-common-3-emails.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="450">
-                <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-common-7-forget-password.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-common-7-forget-password.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -97,12 +81,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-website-2-facebook-google-auth.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2017-07-22-website-2-facebook-google-auth.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor relative-caret-position="165">
+                <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -114,8 +98,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -123,11 +107,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountSettingController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Main/AccountSettingController.php">
+      <file leaf-file-name="2017-07-22-website-4-account-setting.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-website-1-email-password.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-email-password.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="720">
+                <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -142,16 +152,6 @@
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="663" column="5" lean-forward="true" selection-start-line="663" selection-start-column="5" selection-end-line="663" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -241,9 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-username-password.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-2-api-walk-through.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-walk-1-desktop-walk-through.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-7-how-to-add-an-api-endpoint.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-6-how-to-add-a-test.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-5-how-to-add-a-page-to-admin.md" />
@@ -292,6 +289,9 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-6-register.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-forget-password-workflow.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-username-password.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-email-password.md" />
       </list>
     </option>
   </component>
@@ -920,12 +920,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="24542000" />
+      <workItem from="1500769724787" duration="25026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432913000" />
+    <option name="totallyTimeSpent" value="433397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -990,28 +990,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-walk-1-desktop-walk-through.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-walk-2-api-walk-through.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -1290,14 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1419,28 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-credits-1-open-source.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1468,6 +1416,58 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="227">
             <caret line="16" column="189" lean-forward="false" selection-start-line="16" selection-start-column="189" selection-end-line="16" selection-end-column="189" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-email-password.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="720">
+            <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
