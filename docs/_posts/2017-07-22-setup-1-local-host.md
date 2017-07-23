@@ -60,9 +60,9 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
 ```
 13. run migrations
 
-``` 
-bin/console doctrine:migrations:migrate
-```
+    ``` 
+           bin/console doctrine:migrations:migrate
+    ```
 14. run this data fixture file
     ``` 
     bin/console doctrine:fixtures:load --fixtures="./src/AppBundle/DataFixtures/ORM/LoadStartUserData.php"
