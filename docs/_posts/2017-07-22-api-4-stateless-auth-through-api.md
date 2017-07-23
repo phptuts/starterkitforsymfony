@@ -63,7 +63,7 @@ public function getCredentials(Request $request)
      return $userProvider->loadUserByUsername($credentials[self::TOKEN_FIELD]);
  }
 ```
-#### [Token Provider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/TokenProvider.php) Workflow
+### [Token Provider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/TokenProvider.php) Workflow
 
 1. The jws is validated using the [JWS Service](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/Credential/JWSService.php).  If an invalid token is provided a UsernameNotFoundException is thrown.
 2. The the payload of the token is decrypted and if the payload does not have a user_id key in it will throw a UsernameNotFoundException.  The payload of the token is a place where you can store custom set of data.  Think of it like a json object.
