@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-how-to-add-github-login.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-account-setting.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-how-to-add-a-page-to-account-setting.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-a-page-to-admin.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-admin.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-5-how-to-add-an-api-endpoint.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-an-api-endpoint.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_config.yml" afterPath="$PROJECT_DIR$/docs/_config.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-07-22-website-2-facebook-google-auth.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-website-2-facebook-google-auth.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
@@ -67,6 +63,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,19 +122,6 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="30">
                 <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-testing-3-functional-website.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-testing-3-functional-website.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -291,13 +284,13 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-1-email-password.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-2-how-to-add-github-login.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-a-page-to-admin.md" />
-        <option value="$PROJECT_DIR$/docs/_config.yml" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-1-unit.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-3-functional-website.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-account-setting.md" />
+        <option value="$PROJECT_DIR$/docs/_config.yml" />
       </list>
     </option>
   </component>
@@ -956,12 +949,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="26375000" />
+      <workItem from="1500769724787" duration="26513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434746000" />
+    <option name="totallyTimeSpent" value="434884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1412,14 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional-api.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1538,6 +1523,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

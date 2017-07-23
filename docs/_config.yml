@@ -23,7 +23,7 @@ sections: [
     ['common', 'Common'],
     ['website', 'Website'],
     ['api', 'API'],
-    ['test', 'Testing]
+    ['test', 'Testing'],
     ['tut', 'Tutorial'],
     ['sug', 'Suggestions'],
     ['credits', 'Credit / Thanks']
