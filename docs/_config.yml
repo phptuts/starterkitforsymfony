@@ -19,10 +19,10 @@ codeurl: 'https://github.com/phptuts/starterkitforsymfony'
 
 # Default categories (in order) to appear in the navigation
 sections: [
+    ['setup', 'Setup']
     ['common', 'Common'],
     ['website', 'Website'],
     ['api', 'API'],
-    ['test', 'Testing'],
     ['tut', 'Tutorial'],
     ['sug', 'Suggestions'],
     ['credits', 'Shout Outs']
