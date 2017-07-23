@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,12 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-07-22-api-1-email-password.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md">
+      <file leaf-file-name="2017-07-22-api-3-refresh-tokens.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="132" selection-end-column="3" />
+              <first_editor relative-caret-position="574">
+                <caret line="146" column="57" lean-forward="false" selection-start-line="146" selection-start-column="57" selection-end-line="146" selection-end-column="57" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -41,12 +42,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-2-facebook-google-auth.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-api-2-facebook-google-auth.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="409">
-                <caret line="176" column="19" lean-forward="false" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
+              <first_editor relative-caret-position="180">
+                <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-api-1-email-password.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="454">
+                <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="139" selection-end-column="107" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-api-4-stateless-auth-through-api.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -184,11 +221,11 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-form-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
         <option value="$PROJECT_DIR$/docs/_layouts/default.html" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-username-password.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
       </list>
     </option>
   </component>
@@ -551,12 +588,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="8784000" />
+      <workItem from="1500769724787" duration="9822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417155000" />
+    <option name="totallyTimeSpent" value="418193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -571,7 +608,7 @@
     <frame x="0" y="23" width="1437" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486632" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -621,13 +658,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_includes/google_analytics.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -966,28 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -1081,8 +1089,27 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-1-email-password.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="132" selection-end-column="3" />
+          <first_editor relative-caret-position="454">
+            <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="139" selection-end-column="107" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1092,8 +1119,19 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="409">
-            <caret line="176" column="19" lean-forward="false" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
+          <first_editor relative-caret-position="180">
+            <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="574">
+            <caret line="146" column="57" lean-forward="false" selection-start-line="146" selection-start-column="57" selection-end-line="146" selection-end-column="57" />
             <folding />
           </first_editor>
           <second_editor />
