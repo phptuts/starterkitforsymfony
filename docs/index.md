@@ -56,6 +56,7 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
 ``` 
     app.database_user: homestead
     app.database_password: secret
+    app.database_name: skfsp ## or whatever you named it in the config
 ```
 13. run migrations and this data fixtures script to load a default user.
 
@@ -64,6 +65,10 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
        
        bin/console doctrine:fixtures:load --fixtures="./src/AppBundle/DataFixtures/ORM/LoadStartUserData.php"
     ```
+14. Delete the .git folder
+```
+    rm -rf .git
+```
 
 You should then have the website setup.  The user to login is:
 
