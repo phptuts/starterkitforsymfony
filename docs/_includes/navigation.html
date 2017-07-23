@@ -6,9 +6,9 @@
 
         {% for _page in site.categories[attr] %}
             {% if forloop.first %}
-                <li class="nav-header">{{ label }}</li>
+                <li  class="nav-header">{{ label }}</li>
             {% endif %}
-            <li {% if _page.url  == page.url %} class="active"{% endif %} data-order="{{ _page.order }}"><a href="{{ site.baseurl }}{{ _page.url }}">{{ _page.title }}</a></li>
+            <li {% if page.url == '/' && _page.url == '' %}class="active"{% endif %}  {% if _page.url  == page.url %} class="active"{% endif %} data-order="{{ _page.order }}"><a href="{{ site.baseurl }}{{ _page.url }}">{{ _page.title }}</a></li>
         {% endfor %}
     {% endfor %}
 <!-- List additional links. It is recommended to add a divider
