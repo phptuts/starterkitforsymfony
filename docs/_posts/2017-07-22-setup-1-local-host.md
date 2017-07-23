@@ -24,8 +24,8 @@ disqus: 1
 
 ## Setup Guide
 
-1. Install [virtual box]().
-2. Install [vagrant]().
+1. Install [virtual box](https://www.virtualbox.org/).
+2. Install [vagrant](https://www.vagrantup.com/).
 3. Read the [homestead doc page](https://laravel.com/docs/5.4/homestead)
 4. Setup Homestead environment
 5. Now clone the repo for the starter kit
