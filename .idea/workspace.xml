@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-form-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-api-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-api-docs.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/noahglaser.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/noahglaser.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-2-facebook-google-auth.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,12 +42,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-9-docs.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-api-9-docs.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-478">
-                <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -102,12 +95,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-7-fos-rest-bundle.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2017-07-22-api-7-fos-rest-bundle.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="332">
-                <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="81" selection-end-column="85" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -287,9 +280,9 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" />
       </list>
     </option>
   </component>
@@ -792,12 +785,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="19369000" />
+      <workItem from="1500769724787" duration="19439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427740000" />
+    <option name="totallyTimeSpent" value="427810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1305,28 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="332">
-            <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="81" selection-end-column="85" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1170">
-            <caret line="66" column="111" lean-forward="false" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1354,8 +1325,30 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-478">
-            <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1170">
+            <caret line="66" column="111" lean-forward="false" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
