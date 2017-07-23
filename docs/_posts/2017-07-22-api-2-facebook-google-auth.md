@@ -187,5 +187,6 @@ public function onAuthenticationSuccess(Request $request, TokenInterface $token,
 - [Security Yaml Docs](https://symfony.com/doc/current/security.html)
 - [Custom Guard in symfony](https://symfony.com/doc/current/security/guard_authentication.html)
 - [Multiple Guards in symfony](https://symfony.com/doc/current/security/multiple_guard_authenticators.html)
+- [User Providers](https://symfony.com/doc/current/security/multiple_user_providers.html)
 - [Facebook Login](https://developers.facebook.com/docs/facebook-login/web/accesstokens)
 - [Google Login](https://developers.google.com/identity/sign-in/web/sign-in)
