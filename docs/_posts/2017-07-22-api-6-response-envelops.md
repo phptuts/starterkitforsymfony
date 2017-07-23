@@ -36,18 +36,17 @@ This is the part where we store the type, page information for list responses, a
 ```
 
 #### Non Paginated Response
-
 ```
 {
     "meta": {
         "type": "users",
         "paginated": false,
+    },
+    "data" : {
+        ...
     }
-}
-
 ```
-
-### Data is just a what response is
+The data part of the response is just what is being serialized.  In most of our example that would the user.
 
 ## Workflow
 
@@ -79,5 +78,8 @@ public function getBody()
  
  We use [JMS\Serializer\Naming\IdenticalPropertyNamingStrategy](https://knpuniversity.com/screencast/symfony-rest/serializer-basics) for serializing our json.  This means that the json will be camelcased and not snake cased.  This is being done in the [services.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/services.yml#L5) file.  The property we are over riding is,  jms_serializer.serialized_name_annotation_strategy.class.
  
+ We use annotations with the jms serializer.  Also for the user we use [Exclusion Policy=All](http://jmsyst.com/libs/serializer/master/reference/annotations#exclusionpolicy).  What this means is that we have to use the [Expose annotation](http://jmsyst.com/libs/serializer/master/reference/annotations#expose) to make it visible to the client consuming the api.  We also use [serialization groups](http://jmsyst.com/libs/serializer/master/reference/annotations#groups) to hide and expose properties of the user.  A google example is if the user or admin is accessing a user you may want to expose the user's email address, but if user is just being serialized as part of a a piece of content, say she is author, then you don't want to expose their email address.
  
  
+ - [JMS Serialization Library Docs](http://jmsyst.com/libs/serializer)
+ - [JMS Serializer Bundle Doc](http://jmsyst.com/bundles/JMSSerializerBundle)
