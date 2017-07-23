@@ -1,0 +1,8 @@
+AppBundle\Entity\User:
+    refresh_token_user:
+        email: 'admin@not_real_domain.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+

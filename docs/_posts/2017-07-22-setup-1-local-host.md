@@ -33,7 +33,6 @@ disqus: 1
 git clone https://github.com/phptuts/starterkitforsymfony.git
 ```
 6. Go into your Homestead.yml file and add a site to match where you cloned the repo.  Mine looks like this.
-
 ``` 
 folders:
     - map: ~/vagrant/code
@@ -51,7 +50,6 @@ databases:
     - homestead
     - skfsp
 ```
-
 8. vagrant up and then do a vagrant provision in the homestead folder.
 9. vagrant ssh to ssh into the vagrant box.
 10. cd into the directory where your project is
@@ -61,11 +59,19 @@ databases:
     app.database_user: homestead
     app.database_password: secret
 ```
-
 13. run migrations
 
 ``` 
 bin/console doctrine:migrations:migrate
 ```
+14. run this data fixture file
+``` 
+bin/console doctrine:fixtures:load --fixtures="./src/AppBundle/DataFixtures/ORM/LoadStartUserData.php"
+```
+
+You should then have the website setup.  The user to login is:
+
+email: admin@not_real_domain.com /
+password: password
 
 Then your done if you have any questions just ask!!! :)
