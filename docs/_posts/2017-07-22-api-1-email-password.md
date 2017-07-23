@@ -93,7 +93,9 @@ public function onAuthenticationFailure(Request $request, AuthenticationExceptio
  }
 ```
 
-4) The request is then passed to onAuthenticationSuccess and a credentialed response is returned.  This will have a jws token for stateless authentication.  A refresh token for getting a new jws token without email password login.  As well a serialized user.
+4) The request is then passed to onAuthenticationSuccess and a credentialed response is returned.  This will have a jws token for stateless authentication.  A refresh token for getting a new jws token without email password login.  As well a serialized user with serialization group user.  
+
+
 
 ```
  {
@@ -119,4 +121,13 @@ public function onAuthenticationFailure(Request $request, AuthenticationExceptio
         }
     }
 
+```
+
+[ApiLoginGuard](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Guard/ApiLoginGuard.php#L115)
+
+```
+public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+{
+    return $this->credentialResponseBuilderService->createCredentialResponse($token->getUser());
+}
 ```
