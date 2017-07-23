@@ -13,7 +13,7 @@ disqus: 1
 - [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle)
 - [JMSSerializerBundle](http://jmsyst.com/bundles/JMSSerializerBundle)
 - [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle)
-- [LiipFunctionalTestBundle]()https://github.com/liip/LiipFunctionalTestBundle
+- [LiipFunctionalTestBundle](https://github.com/liip/LiipFunctionalTestBundle)
 - [namshi/jose - jws / token library](https://github.com/namshi/jose)
 - [Doctrine](http://www.doctrine-project.org/projects/orm.html)
 - [composer](https://getcomposer.org/)
