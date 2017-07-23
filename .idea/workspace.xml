@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-3-javascript.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/admin/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/admin/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-website-7-twig.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-website-7-twig.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-twig.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -134,12 +127,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-common-8-500-errors.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2017-07-22-common-8-500-errors.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -291,8 +284,8 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-4-account-setting.md" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/admin/layout.html.twig" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md" />
       </list>
     </option>
   </component>
@@ -965,12 +958,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="28940000" />
+      <workItem from="1500769724787" duration="28992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437311000" />
+    <option name="totallyTimeSpent" value="437363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1505,17 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1532,6 +1514,17 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
             <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-8-500-errors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             <folding />
           </first_editor>
           <second_editor />
