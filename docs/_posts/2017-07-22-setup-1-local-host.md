@@ -64,9 +64,9 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
 bin/console doctrine:migrations:migrate
 ```
 14. run this data fixture file
-``` 
-bin/console doctrine:fixtures:load --fixtures="./src/AppBundle/DataFixtures/ORM/LoadStartUserData.php"
-```
+    ``` 
+    bin/console doctrine:fixtures:load --fixtures="./src/AppBundle/DataFixtures/ORM/LoadStartUserData.php"
+    ```
 
 You should then have the website setup.  The user to login is:
 
