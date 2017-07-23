@@ -60,10 +60,10 @@ databases:
 ``` 
     app.database_user: homestead
     app.database_password: secret
-
 ```
 
-13. run migrations.
+13. run migrations
+
 ``` 
 bin/console doctrine:migrations:migrate
 ```
