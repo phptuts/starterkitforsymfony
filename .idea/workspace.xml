@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-1-forms.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-2-register.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_config.yml" afterPath="$PROJECT_DIR$/docs/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +38,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-433">
-                <caret line="21" column="122" lean-forward="false" selection-start-line="21" selection-start-column="122" selection-end-line="21" selection-end-column="122" />
+              <first_editor relative-caret-position="272">
+                <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -41,12 +47,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-api-9-docs.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-api-9-docs.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <first_editor relative-caret-position="195">
+                <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-common-1-forms.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-1-forms.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-common-2-register.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-2-register.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-common-3-emails.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-22-common-4-s3-fileuploads.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -59,26 +127,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="140" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormErrorHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Handler/FormErrorHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="53" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -98,47 +146,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1215">
+              <first_editor relative-caret-position="75">
                 <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-api-6-response-envelops.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="332">
-                <caret line="74" column="184" lean-forward="false" selection-start-line="74" selection-start-column="73" selection-end-line="74" selection-end-column="184" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-api-5-credentialed-response.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-5-credentialed-response.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-688">
-                <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-07-22-api-4-stateless-auth-through-api.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -231,15 +240,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-account-setting.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-github-login.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-6-how-to-add-an-api-endpoint.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-form-errors.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-credits-2-people-that-influence-me.md" />
         <option value="$PROJECT_DIR$/docs/_includes/navigation.html" />
         <option value="$PROJECT_DIR$/docs/css/main.css" />
         <option value="$PROJECT_DIR$/docs/_includes/header.html" />
-        <option value="$PROJECT_DIR$/docs/_config.yml" />
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-side-notes.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md" />
@@ -279,9 +283,14 @@
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-3-refresh-tokens.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-4-stateless-auth-through-api.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-6-response-envelops.md" />
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-2-register.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-1-forms.md" />
+        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md" />
+        <option value="$PROJECT_DIR$/docs/_config.yml" />
       </list>
     </option>
   </component>
@@ -784,12 +793,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="19655000" />
+      <workItem from="1500769724787" duration="20057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428026000" />
+    <option name="totallyTimeSpent" value="428428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,9 +811,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1437" height="817" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32486632" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -854,55 +863,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/_includes/disqus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-7-side-notes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-6-error-pages.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-website-5-admin-user-management.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1324,7 +1284,7 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-7-fos-rest-bundle.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1215">
+          <first_editor relative-caret-position="75">
             <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             <folding />
           </first_editor>
@@ -1335,8 +1295,8 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-8-form-errors.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-433">
-            <caret line="21" column="122" lean-forward="false" selection-start-line="21" selection-start-column="122" selection-end-line="21" selection-end-column="122" />
+          <first_editor relative-caret-position="272">
+            <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1346,11 +1306,63 @@
     <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-api-9-docs.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <first_editor relative-caret-position="195">
+            <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-1-forms.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-2-register.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

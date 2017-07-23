@@ -65,7 +65,7 @@ What you will notice if that FOS Rest Bundle over rides the JMS Serializer Bundl
  }
  ```
  
- ### Helpful Links
+### Helpful Links
  - [FOS Form Errors](https://symfony.com/doc/master/bundles/FOSRestBundle/2-the-view-layer.html#forms-and-views)
  - [FOS Rest Bundle](https://symfony.com/doc/current/bundles/FOSRestBundle/index.html)
  
