@@ -8,7 +8,7 @@ disqus: 1
 ---
 
 
-## Using email and password to authenticate a user
+## Custom Guards
 
 The api uses a custom guards to authenticate requests.  A guard is a class that implements the [GuardAuthenticatorInterface](http://api.symfony.com/master/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html).  It calls a series of methods and determines if the user is valid.  Guards only deal with authentication, meaning who the user is.  They don't deal with whether user has access or not.
 
@@ -29,7 +29,7 @@ api_login:
 ```
 
 
-### Steps to authenticate
+### Workflow
 
 1) Symfony will pass the request through the getCredentials function.  This will see if the json response has email and password fields.  If does not it will return null and authentication will fail.  When authentication fails here the start function will be called and a 401 will be returned.
 

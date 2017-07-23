@@ -7,14 +7,12 @@ order: 4
 disqus: 1
 ---
 
-## Stateless Authentication Workflow
 
-
-#### What is Stateless Authentication
+## What is Stateless Authentication
 
 All this really means is that every request will pass a token.  In our case it will be passed in the header because of some internet standard on some [rfc](https://tools.ietf.org/html/rfc6750).  I am not making this up.  Stateless just means that the api does not keep state between requests and will authenticate the user every time.  This is really great for mobile clients and other devices that don't have a concept of  a session.
 
-#### Guard and [security.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/security.yml)
+## Guard and [security.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/security.yml)
  
 In order to implement stateless auth we use a custom guard.  A guard is a class that implements a [GuardAuthenticatorInterface](http://api.symfony.com/master/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html) that symfony uses to validate who a user is.   Guards are configured in the security.yml.  Here we are only using on guard.
 
@@ -29,7 +27,7 @@ api:
 
 ```
 
-#### Workflow
+## Workflow
 
 1) The request is passed to the getCredentials function in the ApiTokenGuard.  It checks the Authorization header in the request.  The header value is striped of the Bearer part so that only the token is return.  The type of token is also returned so that the AbstractTokenGuard can fetch the provider.
 

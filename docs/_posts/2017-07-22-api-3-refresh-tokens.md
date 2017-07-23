@@ -8,9 +8,11 @@ disqus: 1
 ---
 
 
-## Refresh Token Workflow
+## What is a refresh token?
 
 A refresh token is a string that is used to reauthenticate the user without the user entering in their username or password.  The system stores refresh token with an expiration date and whether they have been used.  Refresh tokens in our system can only be used once.  The app.refresh_token_ttl determines how many seconds the refresh token will have before it expires.  
+
+## [security.yml](https://github.com/phptuts/starterkitforsymfony/blob/master/app/config/security.yml) file
 
 The refresh token are authenticated through a custom guard. A guard is a class that implements a [GuardAuthenticatorInterface](http://api.symfony.com/master/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html) that symfony uses to validate who a user is.   Guards are configured in the security.yml.  We use multiple guards in our configuration for one end point. It will try the ApiLoginGuard first because that is the specified in the entry_point.  This guard will return null when it tries to get information from the request and it will the try the ApiLoginTokenGuard.
  
@@ -27,6 +29,8 @@ The refresh token are authenticated through a custom guard. A guard is a class t
          entry_point: AppBundle\Security\Guard\ApiLoginGuard
  
  ```
+ 
+ ## Workflow
  
  1) The guard will call the getCredentials function and see if the request has a token and a type of token in the json being sent.  If it does not it will return null and the start function will call the start function and return a 401.
  

@@ -7,7 +7,7 @@ order: 2
 disqus: 1
 ---
 
-## Using a facebook / google access token to authenticate vai the api.
+## Access Tokens
 
 You can authenticate a user via facebook or google by sending the api a access token and a type.  Right now the only 2 that are configured are facebook and google.  So the type of access token would be facebook or google. The api will will validate the token and if the token is valid it will log the user in.  If there is no user with an email address matching their facebook / google email the system will register the user and create an user with a random password.  For facebook to work you are required to ask in the scope for an email address.  If you don't do this it will fail.
 
@@ -20,6 +20,8 @@ Here more information on [facebook permission](https://developers.facebook.com/d
 ```
 {"token" : "google_access_token", "type": "google" }
 ```
+
+## Custom Guards
 
 In order to authenticate via facebook we use a custom guard.  A guard is a class that implements a [GuardAuthenticatorInterface](http://api.symfony.com/master/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html) that symfony uses to validate who a user is.  Guards are configured in the security.yml.  We use multiple guards in our configuration for one end point. It will try the ApiLoginGuard first because that is the specified in the entry_point.  This guard will return null when it tries to get information from the request and it will the try the ApiLoginTokenGuard.
 
@@ -36,6 +38,8 @@ api_login:
         entry_point: AppBundle\Security\Guard\ApiLoginGuard
 
 ```
+
+## Workflow
 
 1) The guard will call the getCredentials function and see if the request has a token and a type of token in the json being sent.  If it does not it will return null and the start function will call the start function and return a 401.
 
