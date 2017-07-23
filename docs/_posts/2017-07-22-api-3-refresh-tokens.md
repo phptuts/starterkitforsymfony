@@ -67,11 +67,10 @@ The refresh token are authenticated through a custom guard. A guard is a class t
      return $userProvider->loadUserByUsername($credentials[self::TOKEN_FIELD]);
  }
  ```
- ### [Refresh Token UserProvider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/RefreshTokenProvider.php) WorkFlow
-
-1) We use the refresh token service to see if the user has a valid refresh token.  If there is a duplicate refresh token which should never happen we thorugh a special exception.  
-2) If no valid refresh token is found a UsernameNotFoundException is thrown.
-3) Otherwise we save the refresh token as being used in our database and return the user attached to the refresh token.
+### [Refresh Token UserProvider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/RefreshTokenProvider.php) WorkFlow
+1. We use the refresh token service to see if the user has a valid refresh token.  If there is a duplicate refresh token which should never happen we thorugh a special exception.  
+2. If no valid refresh token is found a UsernameNotFoundException is thrown.
+3. Otherwise we save the refresh token as being used in our database and return the user attached to the refresh token.
 
 ```
 try{
