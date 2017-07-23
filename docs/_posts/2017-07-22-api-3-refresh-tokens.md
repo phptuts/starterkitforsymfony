@@ -103,7 +103,6 @@ final public function checkCredentials($credentials, UserInterface $user)
 4) The request is then passed to onAuthenticationSuccess and a credentialed response is returned.  This will have a jws token for stateless authentication.  A refresh token for getting a new jws token without email password login.  As well a serialized user with serialization group user.  
 
 
-
 ```
  {
         "meta": {
