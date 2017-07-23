@@ -97,3 +97,7 @@ li.active {
     background: #ded8d8;
     font-weight: 400;
 }
+
+#logo {
+    height: 30px;
+}
