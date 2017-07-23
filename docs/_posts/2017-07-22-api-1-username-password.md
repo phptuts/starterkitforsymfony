@@ -7,5 +7,5 @@ order: 1
 ---
 
 
-## {{ relative_path }}
+## {{ page.relative_path }}
 
