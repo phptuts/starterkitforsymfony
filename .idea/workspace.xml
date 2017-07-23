@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-register.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-6-register.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-emails.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-3-emails.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-s3-fileuploads.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md" afterPath="$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-common-7-forget-password.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2017-07-22-common-7-forget-password.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -95,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-07-22-common-4-s3-fileuploads.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-07-22-common-4-s3-fileuploads.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -112,8 +107,8 @@
         <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -822,12 +817,12 @@
       <workItem from="1500525039156" duration="4774000" />
       <workItem from="1500610857929" duration="15209000" />
       <workItem from="1500741765070" duration="7598000" />
-      <workItem from="1500769724787" duration="22747000" />
+      <workItem from="1500769724787" duration="22794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431118000" />
+    <option name="totallyTimeSpent" value="431165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1342,11 +1337,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1364,22 +1370,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-5-user-entity.md">
+    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-7-forget-password.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
             <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_posts/2017-07-22-common-4-s3-fileuploads.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
