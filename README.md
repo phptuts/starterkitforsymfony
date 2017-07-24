@@ -1,6 +1,9 @@
 A Starter Kit For Symfony
 ============
 [![Build Status](https://travis-ci.org/phptuts/starterkitforsymfony.svg?branch=master)](https://travis-ci.org/phptuts/starterkitforsymfony) [![Code Climate](https://codeclimate.com/github/phptuts/starterkitforsymfony/badges/gpa.svg)](https://codeclimate.com/github/phptuts/starterkitforsymfony) [![Code Climate](https://codeclimate.com/github/phptuts/starterkitforsymfony/badges/coverage.svg)](https://codeclimate.com/github/phptuts/starterkitforsymfony)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 This bundle is about helping you get up and running symfony, quickly.  Everything has been has been setup and coded so that all you should have to do is add your business logic. We've documented most of the projects so that if you need to change anything you should be able to without having to dig through a ton of code.  
 
