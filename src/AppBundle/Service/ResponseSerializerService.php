@@ -4,7 +4,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Model\Response\ResponseModelInterface;
 use JMS\Serializer\SerializationContext;
-use JMS\Serializer\Serializer;
+use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,11 +15,11 @@ use Symfony\Component\HttpFoundation\Response;
 class ResponseSerializerService
 {
     /**
-     * @var Serializer
+     * @var SerializerInterface
      */
     private $serializer;
 
-    public function __construct(Serializer $serializer)
+    public function __construct(SerializerInterface $serializer)
     {
         $this->serializer = $serializer;
     }

@@ -7,8 +7,8 @@ use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
 use AppBundle\Repository\UserRepository;
 use AppBundle\Service\AbstractEntityService;
-use Doctrine\ORM\EntityManager;
-use Symfony\Component\Security\Core\Encoder\EncoderFactory;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 
 /**
  * Class UserService
@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Encoder\EncoderFactory;
 class UserService extends AbstractEntityService
 {
     /**
-     * @var EncoderFactory
+     * @var EncoderFactoryInterface
      */
     protected $encoderFactory;
     /**
@@ -27,8 +27,8 @@ class UserService extends AbstractEntityService
 
 
     public function __construct(
-        EntityManager $em,
-        EncoderFactory $encoderFactory,
+        EntityManagerInterface $em,
+        EncoderFactoryInterface $encoderFactory,
         UserRepository $userRepository
     ) {
         parent::__construct($em);

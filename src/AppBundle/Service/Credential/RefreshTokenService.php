@@ -7,7 +7,7 @@ use AppBundle\Entity\RefreshToken;
 use AppBundle\Entity\User;
 use AppBundle\Repository\RefreshTokenRepository;
 use AppBundle\Service\AbstractEntityService;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * Class RefreshTokenService
@@ -27,11 +27,11 @@ class RefreshTokenService extends AbstractEntityService
 
     /**
      * RefreshTokenService constructor.
-     * @param EntityManager $em
+     * @param EntityManagerInterface $em
      * @param $refreshTokenTTL
      * @param RefreshTokenRepository $refreshTokenRepository
      */
-    public function __construct(EntityManager $em, RefreshTokenRepository $refreshTokenRepository, $refreshTokenTTL)
+    public function __construct(EntityManagerInterface $em, RefreshTokenRepository $refreshTokenRepository, $refreshTokenTTL)
     {
         parent::__construct($em);
         $this->refreshTokenTTL = $refreshTokenTTL;

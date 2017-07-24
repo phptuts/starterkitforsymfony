@@ -119,6 +119,7 @@ fos_rest:
         include_format:  false
     format_listener:
         rules:
+            - { path: '^/api/doc',  fallback_format: html } # Available for version >= 1.5
             - { path: '^/api', priorities: ['json'], fallback_format: json, prefer_extension: false }
             - { path: '^/*',  fallback_format: html } # Available for version >= 1.5
 

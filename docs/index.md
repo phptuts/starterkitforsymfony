@@ -72,7 +72,7 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
 
 You should then have the website setup.  The user to login is:
 
-email: admin@not_real_domain.com /
+email: admin@not-real-domain.com /
 password: password
 
 Then your done if you have any questions just ask!!! :)

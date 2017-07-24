@@ -61,7 +61,7 @@ services:
     AppBundle\Service\Credential\RefreshTokenService:
         class: AppBundle\Service\Credential\RefreshTokenService
         arguments:
-            - '@doctrine.orm.default_entity_manager'
+            - '@Doctrine\ORM\EntityManagerInterface'
             - '@AppBundle\Repository\RefreshTokenRepository'
             - '%app.refresh_token_ttl%'
 
@@ -92,13 +92,13 @@ services:
     #REPOSITORIES
     AppBundle\Repository\UserRepository:
         class: AppBundle\Repository\UserRepository
-        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        factory: 'Doctrine\Common\Persistence\ManagerRegistry:getRepository'
         arguments:
             - AppBundle\Entity\User
 
     AppBundle\Repository\RefreshTokenRepository:
         class: AppBundle\Repository\RefreshTokenRepository
-        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        factory: 'Doctrine\Common\Persistence\ManagerRegistry:getRepository'
         arguments:
             - AppBundle\Entity\RefreshToken
 
