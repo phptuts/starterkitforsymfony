@@ -64,12 +64,14 @@ git clone https://github.com/phptuts/starterkitforsymfony.git
     openssl rsa -pubout -in var/jwt/private.pem -out var/jwt/public.pem
     ```
 14. Run  composer install
-15. Fill in all the information that you got in the pre step.  Homestead root password stuff is here:
-``` 
-    app.database_user: homestead
-    app.database_password: secret
-    app.database_name: skfsp ## or whatever you named it in the config
-```
+15. Composer will ask for all the stuff you setup in the pre steps + jwt pass phrase & database info.  Homestead root 
+password stuff is below.  You can always change this in the parameters.yml, fyi.
+here:
+    ``` 
+        app.database_user: homestead
+        app.database_password: secret
+        app.database_name: skfsp ## or whatever you named it in the config
+    ```
 16. run migrations and this data fixtures script to load a default user.
 
     ``` 
