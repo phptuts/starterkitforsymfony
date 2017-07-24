@@ -95,3 +95,11 @@ email: admin@not-real-domain.com /
 password: password
 
 Then your done if you have any questions just ask!!! :)
+
+## Running Tests
+
+This will run all the tests 
+
+``` 
+    sh scripts/run_tests.sh
+```
