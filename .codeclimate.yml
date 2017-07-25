@@ -1,5 +1,8 @@
 languages:
   PHP: true
 exclude_paths:
-  - "var/SymfonyRequirements.php"
-  - "app/DoctrineMigrations/*.php"
+  - "var/*"
+  - "app/*"
+  - "web/*"
+  - "docs/*"
+  - "tests/*"
