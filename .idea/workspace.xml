@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/users.yml" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/users.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Entity/UserTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Entity/UserTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Service/User/UserServiceTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Service/User/UserServiceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,77 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="228" column="33" lean-forward="false" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="33" />
-              <folding>
-                <element signature="e#36#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/User/UserService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="41" column="38" lean-forward="false" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-              <folding>
-                <element signature="e#43#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RefreshTokenProviderServiceTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="69" column="40" lean-forward="false" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CredentialModelBuilderService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Credential/CredentialModelBuilderService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CredentialModelBuilderServiceTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/CredentialModelBuilderServiceTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="46" column="88" lean-forward="false" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
-              <folding>
-                <element signature="e#56#82#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CredentialResponseBuilderServiceTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/CredentialResponseBuilderServiceTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/User/UserServiceTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="197" column="60" lean-forward="false" selection-start-line="197" selection-start-column="60" selection-end-line="197" selection-end-column="60" />
+            <state relative-caret-position="283">
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -116,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/AppBundle/Entity/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="497">
@@ -128,14 +60,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="S3ServiceTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/S3ServiceTest.php">
+      <file leaf-file-name="run_before_travis.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/run_before_travis.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JWSServiceTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
               <folding>
-                <element signature="e#44#59#0#PHP" expanded="true" />
+                <element signature="e#54#80#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JWSService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Credential/JWSService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="e#48#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_test.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,7 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-4-how-to-add-a-page-to-admin.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-testing-2-functional.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-tut-3-how-to-add-a-page-to-account-setting.md" />
         <option value="$PROJECT_DIR$/docs/_posts/2017-07-22-website-2-facebook-google-auth.md" />
@@ -260,7 +253,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Credential/RefreshTokenService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/AbstractEntityService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Credential/JWSService.php" />
-        <option value="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/RefreshToken.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/User/UserService.php" />
@@ -276,6 +268,8 @@
         <option value="$PROJECT_DIR$/tests/AppBundle/Service/User/UserServiceTest.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/users.yml" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Entity/UserTest.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+        <option value="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" />
       </list>
     </option>
   </component>
@@ -630,6 +624,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="User" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Credential" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1011,6 +1031,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SymfonyStart" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1050,7 +1084,7 @@
     <property name="php.override.implement.member.chooser.php.doc" value="COPY_ALWAYS" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="testRefreshTokenModel&#9;null&#9;null&#10;CredentialModelBuilderService&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Service/Credential/CredentialModelBuilderService.php&#10;RefreshTokenProviderServiceTest.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php&#10;Symfony\Component\Security\Guard\GuardAuthenticatorHandler&#9;null&#9;null&#10;ApiLoginGuard&#9;null&#9;null&#10;ExceptionListener&#9;null&#9;null&#10;ExceptionHandler&#9;null&#9;null&#10;fos_rest.exception.messages_map&#9;null&#9;null&#10;ExceptionController&#9;null&#9;null&#10;ExceptionCont&#9;null&#9;null&#10;Exception&#9;null&#9;null&#10;ExceptionCo&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/src/ApiBundle/Controller/ExceptionController.php&#10;TwigBun&#9;null&#9;null&#10;showAction&#9;null&#9;null&#10;testRefreshTokenLogin&#9;null&#9;null&#10;JMS\Serializer\Handler\FormErrorHandler&#9;null&#9;null&#10;FormErrorHandler&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php&#10;Validation Failed&#9;null&#9;null&#10;bootstrap_3_layout&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;ReadWriteCachedEntityPersister&#9;null&#9;null&#10;FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="JWSServiceTest&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Service/Credential/JWSServiceTest.php&#10;testRefreshTokenModel&#9;null&#9;null&#10;CredentialModelBuilderService&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Service/Credential/CredentialModelBuilderService.php&#10;RefreshTokenProviderServiceTest.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php&#10;Symfony\Component\Security\Guard\GuardAuthenticatorHandler&#9;null&#9;null&#10;ApiLoginGuard&#9;null&#9;null&#10;ExceptionListener&#9;null&#9;null&#10;ExceptionHandler&#9;null&#9;null&#10;fos_rest.exception.messages_map&#9;null&#9;null&#10;ExceptionController&#9;null&#9;null&#10;ExceptionCont&#9;null&#9;null&#10;Exception&#9;null&#9;null&#10;ExceptionCo&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/src/ApiBundle/Controller/ExceptionController.php&#10;TwigBun&#9;null&#9;null&#10;showAction&#9;null&#9;null&#10;testRefreshTokenLogin&#9;null&#9;null&#10;JMS\Serializer\Handler\FormErrorHandler&#9;null&#9;null&#10;FormErrorHandler&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php&#10;Validation Failed&#9;null&#9;null&#10;bootstrap_3_layout&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;ReadWriteCachedEntityPersister&#9;null&#9;null&#10;FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1196,12 +1230,12 @@
       <workItem from="1500851577339" duration="1502000" />
       <workItem from="1500864509529" duration="5800000" />
       <workItem from="1509508779509" duration="709000" />
-      <workItem from="1509580505775" duration="6902000" />
+      <workItem from="1509580505775" duration="7423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461148000" />
+    <option name="totallyTimeSpent" value="461669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1271,67 +1305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1470">
-            <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="104" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1500">
-            <caret line="100" column="3" lean-forward="false" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManagerInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="61" column="17" lean-forward="false" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="62" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/AbstractEntityService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1353,24 +1326,6 @@
         <state relative-caret-position="195">
           <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
-          <folding>
-            <element signature="e#54#80#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1448,16 +1403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Credential/JWSService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1107">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="e#48#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Entity/RefreshTokenTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1494,14 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="65" column="52" lean-forward="false" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1700,6 +1637,98 @@
           <caret line="137" column="77" lean-forward="false" selection-start-line="137" selection-start-column="77" selection-end-line="137" selection-end-column="77" />
           <folding>
             <element signature="e#41#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Credential/JWSService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="e#48#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/public.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/private.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/run_before_travis.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+          <folding>
+            <element signature="e#54#80#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -16,11 +16,14 @@ class JWSServiceTest extends BaseTestCase
      */
     protected $JWSService;
 
+    public static $passphrase;
+
     protected function setUp()
     {
+        self::$passphrase = $this->getContainer()->getParameter('app.jws_ttl');
         parent::setUp();
         $this->JWSService =
-            new JWSService($this->getContainer()->getParameter('app.jws_pass_phrase'), $this->getContainer()->getParameter('app.jws_ttl'));
+            new JWSService($this->getContainer()->getParameter('app.jws_pass_phrase'), self::$passphrase);
     }
 
 
@@ -100,7 +103,7 @@ class JWSServiceTest extends BaseTestCase
      */
     public static function createExpiredToken(User $user)
     {
-        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), '1234');
+        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), self::$passphrase);
         $jws = new SimpleJWS([
             'alg' => 'RS256'
         ]);
