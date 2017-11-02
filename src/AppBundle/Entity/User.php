@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use AppBundle\Model\Response\ResponseTypeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Model\Security\AuthTokenModel;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
@@ -212,6 +213,20 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jpeg", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */
     protected $image;
+
+    /**
+     * @var string
+     * @Serializer\Exclude()
+     * @ORM\Column(name="refresh_token", type="string", nullable=true)
+     */
+    protected $refreshToken;
+
+    /**
+     * @var \DateTime
+     * @Serializer\Exclude()
+     * @ORM\Column(name="refresh_token_expire", type="datetime", nullable=true)
+     */
+    protected $refreshTokenExpire;
 
     /**
      * Get id
@@ -667,6 +682,62 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getRefreshToken()
+    {
+        return $this->refreshToken;
+    }
 
+    /**
+     * @param string $refreshToken
+     * @return User
+     */
+    public function setRefreshToken($refreshToken)
+    {
+        $this->refreshToken = $refreshToken;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getRefreshTokenExpire()
+    {
+        return $this->refreshTokenExpire;
+    }
+
+    /**
+     * @param \DateTime $refreshTokenExpire
+     * @return User
+     */
+    public function setRefreshTokenExpire($refreshTokenExpire)
+    {
+        $this->refreshTokenExpire = $refreshTokenExpire;
+
+        return $this;
+    }
+
+    /**
+     * Returns an auth model representing the token
+     *
+     * @return AuthTokenModel
+     */
+    public function getAuthRefreshModel()
+    {
+        return new AuthTokenModel($this->refreshToken, $this->refreshTokenExpire->getTimestamp());
+    }
+
+    /**
+     * Returns true if the refresh token is valid
+     *
+     * @return bool
+     */
+    public function isRefreshTokenValid()
+    {
+        return !empty($this->getRefreshToken()) && $this->getRefreshTokenExpire() > new \DateTime();
+    }
 }
 

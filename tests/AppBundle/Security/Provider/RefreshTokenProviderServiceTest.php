@@ -4,6 +4,7 @@
 namespace Test\AppBundle\Security\Provider;
 
 use AppBundle\Entity\RefreshToken;
+use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
 use AppBundle\Repository\RefreshTokenRepository;
 use AppBundle\Repository\UserRepository;
@@ -27,36 +28,30 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
      */
     protected $userService;
 
-    /**
-     * @var RefreshTokenService|Mock
-     */
-    protected $refreshTokenService;
 
 
     public function setUp()
     {
         parent::setUp();
         $this->userService = \Mockery::mock(UserService::class);
-        $this->refreshTokenService = \Mockery::mock(RefreshTokenService::class);
 
         $this->refreshTokenProvider =
-            new RefreshTokenProvider($this->userService, $this->refreshTokenService);
+            new RefreshTokenProvider($this->userService);
     }
 
     /**
-     * Tests taht a valid refresh token can find a user.  Once the user is we test that token is marked used so it can not be used again.
+     * Tests that a valid refresh token can find a user.  That it update the refresh token
      */
     public function testValidRefreshTokenFound()
     {
-        $refreshToken = new RefreshToken();
-        Assert::assertFalse($refreshToken->isUsed());
-
-        $this->refreshTokenService->shouldReceive('getValidRefreshToken')->with('token')->andReturn($refreshToken);
-        $this->refreshTokenService->shouldReceive('save')->with($refreshToken);
-
-        $this->refreshTokenProvider->loadUserByUsername('token');
-
-        Assert::assertTrue($refreshToken->isUsed());
+        $user = new User();
+        $this->userService
+            ->shouldReceive('findUserByValidRefreshToken')
+            ->once()
+            ->with('refresh_token')
+            ->andReturn($user);
+        $this->userService->shouldReceive('updateUserRefreshToken')->once()->with($user);
+        $this->refreshTokenProvider->loadUserByUsername('refresh_token');
     }
 
     /**
@@ -65,30 +60,16 @@ class RefreshTokenProviderServiceTest extends BaseTestCase
     public function testRefreshTokenNotFound()
     {
         $this->expectException(UsernameNotFoundException::class);
-        $refreshToken = new RefreshToken();
-        Assert::assertFalse($refreshToken->isUsed());
 
-        $this->refreshTokenService->shouldReceive('getValidRefreshToken')->with('token')->andReturnNull();
-        $this->refreshTokenProvider->loadUserByUsername('token');
+        $this->userService
+            ->shouldReceive('findUserByValidRefreshToken')
+            ->once()
+            ->with('refresh_token')
+            ->andReturn(null);
+
+        $this->refreshTokenProvider->loadUserByUsername('refresh_token');
+
     }
 
-    /**
-     * Tests that if duplicate refresh tokens our found that the special
-     * exception code and message are thrown in the UsernameNotFoundException.
-     */
-    public function testDuplicateRefreshToken()
-    {
-        $this->expectException(UsernameNotFoundException::class);
-        $this->expectExceptionCode(ProgrammerException::REFRESH_TOKEN_DUPLICATE);
-        $this->expectExceptionMessage('Duplicate Refresh Token.');
-        $refreshToken = new RefreshToken();
-        Assert::assertFalse($refreshToken->isUsed());
-
-        $this->refreshTokenService
-            ->shouldReceive('getValidRefreshToken')
-            ->with('token')
-            ->andThrow(new ProgrammerException('Duplicate Refresh Token.', ProgrammerException::REFRESH_TOKEN_DUPLICATE));
-        $this->refreshTokenProvider->loadUserByUsername('token');
-    }
 
 }

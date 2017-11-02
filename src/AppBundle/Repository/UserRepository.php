@@ -111,4 +111,22 @@ class UserRepository extends EntityRepository
 
         return $paginator;
     }
+
+    /**
+     * Finds a user by refresh token that is not expired
+     *
+     * @param $token
+     * @return null|object|User
+     */
+    public function findUserByValidRefreshToken($token)
+    {
+        /** @var User $user */
+        $user = $this->findOneBy(['refreshToken' => $token]);
+
+        if (!empty($user) && $user->isRefreshTokenValid()) {
+            return $user;
+        }
+
+        return null;
+    }
 }

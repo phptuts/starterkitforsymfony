@@ -58,12 +58,15 @@ services:
             - '%app.jws_pass_phrase%'
             - '%app.jws_ttl%'
 
-    AppBundle\Service\Credential\RefreshTokenService:
-        class: AppBundle\Service\Credential\RefreshTokenService
+    AppBundle\Service\User\UserService:
+        class: AppBundle\Service\User\UserService
         arguments:
-            - '@Doctrine\ORM\EntityManagerInterface'
-            - '@AppBundle\Repository\RefreshTokenRepository'
+            - '@doctrine.orm.entity_manager'
+            - '@Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface'
+            - '@AppBundle\Repository\UserRepository'
             - '%app.refresh_token_ttl%'
+
+
 
 
     # FACTORIES
@@ -95,12 +98,6 @@ services:
         factory: 'Doctrine\Common\Persistence\ManagerRegistry:getRepository'
         arguments:
             - AppBundle\Entity\User
-
-    AppBundle\Repository\RefreshTokenRepository:
-        class: AppBundle\Repository\RefreshTokenRepository
-        factory: 'Doctrine\Common\Persistence\ManagerRegistry:getRepository'
-        arguments:
-            - AppBundle\Entity\RefreshToken
 
 
     # EVENT LISTENERS

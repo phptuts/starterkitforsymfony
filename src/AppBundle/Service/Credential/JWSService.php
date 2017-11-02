@@ -98,7 +98,7 @@ class JWSService
 
             $jws = SimpleJWS::load($token);
 
-            return $jws->verify($publicKey, self::ALG);
+            return $jws->verify($publicKey, self::ALG) && $this->isTokenNotExpired($token);
         } catch (\InvalidArgumentException $ex) {
             return false;
         }
@@ -121,5 +121,12 @@ class JWSService
             throw new ProgrammerException('Unable to read jws token.', ProgrammerException::JWS_INVALID_TOKEN_FORMAT);
         }
 
+    }
+
+    private function isTokenNotExpired($token)
+    {
+        $payload = $this->getPayload($token);
+
+        return isset($payload[self::EXP_KEY]) && $payload[self::EXP_KEY] > (new \DateTime())->getTimestamp();
     }
 }

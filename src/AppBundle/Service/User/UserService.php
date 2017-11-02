@@ -25,15 +25,22 @@ class UserService extends AbstractEntityService
      */
     private $userRepository;
 
+    /**
+     * @var integer the number of seconds for a refresh token to live
+     */
+    private $refreshTokenTTL;
+
 
     public function __construct(
         EntityManagerInterface $em,
         EncoderFactoryInterface $encoderFactory,
-        UserRepository $userRepository
+        UserRepository $userRepository,
+        $refreshTokenTTL
     ) {
         parent::__construct($em);
         $this->encoderFactory = $encoderFactory;
         $this->userRepository = $userRepository;
+        $this->refreshTokenTTL = $refreshTokenTTL;
     }
 
 
@@ -63,6 +70,23 @@ class UserService extends AbstractEntityService
             ->setForgetPasswordExpired(null);
 
         $this->saveUserWithPlainPassword($user);
+    }
+
+    /**
+     * Saves the user with an updated refresh token
+     *
+     * @param User $user
+     */
+    public function updateUserRefreshToken(User $user)
+    {
+        if (!$user->isRefreshTokenValid()) {
+            $user->setRefreshToken(bin2hex(random_bytes(90)));
+        }
+
+        $expirationDate = new \DateTime();
+        $expirationDate->modify('+' . $this->refreshTokenTTL . ' seconds');
+        $user->setRefreshTokenExpire($expirationDate);
+        $this->save($user);
     }
 
     /**
@@ -143,4 +167,14 @@ class UserService extends AbstractEntityService
         return $this->userRepository->findUserByForgetPasswordToken($token);
     }
 
+    /**
+     * Return a user with a matching refresh token
+     *
+     * @param $token
+     * @return User|null
+     */
+    public function findUserByValidRefreshToken($token)
+    {
+        return $this->userRepository->findUserByValidRefreshToken($token);
+    }
 }

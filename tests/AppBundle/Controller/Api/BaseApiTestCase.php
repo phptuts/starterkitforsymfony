@@ -2,10 +2,8 @@
 
 namespace Tests\AppBundle\Controller\Api;
 
-use AppBundle\Entity\RefreshToken;
 use AppBundle\Entity\User;
 use AppBundle\Factory\FaceBookClientFactory;
-use AppBundle\Repository\RefreshTokenRepository;
 use AppBundle\Repository\UserRepository;
 use AppBundle\Service\Credential\JWSService;
 use Liip\FunctionalTestBundle\Test\WebTestCase;
@@ -23,10 +21,6 @@ class BaseApiTestCase extends WebTestCase
      */
     protected $userRepository;
 
-    /**
-     * @var RefreshTokenRepository
-     */
-    protected $refreshTokenRepository;
 
     /**
      * @var JWSService
@@ -47,7 +41,6 @@ class BaseApiTestCase extends WebTestCase
         );
 
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
-        $this->refreshTokenRepository = $em->getRepository(RefreshToken::class);
         $this->userRepository = $em->getRepository(User::class);
         $this->facebookClientFactory = new FaceBookClientFactory(
             $this->getContainer()->getParameter('app.facebook_app_id'),
@@ -157,18 +150,18 @@ class BaseApiTestCase extends WebTestCase
     public function assertRefreshToken($token, $email, $exp)
     {
 
-        $refreshToken = $this->refreshTokenRepository->getValidRefreshToken($token);
+        $user = $this->userRepository->findUserByValidRefreshToken($token);
 
-        Assert::assertEquals($refreshToken->getUser()->getEmail(), $email);
+        Assert::assertEquals($user->getEmail(), $email);
 
         $ttlForTokenInSeconds = $this->getContainer()->getParameter('app.refresh_token_ttl');
         $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds - 1500) .  ' seconds')->getTimestamp();
         $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . ($ttlForTokenInSeconds + 1500) .  ' seconds')->getTimestamp();
 
         // Asserts that the expiration timestamp is with 500 seconds
-        Assert::assertTrue($lessThanExpirationTimeStamp < $refreshToken->getExpires()->getTimestamp());
-        Assert::assertTrue($greaterThanExpirationTimeStamp > $refreshToken->getExpires()->getTimestamp());
-        Assert::assertEquals($refreshToken->getExpires()->getTimestamp(), $exp);
+        Assert::assertTrue($lessThanExpirationTimeStamp < $user->getRefreshTokenExpire()->getTimestamp());
+        Assert::assertTrue($greaterThanExpirationTimeStamp > $user->getRefreshTokenExpire()->getTimestamp());
+        Assert::assertEquals($user->getRefreshTokenExpire()->getTimestamp(), $exp);
     }
 
     /**

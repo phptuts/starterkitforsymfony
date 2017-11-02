@@ -17,21 +17,12 @@ class RefreshTokenProvider extends AbstractCustomProvider
 {
 
     /**
-     * @var RefreshTokenService
-     */
-    private $refreshTokenService;
-
-    /**
      * RefreshTokenProvider constructor.
      * @param UserService $userService
-     * @param RefreshTokenService $refreshTokenService
      */
-    public function __construct(UserService $userService,
-                                RefreshTokenService $refreshTokenService
-    )
+    public function __construct(UserService $userService)
     {
         parent::__construct($userService);
-        $this->refreshTokenService = $refreshTokenService;
     }
 
     /**
@@ -42,31 +33,17 @@ class RefreshTokenProvider extends AbstractCustomProvider
      */
     public function loadUserByUsername($username)
     {
-        try{
-            $token = $this->refreshTokenService->getValidRefreshToken($username);
-        }
-        catch (ProgrammerException $ex) {
-            throw new UsernameNotFoundException($ex->getMessage(), ProgrammerException::REFRESH_TOKEN_DUPLICATE);
-        }
+        $user = $this->userService->findUserByValidRefreshToken($username);
 
-        if (empty($token)) {
-            throw new UsernameNotFoundException("Invalid Refresh Token");
+        if (empty($user)) {
+            throw new UsernameNotFoundException('No user found with refresh token provided.');
         }
 
-        $this->saveRefreshTokenUsed($token);
+        // This adds time to the refresh token.
+        $this->userService->updateUserRefreshToken($user);
 
-        return $token->getUser();
+        return $user;
     }
 
-    /**
-     * Sets the refresh token to used and saves it to the database.
-     *
-     * @param RefreshToken $token
-     */
-    private function saveRefreshTokenUsed(RefreshToken $token)
-    {
-        $token->setUsed(true);
-        $this->refreshTokenService->save($token);
-    }
 
 }

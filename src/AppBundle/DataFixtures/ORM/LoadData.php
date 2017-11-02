@@ -19,7 +19,6 @@ class LoadData implements FixtureInterface
     {
         Fixtures::load([
             __DIR__ . '/users.yml',
-            __DIR__ . '/refresh_token.yml'
             ], $manager
         );
     }

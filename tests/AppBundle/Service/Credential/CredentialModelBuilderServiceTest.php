@@ -4,12 +4,11 @@
 namespace Tests\AppBundle\Service\Credential;
 
 
-use AppBundle\Entity\RefreshToken;
 use AppBundle\Entity\User;
 use AppBundle\Model\Security\AuthTokenModel;
 use AppBundle\Service\Credential\CredentialModelBuilderService;
 use AppBundle\Service\Credential\JWSService;
-use AppBundle\Service\Credential\RefreshTokenService;
+use AppBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Tests\BaseTestCase;
@@ -22,9 +21,9 @@ class CredentialModelBuilderServiceTest extends BaseTestCase
     protected $credentialModelBuilderService;
 
     /**
-     * @var RefreshTokenService|Mock
+     * @var UserService|Mock
      */
-    protected $refreshTokenService;
+    protected $userService;
 
     /**
      * @var JWSService|Mock
@@ -34,9 +33,9 @@ class CredentialModelBuilderServiceTest extends BaseTestCase
     public function setUp()
     {
         parent::setUp();
-        $this->refreshTokenService = \Mockery::mock(RefreshTokenService::class);
+        $this->userService = \Mockery::mock(UserService::class);
         $this->jwsTokenService = \Mockery::mock(JWSService::class);
-        $this->credentialModelBuilderService = new CredentialModelBuilderService($this->jwsTokenService, $this->refreshTokenService);
+        $this->credentialModelBuilderService = new CredentialModelBuilderService($this->jwsTokenService, $this->userService);
     }
 
     /**
@@ -45,20 +44,22 @@ class CredentialModelBuilderServiceTest extends BaseTestCase
     public function testCreateCredentialModel()
     {
         $user = new User();
+        $user->setRefreshTokenExpire(new \DateTime())->setRefreshToken('refresh_token');
         $tokenModel = new AuthTokenModel('token', 22);
 
-        $expires = new \DateTime();
-
-        $refreshToken = (new RefreshToken())->setToken('refresh_token')->setExpires($expires);
-
         $this->jwsTokenService->shouldReceive('createAuthTokenModel')->with($user)->andReturn($tokenModel);
-        $this->refreshTokenService->shouldReceive('createRefreshToken')->with($user)->andReturn($refreshToken);
+        $this->userService->shouldReceive('updateUserRefreshToken')->with($user)->andReturn($user);
 
         $credModel = $this->credentialModelBuilderService->createCredentialModel($user);
 
         Assert::assertEquals($tokenModel, $credModel->getTokenModel());
-        Assert::assertEquals($refreshToken->getExpires()->getTimestamp(), $credModel->getRefreshTokenModel()->getExpirationTimeStamp());
-        Assert::assertEquals($refreshToken->getToken(), $credModel->getRefreshTokenModel()->getToken());
+        Assert::assertEquals(
+            $user->getAuthRefreshModel()->getExpirationTimeStamp(),
+            $credModel->getRefreshTokenModel()->getExpirationTimeStamp());
+        Assert::assertEquals(
+            $user->getRefreshToken(),
+            $credModel->getRefreshTokenModel()->getToken()
+        );
         Assert::assertEquals($user, $credModel->getUser());
     }
 }

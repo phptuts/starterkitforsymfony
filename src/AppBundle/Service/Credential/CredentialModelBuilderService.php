@@ -4,6 +4,7 @@ namespace AppBundle\Service\Credential;
 
 use AppBundle\Entity\User;
 use AppBundle\Model\Security\CredentialModel;
+use AppBundle\Service\User\UserService;
 
 /**
  * Class CredentialModelBuilderService
@@ -17,19 +18,19 @@ class CredentialModelBuilderService
     private $JWSService;
 
     /**
-     * @var RefreshTokenService
+     * @var UserService
      */
-    private $refreshTokenService;
+    private $userService;
 
     /**
      * CredentialModelBuilderService constructor.
      * @param JWSService $JWSService
-     * @param RefreshTokenService $refreshTokenService
+     * @param UserService $userService
      */
-    public function __construct(JWSService $JWSService, RefreshTokenService $refreshTokenService)
+    public function __construct(JWSService $JWSService, UserService $userService)
     {
         $this->JWSService = $JWSService;
-        $this->refreshTokenService = $refreshTokenService;
+        $this->userService = $userService;
     }
 
     /**
@@ -41,10 +42,8 @@ class CredentialModelBuilderService
     public function createCredentialModel(User $user)
     {
         $authTokenModel = $this->JWSService->createAuthTokenModel($user);
-        $refreshTokenModel = $this->refreshTokenService
-                                    ->createRefreshToken($user)
-                                    ->getAuthModel();
+        $this->userService->updateUserRefreshToken($user);
 
-        return new CredentialModel($user, $authTokenModel, $refreshTokenModel);
+        return new CredentialModel($user, $authTokenModel, $user->getAuthRefreshModel());
     }
 }

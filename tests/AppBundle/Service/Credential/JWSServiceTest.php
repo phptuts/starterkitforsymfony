@@ -4,7 +4,7 @@ namespace Tests\AppBundle\Service\Credential;
 
 use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
-use AppBundle\Model\Security\AuthTokenModel;
+use Namshi\JOSE\SimpleJWS;
 use AppBundle\Service\Credential\JWSService;
 use PHPUnit\Framework\Assert;
 use Tests\BaseTestCase;
@@ -81,4 +81,43 @@ class JWSServiceTest extends BaseTestCase
             ['eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ']
         ];
     }
+
+    /**
+     * Tests that expired tokens are not valid
+     */
+    public function testExpiredToken()
+    {
+        $user = new User();
+        $this->setObjectId($user, 15);
+        $expiredToken = self::createExpiredToken($user);
+
+        Assert::assertFalse($this->JWSService->isValid($expiredToken));
+    }
+
+    /**
+     * @param User $user
+     * @return string
+     */
+    public static function createExpiredToken(User $user)
+    {
+        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), '1234');
+        $jws = new SimpleJWS([
+            'alg' => 'RS256'
+        ]);
+
+        $expirationDate = new \DateTime();
+        $expirationDate->modify('-10 seconds');
+        $expirationTimestamp = $expirationDate->getTimestamp();
+
+        $jws->setPayload([
+            'user_id' => $user->getId(),
+            'exp' => $expirationTimestamp,
+            'iat' => (new \DateTime())->getTimestamp()
+        ]);
+
+        $jws->sign($privateKey);
+
+        return $jws->getTokenString();
+    }
+
 }
