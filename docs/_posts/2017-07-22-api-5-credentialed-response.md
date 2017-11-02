@@ -46,7 +46,7 @@ The reason is that some client like iphone can't change without updates.  So if 
 
 1) The [JWSService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/Credential/JWSService.php) is called and creates an [AuthModel](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Security/AuthTokenModel.php) with a jws token and expiration date.
 
-2) The [RefreshTokenService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/Credential/RefreshTokenService.php) is called and creates another AuthModel with the refresh token and expiration date.
+2) We use the [UserService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/User/UserService.php) to create a refresh token on the user entity and a refresh token expiration date.  Then we call getAuthRefreshModel to get a the AuthModel for the refresh token.
 
 3) This is all used with the user object to create a [CredentialModel](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Model/Security/CredentialModel.php) in the [CredentialModelBuilderService](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Service/Credential/CredentialModelBuilderService.php).
 

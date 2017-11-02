@@ -72,22 +72,20 @@ The refresh token are authenticated through a custom guard. A guard is a class t
  }
  ```
 ### [Refresh Token UserProvider](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Provider/RefreshTokenProvider.php) WorkFlow
-1. We use the refresh token service to see if the user has a valid refresh token.  If there is a duplicate refresh token which should never happen we thorugh a special exception.  
-2. If no valid refresh token is found a UsernameNotFoundException is thrown.
-3. Otherwise we save the refresh token as being used in our database and return the user attached to the refresh token.
+
+We use the user service to try and find a user with a refresh token that has an expiration date in the future.  If we find one we extend the expiration date for the refresh token.  And return the user.  We have one refresh token for user, so that the phone can share the same refresh token and the web client.
 
 ```
-try{
-    $token = $this->refreshTokenService->getValidRefreshToken($username);
+$user = $this->userService->findUserByValidRefreshToken($username);
+
+if (empty($user)) {
+    throw new UsernameNotFoundException('No user found with refresh token provided.');
 }
-catch (ProgrammerException $ex) {
-    throw new UsernameNotFoundException($ex->getMessage(), ProgrammerException::REFRESH_TOKEN_DUPLICATE);
-}
-if (empty($token)) {
-    throw new UsernameNotFoundException("Invalid Refresh Token");
-}
-$this->saveRefreshTokenUsed($token);
-return $token->getUser();
+
+// This adds time to the refresh token.
+$this->userService->updateUserRefreshToken($user);
+
+return $user;
 ```
 
 3) After that the checkCredentials function in the [AbstractTokenGuard](https://github.com/phptuts/starterkitforsymfony/blob/master/src/AppBundle/Security/Guard/Token/AbstractTokenGuard.php#L98)  will be called we'll always return true.  This is because the user has already been validated. This is true for all token auths.
