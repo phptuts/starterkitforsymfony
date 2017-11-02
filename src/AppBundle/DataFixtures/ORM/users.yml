@@ -140,3 +140,21 @@ AppBundle\Entity\User:
         enabled: true
         source: 'website'
         googleUserId: 'google_user_id_dsf3'
+
+    refresh_token_valid:
+        email: 'refresh_token_valid@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        refreshToken: 'refresh_token_valid'
+        refreshTokenExpire: '<dateTimeBetween("+1 days", "+10 days")>'
+
+    refresh_token_expired:
+        email: 'refresh_token_expired@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        refreshToken: 'refresh_token_expired'
+        refreshTokenExpire: '<dateTimeBetween("-10 days", "-1 days")>'

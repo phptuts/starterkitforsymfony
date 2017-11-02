@@ -6,6 +6,7 @@ use AppBundle\Entity\User;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Tests\BaseTestCase;
+use AppBundle\Model\Security\AuthTokenModel;
 
 /**
  * Class UserTest
@@ -115,4 +116,32 @@ class UserTest extends BaseTestCase
 
        Assert::assertNotEmpty($user->getUpdatedAt());
    }
+
+   public function testRefreshTokenValidity()
+   {
+       $user = new User();
+       Assert::assertFalse($user->isRefreshTokenValid());
+
+       $expires = (new \DateTime())->modify('-10 seconds');
+       $user->setRefreshToken('refresh_token')->setRefreshTokenExpire($expires);
+       Assert::assertFalse($user->isRefreshTokenValid());
+
+       $expires = (new \DateTime())->modify('+10 seconds');
+       $user->setRefreshTokenExpire($expires);
+       Assert::assertTrue($user->isRefreshTokenValid());
+   }
+
+   public function testRefreshTokenModel()
+   {
+       $user = new User();
+       $expires = (new \DateTime())->modify('+10 seconds');
+       $user->setRefreshTokenExpire($expires)->setRefreshToken('refresh_token');
+       Assert::assertTrue($user->isRefreshTokenValid());
+       $model = $user->getAuthRefreshModel();
+       Assert::assertInstanceOf(AuthTokenModel::class, $model);
+
+       Assert::assertEquals($expires->getTimestamp(), $model->getExpirationTimeStamp());
+       Assert::assertEquals('refresh_token', $model->getToken());
+   }
+
 }

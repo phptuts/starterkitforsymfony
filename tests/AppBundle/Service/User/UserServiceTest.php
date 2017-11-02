@@ -185,4 +185,20 @@ class UserServiceTest extends BaseTestCase
     {
         Assert::assertInstanceOf(User::class, $this->userService->findByGoogleUserId('google_user_id_dsf3'));
     }
+
+    /**
+     * Tests that a user can be found by a  valid refresh token
+     */
+    public function testFindUserByRefreshToken()
+    {
+        Assert::assertInstanceOf(User::class, $this->userService->findUserByValidRefreshToken('refresh_token_valid'));
+    }
+
+    /**
+     * Tests that null is return for an empty refresh token.
+     */
+    public function testFindUserByRefreshTokenExpired()
+    {
+        Assert::assertEmpty($this->userService->findUserByValidRefreshToken('refresh_token_expired'));
+    }
 }
