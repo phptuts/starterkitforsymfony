@@ -73,8 +73,8 @@
       <file leaf-file-name="JWSServiceTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#54#80#0#PHP" expanded="true" />
               </folding>
@@ -1230,12 +1230,12 @@
       <workItem from="1500851577339" duration="1502000" />
       <workItem from="1500864509529" duration="5800000" />
       <workItem from="1509508779509" duration="709000" />
-      <workItem from="1509580505775" duration="7423000" />
+      <workItem from="1509580505775" duration="7536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461669000" />
+    <option name="totallyTimeSpent" value="461782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1725,8 +1725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#54#80#0#PHP" expanded="true" />
           </folding>
