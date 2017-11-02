@@ -1,0 +1,8 @@
+languages:
+  PHP: true
+exclude_paths:
+  - "var/*"
+  - "app/*"
+  - "web/*"
+  - "docs/*"
+  - "tests/*"
