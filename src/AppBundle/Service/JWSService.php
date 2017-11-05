@@ -1,10 +1,10 @@
 <?php
 
-namespace AppBundle\Service\Credential;
+namespace AppBundle\Service;
 
 use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
-use AppBundle\Model\Security\AuthTokenModel;
+use AppBundle\Model\Auth\AuthTokenModel;
 use Namshi\JOSE\SimpleJWS;
 
 /**
@@ -48,12 +48,12 @@ class JWSService
     /**
      * JWSService constructor.
      * @param $passPhrase
-     * @param $ttl
+     * @param integer $ttl
      */
     public function __construct($passPhrase, $ttl)
     {
-        $this->ttl = $ttl;
         $this->passPhrase = $passPhrase;
+        $this->ttl = $ttl;
     }
 
     /**
@@ -64,7 +64,7 @@ class JWSService
      */
     public function createAuthTokenModel(User $user)
     {
-        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), $this->passPhrase);
+        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../var/jwt/private.pem'), $this->passPhrase);
 
         $jws = new SimpleJWS([
             'alg' => self::ALG
@@ -74,11 +74,11 @@ class JWSService
         $expirationDate->modify('+' . $this->ttl . ' seconds');
         $expirationTimestamp = $expirationDate->getTimestamp();
 
-        $jws->setPayload([
+        $jws->setPayload(array_merge([
             self::USER_ID_KEY => $user->getId(),
             self::EXP_KEY => $expirationTimestamp,
             self::IAT_KEY => (new \DateTime())->getTimestamp()
-        ]);
+        ], $user->getJWTPayload()));
 
         $jws->sign($privateKey);
 
@@ -94,7 +94,7 @@ class JWSService
     public function isValid($token)
     {
         try {
-            $publicKey = openssl_pkey_get_public(file_get_contents(__DIR__ . '/../../../../var/jwt/public.pem'));
+            $publicKey = openssl_pkey_get_public(file_get_contents(__DIR__ . '/../../../var/jwt/public.pem'));
 
             $jws = SimpleJWS::load($token);
 
@@ -123,6 +123,12 @@ class JWSService
 
     }
 
+    /**
+     * Returns true if the token is not expired
+     *
+     * @param string $token
+     * @return bool
+     */
     private function isTokenNotExpired($token)
     {
         $payload = $this->getPayload($token);

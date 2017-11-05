@@ -3,7 +3,7 @@
 namespace AppBundle\Security\Provider;
 
 use AppBundle\Entity\User;
-use AppBundle\Service\User\UserService;
+use AppBundle\Service\UserService;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
  * Class AbstractCustomProvider
  * @package AppBundle\Security\Provider
  */
-abstract class AbstractCustomProvider implements UserProviderInterface
+trait CustomProviderTrait
 {
     /**
      * @var UserProviderInterface

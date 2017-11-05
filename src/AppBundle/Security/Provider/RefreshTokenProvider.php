@@ -1,29 +1,19 @@
 <?php
 
-
 namespace AppBundle\Security\Provider;
 
-use AppBundle\Entity\RefreshToken;
-use AppBundle\Exception\ProgrammerException;
-use AppBundle\Service\Credential\RefreshTokenService;
-use AppBundle\Service\User\UserService;
+use AppBundle\Service\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
  * Class RefreshTokenProvider
  * @package AppBundle\Security\Provider
  */
-class RefreshTokenProvider extends AbstractCustomProvider
+class RefreshTokenProvider implements UserProviderInterface
 {
 
-    /**
-     * RefreshTokenProvider constructor.
-     * @param UserService $userService
-     */
-    public function __construct(UserService $userService)
-    {
-        parent::__construct($userService);
-    }
+    use CustomProviderTrait;
 
     /**
      * See if the refresh token is valid and if it is it return the user otherwise we throw the UsernameNotFoundException

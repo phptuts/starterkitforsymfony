@@ -1,33 +1,27 @@
 <?php
 
-
 namespace AppBundle\Model\Response;
 
+use AppBundle\Model\Page\PageModel;
 
-use Doctrine\ORM\Tools\Pagination\Paginator;
-
+/**
+ * Class ResponsePageModel
+ * @package AppBundle\Model\Response
+ */
 class ResponsePageModel implements ResponseModelInterface
 {
     /**
-     * @var Paginator
+     * @var PageModel
      */
-    private $paginator;
+    private $pageModel;
 
     /**
-     * @var string
+     * ResponsePageModel constructor.
+     * @param PageModel $pageModel
      */
-    private $type;
-
-    /**
-     * @var int
-     */
-    private $page;
-
-    public function __construct(Paginator $paginator, $type, $page)
+    public function __construct(PageModel $pageModel)
     {
-        $this->paginator = $paginator;
-        $this->type = $type;
-        $this->page = $page;
+        $this->pageModel = $pageModel;
     }
 
     /**
@@ -38,22 +32,17 @@ class ResponsePageModel implements ResponseModelInterface
     public function getBody()
     {
 
-        $total = $this->paginator->count();
-        $result = $this->paginator->getQuery()->getResult();
-        $maxPages = ceil($total / $this->paginator->getQuery()->getMaxResults());
-
         return [
             'meta' => [
-                'type' => $this->type,
+                'type' => $this->pageModel->getType(),
                 'paginated' => true,
-                'total' => (int)$total,
-                'page' => (int)$this->page,
-                'pageSize' => count($result),
-                'totalPages' => (int)$maxPages
+                'total' => (int)$this->pageModel->getTotal(),
+                'page' => (int)$this->pageModel->getCurrentPage(),
+                'pageSize' => (int)$this->pageModel->getPageSize(),
+                'numberOfPages' => (int)$this->pageModel->numberOfPages(),
+                'lastPage' => (bool)$this->pageModel->lastPage()
             ],
-            'data' => $result
+            'data' => $this->pageModel->getResults()
         ];
     }
-
-
 }

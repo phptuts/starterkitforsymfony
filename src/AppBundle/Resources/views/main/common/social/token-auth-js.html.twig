@@ -13,7 +13,7 @@
         $.blockUI({message: 'We are logging you right now!! :)'});
 
         $.ajax({
-            url: '{{ path('token_login_check') }}',
+            url: '/login_check',
             data: JSON.stringify({'token': token, 'type': type}),
             contentType: 'application/json',
             type: 'POST',

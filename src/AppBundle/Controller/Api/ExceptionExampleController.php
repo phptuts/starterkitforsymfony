@@ -11,7 +11,7 @@ use FOS\RestBundle\Controller\Annotations as REST;
  * @package ApiBundle\Controller\Api
  * @REST\NamePrefix("api_users_")
  */
-class ExceptionExampleController extends AbstractRestController
+class ExceptionExampleController extends BaseRestController
 {
     /**
      * @REST\Get(path="stupid_exception")

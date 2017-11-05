@@ -1,8 +1,9 @@
 <?php
 
-namespace AppBundle\Handler;
+namespace AppBundle\Listener;
 
 use Monolog\Logger;
+use Symfony\Component\Finder\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
@@ -12,7 +13,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  * Class ExceptionHandler
  * @package AppBundle\Handler
  */
-class ExceptionHandler
+class ExceptionListener
 {
     /**
      * @var \Twig_Environment
@@ -44,9 +45,9 @@ class ExceptionHandler
     {
         $exception = $event->getException();
 
-        if ($exception instanceof  HttpException
-            && $exception->getStatusCode() !== 500
-            && $event->getRequest()->headers->get('Content-Type') != 'application/json') {
+        if ($exception instanceof HttpException &&
+            $exception->getStatusCode() !== Response::HTTP_INTERNAL_SERVER_ERROR  &&
+            $event->getRequest()->headers->get('Content-Type') != 'application/json') {
             return;
         }
 

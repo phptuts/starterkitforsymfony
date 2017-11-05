@@ -4,14 +4,13 @@ namespace AppBundle\Entity;
 
 use AppBundle\Model\Response\ResponseTypeInterface;
 use Doctrine\ORM\Mapping as ORM;
-use AppBundle\Model\Security\AuthTokenModel;
+use AppBundle\Model\Auth\AuthTokenModel;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use JMS\Serializer\Annotation as Serializer;
 
 /**
  * User
@@ -24,9 +23,8 @@ use JMS\Serializer\Annotation as Serializer;
  * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
  *
  * @link http://symfony.com/doc/current/security/entity_provider.html
- * @Serializer\ExclusionPolicy("ALL")
  */
-class User implements AdvancedUserInterface, \Serializable, EquatableInterface, ResponseTypeInterface
+class User implements AdvancedUserInterface, \Serializable, EquatableInterface, ResponseTypeInterface, ViewInterface
 {
 
     use TimeStampTrait;
@@ -50,12 +48,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      */
     const VALIDATION_GROUP_PLAIN_PASSWORD = "user_plain_password";
 
-    /**
-     * This serialization group exposes users personal information like email
-     *
-     * @var string
-     */
-    const USER_PERSONAL_SERIALIZATION_GROUP = 'users';
 
     /**
      * This is the min password length
@@ -72,8 +64,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var int
      *
-     * @Serializer\Expose()
-     *
      * @ORM\Column(name="id", type="string")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
@@ -83,8 +73,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var string
      *
-     * @Serializer\Expose()
-     *
      * @Constraints\Length(min="5", max="100", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="display_name", type="string", length=255, nullable=true, unique=true)
      */
@@ -92,9 +80,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
 
     /**
      * @var string
-     *
-     * @Serializer\Expose()
-     * @Serializer\Groups({User::USER_PERSONAL_SERIALIZATION_GROUP})
      *
      * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_DEFAULT})
      * @Constraints\Email(groups={User::VALIDATION_GROUP_DEFAULT})
@@ -108,8 +93,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      *
      * @var string
      *
-     * @Serializer\Exclude()
-     *
      * @ORM\Column(name="facebook_user_id", type="string", nullable=true, unique=true)
      */
     protected $facebookUserId;
@@ -119,8 +102,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
      *
      * @var string
      *
-     * @Serializer\Exclude()
-     *
      * @ORM\Column(name="google_user_id", type="string", nullable=true, unique=true)
      */
     protected $googleUserId;
@@ -128,16 +109,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var string
      *
-     * @Serializer\Exclude()
-     *
      * @ORM\Column(name="forget_password_token", type="string", nullable=true)
      */
     protected $forgetPasswordToken;
 
     /**
      * @var \DateTime
-     *
-     * @Serializer\Exclude()
      *
      * @ORM\Column(name="forget_password_expired", type="datetime", nullable=true)
      */
@@ -153,8 +130,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var string
      *
-     * @Serializer\Exclude()
-     *
      * @ORM\Column(name="password", type="string", length=255)
      */
     protected $password;
@@ -162,16 +137,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var array
      *
-     *
-     *
      * @ORM\Column(name="roles", type="json_array")
      */
     protected $roles;
 
     /**
      * @var string
-     *
-     * @Serializer\Expose()
      *
      * @Constraints\Length(max="3000", groups={User::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="bio", type="text", nullable=true)
@@ -181,16 +152,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var boolean
      *
-     * @Serializer\Exclude()
-     *
      * @ORM\Column(name="enabled", type="boolean")
      */
     protected $enabled;
 
     /**
      * @var string
-     *
-     * @Serializer\Exclude()
      *
      * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
      * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
@@ -199,7 +166,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
 
     /**
      * @var string
-     * @Serializer\Exclude()
      *
      * @ORM\Column(name="source", type="string")
      */
@@ -208,7 +174,6 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     /**
      * @var UploadedFile
      *
-     * @Serializer\Exclude()
      * @Constraints\NotBlank(groups={User::VALIDATION_IMAGE_REQUIRED})
      * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jpeg", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
      */
@@ -216,14 +181,12 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
 
     /**
      * @var string
-     * @Serializer\Exclude()
      * @ORM\Column(name="refresh_token", type="string", nullable=true)
      */
     protected $refreshToken;
 
     /**
      * @var \DateTime
-     * @Serializer\Exclude()
      * @ORM\Column(name="refresh_token_expire", type="datetime", nullable=true)
      */
     protected $refreshTokenExpire;
@@ -738,6 +701,53 @@ class User implements AdvancedUserInterface, \Serializable, EquatableInterface, 
     public function isRefreshTokenValid()
     {
         return !empty($this->getRefreshToken()) && $this->getRefreshTokenExpire() > new \DateTime();
+    }
+
+    /**
+     * Returns an array of hte view for displaying in a list
+     *
+     * @return array
+     */
+    public function listView()
+    {
+        return [
+            'id' => $this->getId(),
+            'displayName' => $this->getDisplayName(),
+            'imageUrl' => $this->getImageUrl(),
+        ];
+    }
+
+    /**
+     * Return an array of the view for displaying as a single item
+     *
+     * @return array
+     */
+    public function singleView()
+    {
+        return [
+            'id' => $this->getId(),
+            'displayName' => $this->getDisplayName(),
+            'roles' => $this->getRoles(),
+            'imageUrl' => $this->getImageUrl(),
+            'email' => $this->getEmail(),
+            'bio' => $this->getBio()
+        ];
+    }
+
+    /**
+     * Returns the data to merge into the jwt token payload
+     *
+     * @return array
+     */
+    public function getJWTPayload()
+    {
+        return [
+            'displayName' => $this->getDisplayName(),
+            'roles' => $this->getRoles(),
+            'imageUrl' => $this->getImageUrl(),
+            'email' => $this->getEmail(),
+            'bio' => $this->getBio()
+        ];
     }
 }
 

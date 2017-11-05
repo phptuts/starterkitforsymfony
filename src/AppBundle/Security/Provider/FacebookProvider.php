@@ -5,41 +5,32 @@ namespace AppBundle\Security\Provider;
 use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
 use AppBundle\Factory\FaceBookClientFactory;
-use AppBundle\Service\User\RegisterService;
-use AppBundle\Service\User\UserService;
+use AppBundle\Service\UserService;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\FacebookClient;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
  * Class FacebookProvider
  * @package AppBundle\Security\Provider
  */
-class FacebookProvider extends AbstractCustomProvider
+class FacebookProvider implements UserProviderInterface
 {
+    use CustomProviderTrait;
 
     /**
      * @var FacebookClient
      */
     protected $facebookClient;
 
-    /**
-     * @var RegisterService
-     */
-    private $registerService;
-
-
     public function __construct(
         FaceBookClientFactory $faceBookClientFactory,
-        RegisterService $registerService,
-        UserService $userService
-    )
+        UserService $userService)
     {
-        parent::__construct($userService);
         $this->facebookClient = $faceBookClientFactory->getFacebookClient();
-        $this->registerService = $registerService;
         $this->userService = $userService;
     }
 
@@ -116,7 +107,7 @@ class FacebookProvider extends AbstractCustomProvider
             ->setEmail($email)
             ->setFacebookUserId($facebookUserId)
             ->setPlainPassword(base64_encode(random_bytes(20)));
-        $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_FACEBOOK);
+        $this->userService->registerUser($user, UserService::SOURCE_TYPE_FACEBOOK);
 
         return $user;
     }

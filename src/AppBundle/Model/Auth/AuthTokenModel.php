@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AppBundle\Model\Security;
+namespace AppBundle\Model\Auth;
 
 /**
  * Class AuthTokenModel
@@ -41,5 +41,18 @@ class AuthTokenModel
     public function getExpirationTimeStamp()
     {
         return $this->expirationTimeStamp;
+    }
+
+    /**
+     * Returns the array token & expiration timestamp
+     *
+     * @return array
+     */
+    public function getBody()
+    {
+        return [
+            'token' => $this->getToken(),
+            'expirationTimeStamp' => $this->getExpirationTimeStamp()
+        ];
     }
 }

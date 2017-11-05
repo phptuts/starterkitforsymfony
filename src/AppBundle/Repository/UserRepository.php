@@ -91,9 +91,39 @@ class UserRepository extends EntityRepository
      * @param int $page
      * @param int $limit
      *
-     * @return Paginator
+     * @return User[]
      */
-    public function getUsers($searchString = null, $page = 1, $limit = 10)
+    public function searchUsers($searchString = null, $page, $limit)
+    {
+        return $this->buildUserSearchQuery($searchString)
+            ->getQuery()
+            ->setMaxResults($limit)
+            ->setFirstResult($limit * ($page - 1))
+            ->getResult();
+    }
+
+    /**
+     * Counts the number of users in the search
+     *
+     * @param string $searchString
+     * @return mixed
+     */
+    public function countNumberOfUserInSearch($searchString = null)
+    {
+        $builder = $this->buildUserSearchQuery($searchString);
+
+        return $builder->select($builder->expr()->count('u.id'))
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    /**
+     * Builds
+     *
+     * @param string $searchString
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    protected function buildUserSearchQuery($searchString = null)
     {
         $builder = $this->createQueryBuilder('u');
 
@@ -104,12 +134,7 @@ class UserRepository extends EntityRepository
                 ->setParameter('searchString', '%' .$searchString . '%');
         }
 
-        $paginator = new Paginator($builder->getQuery());
-        $paginator->getQuery()
-            ->setMaxResults($limit)
-            ->setFirstResult($limit * ($page - 1));
-
-        return $paginator;
+        return $builder;
     }
 
     /**

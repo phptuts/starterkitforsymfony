@@ -2,9 +2,6 @@
 # https://symfony.com/doc/current/service_container.html
 parameters:
 
-    jms_serializer.serialized_name_annotation_strategy.class: JMS\Serializer\Naming\IdenticalPropertyNamingStrategy
-    jms_serializer.form_error_handler.class: AppBundle\Handler\FormErrorHandler
-
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -52,21 +49,19 @@ services:
             - '@mailer'
             - '%app.from_email%'
 
-    AppBundle\Service\Credential\JWSService:
-        class: AppBundle\Service\Credential\JWSService
+    AppBundle\Service\JWSService:
+        class: AppBundle\Service\JWSService
         arguments:
             - '%app.jws_pass_phrase%'
             - '%app.jws_ttl%'
 
-    AppBundle\Service\User\UserService:
-        class: AppBundle\Service\User\UserService
+    AppBundle\Service\UserService:
+        class: AppBundle\Service\UserService
         arguments:
             - '@doctrine.orm.entity_manager'
-            - '@Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface'
-            - '@AppBundle\Repository\UserRepository'
+            - '@security.encoder_factory.generic'
+            - '@event_dispatcher'
             - '%app.refresh_token_ttl%'
-
-
 
 
     # FACTORIES
@@ -101,11 +96,11 @@ services:
 
 
     # EVENT LISTENERS
-    AppBundle\Handler\ExceptionHandler:
-        class: AppBundle\Handler\ExceptionHandler
+    AppBundle\Listener\ExceptionListener:
+        class: AppBundle\Listener\ExceptionListener
         arguments:
             - '@twig'
-            - '@logger'
+            - '@monolog.logger'
             - '%app.from_email%'
         tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

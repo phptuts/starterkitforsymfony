@@ -1,14 +1,5 @@
-logout:
-    path: /logout
-
-token_login_check:
-    path: /token_login_check
-    methods: ['POST']
-
-api_login:
-    path: /api/login_check
-    methods: ['POST']
-
+login_check:
+    path: login_check
 
 admin:
     resource: "@AppBundle/Controller/Admin/"
@@ -17,15 +8,12 @@ admin:
 
 api:
     resource: '@AppBundle/Controller/Api/'
+    type: annotation
     prefix: /api
-    type: rest
 
 main:
     resource: '@AppBundle/Controller/Main/'
     type: annotation
-
-
-
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

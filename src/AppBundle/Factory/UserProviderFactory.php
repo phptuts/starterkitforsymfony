@@ -1,9 +1,9 @@
 <?php
 
-
 namespace AppBundle\Factory;
 
-use AppBundle\Security\Guard\Token\AbstractTokenGuard;
+use AppBundle\Model\Credential\CredentialInterface;
+use AppBundle\Security\Provider\EmailProvider;
 use AppBundle\Security\Provider\FacebookProvider;
 use AppBundle\Security\Provider\GoogleProvider;
 use AppBundle\Security\Provider\RefreshTokenProvider;
@@ -36,19 +36,25 @@ class UserProviderFactory
     /**
      * @var TokenProvider
      */
-    private $tokenProvider;
+    private $jwtTokenProvider;
+    /**
+     * @var EmailProvider
+     */
+    private $emailProvider;
 
     public function __construct(
         FacebookProvider $facebookProvider,
         GoogleProvider $googleProvider,
         RefreshTokenProvider $refreshTokenProvider,
-        TokenProvider $tokenProvider
+        TokenProvider $tokenProvider,
+        EmailProvider $emailProvider
     ){
 
         $this->facebookProvider = $facebookProvider;
         $this->googleProvider = $googleProvider;
         $this->refreshTokenProvider = $refreshTokenProvider;
-        $this->tokenProvider = $tokenProvider;
+        $this->jwtTokenProvider = $tokenProvider;
+        $this->emailProvider = $emailProvider;
     }
 
     /**
@@ -59,21 +65,26 @@ class UserProviderFactory
      */
     public function getUserProvider($type)
     {
-        if ($type == AbstractTokenGuard::TOKEN_TYPE_FACEBOOK) {
+        if ($type == CredentialInterface::PROVIDER_TYPE_FACEBOOK) {
             return $this->facebookProvider;
         }
 
-        if ($type == AbstractTokenGuard::TOKEN_TYPE_GOOGLE) {
+        if ($type == CredentialInterface::PROVIDER_TYPE_GOOGLE) {
             return $this->googleProvider;
         }
 
-        if ($type == AbstractTokenGuard::TOKEN_TYPE_REFRESH) {
+        if ($type == CredentialInterface::PROVIDER_TYPE_REFRESH) {
             return $this->refreshTokenProvider;
         }
 
-        if ($type == AbstractTokenGuard::TOKEN_TYPE_API) {
-            return $this->tokenProvider;
+        if ($type == CredentialInterface::PROVIDER_TYPE_JWT) {
+            return $this->jwtTokenProvider;
         }
+
+        if ($type == CredentialInterface::PROVIDER_TYPE_EMAIL) {
+            return $this->emailProvider;
+        }
+
 
         throw new NotImplementedException(sprintf("The '%s' social user provider has not been implemented.", $type));
     }

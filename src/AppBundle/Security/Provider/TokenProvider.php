@@ -3,16 +3,19 @@
 namespace AppBundle\Security\Provider;
 
 use AppBundle\Entity\User;
-use AppBundle\Service\Credential\JWSService;
-use AppBundle\Service\User\UserService;
+use AppBundle\Service\JWSService;
+use AppBundle\Service\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
  * Class TokenProvider
  * @package AppBundle\Security\Provider
  */
-class TokenProvider extends AbstractCustomProvider
+class TokenProvider implements UserProviderInterface
 {
+    use CustomProviderTrait;
+
     /**
      * @var JWSService
      */
@@ -25,12 +28,13 @@ class TokenProvider extends AbstractCustomProvider
      */
     public function __construct(UserService $userService, JWSService $JWSService)
     {
-        parent::__construct($userService);
         $this->JWSService = $JWSService;
+        $this->userService = $userService;
     }
 
     /**
-     * Returns a user from the token paylaod if the token is valid and user_id in the payload is found otherwise throws an exception
+     * Returns a user from the token payload if the token is valid and user_id in the payload is found otherwise
+     * throws an exception
      *
      * @param string $username
      * @return null|User

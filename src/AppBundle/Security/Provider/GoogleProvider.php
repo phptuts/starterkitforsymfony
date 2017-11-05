@@ -5,20 +5,17 @@ namespace AppBundle\Security\Provider;
 use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
 use AppBundle\Factory\GoogleClientFactory;
-use AppBundle\Service\User\RegisterService;
-use AppBundle\Service\User\UserService;
+use AppBundle\Service\UserService;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
  * Class GoogleProvider
  * @package AppBundle\Security\Provider
  */
-class GoogleProvider extends AbstractCustomProvider
+class GoogleProvider implements UserProviderInterface
 {
-    /**
-     * @var RegisterService
-     */
-    private $registerService;
+    use CustomProviderTrait;
 
     /**
      * @var \Google_Client
@@ -27,13 +24,11 @@ class GoogleProvider extends AbstractCustomProvider
 
 
     public function __construct(
-        RegisterService $registerService,
         GoogleClientFactory $googleClientFactory,
         UserService $userService
     )
     {
-        parent::__construct($userService);
-        $this->registerService = $registerService;
+        $this->userService = $userService;
         $this->googleClient = $googleClientFactory->getGoogleClient();
     }
 
@@ -102,7 +97,7 @@ class GoogleProvider extends AbstractCustomProvider
             ->setEmail($email)
             ->setGoogleUserId($googleUserId)
             ->setPlainPassword(base64_encode(random_bytes(20)));
-        $this->registerService->registerUser($user, RegisterService::SOURCE_TYPE_GOOGLE);
+        $this->userService->registerUser($user, UserService::SOURCE_TYPE_GOOGLE);
 
         return $user;
     }
