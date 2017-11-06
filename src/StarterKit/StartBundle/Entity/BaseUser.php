@@ -17,8 +17,8 @@ use Symfony\Component\Validator\Constraints as Constraints;
  * @ORM\HasLifecycleCallbacks()
  * @ORM\MappedSuperclass()
  *
- * @UniqueEntity(fields={"email"}, groups={User::VALIDATION_GROUP_DEFAULT})
- * @UniqueEntity(fields={"displayName"}, groups={User::VALIDATION_GROUP_DEFAULT})
+ * @UniqueEntity(fields={"email"}, groups={BaseUser::VALIDATION_GROUP_DEFAULT})
+ * @UniqueEntity(fields={"displayName"}, groups={BaseUser::VALIDATION_GROUP_DEFAULT})
  *
  * @link http://symfony.com/doc/current/security/entity_provider.html
  */
@@ -71,7 +71,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     /**
      * @var string
      *
-     * @Constraints\Length(min="5", max="100", groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\Length(min="5", max="100", groups={BaseUser::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="display_name", type="string", length=255, nullable=true, unique=true)
      */
     protected $displayName;
@@ -79,8 +79,8 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     /**
      * @var string
      *
-     * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_DEFAULT})
-     * @Constraints\Email(groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\NotBlank(groups={BaseUser::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\Email(groups={BaseUser::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     protected $email;
@@ -142,7 +142,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     /**
      * @var string
      *
-     * @Constraints\Length(max="3000", groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\Length(max="3000", groups={BaseUser::VALIDATION_GROUP_DEFAULT})
      * @ORM\Column(name="bio", type="text", nullable=true)
      */
     protected $bio;
@@ -157,8 +157,8 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     /**
      * @var string
      *
-     * @Constraints\NotBlank(groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
-     * @Constraints\Length(max=User::MAX_PASSWORD_LENGTH, min=User::MIN_PASSWORD_LENGTH, groups={User::VALIDATION_GROUP_PLAIN_PASSWORD})
+     * @Constraints\NotBlank(groups={BaseUser::VALIDATION_GROUP_PLAIN_PASSWORD})
+     * @Constraints\Length(max=BaseUser::MAX_PASSWORD_LENGTH, min=BaseUser::MIN_PASSWORD_LENGTH, groups={BaseUser::VALIDATION_GROUP_PLAIN_PASSWORD})
      */
     protected $plainPassword;
 
@@ -172,8 +172,8 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     /**
      * @var UploadedFile
      *
-     * @Constraints\NotBlank(groups={User::VALIDATION_IMAGE_REQUIRED})
-     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jpeg", "image/png"}, groups={User::VALIDATION_GROUP_DEFAULT})
+     * @Constraints\NotBlank(groups={BaseUser::VALIDATION_IMAGE_REQUIRED})
+     * @Constraints\Image(maxSize="7Mi", mimeTypes={"image/gif", "image/jpeg", "image/png"}, groups={BaseUser::VALIDATION_GROUP_DEFAULT})
      */
     protected $image;
 
@@ -205,7 +205,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      *
      * @param string $email
      *
-     * @return User
+     * @return BaseUser
      */
     public function setEmail($email)
     {
@@ -229,7 +229,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      *
      * @param string $imageUrl
      *
-     * @return User
+     * @return BaseUser
      */
     public function setImageUrl($imageUrl)
     {
@@ -253,7 +253,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      *
      * @param string $password
      *
-     * @return User
+     * @return BaseUser
      */
     public function setPassword($password)
     {
@@ -277,7 +277,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      *
      * @param array $roles
      *
-     * @return User
+     * @return BaseUser
      */
     public function setRoles($roles)
     {
@@ -316,7 +316,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      *
      * @param string $bio
      *
-     * @return User
+     * @return BaseUser
      */
     public function setBio($bio)
     {
@@ -345,7 +345,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param bool $enabled
-     * @return User
+     * @return BaseUser
      */
     public function setEnabled($enabled)
     {
@@ -364,7 +364,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $displayName
-     * @return User
+     * @return BaseUser
      */
     public function setDisplayName($displayName)
     {
@@ -383,7 +383,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $forgetPasswordToken
-     * @return User
+     * @return BaseUser
      */
     public function setForgetPasswordToken($forgetPasswordToken)
     {
@@ -402,7 +402,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param \DateTime $forgetPasswordExpired
-     * @return User
+     * @return BaseUser
      */
     public function setForgetPasswordExpired($forgetPasswordExpired)
     {
@@ -421,7 +421,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param UploadedFile $image
-     * @return User
+     * @return BaseUser
      */
     public function setImage($image)
     {
@@ -440,7 +440,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $source
-     * @return User
+     * @return BaseUser
      */
     public function setSource($source)
     {
@@ -471,7 +471,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $plainPassword
-     * @return User
+     * @return BaseUser
      */
     public function setPlainPassword($plainPassword)
     {
@@ -562,7 +562,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $facebookUserId
-     * @return User
+     * @return BaseUser
      */
     public function setFacebookUserId($facebookUserId)
     {
@@ -581,7 +581,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $googleUserId
-     * @return User
+     * @return BaseUser
      */
     public function setGoogleUserId($googleUserId)
     {
@@ -600,7 +600,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param string $refreshToken
-     * @return User
+     * @return BaseUser
      */
     public function setRefreshToken($refreshToken)
     {
@@ -619,7 +619,7 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
 
     /**
      * @param \DateTime $refreshTokenExpire
-     * @return User
+     * @return BaseUser
      */
     public function setRefreshTokenExpire($refreshTokenExpire)
     {

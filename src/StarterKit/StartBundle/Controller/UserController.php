@@ -1,24 +1,20 @@
 <?php
 
-namespace AppBundle\Controller\Api;
+namespace StarterKit\StartBundle\Controller;
 
-use AppBundle\Form\User\ChangePasswordType;
-use AppBundle\Form\User\ForgetPasswordType;
-use AppBundle\Form\User\RegisterType;
-use AppBundle\Form\User\ResetPasswordType;
-use AppBundle\Form\User\UpdateUserType;
-use AppBundle\Form\User\UserImageType;
-use AppBundle\Model\Response\ResponseFormErrorModel;
-use AppBundle\Security\Voter\UserVoter;
-use AppBundle\Service\AuthResponseService;
-use AppBundle\Service\FormSerializer;
-use AppBundle\Service\S3Service;
-use AppBundle\Service\UserService;
-use AppBundle\Entity\User;
+use StarterKit\StartBundle\Form\ChangePasswordType;
+use StarterKit\StartBundle\Form\ForgetPasswordType;
+use StarterKit\StartBundle\Form\RegisterType;
+use StarterKit\StartBundle\Form\ResetPasswordType;
+use StarterKit\StartBundle\Form\UpdateUserType;
+use StarterKit\StartBundle\Security\Voter\UserVoter;
+use StarterKit\StartBundle\Service\AuthResponseService;
+use StarterKit\StartBundle\Service\FormSerializer;
+use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use Symfony\Component\Form\Form;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -39,12 +35,7 @@ class UserController extends BaseRestController
     /**
      * @var AuthResponseService
      */
-    protected $credentialResponseService;
-
-    /**
-     * @var S3Service
-     */
-    protected $s3Service;
+    protected $authResponseService;
 
     /**
      * @var FormSerializer
@@ -56,17 +47,14 @@ class UserController extends BaseRestController
      * @param FormSerializer $formSerializer
      * @param UserService $userService
      * @param AuthResponseService $credentialResponseService
-     * @param S3Service $s3Service
      */
     public function __construct(FormSerializer $formSerializer,
                                 UserService $userService,
-                                AuthResponseService $credentialResponseService,
-                                S3Service $s3Service)
+                                AuthResponseService $credentialResponseService)
     {
+        parent::__construct($formSerializer);
         $this->userService = $userService;
-        $this->credentialResponseService = $credentialResponseService;
-        $this->formSerializer = $formSerializer;
-        $this->s3Service = $s3Service;
+        $this->authResponseService = $credentialResponseService;
     }
 
     /**
@@ -119,56 +107,10 @@ class UserController extends BaseRestController
 
             $user = $this->userService->registerUser($form->getData());
 
-            return $this->credentialResponseService->createAuthResponse($user);
+            return $this->authResponseService->createAuthResponse($user);
         }
 
         return $this->serializeFormError($form);
-    }
-
-    /**
-     * @Security("has_role('ROLE_USER')")
-     *
-     * @ApiDoc(
-     *  resource=true,
-     *  description="Update the image for a user",
-     *  section="Users",
-     *  authentication=true,
-     *  parameters={
-     *      {
-     *          "name"="image",
-     *          "dataType"="file",
-     *          "required"=true,
-     *          "description"="The image profile image it can only be jpg, gif, png."
-     *      }
-     *  }
-     *  )
-     * @Route(path="users/{id}/image", methods={"POST"})
-     * @ParamConverter(name="user", class="AppBundle:User")
-     *
-     * @param Request $request
-     * @param User $user
-     *
-     * @return Response|FormInterface
-     */
-    public function imageAction(Request $request, User $user)
-    {
-        $form = $this->createForm(UserImageType::class, $user);
-
-        $form->submit(['image' => $request->files->get('image')]);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $url = $this->s3Service->uploadFile(
-                $user->getImage(),
-                'profile_pics',
-                md5($user->getId() . '_profile_id')
-            );
-            $user->setImageUrl($url);
-            $this->userService->save($user);
-
-            return new Response('', Response::HTTP_NO_CONTENT);
-        }
-
-        return $form;
     }
 
     /**
@@ -188,7 +130,7 @@ class UserController extends BaseRestController
      * @param User $user
      *
      * @Route(path="users/{id}", methods={"PATCH"})
-     * @ParamConverter(name="user", class="AppBundle:User")
+     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
      *
      * @return FormInterface|Response
      */
@@ -298,7 +240,7 @@ class UserController extends BaseRestController
      *
      * @Route(path="/users/{id}/password", methods={"PATCH"})
      *
-     * @ParamConverter(name="user", class="AppBundle:User")
+     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
      *
      * @param Request $request
      * @param User $user
@@ -335,7 +277,7 @@ class UserController extends BaseRestController
      *
      * @Route(path="/users/{id}", methods={"GET"})
      *
-     * @ParamConverter(name="user", class="AppBundle:User")
+     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
      *
      * @param User $user
      *
@@ -375,21 +317,4 @@ class UserController extends BaseRestController
 
         return $this->serializeList($users, 'users', $page);
     }
-
-    /**
-     * Returns a serialized error response
-     *
-     * @param Form $form
-     * @return JsonResponse
-     */
-    public function serializeFormError(Form $form)
-    {
-        $errors = $this->formSerializer->createFormErrorArray($form);
-
-        $responseModel = new ResponseFormErrorModel($errors);
-
-        return new JsonResponse($responseModel->getBody(), Response::HTTP_BAD_REQUEST);
-    }
-
-
 }
