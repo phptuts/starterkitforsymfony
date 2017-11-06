@@ -1,0 +1,152 @@
+services:
+
+    # Factories
+    StarterKit\StartBundle\Factory\FaceBookClientFactory:
+        class: StarterKit\StartBundle\Factory\FaceBookClientFactory
+        arguments:
+            - '%starter_kit_start.facebook_app_id%'
+            - '%starter_kit_start.facebook_app_secret%'
+            - '%starter_kit_start.facebook_api_version%'
+
+    StarterKit\StartBundle\Factory\GoogleClientFactory:
+        class: StarterKit\StartBundle\Factory\GoogleClientFactory
+        arguments:
+            - '%starter_kit_start.google_client_id%'
+
+
+    StarterKit\StartBundle\Factory\UserProviderFactory:
+        class: StarterKit\StartBundle\Factory\UserProviderFactory
+        arguments:
+            - '@StarterKit\StartBundle\Security\Provider\FacebookProvider'
+            - '@StarterKit\StartBundle\Security\Provider\GoogleProvider'
+            - '@StarterKit\StartBundle\Security\Provider\RefreshTokenProvider'
+            - '@StarterKit\StartBundle\Service\JWSService'
+            - '@StarterKit\StartBundle\Security\Provider\EmailProvider'
+
+    # Services
+    StarterKit\StartBundle\Service\JWSService:
+        class: StarterKit\StartBundle\Service\JWSService
+        arguments:
+            - '%starter_kit_start.jws_pass_phrase%'
+            - '%starter_kit_start.jws_ttl%'
+
+    StarterKit\StartBundle\Service\UserService:
+        class: StarterKit\StartBundle\Service\UserService
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@security.encoder_factory.generic'
+            - '@event_dispatcher'
+            - '%starter_kit_start.refresh_token_ttl%'
+            - '%starter_kit_start.user_class%'
+
+    StarterKit\StartBundle\Service\AuthResponseService:
+        class: StarterKit\StartBundle\Service\AuthResponseService
+        arguments:
+            - '@StarterKit\StartBundle\Service\JWSService'
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Service\FormSerializer:
+        class: StarterKit\StartBundle\Service\FormSerializer
+        arguments:
+            - '@translator'
+
+    # Providers
+    StarterKit\StartBundle\Security\Provider\EmailProvider:
+        class: StarterKit\StartBundle\Security\Provider\EmailProvider
+        arguments:
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Security\Provider\FacebookProvider:
+        class: StarterKit\StartBundle\Security\Provider\FacebookProvider
+        arguments:
+            - '@StarterKit\StartBundle\Factory\FaceBookClientFactory'
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Security\Provider\GoogleProvider:
+        class: StarterKit\StartBundle\Security\Provider\GoogleProvider
+        arguments:
+            - '@StarterKit\StartBundle\Factory\GoogleClientFactory'
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Security\Provider\TokenProvider:
+        class: StarterKit\StartBundle\Security\Provider\TokenProvider
+        arguments:
+            - '@StarterKit\StartBundle\Service\JWSService'
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Security\Provider\RefreshTokenProvider:
+        class: StarterKit\StartBundle\Security\Provider\RefreshTokenProvider
+        arguments:
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    # Guards
+
+    StarterKit\StartBundle\Security\Guard\Guard:
+        class: StarterKit\StartBundle\Security\Guard\Guard
+        arguments:
+            - '@security.encoder_factory'
+            - '@StarterKit\StartBundle\Service\AuthResponseService'
+            - '@StarterKit\StartBundle\Factory\UserProviderFactory'
+            - '@twig'
+
+
+    #Data Transformer
+
+    StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer:
+        class: StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer
+        arguments:
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    StarterKit\StartBundle\Form\ChangePasswordType:
+        class: StarterKit\StartBundle\Form\ChangePasswordType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\ForgetPasswordType:
+        class: StarterKit\StartBundle\Form\ForgetPasswordType
+        arguments:
+            - '@StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer'
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\RegisterType:
+        class: StarterKit\StartBundle\Form\RegisterType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\ResetPasswordType:
+        class: StarterKit\StartBundle\Form\ResetPasswordType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\UpdateUserType:
+        class: StarterKit\StartBundle\Form\UpdateUserType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\UserImageType:
+        class: StarterKit\StartBundle\Form\UserImageType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    #Controllers
+
+    StarterKit\StartBundle\Controller\UserController:
+        class: StarterKit\StartBundle\Controller\UserController
+        arguments:
+            - '@StarterKit\StartBundle\Service\FormSerializer'
+            - '@StarterKit\StartBundle\Service\UserService'
+            - '@StarterKit\StartBundle\Service\AuthResponseService'
+        tags: ['controller.service_arguments']
+

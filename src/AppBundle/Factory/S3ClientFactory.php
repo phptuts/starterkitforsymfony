@@ -7,7 +7,7 @@ use Aws\S3\S3Client;
 
 /**
  * Class S3ClientFactory
- * @package AppBundle\Factory
+ * @package StarterKit\StartBundle\Factory
  */
 class S3ClientFactory
 {

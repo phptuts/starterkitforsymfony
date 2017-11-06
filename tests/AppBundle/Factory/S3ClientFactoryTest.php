@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\AppBundle\Factory;
+namespace AppBundle\Tests\Factory;
 
 
 use AppBundle\Factory\S3ClientFactory;
 use Aws\S3\S3Client;
 use PHPUnit\Framework\Assert;
-use Tests\BaseTestCase;
+use StarterKit\StartBundle\Tests\BaseTestCase;
 
 class S3ClientFactoryTest extends BaseTestCase
 {

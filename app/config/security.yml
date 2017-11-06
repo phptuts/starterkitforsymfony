@@ -29,7 +29,7 @@ security:
             anonymous: ~
             guard:
                 authenticators:
-                    - AppBundle\Security\Guard\Guard
+                    - StarterKit\StartBundle\Security\Guard\Guard
 
             # activate different ways to authenticate
 

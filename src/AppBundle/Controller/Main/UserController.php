@@ -3,11 +3,11 @@
 namespace AppBundle\Controller\Main;
 
 
-use AppBundle\Form\User\ForgetPasswordType;
-use AppBundle\Form\User\RegisterType;
-use AppBundle\Form\User\ResetPasswordType;
-use AppBundle\Service\AuthResponseService;
-use AppBundle\Service\UserService;
+use StarterKit\StartBundle\Form\ForgetPasswordType;
+use StarterKit\StartBundle\Form\RegisterType;
+use StarterKit\StartBundle\Form\ResetPasswordType;
+use StarterKit\StartBundle\Service\AuthResponseService;
+use StarterKit\StartBundle\Service\UserService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

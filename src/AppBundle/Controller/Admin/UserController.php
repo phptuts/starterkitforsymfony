@@ -2,8 +2,8 @@
 
 namespace AppBundle\Controller\Admin;
 
-use AppBundle\Repository\UserRepository;
-use AppBundle\Service\UserService;
+use StarterKit\StartBundle\Repository\UserRepository;
+use StarterKit\StartBundle\Service\UserService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

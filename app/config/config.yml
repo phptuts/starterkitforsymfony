@@ -112,3 +112,13 @@ swiftmailer:
     host: '%app.mailer_host%'
     username: '%app.mailer_user%'
     password: '%app.mailer_password%'
+
+starter_kit_start:
+    facebook_app_secret: '%app.facebook_app_secret%'
+    facebook_api_version: '%app.facebook_api_version%'
+    facebook_app_id: '%app.facebook_app_id%'
+    google_client_id: '%app.google_client_id%'
+    jws_ttl: '%app.jws_ttl%'
+    jws_pass_phrase: '%app.jws_pass_phrase%'
+    refresh_token_ttl: '%app.refresh_token_ttl%'
+    user_class: '%app.user_class%'

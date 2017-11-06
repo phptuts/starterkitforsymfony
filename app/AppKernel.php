@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+            new StarterKit\StartBundle\StarterKitStartBundle(),
 
             new AppBundle\AppBundle(),
         ];
