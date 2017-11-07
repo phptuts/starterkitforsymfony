@@ -23,12 +23,21 @@ services:
             - '@StarterKit\StartBundle\Service\JWSService'
             - '@StarterKit\StartBundle\Security\Provider\EmailProvider'
 
+    StarterKit\StartBundle\S3ClientFactory:
+        class: StarterKit\StartBundle\Factory\S3ClientFactory
+        arguments:
+            - '%starter_kit_start.aws_region%'
+            - '%starter_kit_start.aws_key%'
+            - '%starter_kit_start.aws_secret%'
+            - '%starter_kit_start.aws_api_version%'
+
     # Services
     StarterKit\StartBundle\Service\JWSService:
         class: StarterKit\StartBundle\Service\JWSService
         arguments:
             - '%starter_kit_start.jws_pass_phrase%'
             - '%starter_kit_start.jws_ttl%'
+            - '%kernel.project_dir%'
 
     StarterKit\StartBundle\Service\UserService:
         class: StarterKit\StartBundle\Service\UserService
@@ -49,6 +58,13 @@ services:
         class: StarterKit\StartBundle\Service\FormSerializer
         arguments:
             - '@translator'
+
+    StarterKit\StartBundle\Service\S3Service:
+        class: StarterKit\StartBundle\Service\S3Service
+        arguments:
+            - '@StarterKit\StartBundle\S3ClientFactory'
+            - '%starter_kit_start.aws_s3_bucket_name%'
+            - '%kernel.environment%'
 
     # Providers
     StarterKit\StartBundle\Security\Provider\EmailProvider:

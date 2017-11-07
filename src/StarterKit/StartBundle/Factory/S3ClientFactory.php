@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Factory;
+namespace StarterKit\StartBundle\Factory;
 
 
 use Aws\S3\S3Client;

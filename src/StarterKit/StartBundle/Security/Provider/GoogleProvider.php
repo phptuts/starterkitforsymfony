@@ -2,7 +2,7 @@
 
 namespace StarterKit\StartBundle\Security\Provider;
 
-use StarterKit\StartBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 use StarterKit\StartBundle\Exception\ProgrammerException;
 use StarterKit\StartBundle\Factory\GoogleClientFactory;
 use StarterKit\StartBundle\Service\UserService;
@@ -25,8 +25,7 @@ class GoogleProvider implements UserProviderInterface
 
     public function __construct(
         GoogleClientFactory $googleClientFactory,
-        UserService $userService
-    )
+        UserService $userService)
     {
         $this->userService = $userService;
         $this->googleClient = $googleClientFactory->getGoogleClient();
@@ -38,7 +37,7 @@ class GoogleProvider implements UserProviderInterface
      * 3) Then we search by email and if one is found we update the user to have that google user id
      * 4) If nothing is found we register the user with google user id
      * @param string $username
-     * @return User
+     * @return BaseUser
      */
     public function loadUserByUsername($username)
     {
@@ -75,10 +74,10 @@ class GoogleProvider implements UserProviderInterface
     /**
      * Updates the user with their google id creating a link between their google account and user information.
      *
-     * @param User $user
+     * @param BaseUser $user
      * @param string $googleUserId
      */
-    protected function updateUserWithGoogleUserId(User $user, $googleUserId)
+    protected function updateUserWithGoogleUserId(BaseUser $user, $googleUserId)
     {
         $user->setGoogleUserId($googleUserId);
         $this->userService->save($user);
@@ -89,11 +88,12 @@ class GoogleProvider implements UserProviderInterface
      *
      * @param string $email
      * @param string $googleUserId
-     * @return User
+     * @return BaseUser
      */
     protected function registerUser($email, $googleUserId)
     {
-        $user = (new User())
+        $className = $this->userService->getUserClass();
+        $user = (new $className())
             ->setEmail($email)
             ->setGoogleUserId($googleUserId)
             ->setPlainPassword(base64_encode(random_bytes(20)));

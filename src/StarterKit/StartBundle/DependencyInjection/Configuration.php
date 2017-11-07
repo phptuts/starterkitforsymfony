@@ -21,14 +21,23 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('starter_kit_start');
 
         $rootNode->children()
-            ->scalarNode('facebook_app_secret')->isRequired()->end()
-            ->scalarNode('facebook_api_version')->isRequired()->end()
-            ->scalarNode('facebook_app_id')->isRequired()->end()
             ->scalarNode('jws_pass_phrase')->isRequired()->end()
-            ->scalarNode('google_client_id')->isRequired()->end()
             ->scalarNode('jws_ttl')->isRequired()->end()
             ->scalarNode('user_class')->isRequired()->end()
-            ->scalarNode('refresh_token_ttl')->isRequired()->end();
+            ->scalarNode('refresh_token_ttl')->isRequired()->end()
+
+            // Required for facebook and google login
+            ->scalarNode('facebook_app_secret')->end()
+            ->scalarNode('facebook_api_version')->end()
+            ->scalarNode('facebook_app_id')->end()
+            ->scalarNode('google_client_id')->end()
+
+            // Required for s3 autoload
+            ->scalarNode('aws_region')->end()
+            ->scalarNode('aws_key')->end()
+            ->scalarNode('aws_secret')->end()
+            ->scalarNode('aws_s3_bucket_name')->end()
+            ->scalarNode('aws_api_version')->end();
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

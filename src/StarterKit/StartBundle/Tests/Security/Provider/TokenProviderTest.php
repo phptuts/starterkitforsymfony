@@ -4,14 +4,13 @@
 namespace Test\AppBundle\Security\Provider;
 
 use AppBundle\Entity\User;
-use AppBundle\Repository\UserRepository;
-use AppBundle\Security\Provider\TokenProvider;
-use AppBundle\Service\Credential\JWSService;
-use AppBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Security\Provider\TokenProvider;
+use StarterKit\StartBundle\Service\JWSService;
+use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Tests\BaseTestCase;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-use Tests\BaseTestCase;
 
 class TokenProviderTest extends BaseTestCase
 {
@@ -36,7 +35,7 @@ class TokenProviderTest extends BaseTestCase
 
         $this->jwsService = \Mockery::mock(JWSService::class);
         $this->userService = \Mockery::mock(UserService::class);
-        $this->tokenProvider = new TokenProvider($this->userService, $this->jwsService);
+        $this->tokenProvider = new TokenProvider($this->jwsService, $this->userService);
     }
 
     /**

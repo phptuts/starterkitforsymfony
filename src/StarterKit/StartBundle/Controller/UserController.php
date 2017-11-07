@@ -2,6 +2,7 @@
 
 namespace StarterKit\StartBundle\Controller;
 
+use StarterKit\StartBundle\Entity\BaseUser;
 use StarterKit\StartBundle\Form\ChangePasswordType;
 use StarterKit\StartBundle\Form\ForgetPasswordType;
 use StarterKit\StartBundle\Form\RegisterType;
@@ -11,9 +12,7 @@ use StarterKit\StartBundle\Security\Voter\UserVoter;
 use StarterKit\StartBundle\Service\AuthResponseService;
 use StarterKit\StartBundle\Service\FormSerializer;
 use StarterKit\StartBundle\Service\UserService;
-use StarterKit\StartBundle\Tests\Entity\User;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -127,15 +126,16 @@ class UserController extends BaseRestController
      * )
      *
      * @param Request $request
-     * @param User $user
+     * @param integer $id
      *
      * @Route(path="users/{id}", methods={"PATCH"})
-     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
      *
      * @return FormInterface|Response
      */
-    public function updateUserAction(Request $request, User $user)
+    public function updateUserAction(Request $request, $id)
     {
+        $user = $this->getUserById($id);
+
         $form = $this->createForm(UpdateUserType::class, $user);
 
         $form->submit($request->request->all());
@@ -147,7 +147,7 @@ class UserController extends BaseRestController
 
             $this->userService->save($user);
 
-            return $this->serializeSingleObject($user,  Response::HTTP_OK);
+            return $this->serializeSingleObject($user, BaseUser::RESPONSE_TYPE,  Response::HTTP_OK);
         }
 
         return $form;
@@ -240,15 +240,16 @@ class UserController extends BaseRestController
      *
      * @Route(path="/users/{id}/password", methods={"PATCH"})
      *
-     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
      *
      * @param Request $request
-     * @param User $user
+     * @param integer $id
      *
      * @return FormInterface|Response
      */
-    public function changePasswordAction(Request $request, User $user)
+    public function changePasswordAction(Request $request, $id)
     {
+        $user = $this->getUserById($id);
+
         $form = $this->createForm(ChangePasswordType::class);
 
         $form->submit($request->request->all());
@@ -274,20 +275,17 @@ class UserController extends BaseRestController
      *  section="Users",
      *  authentication=true
      * )
-     *
+     * @param integer $id
      * @Route(path="/users/{id}", methods={"GET"})
-     *
-     * @ParamConverter(name="user", class="StarterKit\StartBundle:User")
-     *
-     * @param User $user
      *
      * @return Response
      */
-    public function getUserAction(User $user)
+    public function getUserAction($id)
     {
+        $user = $this->getUserById($id);
         $this->denyAccessUnlessGranted(UserVoter::USER_CAN_VIEW_EDIT, $user);
 
-        return $this->serializeSingleObject($user);
+        return $this->serializeSingleObject($user->listView(), BaseUser::RESPONSE_TYPE);
     }
 
     /**
@@ -315,6 +313,24 @@ class UserController extends BaseRestController
                 $page
             );
 
-        return $this->serializeList($users, 'users', $page);
+        return $this->serializeList($users, BaseUser::RESPONSE_TYPE, $page);
     }
+
+    /**
+     * Gets the user by the user's id
+     *
+     * @param $id
+     * @return null|object|BaseUser
+     */
+    private function getUserById($id)
+    {
+        $user = $this->userService->findUserById($id);
+
+        if (empty($user)) {
+            throw $this->createNotFoundException('user not found');
+        }
+
+        return $user;
+    }
+
 }

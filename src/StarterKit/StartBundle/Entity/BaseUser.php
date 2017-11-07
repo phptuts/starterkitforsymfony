@@ -22,7 +22,7 @@ use Symfony\Component\Validator\Constraints as Constraints;
  *
  * @link http://symfony.com/doc/current/security/entity_provider.html
  */
-abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface, ViewInterface
+abstract class BaseUser implements AdvancedUserInterface, ViewInterface
 {
 
     use TimeStampTrait;
@@ -58,6 +58,13 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
      * @var string
      */
     const MAX_PASSWORD_LENGTH = 128;
+
+    /**
+     * The Response type for the entity
+     *
+     * @var string
+     */
+    const RESPONSE_TYPE = 'user';
 
     /**
      * @var int
@@ -540,16 +547,6 @@ abstract class BaseUser implements AdvancedUserInterface, ResponseTypeInterface,
     public function isCredentialsNonExpired()
     {
         return true;
-    }
-
-    /**
-     * Returns the type of response being serialized
-     *
-     * @return string
-     */
-    public function getResponseType()
-    {
-        return 'user';
     }
 
     /**

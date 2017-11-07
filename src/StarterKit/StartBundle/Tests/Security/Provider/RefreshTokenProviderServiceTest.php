@@ -3,18 +3,12 @@
 
 namespace Test\AppBundle\Security\Provider;
 
-use AppBundle\Entity\RefreshToken;
-use AppBundle\Entity\User;
-use AppBundle\Exception\ProgrammerException;
-use AppBundle\Repository\RefreshTokenRepository;
-use AppBundle\Repository\UserRepository;
-use AppBundle\Security\Provider\RefreshTokenProvider;
-use AppBundle\Service\Credential\RefreshTokenService;
-use AppBundle\Service\User\UserService;
 use Mockery\Mock;
-use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Security\Provider\RefreshTokenProvider;
+use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Tests\BaseTestCase;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-use Tests\BaseTestCase;
 
 class RefreshTokenProviderServiceTest extends BaseTestCase
 {

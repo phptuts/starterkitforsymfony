@@ -2,84 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b84e03e-8bfa-4642-a16f-589433bb2ec0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Mock/image_10Mb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/BaseTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserValidationTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Api/ExceptionExampleController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Api/FacebookTestUserController.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Api/BaseRestController.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadData.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/LoadData.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/LoadStartUserData.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/LoadStartUserData.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/starter_user.yml" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/starter_user.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/users.yml" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/users.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/TimeStampTrait.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/TimeStampTrait.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/ViewInterface.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/ViewInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Event/UserEvent.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Event/UserEvent.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Exception/ProgrammerException.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Exception/ProgrammerException.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Factory/FaceBookClientFactory.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/FaceBookClientFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Factory/GoogleClientFactory.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/GoogleClientFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Factory/UserProviderFactory.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/UserProviderFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/DataTransformer/UserEmailTransformer.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/DataTransformer/UserEmailTransformer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/ChangePasswordType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ChangePasswordType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/ForgetPasswordType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ForgetPasswordType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/RegisterType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/RegisterType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/ResetPasswordType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ResetPasswordType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/UpdateUserType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/UpdateUserType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/User/UserImageType.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/UserImageType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Auth/AuthTokenModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Auth/AuthTokenModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Credential/CredentialInterface.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Credential/CredentialModelEmail.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialModelEmail.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Credential/CredentialTokenModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialTokenModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Page/PageModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Page/PageModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponseAuthenticationModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseAuthenticationModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponseFormErrorModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseFormErrorModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponseModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponseModelInterface.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModelInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponsePageModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponsePageModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Response/ResponseTypeInterface.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseTypeInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Model/User/ChangePasswordModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/User/ChangePasswordModel.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Repository/UserRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Guard/Guard.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/CustomProviderTrait.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/CustomProviderTrait.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/EmailProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/EmailProvider.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/FacebookProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/FacebookProvider.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/GoogleProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/GoogleProvider.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/RefreshTokenProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/RefreshTokenProvider.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Provider/TokenProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/TokenProvider.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Security/Voter/UserVoter.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Voter/UserVoter.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/AuthResponseService.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/AuthResponseService.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/FormSerializer.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/FormSerializer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/JWSService.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/JWSService.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/UserService.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Factory/FaceBookClientFactoryTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/FaceBookClientFactoryTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Factory/GoogleClientFactoryTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/GoogleClientFactoryTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Factory/UserProviderFactoryTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/UserProviderFactoryTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/DataTransformer/UserEmailTransformerTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/DataTransformer/UserEmailTransformerTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/ChangePasswordTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ChangePasswordTypeTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/ForgetPasswordTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ForgetPasswordTypeTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/RegisterTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/RegisterTypeTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/ResetPasswordTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ResetPasswordTypeTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/UpdateUserTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/UpdateUserTypeTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Form/User/UserImageTypeTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/UserImageTypeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/ControllerTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/S3ClientFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Auth/AuthTokenModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialEmailModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialTokenModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Page/PageModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseFormErrorModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponsePageModelTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Guard/GuardTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/EmailProviderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/AuthResponseServiceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/FormSerializerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/JWSServiceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/S3ServiceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/UserServiceTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Factory/S3ClientFactory.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/S3ClientFactory.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Service/S3Service.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/S3Service.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialModelEmail.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialEmailModel.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Security/Provider/FacebookProviderTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/FacebookProviderTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Security/Provider/GoogleProviderTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/GoogleProviderTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/RefreshTokenProviderServiceTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Security/Provider/TokenProviderTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/TokenProviderTest.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/AppBundle/Security/Voter/UserVoterTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Voter/UserVoterTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_tests.sh" afterPath="$PROJECT_DIR$/scripts/run_tests.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Main/AccountSettingController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Main/AccountSettingController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Main/HomeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Main/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Main/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Main/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Factory/S3ClientFactory.php" afterPath="$PROJECT_DIR$/src/AppBundle/Factory/S3ClientFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Factory/S3ClientFactoryTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Factory/S3ClientFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseAuthenticationModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseAuthenticationModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModel.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/CustomProviderTrait.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/CustomProviderTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/FacebookProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/FacebookProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/GoogleProvider.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/GoogleProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Voter/UserVoter.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Voter/UserVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/JWSService.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/JWSService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/DataTransformer/UserEmailTransformerTest.php" afterPath="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/DataTransformer/UserEmailTransformerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,53 +74,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaseUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php">
+      <file leaf-file-name="ResponseModelTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseModelTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="194" column="18" lean-forward="false" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StarterKitStartBundle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/StarterKitStartBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+            <state relative-caret-position="150">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
               <folding>
-                <element signature="e#42#130#0#PHP" expanded="true" />
+                <element signature="e#63#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JWSServiceTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="311">
+              <caret line="136" column="34" lean-forward="false" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+              <folding>
+                <element signature="e#53#96#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserValidationTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserValidationTest.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="103" column="65" lean-forward="false" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
-              <folding />
+            <state relative-caret-position="210">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding>
+                <element signature="e#36#79#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctrineOrmMappingsPass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php">
+      <file leaf-file-name="BaseUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="138" column="70" lean-forward="false" selection-start-line="138" selection-start-column="69" selection-end-line="138" selection-end-column="70" />
+            <state relative-caret-position="277">
+              <caret line="669" column="0" lean-forward="false" selection-start-line="669" selection-start-column="0" selection-end-line="675" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,48 +123,62 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_tests.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+      <file leaf-file-name="UserTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="499">
+              <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+              <folding>
+                <element signature="e#54#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="starter_user.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/starter_user.yml">
+      <file leaf-file-name="ResponsePageModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponsePageModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="426">
+              <caret line="34" column="15" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="45" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/users.yml">
+      <file leaf-file-name="ResponsePageModelTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponsePageModelTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="300">
+              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="e#63#92#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config_test.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
+      <file leaf-file-name="PageModelTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Page/PageModelTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -211,23 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getTimestamp</find>
-      <find>refresh</find>
-      <find>userRepository</find>
-      <find>abstract</find>
-      <find>REST</find>
-      <find>Serializer</find>
-      <find>getC</find>
-      <find>login_check</find>
-      <find>isLoginRequest</find>
-      <find>Tests</find>
-      <find>Tests\AppBundle</find>
-      <find>testTransformOnEmptyUser</find>
-      <find>User</find>
-      <find>StarterKit\StartBundle\Entity\User</find>
-      <find>isEq</find>
-      <find>serial</find>
-      <find>testEmailConstraints</find>
       <find>UserController</find>
       <find>setParam</find>
       <find>processConfiguration</find>
@@ -235,12 +195,29 @@
       <find>AppBundle</find>
       <find>facebook_app_id</find>
       <find>security.authentication.provider.guard.main</find>
-      <find>@return User</find>
       <find>jws_pass_phrase</find>
       <find>User::</find>
       <find>EmailProvider</find>
       <find>private</find>
+      <find>registerService</find>
+      <find>BlahUser</find>
+      <find>StarterKit\StartBundle\Entity\User</find>
+      <find>testNewUser</find>
+      <find>@return User</find>
+      <find>starter_kit_start.user_class</find>
+      <find>aws_s3_bucket_name</find>
+      <find>S3</find>
       <find>kernel.environment</find>
+      <find>testGetUser</find>
+      <find>echo</find>
+      <find>registerU</find>
+      <find>plur</find>
+      <find>createForm</find>
+      <find>serializeSingleObject</find>
+      <find>ParamConverter</find>
+      <find>$user)</find>
+      <find>getUser</find>
+      <find>getRes</find>
     </findStrings>
     <replaceStrings>
       <replace>protected</replace>
@@ -259,12 +236,13 @@
       <replace>@App/main</replace>
       <replace>main/documentation</replace>
       <replace>AppBundle</replace>
-      <replace>userService</replace>
       <replace>StarterKit\StartBundle</replace>
       <replace>StarterKit\StartBundle\Tests</replace>
       <replace>BaseUser</replace>
-      <replace>@return BaseUser</replace>
       <replace>BaseUser::</replace>
+      <replace>userService</replace>
+      <replace>@return BaseUser</replace>
+      <replace>getUserById</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vendor/symfony</dir>
@@ -302,57 +280,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/User/UserImageTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ChangePasswordType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ForgetPasswordType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/RegisterType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ResetPasswordType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/UpdateUserType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/UserImageType.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ChangePasswordTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ForgetPasswordTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/RegisterTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/ResetPasswordTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/UpdateUserTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/UserImageTypeTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Form/DataTransformer/UserEmailTransformer.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/BaseTestCase.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/FaceBookClientFactoryTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/GoogleClientFactoryTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/S3ClientFactoryTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/UserProviderFactoryTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/UserController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Main/AccountSettingController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/AppBundle.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Main/UserController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Main/HomeController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Factory/S3ClientFactory.php" />
-        <option value="$PROJECT_DIR$/tests/AppBundle/Factory/S3ClientFactoryTest.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/StarterKitStartExtension.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/AuthResponseService.php" />
+        <option value="$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php" />
         <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/JWSService.php" />
-        <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Event/UserEvent.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/TokenProvider.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/RefreshTokenProvider.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/BaseTestCase.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/RefreshTokenProviderServiceTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form/DataTransformer/UserEmailTransformerTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/CustomProviderTrait.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/GoogleProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/FacebookProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/TokenProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Voter/UserVoter.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Voter/UserVoterTest.php" />
         <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/GoogleProvider.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/FacebookProvider.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/S3ClientFactory.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/S3ServiceTest.php" />
         <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserValidationTest.php" />
-        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/StarterKitStartBundle.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Main/AccountSettingController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/JWSServiceTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/S3Service.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseAuthenticationModel.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/AuthResponseServiceTest.php" />
         <option value="$PROJECT_DIR$/scripts/run_tests.sh" />
+        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Guard/GuardTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/EmailProviderTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/UserServiceTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/FormSerializerTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/S3ClientFactoryTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Auth/AuthTokenModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialModelEmail.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialEmailModel.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialModelEmailTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialEmailModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialTokenModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Page/PageModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseFormErrorModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseTypeInterface.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/ControllerTrait.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModel.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponsePageModelTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php" />
+        <option value="$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php" />
       </list>
     </option>
   </component>
@@ -414,292 +392,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redis-bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redis-bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DependencyInjection" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redis-bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DependencyInjection" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Configuration" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Credential" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mock" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factory" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -723,410 +415,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mock" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factory" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Voter" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Provider" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataTransformer" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factory" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarterKit" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StartBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1240,76 +528,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Factory" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -1346,24 +564,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymfonyStart" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -1381,22 +581,22 @@
     <property name="php.override.implement.member.chooser.php.doc" value="COPY_ALWAYS" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="UserController.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Controller/Main/UserController.php&#10;AppBundle\Controller\Main\UserController&#9;null&#9;null&#10;EncoderF&#9;null&#9;null&#10;RefreshTo&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Security/Provider/RefreshTokenProvider.php&#10;JWSServiceTest&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Service/Credential/JWSServiceTest.php&#10;testRefreshTokenModel&#9;null&#9;null&#10;CredentialModelBuilderService&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Service/Credential/CredentialModelBuilderService.php&#10;RefreshTokenProviderServiceTest.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php&#10;Symfony\Component\Security\Guard\GuardAuthenticatorHandler&#9;null&#9;null&#10;ApiLoginGuard&#9;null&#9;null&#10;ExceptionListener&#9;null&#9;null&#10;ExceptionHandler&#9;null&#9;null&#10;fos_rest.exception.messages_map&#9;null&#9;null&#10;ExceptionController&#9;null&#9;null&#10;ExceptionCont&#9;null&#9;null&#10;Exception&#9;null&#9;null&#10;ExceptionCo&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/src/ApiBundle/Controller/ExceptionController.php&#10;TwigBun&#9;null&#9;null&#10;showAction&#9;null&#9;null&#10;testRefreshTokenLogin&#9;null&#9;null&#10;JMS\Serializer\Handler\FormErrorHandler&#9;null&#9;null&#10;FormErrorHandler&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php&#10;Validation Failed&#9;null&#9;null&#10;bootstrap_3_layout&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;ReadWriteCachedEntityPersister&#9;null&#9;null&#10;FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="BaseU&#9;null&#9;null&#10;JWSServiceTest.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/StarterKit/StartBundle/Tests/Service/JWSServiceTest.php&#10;UserController.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Controller/Main/UserController.php&#10;AppBundle\Controller\Main\UserController&#9;null&#9;null&#10;EncoderF&#9;null&#9;null&#10;RefreshTo&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Security/Provider/RefreshTokenProvider.php&#10;JWSServiceTest&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Service/Credential/JWSServiceTest.php&#10;testRefreshTokenModel&#9;null&#9;null&#10;CredentialModelBuilderService&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/src/AppBundle/Service/Credential/CredentialModelBuilderService.php&#10;RefreshTokenProviderServiceTest.php&#9;FILE&#9;file:///Users/noahglaser/bigfoot/SymfonyStart/tests/AppBundle/Security/Provider/RefreshTokenProviderServiceTest.php&#10;Symfony\Component\Security\Guard\GuardAuthenticatorHandler&#9;null&#9;null&#10;ApiLoginGuard&#9;null&#9;null&#10;ExceptionListener&#9;null&#9;null&#10;ExceptionHandler&#9;null&#9;null&#10;fos_rest.exception.messages_map&#9;null&#9;null&#10;ExceptionController&#9;null&#9;null&#10;ExceptionCont&#9;null&#9;null&#10;Exception&#9;null&#9;null&#10;ExceptionCo&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/src/ApiBundle/Controller/ExceptionController.php&#10;TwigBun&#9;null&#9;null&#10;showAction&#9;null&#9;null&#10;testRefreshTokenLogin&#9;null&#9;null&#10;JMS\Serializer\Handler\FormErrorHandler&#9;null&#9;null&#10;FormErrorHandler&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/friendsofsymfony/rest-bundle/Serializer/Normalizer/FormErrorHandler.php&#10;Validation Failed&#9;null&#9;null&#10;bootstrap_3_layout&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;ReadWriteCachedEntityPersister&#9;null&#9;null&#10;FileFormField&#9;null&#9;null&#10;ValidationErrorsConstraint.php&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/liip/functional-test-bundle/Test/ValidationErrorsConstraint.php&#10;FormFactory&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php&#10;AbstractFormLoginAuthenticator&#9;null&#9;null&#10;Guard&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/Firewall/GuardAuthenticationListener.php&#10;Authen&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Component/Security/Guard/GuardAuthenticatorHandler.php&#10;bootstrap_3_layout.html.twig&#9;FILE&#9;file:///Users/noahglaser/vagrant/code/Symfony/SymfonyStart/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/bootstrap_3_layout.html.twig&#10;PropertyPathMapper&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security" />
       <recent name="$PROJECT_DIR$/tests/AppBundle/Factory" />
       <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Form" />
       <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Form" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Model/Auth" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Factory" />
-      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle" />
+      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory" />
+      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service" />
+      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Factory" />
       <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Service" />
-      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/StarterKit/StartBundle/Tests" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.StartBundle">
@@ -1535,12 +735,12 @@
       <workItem from="1509508779509" duration="709000" />
       <workItem from="1509580505775" duration="8601000" />
       <workItem from="1509668190458" duration="48000" />
-      <workItem from="1509841609249" duration="47140000" />
+      <workItem from="1509841609249" duration="64575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510035000" />
+    <option name="totallyTimeSpent" value="527470000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1557,10 +757,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845744" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31903484" sideWeight="0.5024356" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903484" sideWeight="0.5024356" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31903484" sideWeight="0.49756438" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31903484" sideWeight="0.49756438" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1604,228 +804,169 @@
           <line>6</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="178" column="22" lean-forward="false" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/snc/redis-bundle/DependencyInjection/Configuration/RedisDsn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1815">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/snc/redis-bundle/DependencyInjection/SncRedisExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="274" column="47" lean-forward="false" selection-start-line="274" selection-start-column="38" selection-end-line="274" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="640" column="13" lean-forward="true" selection-start-line="640" selection-start-column="13" selection-end-line="640" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/snc/redis-bundle/DependencyInjection/Configuration/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainerCompiler.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="16" column="106" lean-forward="false" selection-start-line="16" selection-start-column="106" selection-end-line="16" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/test/appTestDebugProjectContainer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="1954" column="69" lean-forward="false" selection-start-line="1954" selection-start-column="69" selection-end-line="1954" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Service/JWSService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Api/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="e#44#70#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Service/AuthResponseService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="165">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/StarterKitStartExtension.php">
+    <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="345" column="5" lean-forward="false" selection-start-line="345" selection-start-column="5" selection-end-line="345" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserProviderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/UserPasswordEncoder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="65" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/UserPasswordEncoderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/EmailProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Provider/EmailProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="e#67#84#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Security/Guard/GuardTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding>
+            <element signature="e#63#80#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/User/RegisterServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#62#121#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Main/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="e#46#97#0#PHP" expanded="true" />
-            <element signature="e#2298#2337#0#PHP" expanded="true" />
-            <element signature="e#4889#4899#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/GoogleClientFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        <state relative-caret-position="-1211">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Service/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="243" column="69" lean-forward="false" selection-start-line="243" selection-start-column="69" selection-end-line="243" selection-end-column="69" />
-          <folding>
-            <element signature="e#50#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Event/UserEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="e#49#92#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/EmailProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="222">
+          <caret line="289" column="20" lean-forward="false" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/GoogleProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="375">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/FacebookProvider.php">
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/UserServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="-3326">
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/TokenProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Count.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="80" lean-forward="false" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+        <state relative-caret-position="105">
+          <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Provider/RefreshTokenProvider.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Valid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Factory/UserProviderFactory.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/NotBlank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        <state relative-caret-position="210">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Voter/UserVoter.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Length.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="373">
+          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1833,200 +974,281 @@
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Service/FormSerializer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Exception/ProgrammerException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-789">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/LoadData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
-            <element signature="e#59#109#0#PHP" expanded="false" />
+            <element signature="e#50#82#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ChangePasswordType.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/DataTransformer/UserEmailTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ForgetPasswordType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/RegisterType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/ResetPasswordType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Form/UpdateUserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        <state relative-caret-position="177">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="147" column="53" lean-forward="false" selection-start-line="147" selection-start-column="53" selection-end-line="147" selection-end-column="53" />
+        <state relative-caret-position="239">
+          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="330" column="60" lean-forward="false" selection-start-line="330" selection-start-column="54" selection-end-line="330" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Service/FormSerializerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="108" column="30" lean-forward="false" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+          <folding>
+            <element signature="e#57#86#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/GoogleClientFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#68#123#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Factory/S3ClientFactoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#57#108#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Auth/AuthTokenModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialEmailModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Auth/AuthTokenModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding>
+            <element signature="e#60#89#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Credential/CredentialTokenModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Security/Guard/Guard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialTokenModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding>
+            <element signature="e#67#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Credential/CredentialEmailModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#65#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Page/PageModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="37" column="73" lean-forward="true" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseAuthenticationModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseFormErrorModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseFormErrorModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#65#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/BaseRestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="46" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponseTypeInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponseModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#63#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Page/PageModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Model/Response/ResponsePageModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="34" column="15" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="45" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Model/Response/ResponsePageModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#63#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="136" column="34" lean-forward="false" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+          <folding>
+            <element signature="e#53#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#36#79#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/starter_user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DataFixtures/ORM/users.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Entity/BaseUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="194" column="18" lean-forward="false" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+        <state relative-caret-position="277">
+          <caret line="669" column="0" lean-forward="false" selection-start-line="669" selection-start-column="0" selection-end-line="675" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/Bundle.php">
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="138" column="70" lean-forward="false" selection-start-line="138" selection-start-column="69" selection-end-line="138" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Mock/image_10Mb.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/Tests/Entity/UserValidationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="103" column="65" lean-forward="false" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/StarterKitStartBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+        <state relative-caret-position="499">
+          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
           <folding>
-            <element signature="e#42#130#0#PHP" expanded="true" />
+            <element signature="e#54#83#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/run_tests.sh">
+    <entry file="file://$PROJECT_DIR$/src/StarterKit/StartBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Service/Credential/JWSServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="495">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding />
         </state>
       </provider>

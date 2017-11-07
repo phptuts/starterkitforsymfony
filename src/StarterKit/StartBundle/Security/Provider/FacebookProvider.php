@@ -2,7 +2,7 @@
 
 namespace StarterKit\StartBundle\Security\Provider;
 
-use StarterKit\StartBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 use StarterKit\StartBundle\Exception\ProgrammerException;
 use StarterKit\StartBundle\Factory\FaceBookClientFactory;
 use StarterKit\StartBundle\Service\UserService;
@@ -25,6 +25,7 @@ class FacebookProvider implements UserProviderInterface
      * @var FacebookClient
      */
     protected $facebookClient;
+
 
     public function __construct(
         FaceBookClientFactory $faceBookClientFactory,
@@ -85,10 +86,10 @@ class FacebookProvider implements UserProviderInterface
     /**
      * Updates the user with their facebook id creating a link between their facebook account and user information.
      *
-     * @param User $user
+     * @param BaseUser $user
      * @param string $facebookUserId
      */
-    protected function updateUserWithFacebookId(User $user, $facebookUserId)
+    protected function updateUserWithFacebookId(BaseUser $user, $facebookUserId)
     {
         $user->setFacebookUserId($facebookUserId);
         $this->userService->save($user);
@@ -99,11 +100,12 @@ class FacebookProvider implements UserProviderInterface
      *
      * @param string $email
      * @param string $facebookUserId
-     * @return User
+     * @return BaseUser
      */
     protected function registerUser($email, $facebookUserId)
     {
-        $user = (new User())
+        $className = $this->userService->getUserClass();
+        $user = (new  $className())
             ->setEmail($email)
             ->setFacebookUserId($facebookUserId)
             ->setPlainPassword(base64_encode(random_bytes(20)));

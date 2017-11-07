@@ -222,6 +222,7 @@ class UserService
 
         $encoder = $this->encoderFactory->getEncoder($user);
         $user->setPassword($encoder->encodePassword($user->getPlainPassword(), $user->getSalt()));
+        $user->eraseCredentials();
         $this->save($user);
     }
 
@@ -250,7 +251,7 @@ class UserService
      * Creates a forget password token and sends a forget password email to the user
      * @param BaseUser $user
      *
-     * @return User
+     * @return BaseUser
      */
     public function forgetPassword(BaseUser $user)
     {

@@ -2,7 +2,7 @@
 
 namespace StarterKit\StartBundle\Security\Provider;
 
-use StarterKit\StartBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 use StarterKit\StartBundle\Service\UserService;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -40,7 +40,7 @@ trait CustomProviderTrait
      */
     final public function refreshUser(UserInterface $user)
     {
-        if (!$user instanceof User) {
+        if (!$user instanceof BaseUser) {
             throw new UnsupportedUserException(
                 sprintf('Instances of "%s" are not supported.', get_class($user))
             );
@@ -58,6 +58,6 @@ trait CustomProviderTrait
      */
     final public function supportsClass($class)
     {
-        return $class === User::class;
+        return $class === $this->userService->getUserClass();
     }
 }

@@ -2,8 +2,7 @@
 
 namespace StarterKit\StartBundle\Security\Voter;
 
-
-use StarterKit\StartBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 
@@ -30,24 +29,24 @@ class UserVoter extends Voter
      */
     protected function supports($attribute, $subject)
     {
-         return $attribute == self::USER_CAN_VIEW_EDIT && $subject instanceof User;
+         return $attribute == self::USER_CAN_VIEW_EDIT && $subject instanceof BaseUser;
     }
 
     /**
      * Allows the user to view / edit if the user is an admin or the user is trying to edit itself.
      *
      * @param string $attribute
-     * @param User $subject
+     * @param BaseUser $subject
      * @param TokenInterface $token
      *
      * @return bool
      */
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
     {
-        /** @var User $user */
+        /** @var BaseUser $user */
         $user = $token->getUser();
 
-        return $user instanceof User && ($user->hasRole('ROLE_ADMIN') || $user->getId() === $subject->getId());
+        return $user instanceof BaseUser && ($user->hasRole('ROLE_ADMIN') || $user->getId() === $subject->getId());
     }
 
 }

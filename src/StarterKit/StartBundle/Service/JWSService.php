@@ -44,16 +44,19 @@ class JWSService
      * @var string
      */
     private $passPhrase;
+    private $kernelDir;
 
     /**
      * JWSService constructor.
      * @param $passPhrase
      * @param integer $ttl
+     * @param string $kernelDir
      */
-    public function __construct($passPhrase, $ttl)
+    public function __construct($passPhrase, $ttl, $kernelDir)
     {
         $this->passPhrase = $passPhrase;
         $this->ttl = $ttl;
+        $this->kernelDir = $kernelDir;
     }
 
     /**
@@ -64,7 +67,10 @@ class JWSService
      */
     public function createAuthTokenModel(BaseUser $user)
     {
-        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../var/jwt/private.pem'), $this->passPhrase);
+        $privateKey = openssl_pkey_get_private(
+            file_get_contents($this->kernelDir . '/var/jwt/private.pem'),
+            $this->passPhrase
+        );
 
         $jws = new SimpleJWS([
             'alg' => self::ALG
@@ -94,7 +100,7 @@ class JWSService
     public function isValid($token)
     {
         try {
-            $publicKey = openssl_pkey_get_public(file_get_contents(__DIR__ . '/../../../var/jwt/public.pem'));
+            $publicKey = openssl_pkey_get_public(file_get_contents($this->kernelDir . '/var/jwt/public.pem'));
 
             $jws = SimpleJWS::load($token);
 

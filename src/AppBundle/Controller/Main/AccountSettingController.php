@@ -5,7 +5,7 @@ namespace AppBundle\Controller\Main;
 use AppBundle\Entity\User;
 use StarterKit\StartBundle\Form\ChangePasswordType;
 use StarterKit\StartBundle\Form\UpdateUserType;
-use AppBundle\Service\S3Service;
+use StarterKit\StartBundle\Service\S3Service;
 use StarterKit\StartBundle\Service\UserService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;

@@ -34,6 +34,49 @@ class UserTest extends BaseTestCase
         Assert::assertEquals('blue@gmail.com', $user->getUsername());
    }
 
+   public function testSmallStuff()
+   {
+       $user = new User();
+       $user->setImageUrl('url');
+
+       Assert::assertEquals('url', $user->getImageUrl());
+
+       $user->setSource('website');
+
+       Assert::assertEquals('website', $user->getSource());
+       $user->setCreatedAt(new \DateTime());
+       $user->setUpdatedAt(new \DateTime());
+
+       Assert::assertInstanceOf(\DateTime::class, $user->getCreatedAt());
+       Assert::assertInstanceOf(\DateTime::class, $user->getUpdatedAt());
+
+   }
+
+   public function testSingleView()
+   {
+       $user = new User();
+       $this->setObjectId($user, 33);
+       $user->setDisplayName('blue')
+           ->setEmail('email@gmail.com')
+           ->setDisplayName('moo')
+           ->setBio('bio')
+           ->setRoles(['ROLE_USER'])
+           ->setImageUrl('url');
+
+       $expected = [
+           'id' => 33,
+           'displayName' => 'moo',
+           'roles' => ['ROLE_USER'],
+           'imageUrl' => 'url',
+           'email' => 'email@gmail.com',
+           'bio' => 'bio'
+       ];
+
+       Assert::assertEquals($expected, $user->singleView());
+   }
+
+
+
 
     /**
      * Test that erase creds nulls the plain password field

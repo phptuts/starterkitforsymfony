@@ -6,7 +6,7 @@ namespace StarterKit\StartBundle\Model\Credential;
  * Class CredentialModelEmail
  * @package StarterKit\StartBundle\Model\Security
  */
-class CredentialModelEmail implements CredentialInterface
+class CredentialEmailModel implements CredentialInterface
 {
     /**
      * @var string

@@ -23,24 +23,16 @@ services:
 
     # controllers are imported separately to make sure they're public
     # and have a tag that allows actions to type-hint services
-#    AppBundle\Controller\:
-#        resource: '../../src/AppBundle/Controller'
-#        public: true
-#        tags: ['controller.service_arguments']
+    AppBundle\Controller\:
+        resource: '../../src/AppBundle/Controller'
+        public: true
+        tags: ['controller.service_arguments']
 
     # Third Party Bundle Services
     Doctrine\Common\Cache\PredisCache:
         class: '%snc_redis.doctrine_cache_predis.class%'
         arguments:
             - '@snc_redis.default'
-
-    # Services with parameters
-    AppBundle\Service\S3Service:
-        class: AppBundle\Service\S3Service
-        arguments:
-            - '@AppBundle\Factory\S3ClientFactory'
-            - '%app.aws_s3_bucket_name%'
-            - '%kernel.environment%'
 
     AppBundle\Service\EmailService:
         class: AppBundle\Service\EmailService
@@ -49,14 +41,6 @@ services:
             - '@mailer'
             - '%app.from_email%'
 
-    # FACTORIES
-    AppBundle\Factory\S3ClientFactory:
-        class: AppBundle\Factory\S3ClientFactory
-        arguments:
-            - '%app.aws_region%'
-            - '%app.aws_key%'
-            - '%app.aws_secret%'
-            - '%app.aws_api_version%'
 
     # EVENT LISTENERS
     AppBundle\Listener\ExceptionListener:

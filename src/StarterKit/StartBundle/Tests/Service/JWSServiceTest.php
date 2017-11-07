@@ -1,11 +1,12 @@
 <?php
 
-namespace Tests\AppBundle\Service\Credential;
+namespace StarterKit\StartBundle\Tests\Service\Credential;
 
-use AppBundle\Exception\ProgrammerException;
 use Namshi\JOSE\SimpleJWS;
-use AppBundle\Service\Credential\JWSService;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Exception\ProgrammerException;
+use StarterKit\StartBundle\Service\JWSService;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Tests\BaseTestCase;
 
 class JWSServiceTest extends BaseTestCase
@@ -17,12 +18,18 @@ class JWSServiceTest extends BaseTestCase
 
     public static $passphrase;
 
+    public static $homeDir;
+
     protected function setUp()
     {
-        self::$passphrase = $this->getContainer()->getParameter('app.jws_pass_phrase') ;
+        self::$passphrase = $this->getContainer()->getParameter('starter_kit_start.jws_pass_phrase') ;
+        self::$homeDir = $this->getContainer()->getParameter('kernel.project_dir');
         parent::setUp();
         $this->JWSService =
-            new JWSService(self::$passphrase, $this->getContainer()->getParameter('app.jws_ttl'));
+            new JWSService(self::$passphrase,
+                $this->getContainer()->getParameter('starter_kit_start.jws_ttl'),
+                self::$homeDir
+            );
     }
 
 
@@ -102,7 +109,7 @@ class JWSServiceTest extends BaseTestCase
      */
     public static function createExpiredToken(User $user)
     {
-        $privateKey = openssl_pkey_get_private(file_get_contents(__DIR__ . '/../../../../var/jwt/private.pem'), self::$passphrase);
+        $privateKey = openssl_pkey_get_private(file_get_contents(self::$homeDir . '/var/jwt/private.pem'), self::$passphrase);
         $jws = new SimpleJWS([
             'alg' => 'RS256'
         ]);

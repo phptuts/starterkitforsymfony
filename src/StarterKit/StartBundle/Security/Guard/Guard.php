@@ -5,7 +5,7 @@ namespace StarterKit\StartBundle\Security\Guard;
 use StarterKit\StartBundle\Exception\ProgrammerException;
 use StarterKit\StartBundle\Factory\UserProviderFactory;
 use StarterKit\StartBundle\Model\Credential\CredentialInterface;
-use StarterKit\StartBundle\Model\Credential\CredentialModelEmail;
+use StarterKit\StartBundle\Model\Credential\CredentialEmailModel;
 use StarterKit\StartBundle\Model\Credential\CredentialTokenModel;
 use StarterKit\StartBundle\Service\AuthResponseService;
 use Symfony\Component\HttpFoundation\Request;
@@ -71,7 +71,7 @@ class Guard extends AbstractGuardAuthenticator
     /**
      * @var AuthResponseService
      */
-    private $credentialResponseBuilderService;
+    private $authResponseService;
 
     /**
      * @var UserProviderFactory
@@ -85,18 +85,18 @@ class Guard extends AbstractGuardAuthenticator
     /**
      * ApiLoginGuard constructor.
      * @param EncoderFactoryInterface $encoderFactory
-     * @param AuthResponseService $credentialResponseBuilderService
+     * @param AuthResponseService $authResponseService
      * @param UserProviderFactory $userProviderFactory
      */
     public function __construct(
         EncoderFactoryInterface $encoderFactory,
-        AuthResponseService $credentialResponseBuilderService,
+        AuthResponseService $authResponseService,
         UserProviderFactory $userProviderFactory,
         \Twig_Environment $twig
     )
     {
         $this->encoderFactory = $encoderFactory;
-        $this->credentialResponseBuilderService = $credentialResponseBuilderService;
+        $this->authResponseService = $authResponseService;
         $this->userProviderFactory = $userProviderFactory;
         $this->twig = $twig;
     }
@@ -105,7 +105,7 @@ class Guard extends AbstractGuardAuthenticator
      * Step 1) See if the response has something to authenticate it and produce a CredentialInterface or return null
      *
      * @param Request $request
-     * @return mixed
+     * @return CredentialTokenModel|CredentialEmailModel
      */
     public function getCredentials(Request $request)
     {
@@ -121,7 +121,7 @@ class Guard extends AbstractGuardAuthenticator
             return new CredentialTokenModel(CredentialInterface::PROVIDER_TYPE_JWT, $jwtToken);
         }
 
-        return  null;
+        return null;
     }
 
     /**
@@ -151,7 +151,7 @@ class Guard extends AbstractGuardAuthenticator
      *
      * Otherwise check the password against the user
      *
-     * @param CredentialModelEmail|CredentialTokenModel $credentials
+     * @param CredentialEmailModel|CredentialTokenModel $credentials
      * @param UserInterface $user
      * @return bool
      */
@@ -178,7 +178,8 @@ class Guard extends AbstractGuardAuthenticator
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
         if ($this->isLoginRequest($request)) {
-            return  $this->credentialResponseBuilderService->createAuthResponse($token->getUser());
+
+            return $this->authResponseService->createAuthResponse($token->getUser());
         }
 
         return null;
@@ -194,11 +195,12 @@ class Guard extends AbstractGuardAuthenticator
      */
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
-        if ($request->headers->get('Content-Type') === 'application/json') {
-            return new Response('Authentication Failed', Response::HTTP_FORBIDDEN);
+        if ($this->isRequestHtmlContentType($request)) {
+
+            return new Response($this->twig->render('TwigBundle:Exception:error403.html.twig'), Response::HTTP_FORBIDDEN);
         }
 
-        return new Response($this->twig->render('TwigBundle:Exception:error403.html.twig'), Response::HTTP_FORBIDDEN);
+        return new Response('Authentication Failed', Response::HTTP_FORBIDDEN);
     }
 
     /**
@@ -211,11 +213,13 @@ class Guard extends AbstractGuardAuthenticator
      */
     public function start(Request $request, AuthenticationException $authException = null)
     {
-        if ($request->headers->get('Content-Type') === 'application/json') {
-            return new Response('Authentication Failed', Response::HTTP_UNAUTHORIZED);
+        if ($this->isRequestHtmlContentType($request)) {
+
+            return new Response($this->twig->render('TwigBundle:Exception:error403.html.twig'), Response::HTTP_UNAUTHORIZED);
         }
 
-        return new Response($this->twig->render('TwigBundle:Exception:error403.html.twig'), Response::HTTP_UNAUTHORIZED);
+        return new Response('Authentication Required', Response::HTTP_UNAUTHORIZED);
+
     }
 
     /**
@@ -241,7 +245,7 @@ class Guard extends AbstractGuardAuthenticator
 
     /**
      * @param Request $request
-     * @return CredentialModelEmail|CredentialTokenModel|null
+     * @return CredentialEmailModel|CredentialTokenModel|null
      */
     private function createCredentialModel(Request $request)
     {
@@ -249,7 +253,7 @@ class Guard extends AbstractGuardAuthenticator
             json_decode($request->getContent(), true) : $request->request->all();
 
         if ($this->isEmailLoginResponse($post)) {
-            return new CredentialModelEmail($post[self::EMAIL_FIELD], $post[self::PASSWORD_FIELD]);
+            return new CredentialEmailModel($post[self::EMAIL_FIELD], $post[self::PASSWORD_FIELD]);
         }
 
         if ($this->isTokenLoginRequest($post)) {
@@ -280,7 +284,7 @@ class Guard extends AbstractGuardAuthenticator
      */
     private function isTokenLoginRequest($post)
     {
-        return !empty($post[self::TOKEN_FIELD]) && !empty($post[self::TOKEN_FIELD]);
+        return !empty($post[self::TOKEN_FIELD]) && !empty($post[self::TOKEN_TYPE_FIELD]);
     }
 
     /**
@@ -292,5 +296,16 @@ class Guard extends AbstractGuardAuthenticator
     private function isEmailLoginResponse($post)
     {
         return !empty($post[self::EMAIL_FIELD]) && !empty($post[self::PASSWORD_FIELD]);
+    }
+
+    /**
+     * Returns true if the request's content type is html
+     *
+     * @param Request $request
+     * @return bool
+     */
+    private function isRequestHtmlContentType(Request $request)
+    {
+        return $request->headers->get('Content-Type') === 'html/text';
     }
 }

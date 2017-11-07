@@ -1,13 +1,7 @@
 <?php
 
-namespace Test\AppBundle\Security\Provider;
+namespace StarterKit\StartBundle\Tests\Security\Provider;
 
-use AppBundle\Entity\User;
-use AppBundle\Exception\ProgrammerException;
-use AppBundle\Factory\FaceBookClientFactory;
-use AppBundle\Security\Provider\FacebookProvider;
-use AppBundle\Service\User\RegisterService;
-use AppBundle\Service\User\UserService;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
@@ -15,8 +9,14 @@ use Facebook\FacebookResponse;
 use Facebook\GraphNodes\GraphUser;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Entity\BaseUser;
+use StarterKit\StartBundle\Exception\ProgrammerException;
+use StarterKit\StartBundle\Factory\FaceBookClientFactory;
+use StarterKit\StartBundle\Security\Provider\FacebookProvider;
+use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Tests\BaseTestCase;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-use Tests\BaseTestCase;
 
 class FacebookProviderTest extends BaseTestCase
 {
@@ -24,11 +24,6 @@ class FacebookProviderTest extends BaseTestCase
      * @var UserService|Mock
      */
     private $userService;
-
-    /**
-     * @var RegisterService|Mock
-     */
-    private $registerService;
 
     /**
      * @var Facebook|Mock
@@ -44,13 +39,13 @@ class FacebookProviderTest extends BaseTestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->registerService = \Mockery::mock(RegisterService::class);
         $facebookClientFactory = \Mockery::mock(FaceBookClientFactory::class);
         $this->facebookClient = \Mockery::mock(Facebook::class);
         $facebookClientFactory->shouldReceive('getFacebookClient')->once()->andReturn($this->facebookClient);
         $this->userService = \Mockery::mock(UserService::class);
+        $this->userService->shouldReceive('getUserClass')->andReturn(User::class);
 
-        $this->facebookProvider = new FacebookProvider($facebookClientFactory,  $this->registerService, $this->userService);
+        $this->facebookProvider = new FacebookProvider($facebookClientFactory, $this->userService, User::class);
     }
 
     /**
@@ -72,11 +67,11 @@ class FacebookProviderTest extends BaseTestCase
 
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
-        $this->registerService
+        $this->userService
             ->shouldReceive('registerUser')
-            ->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_FACEBOOK);
+            ->once()->with(\Mockery::type(BaseUser::class), UserService::SOURCE_TYPE_FACEBOOK);
 
-        /** @var User $user */
+        /** @var BaseUser $user */
        $user = $this->facebookProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());
@@ -106,7 +101,7 @@ class FacebookProviderTest extends BaseTestCase
 
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
-        $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('registerUser')->never()->withAnyArgs();
         $this->userService->shouldReceive('save')->with(\Mockery::type(User::class));
 
         /** @var User $returnedUser */
@@ -137,7 +132,7 @@ class FacebookProviderTest extends BaseTestCase
 
 
         $this->facebookClient->shouldReceive('get')->once()->with('/me?fields=email',$token)->andReturn($facebookResponse);
-        $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('registerUser')->never()->withAnyArgs();
         $this->userService->shouldReceive('save')->with(\Mockery::type(User::class));
 
 

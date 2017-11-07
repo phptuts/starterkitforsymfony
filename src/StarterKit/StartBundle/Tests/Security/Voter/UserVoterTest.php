@@ -2,12 +2,12 @@
 
 namespace Tests\AppBundle\Security\Voter;
 
-use AppBundle\Entity\User;
-use AppBundle\Security\Voter\UserVoter;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Security\Voter\UserVoter;
+use StarterKit\StartBundle\Tests\BaseTestCase;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
-use Tests\BaseTestCase;
 
 class UserVoterTest extends BaseTestCase
 {
@@ -41,10 +41,11 @@ class UserVoterTest extends BaseTestCase
     public function testLoginUserTryingToAccessAnotherUserIsDenied()
     {
         $subject = new User();
-        $subject->setEmail('bill@gmail.com');
 
         $loggedInUser = new User();
-        $loggedInUser->setEmail('blue@gmai.com');
+
+        $this->setObjectId($loggedInUser, 15);
+        $this->setObjectId($subject, 33);
 
         $token = \Mockery::mock(TokenInterface::class);
         $token->shouldReceive('getUser')->andReturn($loggedInUser);
@@ -64,6 +65,8 @@ class UserVoterTest extends BaseTestCase
 
         $loggedInUser = new User();
         $loggedInUser->setEmail('bill@gmail.com');
+        $this->setObjectId($loggedInUser, 15);
+        $this->setObjectId($subject, 15);
 
         $token = \Mockery::mock(TokenInterface::class);
         $token->shouldReceive('getUser')->andReturn($loggedInUser);
@@ -78,11 +81,13 @@ class UserVoterTest extends BaseTestCase
     public function testAdminUserCanEditViewAnotherUser()
     {
         $subject = new User();
-        $subject->setEmail('bill@gmail.com');
 
         $loggedInUser = new User();
-        $loggedInUser->setEmail('bill@gmail.com')
+        $loggedInUser
             ->setRoles(['ROLE_ADMIN']);
+
+        $this->setObjectId($loggedInUser, 15);
+        $this->setObjectId($subject, 33);
 
         $token = \Mockery::mock(TokenInterface::class);
         $token->shouldReceive('getUser')->andReturn($loggedInUser);

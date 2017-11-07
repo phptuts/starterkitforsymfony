@@ -2,6 +2,7 @@
 
 namespace StarterKit\StartBundle\Tests\Form\DataTransformer;
 
+use StarterKit\StartBundle\Tests\BaseTestCase;
 use StarterKit\StartBundle\Tests\Entity\User;
 use StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer;
 use StarterKit\StartBundle\Repository\UserRepository;
@@ -9,7 +10,6 @@ use StarterKit\StartBundle\Service\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Form\Exception\TransformationFailedException;
-use Tests\BaseTestCase;
 
 class UserEmailTransformerTest extends BaseTestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace AppBundle\Service;
+namespace StarterKit\StartBundle\Service;
 
 use Aws\Result;
 use Aws\S3\S3Client;
-use AppBundle\Factory\S3ClientFactory;
+use StarterKit\StartBundle\Factory\S3ClientFactory;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class S3Service

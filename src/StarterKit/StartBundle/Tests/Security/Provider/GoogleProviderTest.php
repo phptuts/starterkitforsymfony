@@ -1,29 +1,21 @@
 <?php
-namespace Test\AppBundle\Security\Provider;
+namespace StarterKit\StartBundle\Tests\Security\Provider;
 
-use AppBundle\Entity\User;
-use AppBundle\Exception\ProgrammerException;
-use AppBundle\Factory\GoogleClientFactory;
-use AppBundle\Repository\UserRepository;
-use AppBundle\Security\Provider\GoogleProvider;
-use AppBundle\Service\User\RegisterService;
-use AppBundle\Service\User\UserService;
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Exception\ProgrammerException;
+use StarterKit\StartBundle\Factory\GoogleClientFactory;
+use StarterKit\StartBundle\Security\Provider\GoogleProvider;
+use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Tests\BaseTestCase;
+use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Tests\BaseTestCase;
 
 class GoogleProviderTest extends BaseTestCase
 {
-   
-
-    /**
-     * @var RegisterService|Mock
-     */
-    private $registerService;
-
+    
     /**
      * @var \Google_Client|Mock
      */
@@ -43,13 +35,13 @@ class GoogleProviderTest extends BaseTestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->registerService = \Mockery::mock(RegisterService::class);
         $googleClientFactory = \Mockery::mock(GoogleClientFactory::class);
         $this->googleClient = \Mockery::mock(\Google_Client::class);
         $googleClientFactory->shouldReceive('getGoogleClient')->once()->andReturn($this->googleClient);
         $this->userService = \Mockery::mock(UserService::class);
+        $this->userService->shouldReceive('getUserClass')->andReturn(User::class);
 
-        $this->googleProvider = new GoogleProvider($this->registerService, $googleClientFactory, $this->userService);
+        $this->googleProvider = new GoogleProvider($googleClientFactory, $this->userService, User::class);
     }
 
     /**
@@ -61,7 +53,7 @@ class GoogleProviderTest extends BaseTestCase
         $this->userService->shouldReceive('findUserByEmail')->with('blue@gmail.com')->once()->andReturnNull();
         $token = 'asdfasdfasdfasdf';
         $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com', 'sub' => 32423323]);
-        $this->registerService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), RegisterService::SOURCE_TYPE_GOOGLE);
+        $this->userService->shouldReceive('registerUser')->once()->with(\Mockery::type(User::class), UserService::SOURCE_TYPE_GOOGLE);
         $user = $this->googleProvider->loadUserByUsername($token);
 
         Assert::assertNotEmpty($user->getPlainPassword());
@@ -80,7 +72,7 @@ class GoogleProviderTest extends BaseTestCase
 
         $token = 'asdfasdfasdfasdf';
         $this->googleClient->shouldReceive('verifyIdToken')->once()->with($token)->andReturn(['email' => 'blue@gmail.com', 'sub' => 32423323]);
-        $this->registerService->shouldReceive('registerUser')->never()->withAnyArgs();
+        $this->userService->shouldReceive('registerUser')->never()->withAnyArgs();
         $this->userService->shouldReceive('save')->with($user)->once();
         $returnedUser = $this->googleProvider->loadUserByUsername($token);
 

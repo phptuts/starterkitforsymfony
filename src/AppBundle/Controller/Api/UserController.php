@@ -3,8 +3,8 @@
 namespace AppBundle\Controller\Api;
 
 use AppBundle\Entity\User;
-use AppBundle\Service\S3Service;
-use StarterKit\StartBundle\Controller\Api\BaseRestController;
+use StarterKit\StartBundle\Service\S3Service;
+use StarterKit\StartBundle\Controller\BaseRestController;
 use StarterKit\StartBundle\Form\UserImageType;
 use StarterKit\StartBundle\Service\FormSerializer;
 use StarterKit\StartBundle\Service\UserService;

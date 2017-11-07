@@ -15,6 +15,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BaseRestController extends Controller
 {
+    use ControllerTrait;
+
     /**
      * @var FormSerializer
      */
@@ -23,36 +25,6 @@ class BaseRestController extends Controller
     public function __construct(FormSerializer $formSerializer)
     {
         $this->formSerializer = $formSerializer;
-    }
-
-    /**
-     * Serializes the json response
-     *
-     * @param ResponseTypeInterface $data the data that is being serialized
-     * @param int $statusCode http response status code
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
-    public function serializeSingleObject(ResponseTypeInterface $data, $statusCode = Response::HTTP_OK)
-    {
-        $model = new ResponseModel($data);
-
-        return new JsonResponse($model->getBody(), $statusCode);
-    }
-
-    /**
-     * Serializes a paged response
-     *
-     * @param PageModel $pageModel
-     * @param string $type represents the type
-     * @param int $page the current page number
-     * @param int $statusCode http response status code
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
-    public function serializeList(PageModel $pageModel, $type, $page, $statusCode = Response::HTTP_OK)
-    {
-        $page = new ResponsePageModel($pageModel, $type, $page);
-
-        return new JsonResponse($page->getBody(), $statusCode);
     }
 
     /**

@@ -8,32 +8,27 @@ namespace StarterKit\StartBundle\Model\Response;
  */
 class ResponseModel implements ResponseModelInterface
 {
-    /**
-     * This means that it is a type jws response
-     * @var string
-     */
-    const CREDENTIAL_RESPONSE = 'credentials';
 
     /**
-     * This is the response for when we serialize a user
-     * @var string
-     */
-    const USER_RESPONSE = 'user';
-
-    /**
-     * @var mixed
+     * @var array
      */
     private $data;
 
+    /**
+     * @var string
+     */
+    private $type;
 
 
     /**
      * ResponseModel constructor.
-     * @param ResponseTypeInterface $data this is data be serialized
+     * @param array $data
+     * @param string $type
      */
-    public function __construct($data)
+    public function __construct($data, $type)
     {
         $this->data = $data;
+        $this->type = $type;
     }
 
     /**
@@ -45,7 +40,7 @@ class ResponseModel implements ResponseModelInterface
     {
         return [
             'meta' => [
-                'type' => $this->data->getResponseType(),
+                'type' => $this->type,
                 'paginated' => false
             ],
             'data' => $this->data
