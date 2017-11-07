@@ -39,7 +39,8 @@ class ResetPasswordType extends AbstractType
         // In the controller we just grab the password field from the form.
         $resolver->setDefaults([
             'data_class' => $this->userClass,
-            'validation_groups' => [BaseUser::VALIDATION_GROUP_PLAIN_PASSWORD]
+            'validation_groups' => [BaseUser::VALIDATION_GROUP_PLAIN_PASSWORD],
+            'csrf_protection' => false,
         ]);
     }
 }

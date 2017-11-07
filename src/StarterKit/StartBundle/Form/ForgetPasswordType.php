@@ -58,7 +58,8 @@ class ForgetPasswordType extends AbstractType
                 '.' => 'email'
             ],
             'invalid_message' => 'Email was not found.',
-            'validation_groups' => [BaseUser::VALIDATION_GROUP_DEFAULT]
+            'validation_groups' => [BaseUser::VALIDATION_GROUP_DEFAULT],
+            'csrf_protection' => false,
         ]);
     }
 }

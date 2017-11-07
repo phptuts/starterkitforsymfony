@@ -4,7 +4,7 @@ namespace StarterKit\StartBundle\Model\User;
 
 use Symfony\Component\Validator\Constraints as Constraints;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
-use StarterKit\StartBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 
 /**
  * Class ChangePasswordModel
@@ -21,7 +21,7 @@ class ChangePasswordModel
 
     /**
      * @Constraints\NotBlank()
-     * @Constraints\Length(min=User::MIN_PASSWORD_LENGTH, max=User::MAX_PASSWORD_LENGTH)
+     * @Constraints\Length(min=BaseUser::MIN_PASSWORD_LENGTH, max=BaseUser::MAX_PASSWORD_LENGTH)
      * @var string
      */
     private $newPassword;

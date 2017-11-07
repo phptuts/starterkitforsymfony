@@ -1,7 +1,7 @@
 <?php
 
 
-namespace StarterKit\StartBundle\Tests\AppBundle\Factory;
+namespace StarterKit\StartBundle\StarterKit\StartBundle\Tests\Factory;
 
 
 use StarterKit\StartBundle\Factory\GoogleClientFactory;

@@ -30,7 +30,8 @@ class UserImageType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => $this->userClass,
-            'validation_groups' => [BaseUser::VALIDATION_GROUP_DEFAULT, BaseUser::VALIDATION_IMAGE_REQUIRED]
+            'validation_groups' => [BaseUser::VALIDATION_GROUP_DEFAULT, BaseUser::VALIDATION_IMAGE_REQUIRED],
+            'csrf_protection' => false,
         ]);
     }
 }

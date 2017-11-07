@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\AppBundle\Security\Voter;
+namespace StarterKit\StartBundle\Tests\Security\Voter;
 
 use PHPUnit\Framework\Assert;
 use StarterKit\StartBundle\Security\Voter\UserVoter;

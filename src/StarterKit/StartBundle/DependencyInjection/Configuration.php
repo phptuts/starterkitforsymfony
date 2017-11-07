@@ -23,8 +23,8 @@ class Configuration implements ConfigurationInterface
         $rootNode->children()
             ->scalarNode('jws_pass_phrase')->isRequired()->end()
             ->scalarNode('jws_ttl')->isRequired()->end()
-            ->scalarNode('user_class')->isRequired()->end()
             ->scalarNode('refresh_token_ttl')->isRequired()->end()
+            ->scalarNode('user_class')->isRequired()->end()
 
             // Required for facebook and google login
             ->scalarNode('facebook_app_secret')->end()

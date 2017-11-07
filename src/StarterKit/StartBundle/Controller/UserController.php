@@ -8,9 +8,11 @@ use StarterKit\StartBundle\Form\ForgetPasswordType;
 use StarterKit\StartBundle\Form\RegisterType;
 use StarterKit\StartBundle\Form\ResetPasswordType;
 use StarterKit\StartBundle\Form\UpdateUserType;
+use StarterKit\StartBundle\Form\UserImageType;
 use StarterKit\StartBundle\Security\Voter\UserVoter;
 use StarterKit\StartBundle\Service\AuthResponseService;
 use StarterKit\StartBundle\Service\FormSerializer;
+use StarterKit\StartBundle\Service\S3Service;
 use StarterKit\StartBundle\Service\UserService;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -42,18 +44,26 @@ class UserController extends BaseRestController
     protected $formSerializer;
 
     /**
+     * @var S3Service
+     */
+    protected $s3Service;
+
+    /**
      * UserController constructor.
      * @param FormSerializer $formSerializer
      * @param UserService $userService
      * @param AuthResponseService $credentialResponseService
+     * @param S3Service $s3Service
      */
     public function __construct(FormSerializer $formSerializer,
                                 UserService $userService,
-                                AuthResponseService $credentialResponseService)
+                                AuthResponseService $credentialResponseService,
+                                S3Service $s3Service)
     {
         parent::__construct($formSerializer);
         $this->userService = $userService;
         $this->authResponseService = $credentialResponseService;
+        $this->s3Service = $s3Service;
     }
 
     /**
@@ -128,7 +138,7 @@ class UserController extends BaseRestController
      * @param Request $request
      * @param integer $id
      *
-     * @Route(path="users/{id}", methods={"PATCH"})
+     * @Route(path="/users/{id}", methods={"PATCH"})
      *
      * @return FormInterface|Response
      */
@@ -143,14 +153,15 @@ class UserController extends BaseRestController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            /** @var BaseUser $user */
             $user = $form->getData();
 
             $this->userService->save($user);
 
-            return $this->serializeSingleObject($user, BaseUser::RESPONSE_TYPE,  Response::HTTP_OK);
+            return $this->serializeSingleObject($user->singleView(), BaseUser::RESPONSE_TYPE,  Response::HTTP_OK);
         }
 
-        return $form;
+        return $this->serializeFormError($form);
     }
 
     /**
@@ -181,7 +192,7 @@ class UserController extends BaseRestController
             return new Response('', Response::HTTP_NO_CONTENT);
         }
 
-        return $form;
+        return $this->serializeFormError($form);
     }
 
     /**
@@ -218,7 +229,7 @@ class UserController extends BaseRestController
             return new Response('', Response::HTTP_NO_CONTENT);
         }
 
-        return $form;
+        return $this->serializeFormError($form);
     }
 
 
@@ -262,7 +273,53 @@ class UserController extends BaseRestController
             return new Response('', Response::HTTP_NO_CONTENT);
         }
 
-        return $form;
+        return $this->serializeFormError($form);
+    }
+
+    /**
+     * @Security("has_role('ROLE_USER')")
+     *
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Update the image for a user",
+     *  section="Users",
+     *  authentication=true,
+     *  parameters={
+     *      {
+     *          "name"="image",
+     *          "dataType"="file",
+     *          "required"=true,
+     *          "description"="The image profile image it can only be jpg, gif, png."
+     *      }
+     *  }
+     *  )
+     * @Route(path="/users/{id}/image", methods={"POST"})
+     *
+     * @param Request $request
+     * @param integer $id
+     *
+     * @return Response
+     */
+    public function imageAction(Request $request, $id)
+    {
+        $user = $this->getUserById($id);
+        $form = $this->createForm(UserImageType::class, $user);
+
+        $form->submit(['image' => $request->files->get('image')]);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $url = $this->s3Service->uploadFile(
+                $user->getImage(),
+                'profile_pics',
+                md5($user->getId() . '_profile_id')
+            );
+            $user->setImageUrl($url);
+            $this->userService->save($user);
+
+            return new Response('', Response::HTTP_NO_CONTENT);
+        }
+
+        return $this->serializeFormError($form);
     }
 
 
@@ -285,7 +342,7 @@ class UserController extends BaseRestController
         $user = $this->getUserById($id);
         $this->denyAccessUnlessGranted(UserVoter::USER_CAN_VIEW_EDIT, $user);
 
-        return $this->serializeSingleObject($user->listView(), BaseUser::RESPONSE_TYPE);
+        return $this->serializeSingleObject($user->singleView(), BaseUser::RESPONSE_TYPE);
     }
 
     /**

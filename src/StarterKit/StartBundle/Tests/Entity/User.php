@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\HasLifecycleCallbacks()
  *
  * Class User
- * @package AppBundle\Entity
+ * @package StarterKit\StartBundle\Tests\Entity
  */
 class User extends BaseUser
 {

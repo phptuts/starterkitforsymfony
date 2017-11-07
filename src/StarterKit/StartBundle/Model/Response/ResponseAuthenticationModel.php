@@ -52,7 +52,7 @@ class ResponseAuthenticationModel implements ResponseModelInterface
                 'paginated' => false,
             ],
             'data' => [
-                'user' => $this->user->listView(),
+                'user' => $this->user->singleView(),
                 'tokenModel' => $this->tokenModel->getBody(),
                 'refreshTokenModel' => $this->refreshTokenModel->getBody()
             ]

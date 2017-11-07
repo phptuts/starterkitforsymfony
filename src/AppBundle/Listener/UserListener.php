@@ -4,8 +4,8 @@
 namespace AppBundle\Listener;
 
 
-use AppBundle\Event\UserEvent;
 use AppBundle\Service\EmailService;
+use StarterKit\StartBundle\Event\UserEvent;
 
 class UserListener
 {

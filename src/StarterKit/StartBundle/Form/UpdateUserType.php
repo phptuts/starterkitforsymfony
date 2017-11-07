@@ -42,7 +42,8 @@ class UpdateUserType extends AbstractType
         $resolver->setDefaults([
             'data_class' => $this->userClass,
             'validation_groups' => [BaseUser::VALIDATION_GROUP_DEFAULT],
-            'api' => false
+            'api' => false,
+            'csrf_protection' => false,
         ]);
     }
 }

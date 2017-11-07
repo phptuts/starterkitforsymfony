@@ -1,6 +1,5 @@
 starter_kit_start:
     resource: "@StarterKitStartBundle/Resources/config/routing.yml"
-    prefix:   /
 
 login_check:
     path: login_check
@@ -10,14 +9,10 @@ admin:
     type:     annotation
     prefix:   /admin
 
-api:
-    resource: '@AppBundle/Controller/Api/'
-    type: annotation
-    prefix: /api
-
 main:
     resource: '@AppBundle/Controller/Main/'
     type: annotation
+    prefix: /api
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

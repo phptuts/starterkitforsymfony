@@ -8,7 +8,7 @@ use Symfony\Component\EventDispatcher\Event;
 
 /**
  * Class UserEvent
- * @package AppBundle\Event
+ * @package StarterKit\StartBundle\Event
  */
 class UserEvent extends Event
 {

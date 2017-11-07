@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Test\AppBundle\Security\Provider;
+namespace StarterKit\StartBundle\Security\Provider;
 
 use AppBundle\Entity\User;
 use Mockery\Mock;

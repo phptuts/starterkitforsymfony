@@ -44,7 +44,7 @@ class JWSServiceTest extends BaseTestCase
 
         $model = $this->JWSService->createAuthTokenModel($user);
 
-        $ttl = $this->getContainer()->getParameter('app.jws_ttl');
+        $ttl = $this->getContainer()->getParameter('starter_kit_start.jws_ttl');
 
         $lessThanExpirationTimeStamp = (new \DateTime())->modify('+' . $ttl - 500 .  ' seconds')->getTimestamp();
         $greaterThanExpirationTimeStamp = (new \DateTime())->modify('+' . $ttl + 500 .  ' seconds')->getTimestamp();

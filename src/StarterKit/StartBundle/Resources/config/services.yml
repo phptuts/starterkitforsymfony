@@ -20,7 +20,7 @@ services:
             - '@StarterKit\StartBundle\Security\Provider\FacebookProvider'
             - '@StarterKit\StartBundle\Security\Provider\GoogleProvider'
             - '@StarterKit\StartBundle\Security\Provider\RefreshTokenProvider'
-            - '@StarterKit\StartBundle\Service\JWSService'
+            - '@StarterKit\StartBundle\Security\Provider\TokenProvider'
             - '@StarterKit\StartBundle\Security\Provider\EmailProvider'
 
     StarterKit\StartBundle\S3ClientFactory:
@@ -106,6 +106,13 @@ services:
             - '@twig'
 
 
+    #Voters
+    StarterKit\StartBundle\Security\Voter\UserVoter:
+        class: StarterKit\StartBundle\Security\Voter\UserVoter
+        tags:
+            - { name: security.voter }
+        public: false
+
     #Data Transformer
 
     StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer:
@@ -116,7 +123,7 @@ services:
     StarterKit\StartBundle\Form\ChangePasswordType:
         class: StarterKit\StartBundle\Form\ChangePasswordType
         arguments:
-            - '%starter_kit_start.user_class%'
+            - '@security.authorization_checker'
         tags:
             - { name: form.type }
 
@@ -164,5 +171,6 @@ services:
             - '@StarterKit\StartBundle\Service\FormSerializer'
             - '@StarterKit\StartBundle\Service\UserService'
             - '@StarterKit\StartBundle\Service\AuthResponseService'
+            - '@StarterKit\StartBundle\Service\S3Service'
         tags: ['controller.service_arguments']
 

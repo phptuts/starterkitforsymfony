@@ -8,7 +8,7 @@ use Nelmio\Alice\Fixtures;
 
 /**
  * Class LoadData
- * @package AppBundle\DataFixtures\ORM
+ * @package StarterKit\StartBundle\DataFixtures\ORM
  */
 class LoadData implements FixtureInterface
 {

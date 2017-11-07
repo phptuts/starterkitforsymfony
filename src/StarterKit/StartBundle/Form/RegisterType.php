@@ -44,6 +44,7 @@ class RegisterType extends AbstractType
         $resolver->setDefaults([
             'data_class' => $this->userClass,
             'validation_groups' => [ BaseUser::VALIDATION_GROUP_PLAIN_PASSWORD, BaseUser::VALIDATION_GROUP_DEFAULT,],
+            'csrf_protection' => false,
         ]);
     }
 }

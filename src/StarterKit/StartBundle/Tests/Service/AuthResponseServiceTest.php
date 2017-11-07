@@ -57,7 +57,7 @@ class AuthResponseServiceTest extends BaseTestCase
 
         Assert::assertEquals($json['meta']['type'], 'authentication');
         Assert::assertFalse($json['meta']['paginated']);
-        Assert::assertEquals($json['data']['user'], $user->listView());
+        Assert::assertEquals($json['data']['user'], $user->singleView());
 
         Assert::assertEquals($json['data']['tokenModel']['token'], 'jwt_token');
         Assert::assertEquals($json['data']['tokenModel']['expirationTimeStamp'], 333);

@@ -2,7 +2,7 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\User;
+use StarterKit\StartBundle\Entity\BaseUser;
 
 /**
  * Class EmailService
@@ -42,9 +42,9 @@ class EmailService
     /**
      * Sends the registration email
      *
-     * @param User $user
+     * @param BaseUser $user
      */
-    public function sendRegisterEmail(User $user)
+    public function sendRegisterEmail(BaseUser $user)
     {
         $message = (new \Swift_Message('Thanks for registering.'))
             ->setFrom($this->fromEmail)
@@ -60,9 +60,9 @@ class EmailService
     /**
      * Send the forget password email
      *
-     * @param User $user
+     * @param BaseUser $user
      */
-    public function sendForgetPasswordEmail(User $user)
+    public function sendForgetPasswordEmail(BaseUser $user)
     {
         $message = (new \Swift_Message('Reset Password'))
             ->setFrom($this->fromEmail)

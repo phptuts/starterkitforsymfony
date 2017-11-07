@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Test\AppBundle\Security\Provider;
+namespace StarterKit\StartBundle\Security\Provider;
 
 use Mockery\Mock;
 use StarterKit\StartBundle\Security\Provider\RefreshTokenProvider;
