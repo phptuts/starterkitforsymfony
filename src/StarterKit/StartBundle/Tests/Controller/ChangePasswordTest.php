@@ -45,4 +45,24 @@ class ChangePasswordTest extends BaseApiTestCase
 
         $this->assertCredentialsResponse($response, $client, self::TEST_EMAIL);
     }
+
+    public function testBlankPassword()
+    {
+        $user = $this->userRepository->findUserByEmail(self::TEST_EMAIL);
+        $authToken = $this->getAuthToken($user);
+        $client = $this->makeClient();
+        $url = sprintf('/api/users/%s/password', $user->getId());
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_PATCH,
+            $url,
+            ['newPassword' => '', 'currentPassword' => 'password'],
+            $authToken
+        );
+
+        Assert::assertEquals(Response::HTTP_BAD_REQUEST, $response->getStatusCode());
+        $json = json_decode($response->getContent(), true);
+        Assert::assertNotEmpty($json['data']['children']['newPassword']['errors'][0]);
+
+    }
 }

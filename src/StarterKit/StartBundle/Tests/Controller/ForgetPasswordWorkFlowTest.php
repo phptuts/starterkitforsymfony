@@ -34,6 +34,21 @@ class ForgetPasswordWorkFlowTest extends BaseApiTestCase
                     ->getForgetPasswordToken();
     }
 
+    public function testForgetPasswordBadEmail()
+    {
+        $client = $this->makeClient();
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_POST,
+            '/api/users/forget-password',
+            ['email' => 'forget_password_end_2']
+        );
+
+        Assert::assertEquals(Response::HTTP_BAD_REQUEST, $response->getStatusCode());
+        $json = json_decode($response->getContent(), true);
+        Assert::assertNotEmpty($json['data']['children']['email']['errors'][0]);
+    }
+
     /**
      * Test that an invalid plain password will fail validation
      *
@@ -54,6 +69,20 @@ class ForgetPasswordWorkFlowTest extends BaseApiTestCase
         Assert::assertEquals(Response::HTTP_BAD_REQUEST, $response->getStatusCode());
 
         return $forgetPasswordToken;
+    }
+
+    public function testResetPasswordInvalidToken()
+    {
+        $client = $this->makeClient();
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_PATCH,
+            '/api/users/reset-password/' . 'bad_password_token',
+            ['plainPassword' => '']
+        );
+
+        Assert::assertEquals(Response::HTTP_NOT_FOUND, $response->getStatusCode());
+
     }
 
     /**

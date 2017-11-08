@@ -45,6 +45,24 @@ class GetUserTest extends BaseApiTestCase
         Assert::assertArrayHasKey('displayName',$json['data']);
     }
 
+    public function testGetUserDoesNotExist404()
+    {
+        $client = $this->makeClient();
+        $user = $this->userRepository->findUserByEmail(self::TEST_EMAIL);
+
+        $authToken = $this->getAuthToken($user);
+
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_GET,
+            '/api/users/' . $user->getId() . 'moo',
+            [],
+            $authToken
+        );
+
+        Assert::assertEquals(Response::HTTP_NOT_FOUND, $response->getStatusCode());
+    }
+
     /**
      * Tests get users api for meta data
      *
@@ -55,9 +73,7 @@ class GetUserTest extends BaseApiTestCase
     {
         $client = $this->makeClient();
         $user = $this->userRepository->findUserByEmail(self::TEST_EMAIL);
-
         $authToken = $this->getAuthToken($user);
-
 
         $response = $this->makeJsonRequest(
             $client,

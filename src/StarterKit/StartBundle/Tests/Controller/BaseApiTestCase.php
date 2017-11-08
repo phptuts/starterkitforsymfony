@@ -2,18 +2,17 @@
 
 namespace StarterKit\StartBundle\Tests\Controller;
 
-use Liip\FunctionalTestBundle\Test\WebTestCase;
 use PHPUnit\Framework\Assert;
 use StarterKit\StartBundle\Factory\FaceBookClientFactory;
 use StarterKit\StartBundle\Repository\UserRepository;
 use StarterKit\StartBundle\Service\JWSService;
-use StarterKit\StartBundle\Service\S3Service;
+use StarterKit\StartBundle\Tests\BaseTestCase;
 use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class BaseApiTestCase extends WebTestCase
+class BaseApiTestCase extends BaseTestCase
 {
     use RequestTrait;
 
@@ -41,11 +40,6 @@ class BaseApiTestCase extends WebTestCase
             $this->getContainer()->getParameter('starter_kit_start.jws_ttl'),
             $this->getContainer()->getParameter('kernel.project_dir')
         );
-
-        $s3Service = \Mockery::mock(S3Service::class);
-        $s3Service->shouldReceive('uploadFile')->withAnyArgs()->andReturn('fake_url');
-        $this->getContainer()->set('StarterKit\StartBundle\Service\S3Service', $s3Service);
-
 
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $this->userRepository = $em->getRepository(User::class);

@@ -36,6 +36,25 @@ class UpdateUserTest extends BaseApiTestCase
         Assert::assertEquals('blueMoo',$json['data']['displayName']);
         $this->getContainer()->get('doctrine.orm.entity_manager')->refresh($user);
         Assert::assertEquals('blueMoo', $user->getDisplayName());
+    }
 
+    public function testFormErrorUpdateUser()
+    {
+        $client = $this->makeClient();
+        $user = $this->userRepository->findUserByEmail(self::TEST_EMAIL);
+        $authToken = $this->getAuthToken($user);
+        $url = sprintf('/api/users/%s', $user->getId());
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_PATCH,
+            $url,
+            ['email' => 'bad_email_format', 'displayName' => 'blueMoo'],
+            $authToken
+        );
+
+        Assert::assertEquals(Response::HTTP_BAD_REQUEST, $response->getStatusCode());
+        $json = json_decode($response->getContent(), true);
+
+        Assert::assertNotEmpty($json['data']['children']['email']['errors'][0]);
     }
 }

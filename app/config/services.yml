@@ -37,9 +37,6 @@ services:
     AppBundle\Service\EmailService:
         class: AppBundle\Service\EmailService
         arguments:
-            - '@twig'
-            - '@mailer'
-            - '%app.from_email%'
 
 
     # EVENT LISTENERS
@@ -55,7 +52,9 @@ services:
     AppBundle\Listener\UserListener:
         class: AppBundle\Listener\UserListener
         arguments:
-            - '@AppBundle\Service\EmailService'
+            - '@twig'
+            - '@mailer'
+            - '%app.from_email%'
         tags:
             - { name: kernel.event_listener, event: 'register_event', method: onRegister }
             - { name: kernel.event_listener, event: 'forget_password_event', method: onForgetPassword }

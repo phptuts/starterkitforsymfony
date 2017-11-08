@@ -319,6 +319,7 @@ class UserController extends BaseRestController
             return new Response('', Response::HTTP_NO_CONTENT);
         }
 
+
         return $this->serializeFormError($form);
     }
 
