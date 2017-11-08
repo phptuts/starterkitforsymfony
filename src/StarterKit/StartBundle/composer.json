@@ -1,0 +1,52 @@
+{
+  "name": "StarterKit/StartBundle",
+  "type": "symfony-bundle",
+  "description": "Symfony StartBundle With User and Security",
+  "keywords": [
+    "User management"
+  ],
+  "homepage": "http://skfsp.info",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Noah Glaser",
+      "email": "glaserpower@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "aws/aws-sdk-php": "^3.30",
+    "doctrine/doctrine-bundle": "^1.6",
+    "doctrine/doctrine-migrations-bundle": "^1.0",
+    "doctrine/orm": "^2.5",
+    "egulias/email-validator": "^2.1",
+    "facebook/graph-sdk": "^5.5",
+    "guzzlehttp/guzzle": "^6.3",
+    "incenteev/composer-parameter-handler": "^2.0",
+    "namshi/jose": "^7.2",
+    "nelmio/api-doc-bundle": "^2.13",
+    "sensio/distribution-bundle": "^5.0.19",
+    "sensio/framework-extra-bundle": "^3.0.2",
+    "symfony/monolog-bundle": "^3.1.0",
+    "symfony/polyfill-apcu": "^1.0",
+    "symfony/symfony": "3.3.*",
+    "twig/twig": "^1.0||^2.0"
+  },
+  "require-dev": {
+    "doctrine/doctrine-fixtures-bundle": "^2.3",
+    "liip/functional-test-bundle": "^1.8",
+    "mockery/mockery": "^0.9.9",
+    "nelmio/alice": "^2.3",
+    "phpunit/phpunit": "^6.2",
+    "sensio/generator-bundle": "^3.0",
+    "symfony/phpunit-bridge": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "StarterKit\\StartBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  }
+}
