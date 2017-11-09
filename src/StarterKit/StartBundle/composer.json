@@ -1,5 +1,5 @@
 {
-  "name": "StarterKit/StartBundle",
+  "name": "starter-kit/start-bundle",
   "type": "symfony-bundle",
   "description": "Symfony StartBundle With User and Security",
   "keywords": [
