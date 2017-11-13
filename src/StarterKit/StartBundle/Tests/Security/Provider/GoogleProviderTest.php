@@ -37,7 +37,7 @@ class GoogleProviderTest extends BaseTestCase
         parent::setUp();
         $googleClientFactory = \Mockery::mock(GoogleClientFactory::class);
         $this->googleClient = \Mockery::mock(\Google_Client::class);
-        $googleClientFactory->shouldReceive('getGoogleClient')->once()->andReturn($this->googleClient);
+        $googleClientFactory->shouldReceive('getClient')->once()->andReturn($this->googleClient);
         $this->userService = \Mockery::mock(UserService::class);
         $this->userService->shouldReceive('getUserClass')->andReturn(User::class);
 

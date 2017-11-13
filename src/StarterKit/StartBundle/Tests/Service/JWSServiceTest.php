@@ -5,14 +5,14 @@ namespace StarterKit\StartBundle\Tests\Service\Credential;
 use Namshi\JOSE\SimpleJWS;
 use PHPUnit\Framework\Assert;
 use StarterKit\StartBundle\Exception\ProgrammerException;
-use StarterKit\StartBundle\Service\JWSService;
+use StarterKit\StartBundle\Service\AuthTokenService;
 use StarterKit\StartBundle\Tests\Entity\User;
 use Tests\BaseTestCase;
 
 class JWSServiceTest extends BaseTestCase
 {
     /**
-     * @var JWSService
+     * @var AuthTokenService
      */
     protected $JWSService;
 
@@ -26,7 +26,7 @@ class JWSServiceTest extends BaseTestCase
         self::$homeDir = $this->getContainer()->getParameter('kernel.project_dir');
         parent::setUp();
         $this->JWSService =
-            new JWSService(self::$passphrase,
+            new AuthTokenService(self::$passphrase,
                 $this->getContainer()->getParameter('starter_kit_start.jws_ttl'),
                 self::$homeDir
             );

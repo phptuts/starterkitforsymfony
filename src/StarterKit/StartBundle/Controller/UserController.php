@@ -10,12 +10,12 @@ use StarterKit\StartBundle\Form\ResetPasswordType;
 use StarterKit\StartBundle\Form\UpdateUserType;
 use StarterKit\StartBundle\Form\UserImageType;
 use StarterKit\StartBundle\Security\Voter\UserVoter;
-use StarterKit\StartBundle\Service\AuthResponseService;
-use StarterKit\StartBundle\Service\FormSerializer;
-use StarterKit\StartBundle\Service\S3Service;
-use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Service\AuthResponseServiceInterface;
+use StarterKit\StartBundle\Service\FormSerializerInterface;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use StarterKit\StartBundle\Service\S3ServiceInterface;
+use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,40 +29,35 @@ use Symfony\Component\Routing\Annotation\Route;
 class UserController extends BaseRestController
 {
     /**
-     * @var UserService
+     * @var UserServiceInterface
      */
     protected $userService;
 
     /**
-     * @var AuthResponseService
+     * @var AuthResponseServiceInterface
      */
     protected $authResponseService;
 
     /**
-     * @var FormSerializer
-     */
-    protected $formSerializer;
-
-    /**
-     * @var S3Service
+     * @var S3ServiceInterface
      */
     protected $s3Service;
 
     /**
      * UserController constructor.
-     * @param FormSerializer $formSerializer
-     * @param UserService $userService
-     * @param AuthResponseService $credentialResponseService
-     * @param S3Service $s3Service
+     * @param FormSerializerInterface $formSerializer
+     * @param UserServiceInterface $userService
+     * @param AuthResponseServiceInterface $authResponseService
+     * @param S3ServiceInterface $s3Service
      */
-    public function __construct(FormSerializer $formSerializer,
-                                UserService $userService,
-                                AuthResponseService $credentialResponseService,
-                                S3Service $s3Service)
+    public function __construct(FormSerializerInterface $formSerializer,
+                                UserServiceInterface $userService,
+                                AuthResponseServiceInterface $authResponseService,
+                                S3ServiceInterface $s3Service)
     {
         parent::__construct($formSerializer);
         $this->userService = $userService;
-        $this->authResponseService = $credentialResponseService;
+        $this->authResponseService = $authResponseService;
         $this->s3Service = $s3Service;
     }
 

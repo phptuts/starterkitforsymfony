@@ -3,9 +3,8 @@
 namespace StarterKit\StartBundle\Security\Provider;
 
 use StarterKit\StartBundle\Entity\BaseUser;
-use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 
 /**
@@ -15,11 +14,11 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 trait CustomProviderTrait
 {
     /**
-     * @var UserProviderInterface
+     * @var UserServiceInterface
      */
     protected $userService;
 
-    public function __construct(UserService $userService)
+    public function __construct(UserServiceInterface $userService)
     {
         $this->userService = $userService;
     }

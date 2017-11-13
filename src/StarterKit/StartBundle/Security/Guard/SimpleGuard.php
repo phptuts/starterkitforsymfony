@@ -2,12 +2,16 @@
 
 namespace StarterKit\StartBundle\Security\Guard;
 
+use StarterKit\StartBundle\Event\AuthFailedEvent;
+use StarterKit\StartBundle\Event\UserEvent;
 use StarterKit\StartBundle\Exception\ProgrammerException;
-use StarterKit\StartBundle\Factory\UserProviderFactory;
+use StarterKit\StartBundle\Factory\UserProviderFactoryInterface;
 use StarterKit\StartBundle\Model\Credential\CredentialInterface;
 use StarterKit\StartBundle\Model\Credential\CredentialEmailModel;
 use StarterKit\StartBundle\Model\Credential\CredentialTokenModel;
 use StarterKit\StartBundle\Service\AuthResponseService;
+use StarterKit\StartBundle\Service\AuthResponseServiceInterface;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Intl\Exception\NotImplementedException;
@@ -23,7 +27,7 @@ use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
  * Class Guard
  * @package StarterKit\StartBundle\Security\Guard
  */
-class Guard extends AbstractGuardAuthenticator
+class SimpleGuard extends AbstractGuardAuthenticator implements SimpleGuardInterface
 {
     /**
      * The place where the token is stored
@@ -64,17 +68,31 @@ class Guard extends AbstractGuardAuthenticator
     const BEARER = 'Bearer ';
 
     /**
+     * This event is fired when authentication fails
+     * @var string
+     */
+    const AUTH_FAILED_EVENT = 'auth_failed';
+
+    /**
+     * This happens when we return jwt tokens and refresh tokens.  AKA someone logs in a non stateless way.
+     * This event is fired when a credentialed response is return
+     * @var string
+     */
+    const AUTH_LOGIN_SUCCESS = 'auth_login_success';
+
+
+    /**
      * @var EncoderFactoryInterface
      */
     private $encoderFactory;
 
     /**
-     * @var AuthResponseService
+     * @var AuthResponseServiceInterface
      */
     private $authResponseService;
 
     /**
-     * @var UserProviderFactory
+     * @var UserProviderFactoryInterface
      */
     private $userProviderFactory;
     /**
@@ -83,22 +101,31 @@ class Guard extends AbstractGuardAuthenticator
     private $twig;
 
     /**
+     * @var EventDispatcherInterface
+     */
+    private $dispatcher;
+
+    /**
      * ApiLoginGuard constructor.
      * @param EncoderFactoryInterface $encoderFactory
-     * @param AuthResponseService $authResponseService
-     * @param UserProviderFactory $userProviderFactory
+     * @param AuthResponseServiceInterface $authResponseService
+     * @param UserProviderFactoryInterface $userProviderFactory
+     * @param  \Twig_Environment $twig
+     * @param EventDispatcherInterface $dispatcher
      */
     public function __construct(
         EncoderFactoryInterface $encoderFactory,
-        AuthResponseService $authResponseService,
-        UserProviderFactory $userProviderFactory,
-        \Twig_Environment $twig
+        AuthResponseServiceInterface $authResponseService,
+        UserProviderFactoryInterface $userProviderFactory,
+        \Twig_Environment $twig,
+        EventDispatcherInterface $dispatcher
     )
     {
         $this->encoderFactory = $encoderFactory;
         $this->authResponseService = $authResponseService;
         $this->userProviderFactory = $userProviderFactory;
         $this->twig = $twig;
+        $this->dispatcher = $dispatcher;
     }
 
     /**
@@ -136,7 +163,7 @@ class Guard extends AbstractGuardAuthenticator
         try {
             return $this
                 ->userProviderFactory
-                ->getUserProvider($credentials->getProvider())
+                ->getClient($credentials->getProvider())
                 ->loadUserByUsername($credentials->getUserIdentifier());
         } catch (NotImplementedException $ex) {
             throw new UsernameNotFoundException(
@@ -178,8 +205,9 @@ class Guard extends AbstractGuardAuthenticator
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
         if ($this->isLoginRequest($request)) {
-
-            return $this->authResponseService->createAuthResponse($token->getUser());
+            $user = $token->getUser();
+            $this->dispatcher->dispatch(self::AUTH_LOGIN_SUCCESS, new UserEvent($user));
+            return $this->authResponseService->createAuthResponse($user);
         }
 
         return null;
@@ -195,6 +223,7 @@ class Guard extends AbstractGuardAuthenticator
      */
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
+        $this->dispatcher->dispatch(self::AUTH_FAILED_EVENT, new AuthFailedEvent($request, $exception));
         if ($this->isRequestHtmlContentType($request)) {
 
             return new Response($this->twig->render('TwigBundle:Exception:error403.html.twig'), Response::HTTP_FORBIDDEN);

@@ -29,7 +29,7 @@ class S3ServiceTest extends BaseTestCase
         parent::setUp();
         $s3ClientFactory = \Mockery::mock(S3ClientFactory::class);
         $this->s3Client = \Mockery::mock(S3Client::class);
-        $s3ClientFactory->shouldReceive('createClient')->once()->andReturn($this->s3Client);
+        $s3ClientFactory->shouldReceive('getClient')->once()->andReturn($this->s3Client);
         $this->s3Service = new S3Service($s3ClientFactory, 'bucket_name', 'dev');
     }
 

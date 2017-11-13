@@ -16,6 +16,6 @@ class FaceBookClientFactoryTest extends BaseTestCase
     {
         $factory = new FaceBookClientFactory('app_id', 'app_secret', 'v2.9');
 
-        Assert::assertInstanceOf(Facebook::class, $factory->getFacebookClient());
+        Assert::assertInstanceOf(Facebook::class, $factory->getClient());
     }
 }

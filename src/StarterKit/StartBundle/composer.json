@@ -1,5 +1,5 @@
 {
-  "name": "starter-kit/start-bundle",
+  "name": "start-kit-symfony/start-bundle",
   "type": "symfony-bundle",
   "description": "Symfony StartBundle With User and Security",
   "keywords": [
@@ -25,12 +25,22 @@
     "incenteev/composer-parameter-handler": "^2.0",
     "namshi/jose": "^7.2",
     "nelmio/api-doc-bundle": "^2.13",
-    "sensio/distribution-bundle": "^5.0.19",
-    "sensio/framework-extra-bundle": "^3.0.2",
-    "symfony/monolog-bundle": "^3.1.0",
-    "symfony/polyfill-apcu": "^1.0",
-    "symfony/symfony": "3.3.*",
-    "twig/twig": "^1.0||^2.0"
+    "sensio/framework-extra-bundle": "~2.3|~3.0|4.0.x|~5.0",
+    "symfony/config": "~2.3|~3.0|~4.0",
+    "symfony/dependency-injection": "~2.3|~3.0|~4.0",
+    "symfony/doctrine-bridge": "~2.3|~3.0|~4.0",
+    "symfony/event-dispatcher": "~2.3|~3.0|~4.0",
+    "symfony/form": "~2.3|~3.0|~4.0",
+    "symfony/framework-bundle": "~2.3|~3.0|~4.0",
+    "symfony/http-foundation": "~2.3|~3.0|~4.0",
+    "symfony/http-kernel": "~2.3|~3.0|~4.0",
+    "symfony/security-bundle": "~2.3|~3.0|~4.0",
+    "symfony/translation": "~2.3|~3.0|~4.0",
+    "symfony/twig-bridge": "^2.3.4|~3.0|~4.0",
+    "symfony/twig-bundle": "~2.3|~3.0|~4.0",
+    "symfony/validator": "~2.3|~3.0|~4.0",
+    "twig/extensions": "~1.0",
+    "twig/twig": "~1.26|~2.0"
   },
   "require-dev": {
     "doctrine/doctrine-fixtures-bundle": "^2.3",

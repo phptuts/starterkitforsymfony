@@ -11,7 +11,7 @@ use Namshi\JOSE\SimpleJWS;
  * Class JWSService
  * @package StarterKit\StartBundle\Service
  */
-class JWSService
+class AuthTokenService implements AuthTokenServiceInterface
 {
     const ALG = 'RS256';
 
@@ -44,6 +44,11 @@ class JWSService
      * @var string
      */
     private $passPhrase;
+
+    /**
+     * The folder where the project is located
+     * @var string
+     */
     private $kernelDir;
 
     /**

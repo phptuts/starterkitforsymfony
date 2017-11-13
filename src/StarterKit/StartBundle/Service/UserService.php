@@ -15,7 +15,7 @@ use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
  * Class UserService
  * @package StarterKit\StartBundle\Service\User
  */
-class UserService
+class UserService implements UserServiceInterface
 {
     /**
      * This means the user came registered the website

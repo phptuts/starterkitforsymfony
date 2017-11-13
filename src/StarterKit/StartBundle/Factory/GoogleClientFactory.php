@@ -6,7 +6,7 @@ namespace StarterKit\StartBundle\Factory;
  * Class GoogleClientFactory
  * @package StarterKit\StartBundle\Factory
  */
-class GoogleClientFactory
+class GoogleClientFactory implements GoogleClientFactoryInterface
 {
     private $googleClientId;
 
@@ -22,7 +22,7 @@ class GoogleClientFactory
     /**
      * @return \Google_Client
      */
-    public function getGoogleClient()
+    public function getClient()
     {
         return new \Google_Client(['client_id' => $this->googleClientId]);
     }

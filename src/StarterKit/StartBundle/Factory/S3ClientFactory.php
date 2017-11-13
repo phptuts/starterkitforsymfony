@@ -9,7 +9,7 @@ use Aws\S3\S3Client;
  * Class S3ClientFactory
  * @package StarterKit\StartBundle\Factory
  */
-class S3ClientFactory
+class S3ClientFactory implements S3ClientFactoryInterface
 {
     const AMAZON_S3_VERSION = '2006-03-01';
 
@@ -47,7 +47,7 @@ class S3ClientFactory
      *
      * @return S3Client
      */
-    public function createClient()
+    public function getClient()
     {
         return new S3Client([
             'version' => $this->apiVersion,

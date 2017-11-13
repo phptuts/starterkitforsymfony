@@ -3,40 +3,6 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>FormSymfony</id>
-          </State>
-          <State>
-            <id>RouteSymfony</id>
-          </State>
-          <State>
-            <id>ServiceSymfony</id>
-          </State>
-          <State>
-            <id>Symfony</id>
-          </State>
-          <State>
-            <id>TwigSymfony</id>
-          </State>
-          <State>
-            <id>YamlSymfony</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Symfony2YamlRouteDuplicateInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectPlainTextFileTypeManager">
     <file url="file://$PROJECT_DIR$/docs/_site/website/website-1-username-password.html" />
   </component>

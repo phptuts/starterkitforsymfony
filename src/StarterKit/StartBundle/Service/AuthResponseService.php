@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
  * Class CredentialResponseBuilderService
  * @package StarterKit\StartBundle\Service\Credential
  */
-class AuthResponseService
+class AuthResponseService implements AuthResponseServiceInterface
 {
     /***
      * @var string the name of the cookie used to store the auth token.
@@ -20,9 +20,9 @@ class AuthResponseService
     const AUTH_COOKIE = 'auth_cookie';
 
     /**
-     * @var JWSService
+     * @var AuthTokenService
      */
-    private $JWSService;
+    private $authTokenService;
 
     /**
      * @var UserService
@@ -31,12 +31,12 @@ class AuthResponseService
 
     /**
      * CredentialResponseBuilderService constructor.
-     * @param JWSService $JWSService
+     * @param AuthTokenServiceInterface $authTokenService
      * @param UserService $userService
      */
-    public function __construct(JWSService $JWSService, UserService $userService)
+    public function __construct(AuthTokenServiceInterface $authTokenService, UserService $userService)
     {
-        $this->JWSService = $JWSService;
+        $this->authTokenService = $authTokenService;
         $this->userService = $userService;
     }
 
@@ -62,7 +62,7 @@ class AuthResponseService
      */
     private function createResponseAuthModel(BaseUser $user)
     {
-        $authTokenModel = $this->JWSService->createAuthTokenModel($user);
+        $authTokenModel = $this->authTokenService->createAuthTokenModel($user);
 
         return new ResponseAuthenticationModel($user, $authTokenModel, $user->getAuthRefreshModel());
     }

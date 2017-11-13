@@ -34,10 +34,6 @@ services:
         arguments:
             - '@snc_redis.default'
 
-    AppBundle\Service\EmailService:
-        class: AppBundle\Service\EmailService
-        arguments:
-
 
     # EVENT LISTENERS
     AppBundle\Listener\ExceptionListener:

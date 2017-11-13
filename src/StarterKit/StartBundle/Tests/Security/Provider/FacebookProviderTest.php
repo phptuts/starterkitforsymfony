@@ -41,7 +41,7 @@ class FacebookProviderTest extends BaseTestCase
         parent::setUp();
         $facebookClientFactory = \Mockery::mock(FaceBookClientFactory::class);
         $this->facebookClient = \Mockery::mock(Facebook::class);
-        $facebookClientFactory->shouldReceive('getFacebookClient')->once()->andReturn($this->facebookClient);
+        $facebookClientFactory->shouldReceive('getClient')->once()->andReturn($this->facebookClient);
         $this->userService = \Mockery::mock(UserService::class);
         $this->userService->shouldReceive('getUserClass')->andReturn(User::class);
 

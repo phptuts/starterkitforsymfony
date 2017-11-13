@@ -8,6 +8,7 @@ use StarterKit\StartBundle\Model\Response\ResponseModel;
 use StarterKit\StartBundle\Model\Response\ResponsePageModel;
 use StarterKit\StartBundle\Model\Response\ResponseTypeInterface;
 use StarterKit\StartBundle\Service\FormSerializer;
+use StarterKit\StartBundle\Service\FormSerializerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,11 +19,11 @@ class BaseRestController extends Controller
     use ControllerTrait;
 
     /**
-     * @var FormSerializer
+     * @var FormSerializerInterface
      */
-    private $formSerializer;
+    protected $formSerializer;
 
-    public function __construct(FormSerializer $formSerializer)
+    public function __construct(FormSerializerInterface $formSerializer)
     {
         $this->formSerializer = $formSerializer;
     }

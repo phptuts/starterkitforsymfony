@@ -4,7 +4,7 @@ namespace StarterKit\StartBundle\Form\DataTransformer;
 
 use Doctrine\ORM\Query\Expr\Base;
 use StarterKit\StartBundle\Entity\BaseUser;
-use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 
@@ -17,11 +17,11 @@ use Symfony\Component\Form\Exception\TransformationFailedException;
 class UserEmailTransformer implements DataTransformerInterface
 {
     /**
-     * @var UserService
+     * @var UserServiceInterface
      */
     private $userService;
 
-    public function __construct(UserService $userService)
+    public function __construct(UserServiceInterface $userService)
     {
         $this->userService = $userService;
     }

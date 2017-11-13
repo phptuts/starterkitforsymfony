@@ -10,7 +10,7 @@ use Facebook\Facebook;
  * Class FaceBookClientFactory
  * @package StarterKit\StartBundle\Factory
  */
-class FaceBookClientFactory
+class FaceBookClientFactory implements FaceBookClientFactoryInterface
 {
     /**
      * @var Facebook
@@ -19,9 +19,9 @@ class FaceBookClientFactory
 
     /**
      * FaceBookClientFactory constructor.
-     * @param $appId
-     * @param $appSecret
-     * @param $apiVersion
+     * @param string $appId
+     * @param string $appSecret
+     * @param string $apiVersion
      */
     public function __construct($appId, $appSecret, $apiVersion)
     {
@@ -36,7 +36,7 @@ class FaceBookClientFactory
     /**
      * @return Facebook
      */
-    public function getFacebookClient()
+    public function getClient()
     {
         return $this->fb;
     }

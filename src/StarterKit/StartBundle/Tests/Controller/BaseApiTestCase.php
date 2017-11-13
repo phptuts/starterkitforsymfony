@@ -5,7 +5,7 @@ namespace StarterKit\StartBundle\Tests\Controller;
 use PHPUnit\Framework\Assert;
 use StarterKit\StartBundle\Factory\FaceBookClientFactory;
 use StarterKit\StartBundle\Repository\UserRepository;
-use StarterKit\StartBundle\Service\JWSService;
+use StarterKit\StartBundle\Service\AuthTokenService;
 use StarterKit\StartBundle\Tests\BaseTestCase;
 use StarterKit\StartBundle\Tests\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Client;
@@ -23,7 +23,7 @@ class BaseApiTestCase extends BaseTestCase
 
 
     /**
-     * @var JWSService
+     * @var AuthTokenService
      */
     protected $jwsService;
 
@@ -35,7 +35,7 @@ class BaseApiTestCase extends BaseTestCase
     public function setUp()
     {
         parent::setUp();
-        $this->jwsService = new JWSService(
+        $this->jwsService = new AuthTokenService(
             $this->getContainer()->getParameter('starter_kit_start.jws_pass_phrase'),
             $this->getContainer()->getParameter('starter_kit_start.jws_ttl'),
             $this->getContainer()->getParameter('kernel.project_dir')
@@ -177,7 +177,7 @@ class BaseApiTestCase extends BaseTestCase
 
         $data = json_decode(file_get_contents($url), true);
 
-        $facebookClient = $this->facebookClientFactory->getFacebookClient();
+        $facebookClient = $this->facebookClientFactory->getClient();
 
         $response = $facebookClient->get('/'. $this->getContainer()->getParameter('starter_kit_start.facebook_app_id') . '/accounts/test-users', $data['access_token']);
 

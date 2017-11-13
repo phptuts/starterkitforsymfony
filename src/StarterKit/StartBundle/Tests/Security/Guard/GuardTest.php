@@ -4,14 +4,17 @@ namespace StarterKit\StartBundle\Tests\Security\Guard;
 
 use Mockery\Mock;
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Event\AuthFailedEvent;
+use StarterKit\StartBundle\Event\UserEvent;
 use StarterKit\StartBundle\Exception\ProgrammerException;
-use StarterKit\StartBundle\Factory\UserProviderFactory;
+use StarterKit\StartBundle\Factory\UserProviderFactoryInterface;
 use StarterKit\StartBundle\Model\Credential\CredentialEmailModel;
 use StarterKit\StartBundle\Model\Credential\CredentialTokenModel;
-use StarterKit\StartBundle\Security\Guard\Guard;
-use StarterKit\StartBundle\Service\AuthResponseService;
+use StarterKit\StartBundle\Security\Guard\SimpleGuard;
+use StarterKit\StartBundle\Service\AuthResponseServiceInterface;
 use StarterKit\StartBundle\Tests\BaseTestCase;
 use StarterKit\StartBundle\Tests\Entity\User;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Intl\Exception\NotImplementedException;
@@ -30,12 +33,12 @@ class GuardTest extends BaseTestCase
     protected $encoderFactory;
 
     /**
-     * @var AuthResponseService|Mock
+     * @var AuthResponseServiceInterface|Mock
      */
     protected $authResponseService;
 
     /**
-     * @var UserProviderFactory|Mock
+     * @var UserProviderFactoryInterface|Mock
      */
     protected $userProviderFactory;
 
@@ -45,23 +48,30 @@ class GuardTest extends BaseTestCase
     protected $twig;
 
     /**
-     * @var Guard
+     * @var SimpleGuard
      */
     protected $guard;
+
+    /**
+     * @var EventDispatcherInterface|Mock
+     */
+    protected $dispatcher;
 
     public function setUp()
     {
         parent::setUp();
         $this->encoderFactory = \Mockery::mock(EncoderFactoryInterface::class);
-        $this->authResponseService = \Mockery::mock(AuthResponseService::class);
-        $this->userProviderFactory = \Mockery::mock(UserProviderFactory::class);
+        $this->authResponseService = \Mockery::mock(AuthResponseServiceInterface::class);
+        $this->userProviderFactory = \Mockery::mock(UserProviderFactoryInterface::class);
         $this->twig = \Mockery::mock(\Twig_Environment::class);
+        $this->dispatcher = \Mockery::mock(EventDispatcherInterface::class);
 
-        $this->guard = new Guard(
+        $this->guard = new SimpleGuard(
             $this->encoderFactory,
             $this->authResponseService,
             $this->userProviderFactory,
-            $this->twig
+            $this->twig,
+            $this->dispatcher
         );
     }
 
@@ -131,7 +141,7 @@ class GuardTest extends BaseTestCase
         $userProvider->shouldReceive('loadUserByUsername')->once()->with('token')->andReturn($user);
 
         $this->userProviderFactory
-                ->shouldReceive('getUserProvider')
+                ->shouldReceive('getClient')
                 ->with('facebook')
                 ->once()
                 ->andReturn($userProvider);
@@ -151,7 +161,7 @@ class GuardTest extends BaseTestCase
         $this->expectExceptionCode(ProgrammerException::NO_TOKEN_PROVIDER_IMPLEMENTED);
 
         $this->userProviderFactory
-            ->shouldReceive('getUserProvider')
+            ->shouldReceive('getClient')
             ->with('facebook')
             ->once()
             ->andThrow(new NotImplementedException('none'));
@@ -216,7 +226,13 @@ class GuardTest extends BaseTestCase
         $request = Request::create('/login_check', 'POST',$cred);
         $response = new Response();
         $this->authResponseService->shouldReceive('createAuthResponse')->with($user)->once()->andReturn($response);
-
+        $this->dispatcher->shouldReceive('dispatch')
+            ->with(SimpleGuard::AUTH_LOGIN_SUCCESS,
+                \Mockery::on(function (UserEvent $event) use($user) {
+                    Assert::assertEquals($user, $event->getUser());
+                    return true;
+                })
+            )->once();
         $actualResponse = $this->guard->onAuthenticationSuccess($request, $token, 'main');
 
         Assert::assertEquals($response, $actualResponse);
@@ -233,11 +249,20 @@ class GuardTest extends BaseTestCase
 
     public function testOnAuthFailureWithHTML()
     {
+        $exception =  new AuthenticationException('failure');
         $request = Request::create('/users', 'GET',[]);
         $request->headers->set('Content-Type', 'html/text');
         $this->twig->shouldReceive('render')->with('TwigBundle:Exception:error403.html.twig')->andReturn('hello');
 
-        $response = $this->guard->onAuthenticationFailure($request, new AuthenticationException('failure'));
+        $this->dispatcher->shouldReceive('dispatch')
+            ->with(SimpleGuard::AUTH_FAILED_EVENT,
+            \Mockery::on(function (AuthFailedEvent $event) use($request, $exception) {
+                Assert::assertEquals($exception, $event->getException());
+                Assert::assertEquals($request, $event->getRequest());
+                return true;
+            })
+            )->once();
+        $response = $this->guard->onAuthenticationFailure($request,$exception);
 
         Assert::assertEquals(Response::HTTP_FORBIDDEN, $response->getStatusCode());
         Assert::assertEquals('hello', $response->getContent());
@@ -246,10 +271,19 @@ class GuardTest extends BaseTestCase
 
     public function testOnAuthFailureWithJSON()
     {
+        $exception = new AuthenticationException('failure');
         $request = Request::create('/users', 'GET',[]);
         $request->headers->set('Content-Type', 'application/json');
 
-        $response = $this->guard->onAuthenticationFailure($request, new AuthenticationException('failure'));
+        $this->dispatcher->shouldReceive('dispatch')
+            ->with(SimpleGuard::AUTH_FAILED_EVENT,
+                \Mockery::on(function (AuthFailedEvent $event) use($request, $exception) {
+                    Assert::assertEquals($exception, $event->getException());
+                    Assert::assertEquals($request, $event->getRequest());
+                    return true;
+                })
+            )->once();
+        $response = $this->guard->onAuthenticationFailure($request,$exception );
 
         Assert::assertEquals(Response::HTTP_FORBIDDEN, $response->getStatusCode());
         Assert::assertEquals('Authentication Failed', $response->getContent());

@@ -3,8 +3,9 @@
 namespace StarterKit\StartBundle\Security\Provider;
 
 use StarterKit\StartBundle\Entity\BaseUser;
-use StarterKit\StartBundle\Service\JWSService;
-use StarterKit\StartBundle\Service\UserService;
+use StarterKit\StartBundle\Service\AuthTokenService;
+use StarterKit\StartBundle\Service\AuthTokenServiceInterface;
+use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
@@ -12,23 +13,23 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  * Class TokenProvider
  * @package StarterKit\StartBundle\Security\Provider
  */
-class TokenProvider implements UserProviderInterface
+class TokenProvider implements TokenProviderInterface
 {
     use CustomProviderTrait;
 
     /**
-     * @var JWSService
+     * @var AuthTokenService
      */
-    private $JWSService;
+    private $authTokenService;
 
     /**
      * TokenProvider constructor.
-     * @param UserService $userService
-     * @param JWSService $JWSService
+     * @param UserServiceInterface $userService
+     * @param AuthTokenServiceInterface $authTokenService
      */
-    public function __construct(JWSService $JWSService, UserService $userService)
+    public function __construct(AuthTokenServiceInterface $authTokenService, UserServiceInterface $userService)
     {
-        $this->JWSService = $JWSService;
+        $this->authTokenService = $authTokenService;
         $this->userService = $userService;
     }
 
@@ -41,17 +42,17 @@ class TokenProvider implements UserProviderInterface
      */
     public function loadUserByUsername($username)
     {
-        if (!$this->JWSService->isValid($username)) {
+        if (!$this->authTokenService->isValid($username)) {
             throw new UsernameNotFoundException("Invalid Token.");
         }
 
-        $payload = $this->JWSService->getPayload($username);
+        $payload = $this->authTokenService->getPayload($username);
 
-        if (empty($payload[JWSService::USER_ID_KEY])) {
+        if (empty($payload[AuthTokenService::USER_ID_KEY])) {
             throw new UsernameNotFoundException("No user_id in token payload");
         }
 
-        $userId = $payload[JWSService::USER_ID_KEY];
+        $userId = $payload[AuthTokenService::USER_ID_KEY];
 
         /** @var BaseUser $user */
         $user = $this->userService->findUserById($userId);

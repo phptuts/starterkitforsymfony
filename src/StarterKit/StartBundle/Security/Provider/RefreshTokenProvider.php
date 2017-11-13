@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  * Class RefreshTokenProvider
  * @package StarterKit\StartBundle\Security\Provider
  */
-class RefreshTokenProvider implements UserProviderInterface
+class RefreshTokenProvider implements RefreshTokenProviderInterface
 {
 
     use CustomProviderTrait;

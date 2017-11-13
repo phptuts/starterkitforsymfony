@@ -10,7 +10,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  * Class FormSerializer
  * @package StarterKit\StartBundle\Service
  */
-class FormSerializer
+class FormSerializer implements FormSerializerInterface
 {
 
     /**

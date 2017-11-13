@@ -6,7 +6,7 @@ use Mockery\Mock;
 use PHPUnit\Framework\Assert;
 use StarterKit\StartBundle\Model\Auth\AuthTokenModel;
 use StarterKit\StartBundle\Service\AuthResponseService;
-use StarterKit\StartBundle\Service\JWSService;
+use StarterKit\StartBundle\Service\AuthTokenService;
 use StarterKit\StartBundle\Service\UserService;
 use StarterKit\StartBundle\Tests\BaseTestCase;
 use StarterKit\StartBundle\Tests\Entity\User;
@@ -20,7 +20,7 @@ class AuthResponseServiceTest extends BaseTestCase
     protected $userService;
 
     /**
-     * @var JWSService|Mock
+     * @var AuthTokenService|Mock
      */
     protected $jwsService;
 
@@ -32,7 +32,7 @@ class AuthResponseServiceTest extends BaseTestCase
     public function setUp()
     {
         parent::setUp();
-        $this->jwsService = \Mockery::mock(JWSService::class);
+        $this->jwsService = \Mockery::mock(AuthTokenService::class);
         $this->userService = \Mockery::mock(UserService::class);
         $this->authResponseService = new AuthResponseService($this->jwsService, $this->userService);
     }

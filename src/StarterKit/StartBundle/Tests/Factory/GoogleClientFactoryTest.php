@@ -17,6 +17,6 @@ class GoogleClientFactoryTest extends BaseTestCase
     {
         $factory = new GoogleClientFactory('google_client_id');
 
-        Assert::assertInstanceOf(\Google_Client::class, $factory->getGoogleClient());
+        Assert::assertInstanceOf(\Google_Client::class, $factory->getClient());
     }
 }

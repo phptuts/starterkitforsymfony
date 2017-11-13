@@ -7,7 +7,7 @@ use Aws\S3\S3Client;
 use StarterKit\StartBundle\Factory\S3ClientFactory;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-class S3Service
+class S3Service implements S3ServiceInterface
 {
     /**
      * @var S3Client
@@ -26,7 +26,7 @@ class S3Service
 
     public function __construct(S3ClientFactory $clientFactory,  $bucket, $env)
     {
-        $this->client = $clientFactory->createClient();
+        $this->client = $clientFactory->getClient();
         $this->env = $env;
         $this->bucket = $bucket;
     }

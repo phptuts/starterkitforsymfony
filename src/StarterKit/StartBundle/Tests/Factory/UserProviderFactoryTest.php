@@ -29,14 +29,14 @@ class UserProviderFactoryTest extends BaseTestCase
 
         $factory = new UserProviderFactory($facebook,$google, $refresh, $token, $emailProvider);
 
-        Assert::assertEquals($facebook, $factory->getUserProvider('facebook'));
-        Assert::assertEquals($google, $factory->getUserProvider('google'));
-        Assert::assertEquals($refresh, $factory->getUserProvider('refresh_token'));
-        Assert::assertEquals($token, $factory->getUserProvider('jwt'));
-        Assert::assertEquals($emailProvider, $factory->getUserProvider('email'));
+        Assert::assertEquals($facebook, $factory->getClient('facebook'));
+        Assert::assertEquals($google, $factory->getClient('google'));
+        Assert::assertEquals($refresh, $factory->getClient('refresh_token'));
+        Assert::assertEquals($token, $factory->getClient('jwt'));
+        Assert::assertEquals($emailProvider, $factory->getClient('email'));
 
         $this->expectException(NotImplementedException::class);
 
-        $factory->getUserProvider('github');
+        $factory->getClient('github');
     }
 }

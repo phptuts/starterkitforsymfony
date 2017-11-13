@@ -17,6 +17,6 @@ class S3ClientFactoryTest extends BaseTestCase
     {
         $factory = new S3ClientFactory('region', 'key', '2006-03-01');
 
-        Assert::assertInstanceOf(S3Client::class, $factory->createClient());
+        Assert::assertInstanceOf(S3Client::class, $factory->getClient());
     }
 }

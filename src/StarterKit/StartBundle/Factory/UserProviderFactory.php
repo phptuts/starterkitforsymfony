@@ -3,11 +3,11 @@
 namespace StarterKit\StartBundle\Factory;
 
 use StarterKit\StartBundle\Model\Credential\CredentialInterface;
-use StarterKit\StartBundle\Security\Provider\EmailProvider;
-use StarterKit\StartBundle\Security\Provider\FacebookProvider;
-use StarterKit\StartBundle\Security\Provider\GoogleProvider;
-use StarterKit\StartBundle\Security\Provider\RefreshTokenProvider;
-use StarterKit\StartBundle\Security\Provider\TokenProvider;
+use StarterKit\StartBundle\Security\Provider\EmailProviderInterface;
+use StarterKit\StartBundle\Security\Provider\FacebookProviderInterface;
+use StarterKit\StartBundle\Security\Provider\GoogleProviderInterface;
+use StarterKit\StartBundle\Security\Provider\RefreshTokenProviderInterface;
+use StarterKit\StartBundle\Security\Provider\TokenProviderInterface;
 use Symfony\Component\Intl\Exception\NotImplementedException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
@@ -15,39 +15,39 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  * Class SocialUserProviderFactory
  * @package StarterKit\StartBundle\Factory
  */
-class UserProviderFactory
+class UserProviderFactory implements UserProviderFactoryInterface
 {
 
     /**
-     * @var FacebookProvider
+     * @var FacebookProviderInterface
      */
     private $facebookProvider;
 
     /**
-     * @var GoogleProvider
+     * @var GoogleProviderInterface
      */
     private $googleProvider;
 
     /**
-     * @var RefreshTokenProvider
+     * @var RefreshTokenProviderInterface
      */
     private $refreshTokenProvider;
 
     /**
-     * @var TokenProvider
+     * @var TokenProviderInterface
      */
     private $jwtTokenProvider;
     /**
-     * @var EmailProvider
+     * @var EmailProviderInterface
      */
     private $emailProvider;
 
     public function __construct(
-        FacebookProvider $facebookProvider,
-        GoogleProvider $googleProvider,
-        RefreshTokenProvider $refreshTokenProvider,
-        TokenProvider $tokenProvider,
-        EmailProvider $emailProvider
+        FacebookProviderInterface $facebookProvider,
+        GoogleProviderInterface $googleProvider,
+        RefreshTokenProviderInterface $refreshTokenProvider,
+        TokenProviderInterface $tokenProvider,
+        EmailProviderInterface $emailProvider
     ){
 
         $this->facebookProvider = $facebookProvider;
@@ -63,7 +63,7 @@ class UserProviderFactory
      * @param string $type
      * @return UserProviderInterface|null
      */
-    public function getUserProvider($type)
+    public function getClient($type)
     {
         if ($type == CredentialInterface::PROVIDER_TYPE_FACEBOOK) {
             return $this->facebookProvider;

@@ -2,7 +2,6 @@
 
 namespace StarterKit\StartBundle\Event;
 
-
 use StarterKit\StartBundle\Entity\BaseUser;
 use Symfony\Component\EventDispatcher\Event;
 

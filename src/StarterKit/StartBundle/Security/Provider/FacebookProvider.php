@@ -2,36 +2,36 @@
 
 namespace StarterKit\StartBundle\Security\Provider;
 
+use Facebook\Facebook;
 use StarterKit\StartBundle\Entity\BaseUser;
 use StarterKit\StartBundle\Exception\ProgrammerException;
-use StarterKit\StartBundle\Factory\FaceBookClientFactory;
+use StarterKit\StartBundle\Factory\FaceBookClientFactoryInterface;
 use StarterKit\StartBundle\Service\UserService;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
-use Facebook\FacebookClient;
+use StarterKit\StartBundle\Service\UserServiceInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 /**
  * Class FacebookProvider
  * @package StarterKit\StartBundle\Security\Provider
  */
-class FacebookProvider implements UserProviderInterface
+class FacebookProvider implements FacebookProviderInterface
 {
     use CustomProviderTrait;
 
     /**
-     * @var FacebookClient
+     * @var Facebook
      */
     protected $facebookClient;
 
 
     public function __construct(
-        FaceBookClientFactory $faceBookClientFactory,
-        UserService $userService)
+        FaceBookClientFactoryInterface $faceBookClientFactory,
+        UserServiceInterface $userService)
     {
-        $this->facebookClient = $faceBookClientFactory->getFacebookClient();
+        $this->facebookClient = $faceBookClientFactory->getClient();
         $this->userService = $userService;
     }
 
@@ -105,8 +105,9 @@ class FacebookProvider implements UserProviderInterface
     protected function registerUser($email, $facebookUserId)
     {
         $className = $this->userService->getUserClass();
-        $user = (new  $className())
-            ->setEmail($email)
+        /** @var BaseUser $user */
+        $user = (new  $className());
+        $user->setEmail($email)
             ->setFacebookUserId($facebookUserId)
             ->setPlainPassword(base64_encode(random_bytes(20)));
         $this->userService->registerUser($user, UserService::SOURCE_TYPE_FACEBOOK);
