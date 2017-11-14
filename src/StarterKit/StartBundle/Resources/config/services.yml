@@ -147,6 +147,9 @@ services:
         autowire: true
         tags: ['controller.service_arguments']
 
+    StarterKit\StartBundle\Controller\SecurityController:
+        class: StarterKit\StartBundle\Controller\SecurityController
+
 
     # Concrete Implementations
 

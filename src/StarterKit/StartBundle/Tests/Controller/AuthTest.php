@@ -3,6 +3,7 @@
 namespace StarterKit\StartBundle\Tests\Controller;
 
 use PHPUnit\Framework\Assert;
+use StarterKit\StartBundle\Entity\BaseUser;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -104,31 +105,31 @@ class AuthTest extends BaseApiTestCase
         $this->assertCredentialsResponse($response, $client, self::TEST_EMAIL);
     }
 
-//    /**
-//     * This is excluded from travis ci because it involves a secret
-//     *
-//     * @group exclude_travis
-//     * Tests that a facebook user can login
-//     */
-//    public function testFacebookLogin()
-//    {
-//        $facebookAuthToken = $this->getFacebookAuthTokenAndEmail();
-//
-//        $client = $this->makeClient();
-//        $response = $this->makeJsonRequest(
-//            $client,
-//            Request::METHOD_POST,
-//            '/login_check',
-//            ['type' => 'facebook', 'token' => $facebookAuthToken['token']]
-//        );
-//
-//        $this->assertCredentialsResponse($response, $client, $facebookAuthToken['email']);
-//
-//        $user = $this->userRepository->findUserByEmail($facebookAuthToken['email']);
-//
-//        Assert::assertInstanceOf(User::class, $user);
-//        // Tests that the facebook user id is not empty
-//        Assert::assertNotEmpty($user->getFacebookUserId());
-//
-//    }
+    /**
+     * This is excluded from travis ci because it involves a secret
+     *
+     * @group exclude_travis
+     * Tests that a facebook user can login
+     */
+    public function testFacebookLogin()
+    {
+        $facebookAuthToken = $this->getFacebookAuthTokenAndEmail();
+
+        $client = $this->makeClient();
+        $response = $this->makeJsonRequest(
+            $client,
+            Request::METHOD_POST,
+            '/login_check',
+            ['type' => 'facebook', 'token' => $facebookAuthToken['token']]
+        );
+
+        $this->assertCredentialsResponse($response, $client, $facebookAuthToken['email']);
+
+        $user = $this->userRepository->findUserByEmail($facebookAuthToken['email']);
+
+        Assert::assertInstanceOf(BaseUser::class, $user);
+        // Tests that the facebook user id is not empty
+        Assert::assertNotEmpty($user->getFacebookUserId());
+
+    }
 }

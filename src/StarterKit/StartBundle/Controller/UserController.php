@@ -61,29 +61,6 @@ class UserController extends BaseRestController
         $this->s3Service = $s3Service;
     }
 
-    /**
-     *  This is an example of a facebook user logging in the with a token
-     *  <pre> {"type" : "facebook", "token" : "sdfasdfasdfasdf" } </pre>
-     *
-     *  This is an example of a user using a refresh token
-     *  <pre> {"type" : "refresh_token", "token" : "sdfasdfasdfasdf" } </pre>
-     *
-     *  This is an example of a user logging in with email and password
-     *  <pre> {"email" : "example@gmail.com", "password" : "*******" } </pre>
-     *
-     * @Route(path="login_check", name="_api_doc_login_check", methods={"POST"})
-     *
-     * @ApiDoc(
-     *  resource=true,
-     *  description="Api Login End Point",
-     *  section="Security"
-     * )
-     *
-     */
-    public function loginAction()
-    {
-        throw new \LogicException("Should never hit this end point symfony should take this over.");
-    }
 
     /**
      * <p>This is the json body for register request.</p>
@@ -118,9 +95,7 @@ class UserController extends BaseRestController
     }
 
     /**
-     * @Security("has_role('ROLE_USER')")
-     *
-     * <p>This updates the user.  Whatever user field you have.</pre>
+     * <p>This updates the user.  Whatever user field you have.</p>
      * <pre> {"displayName": "jo32", "email": "example@sdf.com" }</pre>
      *
      * @ApiDoc(
@@ -129,7 +104,7 @@ class UserController extends BaseRestController
      *  section="Users",
      *  authentication=true
      * )
-     *
+     * @Security("has_role('ROLE_USER')")
      * @param Request $request
      * @param integer $id
      *
@@ -229,12 +204,11 @@ class UserController extends BaseRestController
 
 
     /**
-     * @Security("has_role('ROLE_USER')")
      *
      * <p>If the user is not an admin they are required to enter their current password.</p>
      * <pre> {"newPassword": "*****", "currentPassword": "****" }</pre>
      *
-     * <p>If the user is an admin</pre>
+     * <p>If the user is an admin</p>
      * <pre> {"newPassword": "*****" }</pre>
      *
      * @ApiDoc(
@@ -243,7 +217,7 @@ class UserController extends BaseRestController
      *  section="Users",
      *  authentication=true
      * )
-     *
+     * @Security("has_role('ROLE_USER')")
      * @Route(path="/users/{id}/password", methods={"PATCH"})
      *
      *

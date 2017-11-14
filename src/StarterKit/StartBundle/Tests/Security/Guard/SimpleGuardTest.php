@@ -25,7 +25,7 @@ use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken;
 
-class GuardTest extends BaseTestCase
+class SimpleGuardTest extends BaseTestCase
 {
     /**
      * @var EncoderFactoryInterface|Mock

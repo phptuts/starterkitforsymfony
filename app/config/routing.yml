@@ -12,7 +12,7 @@ admin:
 main:
     resource: '@AppBundle/Controller/Main/'
     type: annotation
-    prefix: /api
+    prefix: /
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
