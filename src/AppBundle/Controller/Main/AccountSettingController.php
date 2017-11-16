@@ -3,10 +3,10 @@
 namespace AppBundle\Controller\Main;
 
 use AppBundle\Entity\User;
-use AppBundle\Form\User\ChangePasswordType;
-use AppBundle\Form\User\UpdateUserType;
-use AppBundle\Service\S3Service;
-use AppBundle\Service\User\UserService;
+use StarterKit\StartBundle\Form\ChangePasswordType;
+use StarterKit\StartBundle\Form\UpdateUserType;
+use StarterKit\StartBundle\Service\S3Service;
+use StarterKit\StartBundle\Service\UserService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

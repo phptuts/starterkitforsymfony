@@ -1,31 +1,18 @@
-logout:
-    path: /logout
+starter_kit_start:
+    resource: "@StarterKitStartBundle/Resources/config/routing.yml"
 
-token_login_check:
-    path: /token_login_check
-    methods: ['POST']
-
-api_login:
-    path: /api/login_check
-    methods: ['POST']
-
+login_check:
+    path: login_check
 
 admin:
     resource: "@AppBundle/Controller/Admin/"
     type:     annotation
     prefix:   /admin
 
-api:
-    resource: '@AppBundle/Controller/Api/'
-    prefix: /api
-    type: rest
-
 main:
     resource: '@AppBundle/Controller/Main/'
     type: annotation
-
-
-
+    prefix: /
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

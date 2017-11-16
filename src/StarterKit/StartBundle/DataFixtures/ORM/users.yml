@@ -1,0 +1,160 @@
+StarterKit\StartBundle\Tests\Entity\User:
+
+    users{1..100}:
+        email: <email()>
+        displayName: <username()>
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+
+    example_user:
+        email: 'example@gmail.com'
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    regular_user:
+        email: 'regular_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    admin_user:
+        email: 'admin_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+
+    change_email_user:
+        email: 'change_email_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+
+    disable_user:
+        email: 'disable_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+
+    change_password_user:
+        email: 'change_password_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_ADMIN']
+        enabled: true
+        source: 'website'
+
+    future_admin_user:
+        email: 'future_admin_user@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+
+    forget_password_1:
+        email: 'forget_password_1@gmail.com'
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true
+        forgetPasswordToken: 'token'
+        forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
+
+    forget_password_2:
+        email: 'forget_password_2@gmail.com'
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true
+        forgetPasswordToken: 'token'
+        forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
+
+    forget_password_3:
+        email: 'forget_password_3@gmail.com'
+        displayName: 'forgotten'
+        password: $2a$06$kMlfGawSV7sI1trHzAYuK.8Bg8YNHuIHgp4Kvwpn2nBmtTadizbJ.
+        roles: ['ROLE_USER']
+        enabled: true
+        forgetPasswordToken: 'token_1'
+        forgetPasswordExpired: <dateTimeBetween("+10 days", "+20 days")>
+        source: 'website'
+
+    forget_password_end_2_end:
+        email: 'forget_password_end_2_end@gmail.com'
+        displayName: 'forget_password_end_2_end'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    change_password_end_2_end:
+        email: 'change_password_end_2_end@gmail.com'
+        displayName: 'change_password_end_2_end'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    update_user_e2e:
+        email: update_user_e2e@email.com
+        displayName: 'update_user_e2e'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    account_setting_user:
+        email: 'update_profile@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    account_setting_change_password:
+        email: 'change_password@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+
+    facebook_user_id_test:
+        email: 'facebook_user_id_test@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        facebookUserId: 'facebook_test_user_id32'
+
+    google_user_id_test:
+        email: 'google_user_id_test@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        googleUserId: 'google_user_id_dsf3'
+
+    refresh_token_valid:
+        email: 'refresh_token_valid@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        refreshToken: 'refresh_token_valid'
+        refreshTokenExpire: '<dateTimeBetween("+1 days", "+10 days")>'
+
+    refresh_token_expired:
+        email: 'refresh_token_expired@gmail.com'
+        password: $2a$12$b/Qrjir.7xX31iX7VQ0vVuy65DesSQqQarcDg54W/AbFo1.alHD4q #password
+        roles: ['ROLE_USER']
+        enabled: true
+        source: 'website'
+        refreshToken: 'refresh_token_expired'
+        refreshTokenExpire: '<dateTimeBetween("-10 days", "-1 days")>'
