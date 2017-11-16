@@ -24,39 +24,12 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        api_login:
-            pattern: ^/api/login_check
-            stateless: true
-            provider: app_proivder
-            guard:
-                authenticators:
-                    - AppBundle\Security\Guard\ApiLoginGuard
-                    - AppBundle\Security\Guard\Token\ApiLoginTokenGuard
-                entry_point: AppBundle\Security\Guard\ApiLoginGuard
-
-        api:
-            pattern: ^/api
-            anonymous: ~
-            stateless: true
-            guard:
-                authenticators:
-                    - AppBundle\Security\Guard\Token\ApiTokenGuard
-
-
         main:
             pattern: ^/*
             anonymous: ~
-            provider: app_proivder
-            switch_user: true
-            form_login:
-                login_path: login
-                check_path: login
             guard:
                 authenticators:
-                    - AppBundle\Security\Guard\Token\SessionLoginTokenGuard
-            logout:
-                path: /logout
-                target: /
+                    - StarterKit\StartBundle\Security\Guard\SimpleGuardInterface
 
             # activate different ways to authenticate
 

@@ -1,6 +1,7 @@
 imports:
     - { resource: config_dev.yml }
 
+
 framework:
     test: ~
     session:
@@ -22,3 +23,39 @@ doctrine:
             default:
                 driver:   pdo_sqlite
                 path:     %kernel.cache_dir%/test.db
+
+
+
+# This is done for testing the bundle
+security:
+    encoders:
+        StarterKit\StartBundle\Tests\Entity\User:
+            algorithm: bcrypt
+            cost: 12
+
+    providers:
+        start_user_provider:
+            entity:
+                class: StarterKit\StartBundle\Tests\Entity\User
+                property: email
+
+starter_kit_start:
+
+    jws_ttl: '%app.jws_ttl%'
+    jws_pass_phrase: '%app.jws_pass_phrase%'
+    refresh_token_ttl: '%app.refresh_token_ttl%'
+
+    user_class: 'StarterKit\StartBundle\Tests\Entity\User'
+
+    facebook_app_secret: '%app.facebook_app_secret%'
+    facebook_api_version: '%app.facebook_api_version%'
+    facebook_app_id: '%app.facebook_app_id%'
+
+    google_client_id: '%app.google_client_id%'
+
+
+    aws_api_version: '%app.aws_api_version%'
+    aws_key: '%app.aws_key%'
+    aws_secret: '%app.aws_secret%'
+    aws_region: '%app.aws_region%'
+    aws_s3_bucket_name: '%app.aws_region%'

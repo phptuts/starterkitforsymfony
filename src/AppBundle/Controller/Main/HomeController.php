@@ -2,8 +2,8 @@
 
 namespace AppBundle\Controller\Main;
 
-use AppBundle\Exception\ProgrammerException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use StarterKit\StartBundle\Exception\ProgrammerException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 

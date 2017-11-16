@@ -1,0 +1,177 @@
+services:
+
+    # Services
+    StarterKit\StartBundle\Service\AuthTokenService:
+        class: StarterKit\StartBundle\Service\AuthTokenService
+        arguments:
+            - '%starter_kit_start.jws_pass_phrase%'
+            - '%starter_kit_start.jws_ttl%'
+            - '%kernel.project_dir%'
+
+    StarterKit\StartBundle\Service\UserService:
+        class: StarterKit\StartBundle\Service\UserService
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@security.encoder_factory.generic'
+            - '@event_dispatcher'
+            - '%starter_kit_start.refresh_token_ttl%'
+            - '%starter_kit_start.user_class%'
+
+    StarterKit\StartBundle\Service\AuthResponseService:
+        class: StarterKit\StartBundle\Service\AuthResponseService
+        autowire: true
+
+    StarterKit\StartBundle\Service\FormSerializer:
+        class: StarterKit\StartBundle\Service\FormSerializer
+        autowire: true
+
+    StarterKit\StartBundle\Service\S3Service:
+        class: StarterKit\StartBundle\Service\S3Service
+        arguments:
+            - '@StarterKit\StartBundle\S3ClientFactory'
+            - '%starter_kit_start.aws_s3_bucket_name%'
+            - '%kernel.environment%'
+
+    # Providers
+    StarterKit\StartBundle\Security\Provider\EmailProvider:
+        class: StarterKit\StartBundle\Security\Provider\EmailProvider
+        autowire: true
+
+    StarterKit\StartBundle\Security\Provider\FacebookProvider:
+        class: StarterKit\StartBundle\Security\Provider\FacebookProvider
+        autowire: true
+
+    StarterKit\StartBundle\Security\Provider\GoogleProvider:
+        class: StarterKit\StartBundle\Security\Provider\GoogleProvider
+        autowire: true
+
+    StarterKit\StartBundle\Security\Provider\TokenProvider:
+        class: StarterKit\StartBundle\Security\Provider\TokenProvider
+        autowire: true
+
+    StarterKit\StartBundle\Security\Provider\RefreshTokenProvider:
+        class: StarterKit\StartBundle\Security\Provider\RefreshTokenProvider
+        autowire: true
+
+    # Guards
+    StarterKit\StartBundle\Security\Guard\SimpleGuard:
+        class: StarterKit\StartBundle\Security\Guard\SimpleGuard
+        autowire: true
+
+    #Voters
+    StarterKit\StartBundle\Security\Voter\UserVoter:
+        class: StarterKit\StartBundle\Security\Voter\UserVoter
+        tags:
+            - { name: security.voter }
+        public: false
+
+
+    # Factories
+    StarterKit\StartBundle\Factory\FaceBookClientFactory:
+        class: StarterKit\StartBundle\Factory\FaceBookClientFactory
+        arguments:
+            - '%starter_kit_start.facebook_app_id%'
+            - '%starter_kit_start.facebook_app_secret%'
+            - '%starter_kit_start.facebook_api_version%'
+
+    StarterKit\StartBundle\Factory\GoogleClientFactory:
+        class: StarterKit\StartBundle\Factory\GoogleClientFactory
+        arguments:
+            - '%starter_kit_start.google_client_id%'
+
+
+    StarterKit\StartBundle\Factory\UserProviderFactory:
+        class: StarterKit\StartBundle\Factory\UserProviderFactory
+        autowire: true
+
+    StarterKit\StartBundle\S3ClientFactory:
+        class: StarterKit\StartBundle\Factory\S3ClientFactory
+        arguments:
+            - '%starter_kit_start.aws_region%'
+            - '%starter_kit_start.aws_key%'
+            - '%starter_kit_start.aws_secret%'
+            - '%starter_kit_start.aws_api_version%'
+
+    #Data Transformer
+    StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer:
+        class: StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer
+        arguments:
+            - '@StarterKit\StartBundle\Service\UserService'
+
+    # Forms
+    StarterKit\StartBundle\Form\ChangePasswordType:
+        class: StarterKit\StartBundle\Form\ChangePasswordType
+        autowire: true
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\ForgetPasswordType:
+        class: StarterKit\StartBundle\Form\ForgetPasswordType
+        arguments:
+            - '@StarterKit\StartBundle\Form\DataTransformer\UserEmailTransformer'
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\RegisterType:
+        class: StarterKit\StartBundle\Form\RegisterType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\ResetPasswordType:
+        class: StarterKit\StartBundle\Form\ResetPasswordType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\UpdateUserType:
+        class: StarterKit\StartBundle\Form\UpdateUserType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    StarterKit\StartBundle\Form\UserImageType:
+        class: StarterKit\StartBundle\Form\UserImageType
+        arguments:
+            - '%starter_kit_start.user_class%'
+        tags:
+            - { name: form.type }
+
+    #Controllers
+    StarterKit\StartBundle\Controller\UserController:
+        class: StarterKit\StartBundle\Controller\UserController
+        autowire: true
+        tags: ['controller.service_arguments']
+
+    StarterKit\StartBundle\Controller\SecurityController:
+        class: StarterKit\StartBundle\Controller\SecurityController
+
+
+    # Concrete Implementations
+
+    # Services
+    StarterKit\StartBundle\Service\AuthTokenServiceInterface: '@StarterKit\StartBundle\Service\AuthTokenService'
+    StarterKit\StartBundle\Service\UserServiceInterface: '@StarterKit\StartBundle\Service\UserService'
+    StarterKit\StartBundle\Service\AuthResponseServiceInterface: '@StarterKit\StartBundle\Service\AuthResponseService'
+    StarterKit\StartBundle\Service\FormSerializerInterface: '@StarterKit\StartBundle\Service\FormSerializer'
+    StarterKit\StartBundle\Service\S3ServiceInterface: '@StarterKit\StartBundle\Service\S3Service'
+
+    # Providers
+    StarterKit\StartBundle\Security\Provider\EmailProviderInterface: '@StarterKit\StartBundle\Security\Provider\EmailProvider'
+    StarterKit\StartBundle\Security\Provider\FacebookProviderInterface: '@StarterKit\StartBundle\Security\Provider\FacebookProvider'
+    StarterKit\StartBundle\Security\Provider\GoogleProviderInterface: '@StarterKit\StartBundle\Security\Provider\GoogleProvider'
+    StarterKit\StartBundle\Security\Provider\TokenProviderInterface: '@StarterKit\StartBundle\Security\Provider\TokenProvider'
+    StarterKit\StartBundle\Security\Provider\RefreshTokenProviderInterface: '@StarterKit\StartBundle\Security\Provider\RefreshTokenProvider'
+
+    # Guards
+    StarterKit\StartBundle\Security\Guard\SimpleGuardInterface: '@StarterKit\StartBundle\Security\Guard\SimpleGuard'
+
+    # Factories
+    StarterKit\StartBundle\Factory\FaceBookClientFactoryInterface: '@StarterKit\StartBundle\Factory\FaceBookClientFactory'
+    StarterKit\StartBundle\Factory\GoogleClientFactoryInterface: '@StarterKit\StartBundle\Factory\GoogleClientFactory'
+    StarterKit\StartBundle\Factory\UserProviderFactoryInterface: '@StarterKit\StartBundle\Factory\UserProviderFactory'
+    StarterKit\StartBundle\S3ClientFactoryInterface: '@StarterKit\StartBundle\S3ClientFactory'

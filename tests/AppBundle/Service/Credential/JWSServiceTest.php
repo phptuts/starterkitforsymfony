@@ -2,7 +2,6 @@
 
 namespace Tests\AppBundle\Service\Credential;
 
-use AppBundle\Entity\User;
 use AppBundle\Exception\ProgrammerException;
 use Namshi\JOSE\SimpleJWS;
 use AppBundle\Service\Credential\JWSService;
