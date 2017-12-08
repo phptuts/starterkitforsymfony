@@ -64,35 +64,9 @@ doctrine:
         #path: '%database_path%'
 
     orm:
-        auto_generate_proxy_classes: '%kernel.debug%'
+        auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
-        # enable query caching
-        query_cache_driver:
-            type: redis
-            id: Doctrine\Common\Cache\PredisCache
-        result_cache_driver:
-            type: redis
-            id: Doctrine\Common\Cache\PredisCache
-
-snc_redis:
-   clients:
-       default:
-           type: predis
-           alias: default
-           dsn: redis://localhost
-   doctrine:
-       metadata_cache:
-           client: default
-           entity_manager: default          # the name of your entity_manager connection
-           document_manager: default        # the name of your document_manager connection
-       result_cache:
-           client: default
-           entity_manager: [default, read]  # you may specify multiple entity_managers
-       query_cache:
-           client: default
-           entity_manager: default
-
 
 nelmio_api_doc:
     name: 'Symfony Starter Api'
