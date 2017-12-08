@@ -22,7 +22,7 @@ trait GuardTrait
      */
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
-        return new Response('Authentication Failed.', Response::HTTP_FORBIDDEN);
+        return new Response($exception->getMessage(), Response::HTTP_FORBIDDEN);
     }
 
     /**
